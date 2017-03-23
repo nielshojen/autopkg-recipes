@@ -128,17 +128,6 @@ this user's home will be used, and if run at the loginwindow, the root user's ho
         </dict>
         <dict>
             <key>Processor</key>
-            <string>FileMover</string>
-            <key>Arguments</key>
-            <dict>
-                <key>source</key>
-                <string>%RECIPE_CACHE_DIR%/pkg_payload/Applications/DaVinci Resolve/DaVinci Resolve.app</string>
-                <key>target</key>
-                <string>%RECIPE_CACHE_DIR%/pkg_payload/Applications/DaVinci Resolve/DaVinci Resolve Studio.app</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
             <string>PlistReader</string>
             <key>Arguments</key>
             <dict>
