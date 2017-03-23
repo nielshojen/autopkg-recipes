@@ -3,21 +3,20 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads latest version of DaVinci Resolve 12.
+    <string>Downloads latest version of DaVinci Resolve Studio 12.
 
 This product requires registration in order to download, so
 you _must_ override all input variables beginning with 'REG_'
 and they must contain data.</string>
     <key>Identifier</key>
-    <string>com.github.timsutton.download.davinciresolve12</string>
+    <string>com.github.nielshojen.download.davinciresolvestudio12</string>
     <key>Input</key>
     <dict>
-        <!-- Version 12 updates _may_ contain 'Update' in the title, but
-        we also want to avoid capturing the 'Studio Update' versions -->
+        <!-- Version 12 updates _may_ contain 'Update' in the title, and we only want the studio version -->
         <key>PRODUCT_NAME_PATTERN</key>
-        <string>^DaVinci Resolve (?P&lt;version&gt;12(\.\d+)*)( Update)*$</string>
+        <string>^DaVinci Resolve (?P&lt;version&gt;12(\.\d+)*) Studio( Update)*$</string>
         <key>NAME</key>
-        <string>DaVinciResolve12</string>
+        <string>DaVinciResolveStudio12</string>
         <key>REG_FIRSTNAME</key>
         <string></string>
         <key>REG_LASTNAME</key>
