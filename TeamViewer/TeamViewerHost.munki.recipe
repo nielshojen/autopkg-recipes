@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>TeamViewer</string>
+		<string>TeamViewer Host</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/TeamViewer</string>
 		<key>MUNKI_CATEGORY</key>
