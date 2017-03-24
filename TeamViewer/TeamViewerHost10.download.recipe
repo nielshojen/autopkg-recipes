@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest TeamViewer Host disk image.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.download.TeamViewer10Host</string>
+	<string>com.github.nielshojen.download.TeamViewerHost10</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
