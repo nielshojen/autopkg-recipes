@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current release version of TeamViewer and imports into Munki.</string>
+	<string>Downloads the current release version of TeamViewer Host and imports into Munki.</string>
 	<key>Identifier</key>
-	<string>io.github.hjuutilainen.munki.TeamViewer</string>
+	<string>com.github.nielshojen.munki.TeamViewerHost</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -27,7 +27,7 @@
 			<key>developer</key>
 			<string>TeamViewer GmbH</string>
 			<key>display_name</key>
-			<string>TeamViewer</string>
+			<string>TeamViewerHost</string>
 			<key>minimum_os_version</key>
 			<string>10.6</string>
 			<key>name</key>
@@ -41,7 +41,7 @@
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>io.github.hjuutilainen.download.TeamViewer</string>
+	<string>com.github.nielshojen.download.TeamViewerHost</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -68,11 +68,11 @@
 		</dict>
 		<dict>
 			<key>Comment</key>
-			<string>TeamViewer 9 installs in /Applications/TeamViewer.app so extract accordingly</string>
+			<string>TeamViewer Host installs in /Applications/TeamViewer Host.app so extract accordingly</string>
 			<key>Arguments</key>
 			<dict>
 				<key>pkg_payload_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/TeamViewerApp.pkg/Payload</string>
+				<string>%RECIPE_CACHE_DIR%/unpack/TeamViewerHostApp.pkg/Payload</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/payload/root/Applications</string>
 			</dict>
@@ -86,7 +86,7 @@
 				<string>%RECIPE_CACHE_DIR%/payload/root</string>
 				<key>installs_item_paths</key>
 				<array>
-					<string>/Applications/TeamViewer.app</string>
+					<string>/Applications/TeamViewer Host.app</string>
 				</array>
 			</dict>
 			<key>Processor</key>
