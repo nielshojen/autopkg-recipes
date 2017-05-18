@@ -3,11 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads Adobe Output Module for Bridge CC 2017 and creates a package.  Version was chosen based on AdobeOutputModule.jsx modified date.
-
-Skipped writing a .munki recipe since Adobe Output Module is unlikely to be updated again.</string>
+	<string>Downloads Adobe Output Module for Bridge CC 2017 and creates a package. Version was chosen based on AdobeOutputModule.jsx modified date.</string>
 	<key>Identifier</key>
-	<string>com.github.foigus.pkg.AdobeOutputModuleCC2017</string>
+	<string>com.github.nielshojen.pkg.AdobeOutputModuleCC2017</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -18,7 +16,7 @@ Skipped writing a .munki recipe since Adobe Output Module is unlikely to be upda
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.foigus.download.AdobeOutputModuleCC2017</string>
+	<string>com.github.nielshojen.download.AdobeOutputModuleCC2017</string>
 	<key>Process</key>
 	<array>
 		<dict>
