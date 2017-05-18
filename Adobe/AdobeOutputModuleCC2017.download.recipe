@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads Adobe Output Module for Bridge CC. Version was chosen because that's the date of most of the component files in the download. No code signature check since the package is unsigned.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.download.AdobeOutputModule</string>
+	<string>com.github.nielshojen.download.AdobeOutputModuleCC2017</string>
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
