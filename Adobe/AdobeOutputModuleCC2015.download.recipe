@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads Adobe Output Module for Bridge CC 2015.</string>
 	<key>Identifier</key>
-	<string>com.github.foigus.download.AdobeOutputModuleCC2015</string>
+	<string>com.github.nielshojen.download.AdobeOutputModuleCC2015</string>
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
