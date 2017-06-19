@@ -31,7 +31,7 @@
                 <key>locale_id</key>
                 <string>%LOCALE_ID%</string>
                 <key>product</key>
-                <string>PowerPoint</string>
+                <string>SkypeForBusiness</string>
                 <key>version</key>
                 <string>%VERSION%</string>
             </dict>
