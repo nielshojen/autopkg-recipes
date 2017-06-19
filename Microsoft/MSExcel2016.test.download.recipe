@@ -72,9 +72,9 @@
                 <key>purge_destination</key>
                 <string>TRUE</string>
                 <key>destination_path</key>
-                <string>%NAME%-%version%</string>
+                <string>%RECIPE_CACHE_DIR%/unpack/%NAME%-%version%</string>
                 <key>flat_pkg_path</key>
-                <string>downloads/%NAME%-%version%.pkg</string>
+                <string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%.pkg</string>
                 <key>skip_payload</key>
                 <string>TRUE</string>
             </dict>
