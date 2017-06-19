@@ -81,15 +81,17 @@
         </dict>
         <dict>
             <key>Processor</key>
-            <string>PkgPayloadUnpacker</string>
+            <string>FlatPkgUnpacker</string>
             <key>Arguments</key>
             <dict>
                 <key>purge_destination</key>
                 <string>TRUE</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack/app</string>
-                <key>pkg_payload_path</key>
+                <key>flat_pkg_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack/Microsoft_Excel.pkg</string>
+                <key>skip_payload</key>
+                <string>TRUE</string>
             </dict>
         </dict>
     </array>
