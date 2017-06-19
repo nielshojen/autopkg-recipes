@@ -87,7 +87,7 @@
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/app</string>
                 <key>pkg_payload_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/Microsoft_PowerPoint.pkg/Payload</string>
+                <string>%RECIPE_CACHE_DIR%/unpack/SkypeForBusiness.pkg/Payload</string>
             </dict>
         </dict>
     </array>
