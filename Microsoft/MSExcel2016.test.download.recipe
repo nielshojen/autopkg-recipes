@@ -73,10 +73,8 @@
                 <string>TRUE</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack</string>
-                <key>flat_pkg_path</key>
+                <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%.pkg</string>
-                <key>skip_payload</key>
-                <string>TRUE</string>
             </dict>
         </dict>
     </array>
