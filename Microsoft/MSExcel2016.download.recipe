@@ -73,11 +73,11 @@ the latest full update for the given CHANNEL.
                 <key>purge_destination</key>
                 <string>True</string>
                 <key>destination_path</key>
-                <string></string>
+                <string>%NAME%-%version%</string>
                 <key>flat_pkg_path</key>
-                <string></string>
+                <string>%NAME%-%version%.pkg</string>
                 <key>skip_payload</key>
-                <string></string>
+                <string>True</string>
             </dict>
         </dict>
         <dict>
