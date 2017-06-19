@@ -75,6 +75,19 @@
                 <string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%.pkg</string>
             </dict>
         </dict>
+        <dict>
+            <key>Processor</key>
+            <string>PkgPayloadUnpacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>purge_destination</key>
+                <string>TRUE</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/unpack/app</string>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/unpack/Microsoft_Excel.pkg/Payload</string>
+            </dict>
+        </dict>
     </array>
 </dict>
 </plist>
