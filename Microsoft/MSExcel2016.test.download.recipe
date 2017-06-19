@@ -66,7 +66,7 @@
         </dict>
         <dict>
             <key>Processor</key>
-            <string>FlatPkgUnpacker</string>
+            <string>PkgPayloadUnpacker</string>
             <key>Arguments</key>
             <dict>
                 <key>purge_destination</key>
@@ -75,8 +75,6 @@
                 <string>%RECIPE_CACHE_DIR%/unpack</string>
                 <key>flat_pkg_path</key>
                 <string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%.pkg</string>
-                <key>skip_payload</key>
-                <string>FALSE</string>
             </dict>
         </dict>
     </array>
