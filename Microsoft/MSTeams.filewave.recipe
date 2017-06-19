@@ -5,20 +5,20 @@
 	<key>Description</key>
 	<string>Downloads latest Skype disk image and import to Filewave.</string>
 	<key>Identifier</key>
-	<string>com.github.peshay.filewave.Skype</string>
+	<string>com.github.nielshojen.filewave.MSTeams</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>Skype</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.peshay.filewave.Skype</string>
+		<string>com.github.nielshojen.filewave.MSTeams</string>
 		<key>fw_destination_root</key>
 		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.download.Skype</string>
+	<string>com.github.nielshojen.download.MSTeams</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -39,7 +39,7 @@
 					<string>0775</string>
 				</dict>
 				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%</string>
 			</dict>
 			<key>Processor</key>
 			<string>PkgRootCreator</string>
@@ -65,7 +65,7 @@
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% - %version%</string>
+				<string>%NAME% %version%</string>
 				<key>fw_import_source</key>
 				<string>%pkgroot%/Applications/%app_name%</string>
 			</dict>
