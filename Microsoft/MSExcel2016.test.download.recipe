@@ -89,7 +89,7 @@
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack/app</string>
                 <key>pkg_payload_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/%NAME%.pkg</string>
+                <string>%RECIPE_CACHE_DIR%/unpack/Microsoft_Excel.pkg</string>
             </dict>
         </dict>
     </array>
