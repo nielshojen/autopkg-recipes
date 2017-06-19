@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest Skype disk image and import to Filewave.</string>
+	<string>Downloads latest MS Teams disk image and import to Filewave.</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.MSTeams</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Skype</string>
+		<string>Microsoft Teams</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.filewave.MSTeams</string>
 		<key>fw_destination_root</key>
