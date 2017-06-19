@@ -74,7 +74,7 @@
                 <key>destination_path</key>
                 <string>%NAME%-%version%</string>
                 <key>flat_pkg_path</key>
-                <string>%NAME%-%version%.pkg</string>
+                <string>downloads/%NAME%-%version%.pkg</string>
                 <key>skip_payload</key>
                 <string>TRUE</string>
             </dict>
