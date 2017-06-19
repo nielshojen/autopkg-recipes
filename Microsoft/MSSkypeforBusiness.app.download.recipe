@@ -85,7 +85,7 @@
                 <key>purge_destination</key>
                 <string>TRUE</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/Skype for Business.app</string>
+                <string>%RECIPE_CACHE_DIR%/app/Skype for Business.app</string>
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack/SkypeForBusiness.pkg/Payload</string>
             </dict>
