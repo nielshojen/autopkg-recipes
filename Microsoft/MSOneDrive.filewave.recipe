@@ -19,17 +19,6 @@
 	<string>com.github.apettinen.download.MSOneDrive</string>
 	<key>Process</key>
 	<array>
-        <dict>
-            <key>Processor</key>
-            <string>PkgExtractor</string>
-            <key>Arguments</key>
-            <dict>
-                <key>extract_root</key>
-                <string>%RECIPE_CACHE_DIR%/unpack</string>
-                <key>pkg_path</key>
-                <string>%RECIPE_CACHE_DIR%/downloads/%NAME%.pkg</string>
-            </dict>
-        </dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -38,7 +27,7 @@
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% %version%</string>
+				<string>%NAME%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/downloads/OneDrive.pkg</string>
 			</dict>
