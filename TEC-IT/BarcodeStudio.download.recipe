@@ -89,6 +89,24 @@
                 		<string>%RECIPE_CACHE_DIR%/app</string>
 			</dict>
             	</dict>
+		<dict>
+            		<key>Processor</key>
+            		<string>FileFinder</string>
+            		<key>Arguments</key>
+            		<dict>
+                		<key>pattern</key>
+                		<string>%RECIPE_CACHE_DIR%/app/Applications/*.app</string>
+			</dict>
+            	</dict>
+		<dict>
+            		<key>Processor</key>
+            		<string>Versioner</string>
+            		<key>Arguments</key>
+            		<dict>
+                		<key>pkg_payload_path</key>
+                		<string>%found_filename%/Content/Info.plist</string>
+			</dict>
+            	</dict>
 	</array>
 </dict>
 </plist>
