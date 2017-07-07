@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Barcode Studio</string>
+		<string>BarCode-Studio-MacOSX</string>
 		<key>DOWNLOAD_URL</key>
 		<string>https://www.tec-it.com/download/Unix/Mac-OS/BarCode-Studio-MacOSX.zip</string>
 	</dict>
@@ -28,6 +28,10 @@
 		</dict>
 		<dict>
 			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
 			<string>Unarchiver</string>
 			<key>Arguments</key>
 			<dict>
@@ -41,10 +45,17 @@
 				<string>zip</string>
 			</dict>
 		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>EndOfCheckPhase</string>
-		</dict>
+            	<key>Processor</key>
+            	<string>FlatPkgUnpacker</string>
+            	<key>Arguments</key>
+            	<dict>
+                	<key>purge_destination</key>
+                	<string>TRUE</string>
+                	<key>destination_path</key>
+                	<string>%RECIPE_CACHE_DIR%/app</string>
+                	<key>flat_pkg_path</key>
+                	<string>%RECIPE_CACHE_DIR%/unpack/%NAME%.pkg</string>
+            	</dict>
 	</array>
 </dict>
 </plist>
