@@ -65,7 +65,7 @@
                 		<string>%RECIPE_CACHE_DIR%/app</string>
                 		<key>flat_pkg_path</key>
                 		<string>%RECIPE_CACHE_DIR%/unpack/%NAME%.pkg</string>
-			<dict>
+			</dict>
             	</dict>
 	</array>
 </dict>
