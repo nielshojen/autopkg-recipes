@@ -104,7 +104,7 @@
             		<key>Arguments</key>
             		<dict>
                 		<key>input_plist_path</key>
-                		<string>%found_filename%/Content/Info.plist</string>
+                		<string>%found_filename%/Contents/Info.plist</string>
 			</dict>
             	</dict>
 	</array>
