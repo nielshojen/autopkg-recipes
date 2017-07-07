@@ -33,16 +33,10 @@
 			<dict>
 				<key>archive_path</key>
 				<string>downloads/BarCode-Studio-MacOSX.zip</string>
-			</dict>
-			<dict>
 				<key>purge_destination</key>
 				<string>true</string>
-			</dict>
-			<dict>
 				<key>destination_path</key>
 				<string>unpack</string>
-			</dict>
-			<dict>
 				<key>archive_format</key>
 				<string>zip</string>
 			</dict>
