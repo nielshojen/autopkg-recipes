@@ -52,7 +52,7 @@
             		<dict>
                 		<key>pattern</key>
                 		<string>%RECIPE_CACHE_DIR%/unpack/*.pkg</string>
-			<dict>
+			</dict>
             	</dict>
 		<dict>
             		<key>Processor</key>
