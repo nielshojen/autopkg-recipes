@@ -67,6 +67,19 @@
                 		<string>%found_filename%</string>
 			</dict>
             	</dict>
+		<dict>
+            		<key>Processor</key>
+            		<string>PkgExtractor</string>
+            		<key>Arguments</key>
+            		<dict>
+                		<key>purge_destination</key>
+                		<string>TRUE</string>
+                		<key>extract_root</key>
+                		<string>%RECIPE_CACHE_DIR%/root</string>
+                		<key>pkg_path</key>
+                		<string>%found_filename%</string>
+			</dict>
+            	</dict>
 	</array>
 </dict>
 </plist>
