@@ -56,13 +56,37 @@
             	</dict>
 		<dict>
             		<key>Processor</key>
-            		<string>PkgExtractor</string>
+            		<string>FlatPkgUnpacker</string>
             		<key>Arguments</key>
             		<dict>
-                		<key>pkg_path</key>
+                		<key>flat_pkg_path</key>
                 		<string>%found_filename%</string>
-				<key>extract_root</key>
-				<string>%RECIPE_CACHE_DIR%/root</string>
+				<key>purge_destination</key>
+				<string>true</string>
+				<key>destination_path</key>
+                		<string>RECIPE_CACHE_DIR%/flat</string>
+			</dict>
+            	</dict>
+		<dict>
+            		<key>Processor</key>
+            		<string>FileFinder</string>
+            		<key>Arguments</key>
+            		<dict>
+                		<key>pattern</key>
+                		<string>%RECIPE_CACHE_DIR%/flat/*.pkg</string>
+			</dict>
+            	</dict>
+		<dict>
+            		<key>Processor</key>
+            		<string>PkgPayloadUnpacker</string>
+            		<key>Arguments</key>
+            		<dict>
+                		<key>pkg_payload_path</key>
+                		<string>%found_filename%/Payload</string>
+				<key>purge_destination</key>
+				<string>true</string>
+				<key>destination_path</key>
+                		<string>RECIPE_CACHE_DIR%/app</string>
 			</dict>
             	</dict>
 	</array>
