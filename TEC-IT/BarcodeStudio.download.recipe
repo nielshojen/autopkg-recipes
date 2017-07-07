@@ -1,99 +1,35 @@
-https://www.tec-it.com/download/Unix/Mac-OS/BarCode-Studio-MacOSX.zip
-
-
-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>Description</key>
-    <string></string>
-    <key>Identifier</key>
-    <string>com.github.nielshojen.download.BarcodeStudio</string>
-    <key>MinimumVersion</key>
-    <string>0.4.2</string>
-    <key>Input</key>
-    <dict>
-        <key>CHANNEL</key>
-        <string>Production</string>
-        <key>LOCALE_ID</key>
-        <string>1033</string>
-        <key>NAME</key>
-        <string>MSExcel2016</string>
-        <key>VERSION</key>
-        <string>latest</string>
-    </dict>
-    <key>Process</key>
-    <array>
-        <dict>
-            <key>Processor</key>
-            <string>MSOffice2016URLandUpdateInfoProvider</string>
-            <key>Arguments</key>
-            <dict>
-                <key>channel</key>
-                <string>%CHANNEL%</string>
-                <key>locale_id</key>
-                <string>%LOCALE_ID%</string>
-                <key>product</key>
-                <string>Excel</string>
-                <key>version</key>
-                <string>%VERSION%</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>URLDownloader</string>
-            <key>Arguments</key>
-            <dict>
-                <key>filename</key>
-                <string>%NAME%-%version%.pkg</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>CodeSignatureVerifier</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_path</key>
-                <string>%pathname%</string>
-                <key>expected_authority_names</key>
-                <array>
-                    <string>Developer ID Installer: Microsoft Corporation (UBF8T346G9)</string>
-                    <string>Developer ID Certification Authority</string>
-                    <string>Apple Root CA</string>
-                </array>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>FlatPkgUnpacker</string>
-            <key>Arguments</key>
-            <dict>
-                <key>purge_destination</key>
-                <string>TRUE</string>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack</string>
-                <key>flat_pkg_path</key>
-                <string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%.pkg</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>PkgPayloadUnpacker</string>
-            <key>Arguments</key>
-            <dict>
-                <key>purge_destination</key>
-                <string>TRUE</string>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/app</string>
-                <key>pkg_payload_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/Microsoft_Excel.pkg/Payload</string>
-            </dict>
-        </dict>
-    </array>
+	<key>Description</key>
+	<string>Downloads the latest version of Barcode Studio form TEC-IT.</string>
+	<key>Identifier</key>
+	<string>com.github.nielshojen.download.BarcodeStudio</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Barcode Studio</string>
+		<key>DOWNLOAD_URL</key>
+		<string>https://www.tec-it.com/download/Unix/Mac-OS/BarCode-Studio-MacOSX.zip</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.5.2</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%DOWNLOAD_URL%</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
 </dict>
 </plist>
