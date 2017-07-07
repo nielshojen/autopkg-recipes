@@ -16,8 +16,6 @@
 	<string>BarCode Studio</string>
         <key>fw_app_bundle_id</key>
         <string>com.github.nielshojen.filewave.BarcodeStudio</string>
-	<key>fw_destination_root</key>
-	<string>/</string>
 	</dict>
 	<key>Process</key>
 	<array>
@@ -31,11 +29,28 @@
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_destination_root</key>
-				<string>%fw_destination_root%</string>
+				<string>/Applications</string>
 				<key>fw_fileset_name</key>
 				<string>%NAME% %version%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/app/Applications</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
+			<key>Arguments</key>
+			<dict>
+				<key>fw_app_bundle_id</key>
+				<string>%fw_app_bundle_id%</string>
+				<key>fw_app_version</key>
+				<string>%version%</string>
+				<key>fw_destination_root</key>
+				<string>/Library</string>
+				<key>fw_fileset_name</key>
+				<string>%NAME% %version%</string>
+				<key>fw_import_source</key>
+				<string>%RECIPE_CACHE_DIR%/app/Library</string>
 			</dict>
 		</dict>
 	</array>
