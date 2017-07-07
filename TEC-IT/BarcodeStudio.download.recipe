@@ -103,7 +103,7 @@
             		<string>Versioner</string>
             		<key>Arguments</key>
             		<dict>
-                		<key>pkg_payload_path</key>
+                		<key>input_plist_path</key>
                 		<string>%found_filename%/Content/Info.plist</string>
 			</dict>
             	</dict>
