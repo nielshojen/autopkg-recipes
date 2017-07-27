@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Sonos</string>
+		<string>Sonos Controller</string>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.nielshojen.download.Sonos</string>
@@ -59,7 +59,7 @@
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% - %version%</string>
+				<string>%NAME% %version%</string>
 				<key>fw_import_source</key>
 				<string>%pkgroot%/Applications/%app_name%</string>
 			</dict>
