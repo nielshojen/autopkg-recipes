@@ -62,6 +62,8 @@
 				<string>%NAME% %version%</string>
 				<key>fw_import_source</key>
 				<string>%pkgroot%/Applications/%app_name%</string>
+				<key>fw_destination_root</key>
+				<string>/Applications/%app_name%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
