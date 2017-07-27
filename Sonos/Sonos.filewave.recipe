@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Sonos Controller</string>
+		<string>Sonos</string>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.nielshojen.download.Sonos</string>
