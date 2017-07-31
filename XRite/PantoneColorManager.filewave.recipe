@@ -20,6 +20,15 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>pattern</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/*.zip</string>
+			</dict>
+			<key>Processor</key>
+			<string>FileFinder</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
 				<key>archive_path</key>
 				<string>%RECIPE_CACHE_DIR%/downloads/%app_name%</string>
 				<key>purge_destination</key>
