@@ -39,6 +39,19 @@
 			<key>Processor</key>
 			<string>FileFinder</string>
 		</dict>
+        	<dict>
+            		<key>Processor</key>
+            		<string>FlatPkgUnpacker</string>
+			<key>Arguments</key>
+			<dict>
+				<key>purge_destination</key>
+				<string>TRUE</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack</string>
+				<key>flat_pkg_path</key>
+				<string>%found_file%</string>
+			</dict>
+        	</dict>
 	</array>
 </dict>
 </plist>
