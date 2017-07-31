@@ -34,20 +34,6 @@
                 <string>%pathname%</string>
             </dict>
         </dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>pkgdirs</key>
-				<dict>
-					<key>Applications</key>
-					<string>0775</string>
-				</dict>
-				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-			</dict>
-			<key>Processor</key>
-			<string>PkgRootCreator</string>
-		</dict>
         <dict>
             <key>Processor</key>
             <string>PkgPayloadUnpacker</string>
@@ -56,7 +42,7 @@
                 <key>purge_destination</key>
                 <string>TRUE</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%</string>
+                <string>%RECIPE_CACHE_DIR%/Applications</string>
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack/Microsoft_PowerPoint.pkg/Payload</string>
             </dict>
