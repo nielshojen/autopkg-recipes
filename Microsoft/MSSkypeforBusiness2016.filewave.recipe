@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Description</key>
+	<string>Downloads latest version of Skype for Business 2016 and imports into FileWave.</string>
+	<key>Identifier</key>
+	<string>com.github.nielshojen.filewave.MSSkypeforBusiness</string>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.download.MSPowerPoint2016</string>
+	<key>Input</key>
+	<dict>
+    <key>NAME</key>
+    <string>Skype for Business</string>
+    <key>fw_app_bundle_id</key>
+    <string>com.github.nielshojen.filewave.MSSkypeforBusiness</string>
+    <key>fw_destination_root</key>
+    <string>/Applications/%NAME%.app</string>
+	</dict>
+	<key>Process</key>
+	<array>
+        <dict>
+            <key>Processor</key>
+            <string>FlatPkgUnpacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>purge_destination</key>
+                <string>TRUE</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/unpack</string>
+                <key>flat_pkg_path</key>
+                <string>%pathname%</string>
+            </dict>
+        </dict>
+	</array>
+</dict>
+</plist>
