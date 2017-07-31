@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current release version of Capture One and builds a package.</string>
+	<string>Downloads the current release version of Capture One and builds a fileset.</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.CaptureOne</string>
 	<key>Input</key>
