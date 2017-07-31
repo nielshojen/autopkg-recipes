@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the current release version of Sonos and builds a package.</string>
+	<key>Identifier</key>
+	<string>com.github.nielshojen.filewave.PantoneColorManager</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>PantoneColorManager</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.nielshojen.download.PantoneColorManager</string>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>Process</key>
+	<array>
+
+	</array>
+</dict>
+</plist>
