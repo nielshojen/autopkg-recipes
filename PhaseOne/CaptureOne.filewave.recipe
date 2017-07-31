@@ -9,9 +9,9 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>PantoneColorManager</string>
+		<string>CaptureOne</string>
 		<key>fw_app_bundle_id</key>
-        	<string>com.github.nielshojen.filewave.PantoneColorManager</string>
+        	<string>com.github.nielshojen.filewave.CaptureOne</string>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.foigus.download.CaptureOne</string>
@@ -27,6 +27,31 @@
 				<key>dmg_path</key>
 				<string>%pathname%</string>
 			</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Applications</key>
+					<string>0775</string>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%pkgroot%/Applications/%app_name%</string>
+				<key>source_path</key>
+				<string>%pathname%/%app_name%</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
 		</dict>
 	</array>
 </dict>
