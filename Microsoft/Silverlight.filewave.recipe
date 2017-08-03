@@ -21,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg</string>
+				<string>%RECIPE_CACHE_DIR%/flatpkg</string>
 				<key>flat_pkg_path</key>
 				<string>%pathname%/Silverlight.pkg</string>
 				<key>purge_destination</key>
