@@ -60,7 +60,7 @@
                 		<key>source</key>
                 		<string>RECIPE_CACHE_DIR%/flatpkg/silverlight_plugin.pkg/Scripts/preinstall</string>
 				<key>target</key>
-                		<string>RECIPE_CACHE_DIR%/payload/tmp</string>
+                		<string>RECIPE_CACHE_DIR%/payload/tmp/preinstall</string>
             		</dict>
         	</dict>
         	<dict>
@@ -71,7 +71,7 @@
                 		<key>source</key>
                 		<string>RECIPE_CACHE_DIR%/flatpkg/silverlight_plugin.pkg/Scripts/postinstall</string>
 				<key>target</key>
-                		<string>RECIPE_CACHE_DIR%/payload/tmp</string>
+                		<string>RECIPE_CACHE_DIR%/payload/tmp/postinstall</string>
             		</dict>
         	</dict>
 	</array>
