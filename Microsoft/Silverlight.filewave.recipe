@@ -62,7 +62,161 @@
 				<key>file_mode</key>
                 		<string>0744</string>
 				<key>file_content</key>
-                		<string>Hello World</string>
+                		<string>#!/bin/sh
+
+# Script to delete old versions
+# Copyright (c) 2006 Microsoft Corporation
+
+######################################################
+# Remove WPFe
+rm -rf /Library/Internet\ Plug-Ins/WPFe.plugin/
+rm -rf /Library/Internet\ Plug-Ins/Silverlight.plugin/
+
+rm -rf /Library/Receipts/Silverlight.pkg/
+rm -rf /Library/Receipts/Silverlight_W2.pkg/
+rm -rf /Library/Receipts/Silverlight_W2_MIX.pkg/</string>
+            		</dict>
+        	</dict>
+        	<dict>
+            		<key>Processor</key>
+            		<string>FileCreator</string>
+            		<key>Arguments</key>
+            		<dict>
+                		<key>file_path</key>
+                		<string>%RECIPE_CACHE_DIR%/payload/tmp/postinstall.sh</string>
+				<key>file_mode</key>
+                		<string>0744</string>
+				<key>file_content</key>
+                		<string>#!/bin/sh
+
+# Postflight shell script.
+# Copyright (c) 2006 Microsoft Corporation
+
+########################################################
+# Remove WPFe
+
+echo "Postflight: Hello"
+
+pushd /Library/Internet\ Plug-Ins/
+rm -rf WPFe.plugin/
+chown -R root:admin Silverlight.plugin/
+chmod -R 775 Silverlight.plugin/
+popd
+
+pushd /Library/Application\ Support/Microsoft/
+chown -R root:admin Silverlight/
+chmod -R 775 Silverlight/
+popd
+
+pushd /Library/Application\ Support/
+chown root:admin Microsoft/
+chmod 775 Microsoft/
+popd
+
+echo "Postflight: After Chmods"
+echo "Postflight:  PackagePath ="  $PACKAGE_PATH
+# System.Windows.dll code uses '[DllImport("agcore")]', which assumes that agcore will be in the same
+# folder. Fake it with a symlink. The alternative would be to change the DllImport but then we would
+# need to make System.Windows.dll different between Mac and Windows.
+pushd /Library/Internet\ Plug-Ins/Silverlight.plugin/Contents/MacOS/CoreCLR.bundle/Contents/MacOS/i386
+rm -f agcore
+ln -s ../../../../agcore
+popd
+
+if [ -d /Library/Internet\ Plug-Ins/Silverlight.plugin/Contents/MacOS/CoreCLR.bundle/Contents/MacOS/x86_64 ]
+then	
+	pushd /Library/Internet\ Plug-Ins/Silverlight.plugin/Contents/MacOS/CoreCLR.bundle/Contents/MacOS/x86_64
+	rm -f agcore
+	ln -s ../../../../agcore
+	popd
+fi
+	
+echo "Postflight: After Symlink"
+	
+#if a playready state exists and the version of the ibx is the beta version, remove the entire playready folder. the folder will get recreated by the 
+#call to the bootstrap
+pushd "/tmp/SilverlightInstallTools"
+if [[ -e "/Library/Application Support/Microsoft/PlayReady/mspr.hds" && -e "/Library/Application Support/Microsoft/PlayReady/Cache/" ]]
+then
+    _PRIBX=`ls -r "/Library/Application Support/Microsoft/PlayReady/Cache" | grep .key | awk '{if (NR==1) {print $1}}' `
+    if [ "$_PRIBX" ]
+    then
+        _PRIBXVER=`./PlayReadyGetIBXVersionTool "/Library/Application Support/Microsoft/PlayReady/Cache/"$_PRIBX`
+        if [ "$_PRIBXVER" = "mspribx.1.5.8" ]
+        then
+            rm -rf /Library/Application\ Support/Microsoft/PlayReady/
+        else
+            exit 1
+        fi
+    fi
+fi
+popd
+echo "Postflight: After Playready"
+
+pushd "/tmp/SilverlightInstallTools"
+_SPRDResult=`./rundylib "/Library/Internet Plug-Ins/Silverlight.plugin/Contents/MacOS/SLMSPRBootstrap.dylib"`
+popd
+if [ ! -z "$_SPRDResult" ]
+then
+    exit 1
+fi
+
+# coregen managed assemblies in the background.  This will continue executing even if postflight
+# completes earlier.
+pushd "/Library/Internet Plug-Ins/Silverlight.plugin/Contents/MacOS"
+(./coregen_i386 "CoreCLR.bundle/Contents/MacOS/i386/mscorlib.dll";
+./coregen_i386 "CoreCLR.bundle/Contents/MacOS/i386/System.dll";
+./coregen_i386 "CoreCLR.bundle/Contents/MacOS/i386/System.Core.dll";
+./coregen_i386 "CoreCLR.bundle/Contents/MacOS/i386/System.Net.dll";
+./coregen_i386 "CoreCLR.bundle/Contents/MacOS/i386/System.Xml.dll";
+./coregen_i386 "CoreCLR.bundle/Contents/MacOS/i386/System.Runtime.Serialization.dll";
+./coregen_i386 "CoreCLR.bundle/Contents/MacOS/i386/System.ServiceModel.Web.dll";
+./coregen_i386 "CoreCLR.bundle/Contents/MacOS/i386/Microsoft.Xna.Framework.dll";
+./coregen_i386 "CoreCLR.bundle/Contents/MacOS/i386/Microsoft.Xna.Framework.Graphics.dll";
+./coregen_i386 "CoreCLR.bundle/Contents/MacOS/i386/Microsoft.Xna.Framework.Graphics.Shaders.dll";
+./coregen_i386 "CoreCLR.bundle/Contents/MacOS/i386/System.Windows.dll";
+./coregen_i386 "CoreCLR.bundle/Contents/MacOS/i386/System.Windows.Xna.dll";
+./coregen_i386 "CoreCLR.bundle/Contents/MacOS/i386/System.ServiceModel.dll";
+./coregen_i386 "CoreCLR.bundle/Contents/MacOS/i386/System.Windows.RuntimeHost.dll";
+./coregen_i386 "CoreCLR.bundle/Contents/MacOS/i386/System.Windows.Browser.dll";
+rm -rf coregen_i386) &
+# System.Windows.Browser.dll has to be the last DLL on this list
+# See CLRHost_Authenticate in xcp/slr/Shared/Common/sl/clrhost_inc.h for more details
+
+if [ -e "coregen_x86_64" ]
+then
+    (./coregen_x86_64 "CoreCLR.bundle/Contents/MacOS/x86_64/mscorlib.dll";
+    ./coregen_x86_64 "CoreCLR.bundle/Contents/MacOS/x86_64/System.dll";
+    ./coregen_x86_64 "CoreCLR.bundle/Contents/MacOS/x86_64/System.Core.dll";
+    ./coregen_x86_64 "CoreCLR.bundle/Contents/MacOS/x86_64/System.Net.dll";
+    ./coregen_x86_64 "CoreCLR.bundle/Contents/MacOS/x86_64/System.Xml.dll";
+    ./coregen_x86_64 "CoreCLR.bundle/Contents/MacOS/x86_64/System.Runtime.Serialization.dll";
+    ./coregen_x86_64 "CoreCLR.bundle/Contents/MacOS/x86_64/System.ServiceModel.Web.dll";
+    ./coregen_x86_64 "CoreCLR.bundle/Contents/MacOS/x86_64/Microsoft.Xna.Framework.dll";
+    ./coregen_x86_64 "CoreCLR.bundle/Contents/MacOS/x86_64/Microsoft.Xna.Framework.Graphics.dll";
+    ./coregen_x86_64 "CoreCLR.bundle/Contents/MacOS/x86_64/Microsoft.Xna.Framework.Graphics.Shaders.dll";
+    ./coregen_x86_64 "CoreCLR.bundle/Contents/MacOS/x86_64/System.Windows.dll";
+    ./coregen_x86_64 "CoreCLR.bundle/Contents/MacOS/x86_64/System.Windows.Xna.dll";
+    ./coregen_x86_64 "CoreCLR.bundle/Contents/MacOS/x86_64/System.ServiceModel.dll";
+    ./coregen_x86_64 "CoreCLR.bundle/Contents/MacOS/x86_64/System.Windows.RuntimeHost.dll";
+    ./coregen_x86_64 "CoreCLR.bundle/Contents/MacOS/x86_64/System.Windows.Browser.dll";
+    rm -rf coregen_x86_64) &
+    # System.Windows.Browser.dll has to be the last DLL on this list
+    # See CLRHost_Authenticate in xcp/slr/Shared/Common/sl/clrhost_inc.h for more details
+fi
+popd
+echo "Postflight: After coregen"
+
+# Register in MAU
+domain="com.microsoft.autoupdate2"
+defaults_cmd="/usr/bin/sudo -u $USER /usr/bin/defaults"
+if [ -e "/Library/Internet Plug-Ins/Silverlight.plugin/Contents/MacOS/CoreCLR.bundle/Contents/MacOS/x86_64" ]; then
+    $defaults_cmd write $domain Applications -dict-add "/Library/Internet Plug-Ins/Silverlight.plugin" "<dict><key>Application ID</key><string>SLVT64</string><key>LCID</key><integer>1033</integer></dict>"
+else
+    $defaults_cmd write $domain Applications -dict-add "/Library/Internet Plug-Ins/Silverlight.plugin" "<dict><key>Application ID</key><string>SLVT</string><key>LCID</key><integer>1033</integer></dict>"
+fi
+
+ln -sfh "/Library/Internet Plug-Ins/Silverlight.plugin/Contents/Resources/Silverlight Preferences.app" "/Applications/Microsoft Silverlight"</string>
             		</dict>
         	</dict>
 	</array>
