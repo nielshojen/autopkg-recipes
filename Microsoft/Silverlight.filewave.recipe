@@ -52,6 +52,19 @@
                 		<string>%RECIPE_CACHE_DIR%/payload/Library/Internet Plug-Ins/Silverlight.plugin/Contents/Info.plist</string>
             		</dict>
         	</dict>
+        	<dict>
+            		<key>Processor</key>
+            		<string>FileCreator</string>
+            		<key>Arguments</key>
+            		<dict>
+                		<key>file_path</key>
+                		<string>%RECIPE_CACHE_DIR%/payload/tmp/preinstall.sh</string>
+				<key>file_mode</key>
+                		<string>0744</string>
+				<key>file_content</key>
+                		<string>Hello World</string>
+            		</dict>
+        	</dict>
 	</array>
 </dict>
 </plist>
