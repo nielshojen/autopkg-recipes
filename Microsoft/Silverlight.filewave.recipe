@@ -52,17 +52,6 @@
                 		<string>%RECIPE_CACHE_DIR%/payload/Library/Internet Plug-Ins/Silverlight.plugin/Contents/Info.plist</string>
             		</dict>
         	</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>extract_root</key>
-				<string>%RECIPE_CACHE_DIR%/test</string>
-				<key>pkg_path</key>
-				<string>%RECIPE_CACHE_DIR%/flatpkg/silverlight_plugin.pkg</string>
-			</dict>
-			<key>Processor</key>
-			<string>PkgExtractor</string>
-		</dict>
 	</array>
 </dict>
 </plist>
