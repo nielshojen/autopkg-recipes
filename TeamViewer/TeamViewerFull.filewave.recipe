@@ -79,11 +79,13 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>input_plist_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload/root/Applications/TeamViewer.app/Contents/Info.plist</string>
+				<key>pkgdirs</key>
+				<dict/>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/payload/root/Library/Fonts</string>
 			</dict>
 			<key>Processor</key>
-			<string>Versioner</string>
+			<string>PkgRootCreator</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
