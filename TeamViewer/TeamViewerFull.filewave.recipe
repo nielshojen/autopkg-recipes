@@ -69,9 +69,29 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload/root/</string>
+				<string>%RECIPE_CACHE_DIR%/payload/root/Library/Security/SecurityAgentPlugins</string>
 				<key>pkg_payload_path</key>
 				<string>%RECIPE_CACHE_DIR%/unpack/AuthPluginPackage.pkg/Payload</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgPayloadUnpacker</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload/root/Applications/TeamViewer.app/Contents/Info.plist</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload/root/Library/Fonts</string>
+				<key>pkg_payload_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack/FontFull.pkg/Payload</string>
 			</dict>
 			<key>Processor</key>
 			<string>PkgPayloadUnpacker</string>
