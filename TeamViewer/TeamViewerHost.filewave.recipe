@@ -47,7 +47,7 @@
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/payload/root/Applications</string>
 				<key>pkg_payload_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/TeamViewerApp.pkg/Payload</string>
+				<string>%RECIPE_CACHE_DIR%/unpack/TeamViewerHostApp.pkg/Payload</string>
 			</dict>
 			<key>Processor</key>
 			<string>PkgPayloadUnpacker</string>
@@ -91,7 +91,7 @@
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/payload/root/Library/Fonts</string>
 				<key>pkg_payload_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/FontFull.pkg/Payload</string>
+				<string>%RECIPE_CACHE_DIR%/unpack/FontHost.pkg/Payload</string>
 			</dict>
 			<key>Processor</key>
 			<string>PkgPayloadUnpacker</string>
@@ -113,7 +113,7 @@
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/payload/root/tmp/</string>
 				<key>pkg_payload_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/FullRestarterPackage.pkg/Payload</string>
+				<string>%RECIPE_CACHE_DIR%/unpack/HostRestarterPackage.pkg/Payload</string>
 			</dict>
 			<key>Processor</key>
 			<string>PkgPayloadUnpacker</string>
@@ -124,7 +124,7 @@
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/payload/root/Library/</string>
 				<key>pkg_payload_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/LauncherFull.pkg/Payload</string>
+				<string>%RECIPE_CACHE_DIR%/unpack/LauncherHost.pkg/Payload</string>
 			</dict>
 			<key>Processor</key>
 			<string>PkgPayloadUnpacker</string>
