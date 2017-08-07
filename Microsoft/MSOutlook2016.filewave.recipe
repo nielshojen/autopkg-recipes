@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest version of Word 2016 and imports into FileWave.</string>
+	<string>Downloads latest version of Outlook 2016 and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.MSOutlook2016</string>
 	<key>MinimumVersion</key>
