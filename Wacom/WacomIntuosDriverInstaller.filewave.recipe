@@ -80,7 +80,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>pattern</key>
-				<string>RECIPE_CACHE_DIR%/installer/*</string>
+				<string>RECIPE_CACHE_DIR%/installer/Install_*.pkg</string>
 			</dict>
 			<key>Processor</key>
 			<string>FileFinder</string>
