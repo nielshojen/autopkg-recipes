@@ -52,7 +52,8 @@
 			<key>Processor</key>
 			<string>Versioner</string>
 		</dict>
-        <dict>
+
+	<dict>
             <key>Processor</key>
             <string>Copier</string>
             <key>Arguments</key>
