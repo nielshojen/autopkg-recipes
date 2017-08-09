@@ -5,13 +5,13 @@
 	<key>Description</key>
 	<string>Downloads latest Wacom Intuos driver fileset and imports into Filewave</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.WacomIntuosDriver</string>
+	<string>com.github.nielshojen.filewave.WacomIntuosDriverInstaller</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>Wacom Intuos Driver</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.WacomIntuosDriver</string>
+		<string>com.github.nielshojen.filewave.WacomIntuosDriverInstaller</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
