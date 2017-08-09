@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest Wacom Intuos driver disk image and builds a package.</string>
+	<string>Downloads latest Wacom Intuos driver fileset and imports into Filewave</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.WacomIntuosDriver</string>
 	<key>Input</key>
