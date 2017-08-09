@@ -76,6 +76,15 @@
                 <string>TRUE</string>
             </dict>
         </dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pattern</key>
+				<string>RECIPE_CACHE_DIR%/installer/*</string>
+			</dict>
+			<key>Processor</key>
+			<string>FileFinder</string>
+		</dict>
 	</array>
 </dict>
 </plist>
