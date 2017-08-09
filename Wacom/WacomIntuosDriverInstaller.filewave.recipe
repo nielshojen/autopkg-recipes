@@ -60,7 +60,7 @@
                 <key>source_path</key>
                 <string>%pathname%/Install Wacom Tablet.pkg</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/Install_Wacom_Tablet_%version%.pkg</string>
+                <string>%RECIPE_CACHE_DIR%/installer/Install_Wacom_Tablet_%version%.pkg</string>
                 <key>overwrite</key>
                 <string>TRUE</string>
             </dict>
