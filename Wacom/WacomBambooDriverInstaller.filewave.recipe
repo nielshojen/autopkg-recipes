@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Wacom Intuos Driver</string>
+		<string>Wacom Bamboo Driver</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.filewave.WacomBambooDriverInstaller</string>
 	</dict>
