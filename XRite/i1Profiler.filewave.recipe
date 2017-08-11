@@ -72,7 +72,7 @@
                 <key>archive_format</key>
                 <string>tar_gzip</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/payload/Applications/i1Profiler</string>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/payload/TEST2</string>
             </dict>
         </dict>
         <dict>
@@ -86,19 +86,6 @@
                 <string>tar_gzip</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/payload/TEST</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>Unarchiver</string>
-            <key>Arguments</key>
-            <dict>
-                <key>archive_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/XRD_Manager_Component.pkg/Payload</string>
-                <key>archive_format</key>
-                <string>tar_gzip</string>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/payload</string>
             </dict>
         </dict>
         <dict>
@@ -147,18 +134,6 @@
             <dict>
                 <key>input_plist_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/payload/Applications/i1Profiler/i1Profiler.app/Contents/Info.plist</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>MunkiPkginfoMerger</string>
-            <key>Arguments</key>
-            <dict>
-                <key>additional_pkginfo</key>
-                <dict>
-                    <key>version</key>
-                    <string>%version%</string>
-                </dict>
             </dict>
         </dict>
     </array>
