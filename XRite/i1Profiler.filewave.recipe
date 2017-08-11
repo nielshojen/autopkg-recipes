@@ -42,11 +42,24 @@
             <key>Arguments</key>
             <dict>
                 <key>archive_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/comxritehaspdrivers.pkg/Payload</string>
+                <key>archive_format</key>
+                <string>tar_gzip</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/payload/Library</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Unarchiver</string>
+            <key>Arguments</key>
+            <dict>
+                <key>archive_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/i1profiler.pkg/Payload</string>
                 <key>archive_format</key>
                 <string>tar_gzip</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/payload</string>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/payload/Applications</string>
             </dict>
         </dict>
         <dict>
@@ -55,7 +68,7 @@
             <key>Arguments</key>
             <dict>
                 <key>input_plist_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/i1profiler_payload/i1Profiler.app/Contents/Info.plist</string>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/payload/i1Profiler.app/Contents/Info.plist</string>
             </dict>
         </dict>
         <dict>
