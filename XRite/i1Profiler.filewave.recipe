@@ -31,7 +31,7 @@
                 <key>skip_payload</key>
                 <false/>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/pkgroot</string>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg</string>
                 <key>purge_destination</key>
                 <true/>
             </dict>
@@ -42,11 +42,11 @@
             <key>Arguments</key>
             <dict>
                 <key>archive_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/pkgroot/i1profiler.pkg/Payload</string>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/i1profiler.pkg/Payload</string>
                 <key>archive_format</key>
                 <string>tar_gzip</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/i1profiler_payload</string>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/payload</string>
             </dict>
         </dict>
         <dict>
