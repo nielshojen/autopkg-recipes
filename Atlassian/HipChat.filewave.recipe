@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the current release version of HipChat and imports into FileWave.</string>
+    <key>Identifier</key>
+    <string>com.github.nielshojen.filewave.HipChat</string>
+    <key>ParentRecipe</key>
+    <string>com.github.arubdesu.download.HipChat</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>HipChat</string>
+    </dict>
+    <key>Process</key>
+    <array>
+    </array>
+</dict>
+</plist>
