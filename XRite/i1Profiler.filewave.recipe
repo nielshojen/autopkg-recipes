@@ -120,6 +120,19 @@
             <key>Arguments</key>
             <dict>
                 <key>archive_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/i1profilertray.pkg/Payload</string>
+                <key>archive_format</key>
+                <string>tar_gzip</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/payload/Applications/i1Profiler</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Unarchiver</string>
+            <key>Arguments</key>
+            <dict>
+                <key>archive_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/i1profiler.pkg/Payload</string>
                 <key>archive_format</key>
                 <string>tar_gzip</string>
