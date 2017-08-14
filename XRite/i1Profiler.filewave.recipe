@@ -38,93 +38,93 @@
         </dict>
         <dict>
             <key>Processor</key>
-            <string>Unarchiver</string>
+            <string>PkgPayloadUnpacker</string>
             <key>Arguments</key>
             <dict>
-                <key>archive_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/haspComponent.pkg/Payload</string>
-                <key>archive_format</key>
-                <string>tar_gzip</string>
+                <key>purge_destination</key>
+                <string>FALSE</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/payload/Library/Application Supprt/HASP</string>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/haspComponent.pkg/Payload</string>
             </dict>
         </dict>
         <dict>
             <key>Processor</key>
-            <string>Unarchiver</string>
+            <string>PkgPayloadUnpacker</string>
             <key>Arguments</key>
             <dict>
-                <key>archive_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/comxritehaspdrivers.pkg/Payload</string>
-                <key>archive_format</key>
-                <string>tar_gzip</string>
+                <key>purge_destination</key>
+                <string>FALSE</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/payload/Library/LaunchDaemons</string>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/comxritehaspdrivers.pkg/Payload</string>
             </dict>
         </dict>
         <dict>
             <key>Processor</key>
-            <string>Unarchiver</string>
+            <string>PkgPayloadUnpacker</string>
             <key>Arguments</key>
             <dict>
-                <key>archive_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/i1profilertray.pkg/Payload</string>
-                <key>archive_format</key>
-                <string>tar_gzip</string>
+                <key>purge_destination</key>
+                <string>FALSE</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/payload/TEST2</string>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/i1profilertray.pkg/Payload</string>
             </dict>
         </dict>
         <dict>
             <key>Processor</key>
-            <string>Unarchiver</string>
+            <string>PkgPayloadUnpacker</string>
             <key>Arguments</key>
             <dict>
-                <key>archive_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/installhasp.pkg/Payload</string>
-                <key>archive_format</key>
-                <string>tar_gzip</string>
+                <key>purge_destination</key>
+                <string>FALSE</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/payload/TEST</string>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/installhasp.pkg/Payload</string>
             </dict>
         </dict>
         <dict>
             <key>Processor</key>
-            <string>Unarchiver</string>
+            <string>PkgPayloadUnpacker</string>
             <key>Arguments</key>
             <dict>
-                <key>archive_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/XRD_Manager_Component.pkg/Payload</string>
-                <key>archive_format</key>
-                <string>tar_gzip</string>
+                <key>purge_destination</key>
+                <string>FALSE</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/payload</string>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/XRD_Manager_Component.pkg/Payload</string>
             </dict>
         </dict>
         <dict>
             <key>Processor</key>
-            <string>Unarchiver</string>
+            <string>PkgPayloadUnpacker</string>
             <key>Arguments</key>
             <dict>
-                <key>archive_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/userfiles.pkg/Payload</string>
-                <key>archive_format</key>
-                <string>tar_gzip</string>
+                <key>purge_destination</key>
+                <string>FALSE</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/payload/Library/Application Support</string>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/userfiles.pkg/Payload</string>
             </dict>
         </dict>
         <dict>
             <key>Processor</key>
-            <string>Unarchiver</string>
+            <string>PkgPayloadUnpacker</string>
             <key>Arguments</key>
             <dict>
-                <key>archive_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/i1profiler.pkg/Payload</string>
-                <key>archive_format</key>
-                <string>tar_gzip</string>
+                <key>purge_destination</key>
+                <string>FALSE</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/payload/Applications/i1Profiler</string>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/i1profiler.pkg/Payload</string>
             </dict>
         </dict>
         <dict>
