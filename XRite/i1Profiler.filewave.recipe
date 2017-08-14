@@ -44,7 +44,7 @@
                 <key>purge_destination</key>
                 <string>FALSE</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/payload/Library/Application Supprt/HASP</string>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/payload/Library/Application Support/HASP</string>
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/haspComponent.pkg/Payload</string>
             </dict>
