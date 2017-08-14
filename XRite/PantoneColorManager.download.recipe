@@ -3,9 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>
-    Download the current release of Pantone Color Manager
-    </string>
+    <string>Download the current release of Pantone Color Manager</string>
     <key>Identifier</key>
     <string>com.github.nielshojen.download.PantoneColorManager</string>
     <key>Input</key>
