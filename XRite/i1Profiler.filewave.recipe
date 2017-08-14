@@ -84,6 +84,19 @@
                 <string>%RECIPE_CACHE_DIR%/flatpkg/comxritehaspdrivers.pkg/Payload</string>
             </dict>
         </dict>
+        <dict>
+            <key>Processor</key>
+            <string>PkgPayloadUnpacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>purge_destination</key>
+                <string>FALSE</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/root/TEST2</string>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/flatpkg/i1profilertray.pkg/Payload</string>
+            </dict>
+        </dict>
     </array>
 </dict>
 </plist>
