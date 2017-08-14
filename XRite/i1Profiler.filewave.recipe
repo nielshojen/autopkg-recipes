@@ -37,14 +37,21 @@
             </dict>
         </dict>
         <dict>
+            <key>Processor</key>
+            <string>PkgPayloadUnpacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/root</string>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/flatpkg/XRD_Manager_Component.pkg/Payload</string>
+            </dict>
+        </dict>
+	<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>pkgdirs</key>
 				<dict>
-					<key>Library</key>
-					<string>0775</string>
-					<key>Library/Application Support</key>
-					<string>0775</string>
 					<key>Library/Application Support/HASP</key>
 					<string>0775</string>
 					<key>Applications</key>
@@ -108,17 +115,6 @@
                 <string>%RECIPE_CACHE_DIR%/root/tmp</string>
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/flatpkg/installhasp.pkg/Payload</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>PkgPayloadUnpacker</string>
-            <key>Arguments</key>
-            <dict>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/root</string>
-                <key>pkg_payload_path</key>
-                <string>%RECIPE_CACHE_DIR%/flatpkg/XRD_Manager_Component.pkg/Payload</string>
             </dict>
         </dict>
     </array>
