@@ -47,6 +47,10 @@
 					<string>0775</string>
 					<key>Library/Application Support/HASP</key>
 					<string>0775</string>
+					<key>Applications</key>
+					<string>0775</string>
+					<key>Applications/i1Profiler</key>
+					<string>0775</string>
 				</dict>
 				<key>pkgroot</key>
 				<string>%RECIPE_CACHE_DIR%/root</string>
