@@ -64,7 +64,7 @@
 				<string>0775</string>
 			</dict>
 			<key>pkgroot</key>
-			<string>%RECIPE_CACHE_DIR%/root</string>
+			<string>%RECIPE_CACHE_DIR%/temp</string>
 		</dict>
 		<key>Processor</key>
 		<string>PkgRootCreator</string>
