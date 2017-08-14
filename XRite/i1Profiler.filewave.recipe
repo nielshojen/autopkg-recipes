@@ -41,7 +41,9 @@
 			<dict>
 				<key>pkgdirs</key>
 				<dict>
-					<key>Applications/Application Support</key>
+					<key>Library</key>
+					<string>0775</string>
+					<key>Library/Application Support</key>
 					<string>0775</string>
 				</dict>
 				<key>pkgroot</key>
