@@ -37,6 +37,20 @@
             </dict>
         </dict>
         <dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Applications/Application Support</key>
+					<string>0775</string>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/root</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+        <dict>
             <key>Processor</key>
             <string>PkgPayloadUnpacker</string>
             <key>Arguments</key>
@@ -44,7 +58,7 @@
                 <key>purge_destination</key>
                 <string>FALSE</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/payload/Library/Application Support/HASP</string>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/root/Library/Application Support/HASP</string>
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/haspComponent.pkg/Payload</string>
             </dict>
@@ -57,7 +71,7 @@
                 <key>purge_destination</key>
                 <string>FALSE</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/payload/Library/LaunchDaemons</string>
+                <string>%RECIPE_CACHE_DIR%/root/Library/LaunchDaemons</string>
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/comxritehaspdrivers.pkg/Payload</string>
             </dict>
@@ -70,7 +84,7 @@
                 <key>purge_destination</key>
                 <string>FALSE</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/payload/TEST2</string>
+                <string>%RECIPE_CACHE_DIR%/root/TEST2</string>
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/i1profilertray.pkg/Payload</string>
             </dict>
@@ -83,7 +97,7 @@
                 <key>purge_destination</key>
                 <string>FALSE</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/payload/TEST</string>
+                <string>%RECIPE_CACHE_DIR%/root/TEST</string>
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/installhasp.pkg/Payload</string>
             </dict>
@@ -96,7 +110,7 @@
                 <key>purge_destination</key>
                 <string>FALSE</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/payload</string>
+                <string>%RECIPE_CACHE_DIR%/root</string>
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/XRD_Manager_Component.pkg/Payload</string>
             </dict>
@@ -109,7 +123,7 @@
                 <key>purge_destination</key>
                 <string>FALSE</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/payload/Library/Application Support</string>
+                <string>%RECIPE_CACHE_DIR%/root/Library/Application Support</string>
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/userfiles.pkg/Payload</string>
             </dict>
@@ -122,7 +136,7 @@
                 <key>purge_destination</key>
                 <string>FALSE</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/payload/Applications/i1Profiler</string>
+                <string>%RECIPE_CACHE_DIR%/root/Applications/i1Profiler</string>
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/i1profiler.pkg/Payload</string>
             </dict>
@@ -133,7 +147,7 @@
             <key>Arguments</key>
             <dict>
                 <key>input_plist_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/payload/Applications/i1Profiler/i1Profiler.app/Contents/Info.plist</string>
+                <string>%RECIPE_CACHE_DIR%/root/Applications/i1Profiler/i1Profiler.app/Contents/Info.plist</string>
             </dict>
         </dict>
     </array>
