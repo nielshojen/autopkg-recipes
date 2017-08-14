@@ -35,6 +35,13 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Applications</key>
+					<string>0775</string>
+					<key>Library</key>
+					<string>0775</string>
+				</dict>
 				<key>pkgroot</key>
 				<string>%RECIPE_CACHE_DIR%/root</string>
 			</dict>
@@ -102,7 +109,7 @@
 				<key>purge_destination</key>
 				<string>TRUE</string>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/root/TEST</string>
+				<string>%RECIPE_CACHE_DIR%/root/Library</string>
 				<key>pkg_payload_path</key>
 				<string>%found_filename%/Payload</string>
 			</dict>
