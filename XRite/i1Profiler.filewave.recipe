@@ -58,7 +58,19 @@
 			<key>Processor</key>
 			<string>PkgRootCreator</string>
 		</dict>
-
+        <dict>
+            <key>Processor</key>
+            <string>PkgPayloadUnpacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>purge_destination</key>
+                <string>FALSE</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/root/Library/Application Support/HASP</string>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/flatpkg/haspComponent.pkg/Payload</string>
+            </dict>
+        </dict>
     </array>
 </dict>
 </plist>
