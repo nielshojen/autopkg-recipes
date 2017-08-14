@@ -31,7 +31,7 @@
                 <key>skip_payload</key>
                 <false/>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg</string>
+                <string>%RECIPE_CACHE_DIR%/flatpkg</string>
                 <key>purge_destination</key>
                 <true/>
             </dict>
@@ -64,7 +64,7 @@
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/root/Library/Application Support/HASP</string>
                 <key>pkg_payload_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/haspComponent.pkg/Payload</string>
+                <string>%RECIPE_CACHE_DIR%/flatpkg/haspComponent.pkg/Payload</string>
             </dict>
         </dict>
         <dict>
@@ -77,7 +77,7 @@
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/root/Library/LaunchDaemons</string>
                 <key>pkg_payload_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/comxritehaspdrivers.pkg/Payload</string>
+                <string>%RECIPE_CACHE_DIR%/flatpkg/comxritehaspdrivers.pkg/Payload</string>
             </dict>
         </dict>
         <dict>
@@ -90,7 +90,7 @@
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/root/TEST2</string>
                 <key>pkg_payload_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/i1profilertray.pkg/Payload</string>
+                <string>%RECIPE_CACHE_DIR%/flatpkg/i1profilertray.pkg/Payload</string>
             </dict>
         </dict>
         <dict>
@@ -103,7 +103,7 @@
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/root/TEST</string>
                 <key>pkg_payload_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/installhasp.pkg/Payload</string>
+                <string>%RECIPE_CACHE_DIR%/flatpkg/installhasp.pkg/Payload</string>
             </dict>
         </dict>
         <dict>
@@ -116,7 +116,7 @@
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/root</string>
                 <key>pkg_payload_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/XRD_Manager_Component.pkg/Payload</string>
+                <string>%RECIPE_CACHE_DIR%/flatpkg/XRD_Manager_Component.pkg/Payload</string>
             </dict>
         </dict>
         <dict>
@@ -129,7 +129,7 @@
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/root/Library/Application Support</string>
                 <key>pkg_payload_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/userfiles.pkg/Payload</string>
+                <string>%RECIPE_CACHE_DIR%/flatpkg/userfiles.pkg/Payload</string>
             </dict>
         </dict>
         <dict>
@@ -142,7 +142,7 @@
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/root/Applications/i1Profiler</string>
                 <key>pkg_payload_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/flatpkg/i1profiler.pkg/Payload</string>
+                <string>%RECIPE_CACHE_DIR%/flatpkg/i1profiler.pkg/Payload</string>
             </dict>
         </dict>
         <dict>
