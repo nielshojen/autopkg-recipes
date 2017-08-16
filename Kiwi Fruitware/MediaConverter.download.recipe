@@ -10,23 +10,16 @@
 	<dict>
 		<key>NAME</key>
 		<string>jEdit</string>
+		<key>SOURCEFORGE_PROJECT_NAME</key>
+		<string>media-converter</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>Process</key>
 	<array>
-    <dict>
-			<key>Arguments</key>
-			<dict>
-				<key>url</key>
-				<string>https://sourceforge.net/projects/media-converter/files/latest/download?source=files</string>
-			</dict>
-			<key>Processor</key>
-			<string>URLDownloader</string>
-		</dict>
 		<dict>
 			<key>Processor</key>
-			<string>EndOfCheckPhase</string>
+			<string>SourceForgeBestReleaseURLProvider</string>
 		</dict>
 	</array>
 </dict>
