@@ -53,7 +53,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/unpack/%NAME%.localized/%NAME%.app</string>
+				<string>%RECIPE_CACHE_DIR%/unpack/%NAME%.localized/%NAME%.app</string>
 				<key>fw_destination_root</key>
 				<string>/Applications/%NAME%</string>
 			</dict>
