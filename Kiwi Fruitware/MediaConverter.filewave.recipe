@@ -27,7 +27,7 @@
 				<key>purge_destination</key>
 				<true/>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME</string>
+				<string>%RECIPE_CACHE_DIR%/unpack</string>
 			</dict>
 			<key>Processor</key>
 			<string>Unarchiver</string>
@@ -36,7 +36,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app/Contents/Info.plist</string>
+				<string>%RECIPE_CACHE_DIR%/unpack/%NAME%/%NAME%.app/Contents/Info.plist</string>
 				<key>plist_version_key</key>
 				<string>CFBundleVersion</string>
 			</dict>
@@ -53,7 +53,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/%NAME%/%NAME.app</string>
+				<string>%pkgroot%/unpack/%NAME%/%NAME.app</string>
 				<key>fw_destination_root</key>
 				<string>/Applications/%NAME%</string>
 			</dict>
