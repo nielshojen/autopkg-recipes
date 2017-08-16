@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>jEdit</string>
+		<string>Media Converter</string>
 		<key>SOURCEFORGE_PROJECT_NAME</key>
 		<string>media-converter</string>
 		<key>SOURCEFORGE_FILE_PATTERN</key>
