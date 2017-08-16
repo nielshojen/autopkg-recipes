@@ -149,24 +149,24 @@
         </dict>
         <dict>
             <key>Processor</key>
-            <string>Copier</string>
+            <string>FileMover</string>
             <key>Arguments</key>
             <dict>
-                <key>source_path</key>
-                <string>%RECIPE_CACHE_DIR%/temp2/i1ProfilerTray.app</string>
-                <key>destination_path</key>
+                <key>source</key>
+                <string>%RECIPE_CACHE_DIR%/source/i1ProfilerTray.app</string>
+                <key>target</key>
                 <string>%RECIPE_CACHE_DIR%/root/Applications/i1Profiler/i1ProfilerTray.app</string>
             </dict>
         </dict>
         <dict>
             <key>Processor</key>
-            <string>Copier</string>
+            <string>FileMover</string>
             <key>Arguments</key>
             <dict>
-                <key>source_path</key>
-                <string>%RECIPE_CACHE_DIR%/temp/Library/*</string>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/root/Library/</string>
+                <key>source</key>
+                <string>%RECIPE_CACHE_DIR%/temp/*</string>
+                <key>target</key>
+                <string>%RECIPE_CACHE_DIR%/root/</string>
             </dict>
         </dict>
         <dict>
