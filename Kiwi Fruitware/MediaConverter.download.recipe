@@ -12,6 +12,10 @@
 		<string>jEdit</string>
 		<key>SOURCEFORGE_PROJECT_NAME</key>
 		<string>media-converter</string>
+		<key>SOURCEFORGE_FILE_PATTERN</key>
+		<string>media-converter-[0-9\.]*\-64bit.zip</string>
+		<key>SOURCEFORGE_PROJECT_ID</key>
+		<string>1674525</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
@@ -19,7 +23,7 @@
 	<array>
 		<dict>
 			<key>Processor</key>
-			<string>SourceForgeBestReleaseURLProvider</string>
+			<string>SourceForgeURLProvider</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
