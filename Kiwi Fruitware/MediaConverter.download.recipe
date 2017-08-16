@@ -13,8 +13,7 @@
 		<key>SOURCEFORGE_PROJECT_NAME</key>
 		<string>media-converter</string>
 		<key>SOURCEFORGE_FILE_PATTERN</key>
-		<string>media-converter-[0-9\.]*\-64bit\.zip</string>
-
+		<string>media-converter-[0-9\.]*\-64bit.zip</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
