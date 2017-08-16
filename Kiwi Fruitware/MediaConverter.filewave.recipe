@@ -32,6 +32,23 @@
 			<key>Processor</key>
 			<string>Unarchiver</string>
 		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>fw_app_bundle_id</key>
+				<string>%bundleid%</string>
+				<key>fw_app_version</key>
+				<string>%version%</string>
+				<key>fw_fileset_name</key>
+				<string>%NAME% %version%</string>
+				<key>fw_import_source</key>
+				<string>%pkgroot%/%NAME%/%NAME.app</string>
+				<key>fw_destination_root</key>
+				<string>/Applications/%NAME%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
+		</dict>
 	</array>
 </dict>
 </plist>
