@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current release version of Sonos and builds a package.</string>
+	<string>Downloads the current release version of PANTONE Color Manager and imports into filewave</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.PantoneColorManager</string>
 	<key>Input</key>
@@ -25,7 +25,7 @@
 				<key>archive_path</key>
 				<string>%pathname%</string>
 				<key>purge_destination</key>
-				<string>true</string>
+				<true/>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/pkg</string>
 			</dict>
@@ -61,7 +61,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>purge_destination</key>
-				<string>TRUE</string>
+				<true/>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/unpack</string>
 				<key>flat_pkg_path</key>
@@ -83,7 +83,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>purge_destination</key>
-				<string>FALSE</string>
+				<false/>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/root</string>
 				<key>pkg_payload_path</key>
@@ -105,7 +105,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>purge_destination</key>
-				<string>FALSE</string>
+				<false/>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/root/Applications</string>
 				<key>pkg_payload_path</key>
