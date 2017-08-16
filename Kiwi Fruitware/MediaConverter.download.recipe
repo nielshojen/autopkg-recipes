@@ -10,6 +10,8 @@
 	<dict>
 		<key>NAME</key>
 		<string>Media Converter</string>
+		<key>SOURCEFORGE_PROJECT_NAME</key>
+		<string>media-converter</string>
 		<key>SOURCEFORGE_PROJECT_ID</key>
 		<string>506830</string>
 		<key>SOURCEFORGE_FILE_PATTERN</key>
