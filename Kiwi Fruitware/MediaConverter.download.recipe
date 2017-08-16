@@ -28,6 +28,10 @@
 		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
+			<Arguments>
+			<dict>
+				<string>filename</string>
+				<key>%NAME%.zip</key>
 		</dict>
 		<dict>
 			<key>Processor</key>
