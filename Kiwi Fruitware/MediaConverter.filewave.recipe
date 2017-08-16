@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the current release version Media Converter and imports into filewave</string>
+	<key>Identifier</key>
+	<string>com.github.nielshojen.filewave.MediaConverter</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Media Converter</string>
+		<key>fw_app_bundle_id</key>
+        	<string>com.github.nielshojen.filewave.MediaConverter</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.nielshojen.download.MediaConverter</string>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>archive_path</key>
+				<string>%pathname%</string>
+				<key>purge_destination</key>
+				<true/>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/app</string>
+			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
+	</array>
+</dict>
+</plist>
