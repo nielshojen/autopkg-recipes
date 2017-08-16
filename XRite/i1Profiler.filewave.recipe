@@ -166,7 +166,7 @@
                 <key>source_path</key>
                 <string>%RECIPE_CACHE_DIR%/temp/Library/*</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/root/Library/</string>
+                <string>%RECIPE_CACHE_DIR%/root/Library/*</string>
             </dict>
         </dict>
         <dict>
