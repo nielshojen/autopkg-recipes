@@ -153,9 +153,9 @@
             <key>Arguments</key>
             <dict>
                 <key>source_path</key>
-                <string>%RECIPE_CACHE_DIR%/temp2/*</string>
+                <string>%RECIPE_CACHE_DIR%/temp2/i1ProfilerTray.app</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/root/Applications/i1Profiler</string>
+                <string>%RECIPE_CACHE_DIR%/root/Applications/i1Profiler/i1ProfilerTray.app</string>
             </dict>
         </dict>
         <dict>
