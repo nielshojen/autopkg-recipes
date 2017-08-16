@@ -21,6 +21,14 @@
 			<key>Processor</key>
 			<string>SourceForgeBestReleaseURLProvider</string>
 		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
 	</array>
 </dict>
 </plist>
