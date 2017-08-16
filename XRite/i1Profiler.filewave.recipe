@@ -153,7 +153,7 @@
             <key>Arguments</key>
             <dict>
                 <key>purge_destination</key>
-                <string>FALSE</string>
+                <false/>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/root/Applications/i1Profiler</string>
                 <key>pkg_payload_path</key>
