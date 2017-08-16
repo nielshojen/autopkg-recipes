@@ -19,19 +19,19 @@
     <string>com.github.mosen.download.i1Profiler</string>
     <key>Process</key>
     <array>
+	<dict>
+		<key>Arguments</key>
 		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>archive_path</key>
-				<string>%pathname%</string>
-				<key>purge_destination</key>
-				<string>true</string>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkg</string>
-			</dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
+			<key>archive_path</key>
+			<string>%pathname%</string>
+			<key>purge_destination</key>
+			<string>true</string>
+			<key>destination_path</key>
+			<string>%RECIPE_CACHE_DIR%/pkg</string>
 		</dict>
+		<key>Processor</key>
+		<string>Unarchiver</string>
+	</dict>
         <dict>
             <key>Processor</key>
             <string>FlatPkgUnpacker</string>
@@ -47,6 +47,20 @@
                 <true/>
             </dict>
         </dict>
+	<dict>
+		<key>Arguments</key>
+		<dict>
+			<key>pkgdirs</key>
+			<dict>
+				<key>Applications</key>
+				<string>0775</string>
+			</dict>
+			<key>pkgroot</key>
+			<string>%RECIPE_CACHE_DIR%/root</string>
+		</dict>
+		<key>Processor</key>
+		<string>PkgRootCreator</string>
+	</dict>
 	<dict>
             <key>Processor</key>
             <string>PkgPayloadUnpacker</string>
