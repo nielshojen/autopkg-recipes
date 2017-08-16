@@ -32,7 +32,21 @@
 			<key>Processor</key>
 			<string>Unarchiver</string>
 		</dict>
-
+        <dict>
+            <key>Processor</key>
+            <string>FlatPkgUnpacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>flat_pkg_path</key>
+                <string>%RECIPE_CACHE_DIR%/pkg/%NAME%.pkg</string>
+                <key>skip_payload</key>
+                <false/>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/flatpkg</string>
+                <key>purge_destination</key>
+                <true/>
+            </dict>
+        </dict>
     </array>
 </dict>
 </plist>
