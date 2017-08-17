@@ -62,6 +62,7 @@
     			<key>decompressor</key>
     			<string>%RECIPE_CACHE_DIR%/payload/Library/Internet Plug-Ins</string>
     		</dict>
+	</dict>
 	<dict>
 		<key>Arguments</key>
 		<dict>
