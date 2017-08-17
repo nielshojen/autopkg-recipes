@@ -17,7 +17,6 @@
     <string>com.github.autopkg.download.Spotify</string>
     <key>Process</key>
     <array>
-        <dict>
     </array>
 </dict>
 </plist>
