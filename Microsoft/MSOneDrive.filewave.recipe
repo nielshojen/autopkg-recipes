@@ -19,7 +19,19 @@
 	<string>com.github.apettinen.download.MSOneDrive</string>
 	<key>Process</key>
 	<array>
-
+		<dict>
+			<key>Processor</key>
+			<string>FlatPkgUnpacker</string>
+			<key>Arguments</key>
+			<dict>
+				<key>purge_destination</key>
+				<string>TRUE</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack</string>
+				<key>flat_pkg_path</key>
+				<string>%pathname%</string>
+			</dict>
+		</dict>
 	</array>
 </dict>
 </plist>
