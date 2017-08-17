@@ -58,9 +58,9 @@
     		<key>Arguments</key>
     		<dict>
     			<key>lzma_file</key>
-    			<string>%RECIPE_CACHE_DIR%/payload/Library/Internet Plug-Ins/Flash Player.plugin.lzma</string>
+    			<string>%RECIPE_CACHE_DIR%/payload/a</string>
     			<key>decompressor</key>
-    			<string>/usr/local/bin/xz</string>
+    			<string>%RECIPE_CACHE_DIR%/unpack/AdobeFlashPlayerComponent.pkg/Scripts/finalize</string>
     		</dict>
 	</dict>
 	<dict>
