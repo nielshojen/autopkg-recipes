@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the most recent version of DaVinci Resolve Studio 12 and imports into FileWave.</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.munki.davinciresolvestudio12</string>
+    <string>com.github.nielshojen.filewave.davinciresolvestudio12</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
