@@ -52,6 +52,16 @@
 		<key>Processor</key>
 		<string>PkgPayloadUnpacker</string>
 	</dict>
+    	<dict>
+    		<key>Processor</key>
+    		<string>LZMADecompress</string>
+    		<key>Arguments</key>
+    		<dict>
+    			<key>lzma_file</key>
+    			<string>%RECIPE_CACHE_DIR%/payload/Library/Internet Plug-Ins/Flash Player.plugin.lzma</string>
+    			<key>decompressor</key>
+    			<string>%RECIPE_CACHE_DIR%/payload/Library/Internet Plug-Ins</string>
+    		</dict>
 	<dict>
 		<key>Arguments</key>
 		<dict>
