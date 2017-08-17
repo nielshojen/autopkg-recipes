@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>DaVinci Resolve Studio 12</string>
+        <string>DaVinci Resolve Studio</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.9</string>
@@ -50,7 +50,7 @@
                 <string>%RECIPE_CACHE_DIR%/distpkg</string>
             </dict>
         </dict>
-				<dict>
+	<dict>
             <key>Processor</key>
             <string>PkgPayloadUnpacker</string>
             <key>Arguments</key>
@@ -58,7 +58,29 @@
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/distpkg/Manifest.pkg/Payload</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/pkg_payload</string>
+                <string>%RECIPE_CACHE_DIR%/payload</string>
+            </dict>
+        </dict>
+	<dict>
+            <key>Processor</key>
+            <string>PkgPayloadUnpacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/distpkg/ManifestPanels.pkg/Payload</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/payload_test</string>
+            </dict>
+        </dict>
+	<dict>
+            <key>Processor</key>
+            <string>FileMover</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source</key>
+                <string>%%RECIPE_CACHE_DIR%/payload/Applications/DaVinci Resolve/DaVinci Resolve.app</string>
+                <key>target</key>
+                <string>%RECIPE_CACHE_DIR%/payload/Applications/DaVinci Resolve/DaVinci Resolve Studio.app</string>
             </dict>
         </dict>
         <dict>
@@ -67,7 +89,7 @@
             <key>Arguments</key>
             <dict>
                 <key>info_path</key>
-                <string>%RECIPE_CACHE_DIR%/pkg_payload/Applications/DaVinci Resolve/DaVinci Resolve Studio.app</string>
+                <string>%RECIPE_CACHE_DIR%/payload/Applications/DaVinci Resolve/DaVinci Resolve Studio.app</string>
             </dict>
         </dict>
     </array>
