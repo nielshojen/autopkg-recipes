@@ -69,6 +69,15 @@
 			</dict>
   	</dict>
 		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pattern</key>
+				<string>%RECIPE_CACHE_DIR%/unpack/pantone*.pkg</string>
+			</dict>
+			<key>Processor</key>
+			<string>FileFinder</string>
+		</dict>
+		<dict>
 			<key>Processor</key>
 			<string>PkgPayloadUnpacker</string>
 			<key>Arguments</key>
