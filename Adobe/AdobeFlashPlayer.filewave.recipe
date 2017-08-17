@@ -58,7 +58,7 @@
     		<key>Arguments</key>
     		<dict>
     			<key>lzma_file</key>
-    			<string>%RECIPE_CACHE_DIR%/payload/a</string>
+    			<string>%RECIPE_CACHE_DIR%/payload/</string>
     			<key>decompressor</key>
     			<string>%RECIPE_CACHE_DIR%/unpack/AdobeFlashPlayerComponent.pkg/Scripts/finalize</string>
     		</dict>
