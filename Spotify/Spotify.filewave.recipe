@@ -63,6 +63,50 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>Processor</key>
+			<string>ModeChanger</string>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/%NAME%.app/Contents/MacOS/SpotifyWebHelper</string>
+				<key>mode</key>
+				<string>+x</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>ModeChanger</string>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/%NAME%.app/Contents/MacOS/sp_relauncher</string>
+				<key>mode</key>
+				<string>+x</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>ModeChanger</string>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/%NAME%.app/Contents/FrameWorks/Spotify Helper.app/Contents/MacOS/Spotify Helper</string>
+				<key>mode</key>
+				<string>+x</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>ModeChanger</string>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/%NAME%.app/Contents/FrameWorks/Chromium Embedded Framework.framework/Chromium Embedded Framework</string>
+				<key>mode</key>
+				<string>+x</string>
+			</dict>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>fw_app_bundle_id</key>
