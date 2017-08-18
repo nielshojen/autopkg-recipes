@@ -21,7 +21,7 @@
         <key>REG_CITY</key>
         <string>Brande</string>
         <key>REG_STATE</key>
-        <string></string>
+        <string>None</string>
         <key>REG_COUNTRY</key>
         <string>Denmark</string>
     </dict>
