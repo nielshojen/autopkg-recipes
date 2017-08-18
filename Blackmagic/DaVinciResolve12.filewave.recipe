@@ -88,7 +88,8 @@
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/payload</string>
             </dict>
-        <dict>
+        </dict>
+	<dict>
         	<key>Processor</key>
         	<string>PathDeleter</string>
 		<key>Arguments</key>
@@ -99,7 +100,6 @@
         	    </array>
         	</dict>
 	</dict>
-        </dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
