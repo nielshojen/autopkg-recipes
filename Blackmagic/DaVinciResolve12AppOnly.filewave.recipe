@@ -62,6 +62,7 @@
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/payload</string>
             </dict>
+	</dict>
         <dict>
         	<key>Processor</key>
         	<string>PathDeleter</string>
@@ -69,12 +70,12 @@
 		<dict>
        		    <key>path_list</key>
         	    <array>
-        	        <string>%RECIPE_CACHE_DIR%/payload</string>
-        	        <string>%RECIPE_CACHE_DIR%/distpkg</string>
-			<string>%RECIPE_CACHE_DIR%/unzip</string>
+        	        <string>%RECIPE_CACHE_DIR%/payload/Library</string>
+        	        <string>%RECIPE_CACHE_DIR%/payload/Applications/DaVinci Resolve/DaVinci Resolve Manual.pdf</string>
+        	        <string>%RECIPE_CACHE_DIR%/payload/Applications/DaVinci Resolve/Documents</string>
+			<string>%RECIPE_CACHE_DIR%/payload/Applications/DaVinci Resolve/Uninstall Resolve.app</string>
         	    </array>
         	</dict>
-	</dict>
 	</dict>
 		<dict>
 			<key>Arguments</key>
