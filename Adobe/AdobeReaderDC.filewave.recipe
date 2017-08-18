@@ -39,6 +39,8 @@
 				<string>0775</string>
 				<key>Library</key>
 				<string>0775</string>
+				<key>Library/Application Support</key>
+				<string>0775</string>
 				<key>Library/Internet Plug-Ins</key>
 				<string>0775</string>
 			</dict>
@@ -68,6 +70,19 @@
 				<string>%RECIPE_CACHE_DIR%/payload/Library/Internet Plug-Ins</string>
 				<key>pkg_payload_path</key>
 				<string>%RECIPE_CACHE_DIR%/unpack/browser.pkg/Payload</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>PkgPayloadUnpacker</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload/Library/Application Support</string>
+				<key>pkg_payload_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack/support.pkg/Payload</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
