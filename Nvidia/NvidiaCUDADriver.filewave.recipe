@@ -39,6 +39,12 @@
 				<string>0775</string>
 				<key>Library/Frameworks</key>
 				<string>0775</string>
+				<key>System</key>
+				<string>0775</string>
+				<key>System/Library</key>
+				<string>0775</string>
+				<key>System/Library/Extensions</key>
+				<string>0775</string>
 			</dict>
 			<key>pkgroot</key>
 			<string>%RECIPE_CACHE_DIR%/payload</string>
