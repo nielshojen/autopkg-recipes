@@ -5,13 +5,13 @@
 	<key>Description</key>
 	<string>Downloads latest Wacom Intuos driver fileset and imports into Filewave</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.googlevoiceandvideo</string>
+	<string>com.github.nielshojen.filewave.GoogleVoiceAndVideo</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>Google Voice And Video</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.googlevoiceandvideo</string>
+		<string>com.github.nielshojen.filewave.GoogleVoiceAndVideo</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
