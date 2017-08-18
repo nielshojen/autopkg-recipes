@@ -98,15 +98,6 @@
                 <string>%RECIPE_CACHE_DIR%/payload/Applications/DaVinci Resolve/DaVinci Resolve Studio.app/</string>
             </dict>
         </dict>
-        <dict>
-            <key>Processor</key>
-            <string>PlistReader</string>
-            <key>Arguments</key>
-            <dict>
-                <key>info_path</key>
-                <string>%RECIPE_CACHE_DIR%/payload/Applications/DaVinci Resolve/DaVinci Resolve Studio.app</string>
-            </dict>
-        </dict>
     </array>
 </dict>
 </plist>
