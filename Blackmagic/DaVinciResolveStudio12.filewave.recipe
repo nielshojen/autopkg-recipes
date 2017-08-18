@@ -66,6 +66,8 @@
             <string>PkgPayloadUnpacker</string>
             <key>Arguments</key>
             <dict>
+	    	<key>purge_destination</key>
+		<false/>
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/distpkg/ManifestPanels.pkg/Payload</string>
                 <key>destination_path</key>
@@ -77,6 +79,8 @@
             <string>PkgPayloadUnpacker</string>
             <key>Arguments</key>
             <dict>
+	    	<key>purge_destination</key>
+		<false/>
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/distpkg/ManifestPostgres.pkg/Payload</string>
                 <key>destination_path</key>
