@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>DaVinci Resolve Shared</string>
 	<key>fw_app_bundle_id</key>
-	<string>%fw_app_bundle_id%</string>
+	<string>com.github.nielshojen.filewave.davinciresolvestudio12shared</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.9</string>
