@@ -10,20 +10,6 @@
     <dict>
         <key>NAME</key>
         <string>DaVinci Resolve</string>
-        <key>REG_FIRSTNAME</key>
-        <string>Diller</string>
-        <key>REG_LASTNAME</key>
-        <string>Daller</string>
-        <key>REG_EMAIL</key>
-        <string>d@d.com</string>
-        <key>REG_PHONE</key>
-        <string>99420000</string>
-        <key>REG_CITY</key>
-        <string>Chicago</string>
-        <key>REG_STATE</key>
-        <string>Illinois</string>
-        <key>REG_COUNTRY</key>
-        <string>us</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.9</string>
