@@ -39,11 +39,19 @@
 				<string>0775</string>
 				<key>Library/Frameworks</key>
 				<string>0775</string>
+				<key>Library/LaunchAgents</key>
+				<string>0775</string>
+				<key>Library/LaunchDaemons</key>
+				<string>0775</string>
+				<key>Library/PreferencePanes</key>
+				<string>0775</string>
 				<key>System</key>
 				<string>0775</string>
 				<key>System/Library</key>
 				<string>0775</string>
 				<key>System/Library/Extensions</key>
+				<string>0775</string>
+				<key>usr/local/cuda/lib</key>
 				<string>0775</string>
 			</dict>
 			<key>pkgroot</key>
@@ -84,7 +92,7 @@
 		                <key>purge_destination</key>
                 		<false/>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload_agent</string>
+				<string>%RECIPE_CACHE_DIR%/payload/Library/LaunchAgents</string>
 				<key>pkg_payload_path</key>
 				<string>%RECIPE_CACHE_DIR%/unpack/CUDALaunchAgent.pkg/Payload</string>
 			</dict>
@@ -97,7 +105,7 @@
 		                <key>purge_destination</key>
                 		<false/>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload_daemon</string>
+				<string>%RECIPE_CACHE_DIR%/payload/Library/LaunchDaemons</string>
 				<key>pkg_payload_path</key>
 				<string>%RECIPE_CACHE_DIR%/unpack/CUDALaunchDaemon.pkg/Payload</string>
 			</dict>
@@ -110,7 +118,7 @@
 		                <key>purge_destination</key>
                 		<false/>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload_pref</string>
+				<string>%RECIPE_CACHE_DIR%/payload/Library/PreferencePanes</string>
 				<key>pkg_payload_path</key>
 				<string>%RECIPE_CACHE_DIR%/unpack/CUDAPrefPane.pkg/Payload</string>
 			</dict>
@@ -123,7 +131,7 @@
 		                <key>purge_destination</key>
                 		<false/>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload_lib</string>
+				<string>%RECIPE_CACHE_DIR%/payload/usr/local/cuda/lib</string>
 				<key>pkg_payload_path</key>
 				<string>%RECIPE_CACHE_DIR%/unpack/CUDAUnixLib.pkg/Payload</string>
 			</dict>
