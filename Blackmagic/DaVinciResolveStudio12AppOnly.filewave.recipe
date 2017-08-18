@@ -63,7 +63,7 @@
                 <string>%RECIPE_CACHE_DIR%/payload</string>
             </dict>
         </dict>
-			<dict>
+	<dict>
             <key>Processor</key>
             <string>FileMover</string>
             <key>Arguments</key>
@@ -74,6 +74,20 @@
                 <string>%RECIPE_CACHE_DIR%/payload/Applications/DaVinci Resolve/DaVinci Resolve Studio.app/</string>
             </dict>
         </dict>
+        <dict>
+        	<key>Processor</key>
+        	<string>PathDeleter</string>
+		<key>Arguments</key>
+		<dict>
+       		    <key>path_list</key>
+        	    <array>
+        	        <string>%RECIPE_CACHE_DIR%/payload/Library</string>
+        	        <string>%RECIPE_CACHE_DIR%/payload/Applications/DaVinci Resolve/DaVinci Resolve Manual.pdf</string>
+        	        <string>%RECIPE_CACHE_DIR%/payload/Applications/DaVinci Resolve/Documents</string>
+			<string>%RECIPE_CACHE_DIR%/payload/Applications/DaVinci Resolve/Uninstall Resolve.app</string>
+        	    </array>
+        	</dict>
+	</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
