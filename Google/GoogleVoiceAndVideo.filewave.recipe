@@ -33,6 +33,15 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>input_plist_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack/Google_Voice_and_Video.pkg/PackageInfo</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/payload</string>
 				<key>pkg_payload_path</key>
