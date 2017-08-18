@@ -51,6 +51,12 @@
 				<string>0775</string>
 				<key>System/Library/Extensions</key>
 				<string>0775</string>
+				<key>usr/</key>
+				<string>0775</string>
+				<key>usr/local/</key>
+				<string>0775</string>
+				<key>usr/local/cuda</key>
+				<string>0775</string>
 				<key>usr/local/cuda/lib</key>
 				<string>0775</string>
 			</dict>
