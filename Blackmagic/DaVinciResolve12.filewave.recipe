@@ -19,11 +19,11 @@
         <key>REG_PHONE</key>
         <string>99420000</string>
         <key>REG_CITY</key>
-        <string>Brande</string>
+        <string>Chicago</string>
         <key>REG_STATE</key>
-        <string>None</string>
+        <string>Illinois</string>
         <key>REG_COUNTRY</key>
-        <string>Denmark</string>
+        <string>us</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.9</string>
