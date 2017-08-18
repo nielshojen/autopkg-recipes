@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest Adobe Reader TC and imports into FileWave.</string>
 	<key>Identifier</key>
-	<string>com.github.autopkg.filewave.AdobeReader</string>
+	<string>com.github.nielshojen.filewave.AdobeReader</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -14,7 +14,7 @@
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.nielshojen.download.AdobeReaderDC</string>
+	<string>com.github.autopkg.download.AdobeReaderDC</string>
 	<key>Process</key>
 	<array>
 		<dict>
