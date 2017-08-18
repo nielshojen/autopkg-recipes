@@ -14,7 +14,7 @@
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.download.AdobeReaderDC</string>
+	<string>com.github.nielshojen.download.AdobeReaderDC</string>
 	<key>Process</key>
 	<array>
 		<dict>
