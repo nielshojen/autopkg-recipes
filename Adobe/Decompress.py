@@ -9,7 +9,7 @@ __all__ = ["Decompress"]
 class Decompress(Processor):
 	description = "Decompresses an 7z file using Adobe decompress."
 	input_variables = {
-		"decompressor": {
+		"decompress": {
 			"required": True,
 			"description": ("Path to decompress binary."),
 		}
