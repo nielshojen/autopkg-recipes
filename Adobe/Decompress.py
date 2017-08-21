@@ -36,6 +36,6 @@ class Decompress(Processor):
 
 
 if __name__ == '__main__':
-    processor = LZMADecompress()
+    processor = Decompress()
     processor.execute_shell()
     
