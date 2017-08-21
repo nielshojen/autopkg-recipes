@@ -22,6 +22,7 @@ class Decompress(Processor):
 	def decompress_the_files(self):
 		if not path:
 			raise ProcessorError("Decompress path not found: %s" % (path))
+		os.chdir(path)
 		cmd = ["decompress"]
 		proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 		(output, errors) = proc.communicate()
