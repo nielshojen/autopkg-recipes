@@ -1,20 +1,17 @@
 #!/usr/bin/env python
 
 import subprocess
+import os
 from autopkglib import Processor, ProcessorError
 
-__all__ = ["LZMADecompress"]
+__all__ = ["Decompress"]
 
-class LZMADecompress(Processor):
-	description = "Decompresses an LZMA file using Adobe finalize."
+class Decompress(Processor):
+	description = "Decompresses an 7z file using Adobe decompress."
 	input_variables = {
-		"lzma_file": {
-			"required": True,
-			"description": ("Path to .lzma file."),
-		},
 		"decompressor": {
 			"required": True,
-			"description": ("Path to finalize binary."),
+			"description": ("Path to decompress binary."),
 		}
 	}
 	output_variables = {
@@ -22,23 +19,19 @@ class LZMADecompress(Processor):
 
 	__doc__ = description
 
-	def decompress_the_file(self):
-		file = self.env.get("lzma_file")
-		if not file:
-			raise ProcessorError("lzma_file not found: %s" % (file))
-		finalize = self.env.get("decompressor")
-		if not finalize:
-			raise ProcessorError("finalize binary not found: %s" % (finalize))
-		cmd = [finalize,file]
-		proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+	def decompress_the_files(self):
+		if not decompress:
+			raise ProcessorError("decompress binary not found: %s" % (decompress))
+		cmd = ["decompress"]
+		proc = subprocess.Popen(os.chdir(decompress),cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 		(output, errors) = proc.communicate()
 		return errors      
 
 	def main(self):
 		'''Does nothing except decompresses the file'''
-		if "lzma_file" in self.env:
-			self.output("Using input LZMA file %s decompressing with %s" % (self.env["lzma_file"], self.env["decompressor"]))
-		self.env["results"] = self.decompress_the_file()
+		if "file" in self.env:
+			self.output("Decompressing with %s" % (self.env["decompress"]))
+		self.env["results"] = self.decompress_the_files()
 		self.output("Decompressed: %s" % self.env["results"])
 
 
