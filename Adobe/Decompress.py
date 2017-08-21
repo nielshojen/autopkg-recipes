@@ -9,7 +9,7 @@ __all__ = ["Decompress"]
 class Decompress(Processor):
 	description = "Decompresses an 7z file using Adobe decompress."
 	input_variables = {
-		"decompress": {
+		"path": {
 			"required": True,
 			"description": ("Path to decompress binary."),
 		}
@@ -20,10 +20,10 @@ class Decompress(Processor):
 	__doc__ = description
 
 	def decompress_the_files(self):
-		if not decompress:
-			raise ProcessorError("decompress binary not found: %s" % (decompress))
+		if not path:
+			raise ProcessorError("Decompress path not found: %s" % (path))
 		cmd = ["decompress"]
-		proc = subprocess.Popen(os.chdir(decompress),cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+		proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 		(output, errors) = proc.communicate()
 		return errors      
 
