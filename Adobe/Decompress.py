@@ -29,8 +29,8 @@ class Decompress(Processor):
 
 	def main(self):
 		'''Does nothing except decompresses the file'''
-		if "file" in self.env:
-			self.output("Decompressing with %s" % (self.env["decompress"]))
+		if "path" in self.env:
+			self.output("Decompressing with %s" % (self.env["path"]))
 		self.env["results"] = self.decompress_the_files()
 		self.output("Decompressed: %s" % self.env["results"])
 
