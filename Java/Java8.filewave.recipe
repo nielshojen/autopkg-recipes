@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads Java 8, Creates a Fileset and imports into FileWave.</string>
+	<key>Identifier</key>
+	<string>com.github.nielshojen.filewave.OracleJava8</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Java</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.9</string>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.pkg.OracleJava8</string>
+	<key>Process</key>
+	<array>
+
+	</array>
+</dict>
+</plist>
