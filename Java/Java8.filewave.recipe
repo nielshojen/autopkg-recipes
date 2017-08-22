@@ -31,6 +31,24 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Library</key>
+					<string>0775</string>
+					<key>Library/Internet Plug-Ins</key>
+					<string>0775</string>
+					<key>Library/Internet Plug-Ins/JavaAppletPlugin.plugin</key>
+					<string>0775</string>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/payload</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/payload/Library/Internet Plug-Ins/JavaAppletPlugin.plugin</string>
 				<key>pkg_payload_path</key>
