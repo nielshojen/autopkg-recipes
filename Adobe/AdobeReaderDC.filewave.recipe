@@ -67,7 +67,7 @@
 		</dict>
     		<dict>
     			<key>Processor</key>
-    			<string>Decompress</string>
+    			<string>Decompress.py</string>
     			<key>Arguments</key>
     			<dict>
     				<key>path</key>
