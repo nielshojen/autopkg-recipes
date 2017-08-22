@@ -9,7 +9,9 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Java</string>
+		<string>Java 8</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.nielshojen.filewave.OracleJava8</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.9</string>
@@ -137,6 +139,21 @@
 			</dict>
 			<key>Processor</key>
 			<string>PlistReader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>fw_app_bundle_id</key>
+				<string>com.github.autopkg.filewave.OracleJava8</string>
+				<key>fw_app_version</key>
+				<string>%version%</string>
+				<key>fw_fileset_name</key>
+				<string>%NAME% %version%</string>
+				<key>fw_import_source</key>
+				<string>%RECIPE_CACHE_DIR%/payload</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
 		</dict>
 	</array>
 </dict>
