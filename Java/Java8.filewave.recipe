@@ -71,7 +71,7 @@
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/payload/Library/Application\ Support/Oracle/Java/Info.plist</string>
 				<key>source_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/deploy/JavaControlPanel.prefPane</string>
+				<string>%RECIPE_CACHE_DIR%/payload/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Enabled.plist</string>
 			</dict>
 			<key>Processor</key>
 			<string>Symlinker</string>
@@ -93,7 +93,7 @@
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/payload/Library/PreferencePanes/JavaControlPanel.prefPane</string>
 				<key>source_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Enabled.plist</string>
+				<string>%RECIPE_CACHE_DIR%/payload/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/deploy/JavaControlPanel.prefPane</string>
 			</dict>
 			<key>Processor</key>
 			<string>Symlinker</string>
