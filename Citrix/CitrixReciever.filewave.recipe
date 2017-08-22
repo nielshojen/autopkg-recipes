@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>CitrixReceiver</string>
+		<string>Citrix Receiver</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.filewave.CitrixReceiver</string>
 	</dict>
