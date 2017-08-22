@@ -65,15 +65,7 @@
 			<key>Processor</key>
 			<string>PkgPayloadUnpacker</string>
 		</dict>
-    		<dict>
-    			<key>Processor</key>
-    			<string>Decompress</string>
-    			<key>Arguments</key>
-    			<dict>
-    				<key>path</key>
-    				<string>%RECIPE_CACHE_DIR%/payload/Applications/Adobe Acrobat Reader DC.app/Contents</string>
-    			</dict>
-		</dict>
+
 		<dict>
 			<key>Arguments</key>
 			<dict>
