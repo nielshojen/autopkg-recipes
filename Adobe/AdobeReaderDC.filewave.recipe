@@ -70,7 +70,7 @@
     			<string>Decompress</string>
     			<key>Arguments</key>
     			<dict>
-    				<key>path</key>
+    				<key>decompressor</key>
     				<string>%RECIPE_CACHE_DIR%/payload/Applications/Adobe Acrobat Reader DC.app/Contents</string>
     			</dict>
 		</dict>
