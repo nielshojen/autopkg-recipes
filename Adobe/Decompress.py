@@ -21,7 +21,7 @@ class Decompress(Processor):
 
 	def decompress_the_file(self):
 		folder = self.env.get("decompressor")
-		decompress = join(folder + "decompress")
+		decompress = os.path.join(folder,"decompress")
 		if not decompress:
 			raise ProcessorError("Decompress binary not found: %s" % (finalize))
 		cmd = [decompress]
