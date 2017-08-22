@@ -39,6 +39,8 @@
 					<string>0775</string>
 					<key>Library/Internet Plug-Ins/JavaAppletPlugin.plugin</key>
 					<string>0775</string>
+					<key>Library/PreferencePanes</key>
+					<string>0775</string>
 				</dict>
 				<key>pkgroot</key>
 				<string>%RECIPE_CACHE_DIR%/payload</string>
@@ -56,6 +58,17 @@
 			</dict>
 			<key>Processor</key>
 			<string>PkgPayloadUnpacker</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload/Library/PreferencePanes/JavaControlPanel.prefPane</string>
+				<key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/deploy/JavaControlPanel.prefPane</string>
+			</dict>
+			<key>Processor</key>
+			<string>Symlinker</string>
 		</dict>
 	</array>
 </dict>
