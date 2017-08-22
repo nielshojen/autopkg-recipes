@@ -37,6 +37,12 @@
 					<string>0775</string>
 					<key>Library/Internet Plug-Ins</key>
 					<string>0775</string>
+					<key>Library/Application Support</key>
+					<string>0775</string>
+					<key>Library/Application Support/Oracle</key>
+					<string>0775</string>
+					<key>Library/Application Support/Oracle/Java</key>
+					<string>0775</string>
 					<key>Library/Internet Plug-Ins/JavaAppletPlugin.plugin</key>
 					<string>0775</string>
 					<key>Library/PreferencePanes</key>
@@ -63,9 +69,31 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload/Library/PreferencePanes/JavaControlPanel.prefPane</string>
+				<string>%RECIPE_CACHE_DIR%/payload/Library/Application\ Support/Oracle/Java/Info.plist</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/payload/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/deploy/JavaControlPanel.prefPane</string>
+			</dict>
+			<key>Processor</key>
+			<string>Symlinker</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload/Library/Application\ Support/Oracle/Java/javaws</string>
+				<key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/_javaws</string>
+			</dict>
+			<key>Processor</key>
+			<string>Symlinker</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload/Library/PreferencePanes/JavaControlPanel.prefPane</string>
+				<key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Enabled.plist</string>
 			</dict>
 			<key>Processor</key>
 			<string>Symlinker</string>
