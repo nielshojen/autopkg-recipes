@@ -7,11 +7,11 @@ from autopkglib import Processor, ProcessorError
 __all__ = ["Decompress"]
 
 class Decompress(Processor):
-	description = "Decompresses an 7z file using Adobe decompress."
+	description = "Decompresses 7z files in Reader using Adobe decompress."
 	input_variables = {
-		"path": {
+		"decompressor": {
 			"required": True,
-			"description": ("Path to decompress binary."),
+			"description": ("Path to decompress folder."),
 		}
 	}
 	output_variables = {
@@ -19,20 +19,18 @@ class Decompress(Processor):
 
 	__doc__ = description
 
-	def decompress_the_files(self):
-		if not path:
-			raise ProcessorError("Decompress path not found: %s" % (path))
+	def decompress_the_file(self):
+		decompress = str.join(self.env.get("decompressor"),"decompress")
+		if not decompress:
+			raise ProcessorError("Decompress binary not found: %s" % (finalize))
+		cmd = [decompress]
 		os.chdir(path)
-		cmd = ["decompress"]
 		proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 		(output, errors) = proc.communicate()
 		return errors      
 
 	def main(self):
-		'''Does nothing except decompresses the file'''
-		if "path" in self.env:
-			self.output("Decompressing with %s" % (self.env["path"]))
-		self.env["results"] = self.decompress_the_files()
+		self.env["results"] = self.decompress_the_file()
 		self.output("Decompressed: %s" % self.env["results"])
 
 
