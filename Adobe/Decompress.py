@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import subprocess
-import os
+import os.path
 from autopkglib import Processor, ProcessorError
 
 __all__ = ["Decompress"]
