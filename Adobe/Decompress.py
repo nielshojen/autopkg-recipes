@@ -25,7 +25,7 @@ class Decompress(Processor):
 		if not decompress:
 			raise ProcessorError("Decompress binary not found: %s" % (finalize))
 		cmd = [decompress]
-		os.chdir(path)
+		os.chdir(decompressor)
 		proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 		(output, errors) = proc.communicate()
 		return errors      
