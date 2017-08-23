@@ -37,6 +37,8 @@
 			<dict>
 				<key>Applications</key>
 				<string>0775</string>
+				<key>Applications/Wacom</key>
+				<string>0775</string>
 				<key>Library</key>
 				<string>0775</string>
 			</dict>
