@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Description</key>
+    <string>Downloads the latest version of Blackmagic Desktop Video and imports it into filewave</string>
+    <key>Identifier</key>
+    <string>ucom.github.nielshojen.filewave.DesktopVideo</string>
+    <key>Input</key>
+    <dict>
+        <key>name</key>
+        <string>%NAME%</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.0</string>
+    <key>ParentRecipe</key>
+    <string>uk.ac.ox.orchard.download.DesktopVideo</string>
+    <key>Process</key>
+    <array>
+    </array>
+  </dict>
+</plist>
