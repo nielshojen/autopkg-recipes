@@ -85,8 +85,8 @@
     				<string>/</string>
     				<key>fw_fileset_name</key>
     				<string>%NAME% %version%</string>
-    				<key>fw_import_source</key>
-                    <string>%RECIPE_CACHE_DIR%/payload</string>
+					<key>fw_import_source</key>
+					<string>%RECIPE_CACHE_DIR%/payload</string>
                 </dict>
                 <key>Processor</key>
                 <string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
