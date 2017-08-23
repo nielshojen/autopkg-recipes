@@ -3,20 +3,20 @@
 <plist version="1.0">
   <dict>
     <key>Description</key>
-    <string>Downloads the latest version of Blackmagic Desktop Video and imports it into filewave</string>
+    <string>Downloads the latest version of Blackmagic Desktop Video 10 and imports it into filewave</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.filewave.DesktopVideo</string>
+    <string>com.github.nielshojen.filewave.DesktopVideo10</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
         <string>DaVinci Resolve</string>
         <key>fw_app_bundle_id</key>
-				<string>com.github.nielshojen.filewave.DesktopVideo</string>
+	<string>com.github.nielshojen.filewave.DesktopVideo10</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
     <key>ParentRecipe</key>
-    <string>uk.ac.ox.orchard.download.DesktopVideo</string>
+    <string>com.github.nielshojen.download.DesktopVideo10</string>
     <key>Process</key>
     <array>
     </array>
