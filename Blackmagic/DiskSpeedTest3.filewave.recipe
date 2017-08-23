@@ -72,7 +72,7 @@
                     <string>CFBundleVersion</string>
                 </dict>
                 <key>Processor</key>
-    			<string>Versioner</string>
+		<string>Versioner</string>
             </dict>
             <dict>
                 <key>Arguments</key>
