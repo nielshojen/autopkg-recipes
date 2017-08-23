@@ -41,6 +41,12 @@
 					<string>0775</string>
 					<key>Library</key>
 					<string>0775</string>
+					<key>Library/Applications Support</key>
+					<string>0775</string>
+					<key>Library/Application Support/Wacom</key>
+					<string>0775</string>
+					<key>Library/LaunchDaemons</key>
+					<string>0775</string>
 				</dict>
 				<key>pkgroot</key>
 				<string>%RECIPE_CACHE_DIR%/payload</string>
@@ -63,7 +69,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload_test</string>
+				<string>%RECIPE_CACHE_DIR%/payload/Library/LaunchDaemons</string>
 				<key>pkg_payload_path</key>
 				<string>%RECIPE_CACHE_DIR%/unpack/comwacomdrivers.pkg/Payload</string>
 			</dict>
@@ -74,7 +80,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload_component</string>
+				<string>%RECIPE_CACHE_DIR%/payload</string>
 				<key>pkg_payload_path</key>
 				<string>%RECIPE_CACHE_DIR%/unpack/XRD_Manager_Component.pkg/Payload</string>
 			</dict>
@@ -85,7 +91,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload_userfiles</string>
+				<string>%RECIPE_CACHE_DIR%/payload/Library/Application Support/Wacom</string>
 				<key>pkg_payload_path</key>
 				<string>%RECIPE_CACHE_DIR%/unpack/userfiles.pkg/Payload</string>
 			</dict>
