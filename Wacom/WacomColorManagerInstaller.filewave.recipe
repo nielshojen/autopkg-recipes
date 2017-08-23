@@ -36,7 +36,7 @@
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/payload</string>
 				<key>pkg_payload_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/content.pkg/Payload</string>
+				<string>%RECIPE_CACHE_DIR%/unpack/wacomColorManager.pkg/Payload</string>
 			</dict>
 			<key>Processor</key>
 			<string>PkgPayloadUnpacker</string>
@@ -63,24 +63,24 @@
 			<key>Processor</key>
 			<string>PkgRootCreator</string>
 		</dict>
-	<dict>
-            <key>Processor</key>
-            <string>Copier</string>
-            <key>Arguments</key>
-            <dict>
-                <key>source_path</key>
-                <string>%pathname%/Install Wacom Tablet.pkg</string>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/installer/Install_Wacom_Tablet_%version%.pkg</string>
-                <key>overwrite</key>
-                <string>TRUE</string>
-            </dict>
-        </dict>
+		<dict>
+			<key>Processor</key>
+			<string>Copier</string>
+			<key>Arguments</key>
+			<dict>
+				<key>source_path</key>
+				<string>%pathname%/Install Wacom Tablet.pkg</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/installer/WacomColorManager_%version%.pkg</string>
+				<key>overwrite</key>
+				<true/>
+			</dict>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>pattern</key>
-				<string>%RECIPE_CACHE_DIR%/installer/Install_*.pkg</string>
+				<string>%RECIPE_CACHE_DIR%/installer/WacomColorManager_*.pkg</string>
 			</dict>
 			<key>Processor</key>
 			<string>FileFinder</string>
