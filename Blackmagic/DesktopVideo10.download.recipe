@@ -24,6 +24,8 @@
             <dict>
                 <key>product_name_pattern</key>
                 <string>%PRODUCT_NAME_PATTERN%</string>
+                <key>product_name</key>
+                <string>Desktop Video</string>
             </dict>
         </dict>
         <dict>
