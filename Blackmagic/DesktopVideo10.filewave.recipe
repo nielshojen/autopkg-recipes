@@ -97,7 +97,7 @@
 	    	<key>purge_destination</key>
 		<false/>
                 <key>pkg_payload_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/Uncompressed442.pkg/Payload</string>
+                <string>%RECIPE_CACHE_DIR%/unpack/Uncompressed422.pkg/Payload</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/payload</string>
             </dict>
