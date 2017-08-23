@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version of Blackmagic Desktop Video and imports it into filewave</string>
     <key>Identifier</key>
-    <string>ucom.github.nielshojen.filewave.DesktopVideo</string>
+    <string>com.github.nielshojen.filewave.DesktopVideo</string>
     <key>Input</key>
     <dict>
         <key>name</key>
