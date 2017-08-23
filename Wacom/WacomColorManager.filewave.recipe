@@ -41,7 +41,7 @@
 					<string>0775</string>
 					<key>Library</key>
 					<string>0775</string>
-					<key>Library/Applications Support</key>
+					<key>Library/Application Support</key>
 					<string>0775</string>
 					<key>Library/Application Support/Wacom</key>
 					<string>0775</string>
