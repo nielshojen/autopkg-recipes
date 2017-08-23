@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads latest version of Desktop VIdeo</string>
+    <string>Downloads latest version of Desktop Video 10</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.download.desktopvideo</string>
+    <string>com.github.nielshojen.download.desktopvideo10</string>
     <key>Input</key>
     <dict>
         <key>PRODUCT_NAME_PATTERN</key>
