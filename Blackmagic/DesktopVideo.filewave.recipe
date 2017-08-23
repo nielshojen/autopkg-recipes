@@ -8,8 +8,10 @@
     <string>com.github.nielshojen.filewave.DesktopVideo</string>
     <key>Input</key>
     <dict>
-        <key>name</key>
-        <string>%NAME%</string>
+        <key>NAME</key>
+        <string>DaVinci Resolve</string>
+        <key>fw_app_bundle_id</key>
+				<string>com.github.nielshojen.filewave.DesktopVideo</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
@@ -17,17 +19,6 @@
     <string>uk.ac.ox.orchard.download.DesktopVideo</string>
     <key>Process</key>
     <array>
-        <dict>
-            <key>Processor</key>
-            <string>FlatPkgUnpacker</string>
-            <key>Arguments</key>
-            <dict>
-                <key>flat_pkg_path</key>
-                <string>%pathname%/*.pkg</string>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack</string>
-            </dict>
-        </dict>
     </array>
   </dict>
 </plist>
