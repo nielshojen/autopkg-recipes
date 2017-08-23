@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>DaVinci Resolve</string>
+        <string>Desktop Video</string>
         <key>fw_app_bundle_id</key>
 	<string>com.github.nielshojen.filewave.DesktopVideo10</string>
     </dict>
@@ -49,7 +49,7 @@
                 <key>flat_pkg_path</key>
                 <string>%found_filename%/*.pkg</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/distpkg</string>
+                <string>%RECIPE_CACHE_DIR%/unpack</string>
             </dict>
         </dict>
     </array>
