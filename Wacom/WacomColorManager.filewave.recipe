@@ -57,6 +57,8 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>purge_destination</key>
+				<false/>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/payload/Applications/Wacom</string>
 				<key>pkg_payload_path</key>
@@ -68,6 +70,8 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>purge_destination</key>
+				<false/>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/payload/Library/LaunchDaemons</string>
 				<key>pkg_payload_path</key>
@@ -79,6 +83,8 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>purge_destination</key>
+				<false/>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/payload</string>
 				<key>pkg_payload_path</key>
@@ -90,6 +96,8 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>purge_destination</key>
+				<false/>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/payload/Library/Application Support/Wacom</string>
 				<key>pkg_payload_path</key>
