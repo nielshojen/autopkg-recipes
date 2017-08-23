@@ -9,9 +9,9 @@
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_PATTERN</key>
-		<string>(http://cdn.wacom.com/u/productsupport/drivers/mac/professional/WacomColorManager_+[0-9].+[0-9].+[0-9]*-*[0-9].dmg)</string>
+		<string>(http://cdn.wacom.com/u/color/Mac/Wacom Color Manager.pkg)</string>
 		<key>DOWNLOAD_URL</key>
-		<string>https://www.wacom.com/en-us/support/product-support/drivers</string>
+		<string>https://www.wacom.com/en-us/support/product-support/other</string>
 		<key>NAME</key>
 		<string>Wacom Color Manager</string>
 	</dict>
@@ -33,8 +33,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%NAME%.dmg</string>
 				<key>url</key>
 				<string>%match%</string>
 			</dict>
@@ -51,7 +49,7 @@
 					<string>Apple Root CA</string>
 				</array>
 				<key>input_path</key>
-				<string>%pathname%/*.pkg</string>
+				<string>%pathname%</string>
 			</dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
