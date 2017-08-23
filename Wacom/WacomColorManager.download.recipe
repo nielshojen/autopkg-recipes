@@ -40,21 +40,6 @@
 			<string>URLDownloader</string>
 		</dict>
 		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>expected_authority_names</key>
-				<array>
-					<string>Developer ID Installer: X-Riten, Incorporated</string>
-					<string>Developer ID Certification Authority</string>
-					<string>Apple Root CA</string>
-				</array>
-				<key>input_path</key>
-				<string>%pathname%</string>
-			</dict>
-			<key>Processor</key>
-			<string>CodeSignatureVerifier</string>
-		</dict>
-		<dict>
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
 		</dict>
