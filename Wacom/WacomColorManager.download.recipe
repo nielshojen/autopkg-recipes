@@ -44,7 +44,7 @@
 			<dict>
 				<key>expected_authority_names</key>
 				<array>
-					<string>Developer ID Installer: X-Rite Incorporated</string>
+					<string>Developer ID Installer: X-Riten, Incorporated</string>
 					<string>Developer ID Certification Authority</string>
 					<string>Apple Root CA</string>
 				</array>
