@@ -31,8 +31,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>Comment</key>
-				<string>"Workspaces" permissions are Adobe's default</string>
 				<key>pkgdirs</key>
 				<dict>
 					<key>Library</key>
