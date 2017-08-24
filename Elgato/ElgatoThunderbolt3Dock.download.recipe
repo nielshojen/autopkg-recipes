@@ -24,8 +24,6 @@
             <dict>
                 <key>url</key>
                 <string>%DOWNLOAD_URL%</string>
-                <key>filename</key>
-                <string>%NAME%.pkg</string>
                 <key>request_headers</key>
                 <dict>
                         <key>user-agent</key>
