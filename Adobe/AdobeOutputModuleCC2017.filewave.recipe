@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>Adobe Output Module CC2017</string>
 		<key>version</key>
-		<string>2016.5.31</string>
+		<string>2016.8.4</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.filewave.AdobeOutputModuleCC2017</string>
 	</dict>
