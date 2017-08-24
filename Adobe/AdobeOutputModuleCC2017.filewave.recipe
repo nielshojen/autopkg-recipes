@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads latest Adobe Output Module for 2015 and imports into Filewave</string>
+	<key>Identifier</key>
+	<string>com.github.nielshojen.filewave.AdobeOutputModuleCC2017</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Adobe Output Module CC2017</string>
+		<key>version</key>
+		<string>2016.5.31</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.nielshojen.filewave.AdobeOutputModuleCC2017</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.4.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.nielshojen.download.AdobeOutputModuleCC2017</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Library</key>
+					<string>0755</string>
+					<key>Library/Application Support</key>
+					<string>0755</string>
+					<key>Library/Application Support/Adobe</key>
+					<string>0775</string>
+					<key>Library/Application Support/Adobe/Bridge CC 2015 Extensions</key>
+					<string>0775</string>
+					<key>Library/Application Support/Adobe/Bridge CC 2015 Extensions/Workspaces</key>
+					<string>0777</string>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Bridge CC 2015 Extensions/Workspaces/AdobeOutputModule.workspace</string>
+				<key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/AOM_Mac/AdobeOutputModule.workspace</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Bridge CC 2015 Extensions/Adobe Output Module</string>
+				<key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/AOM_Mac/Adobe Output Module</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>fw_app_bundle_id</key>
+				<string>%fw_app_bundle_id%</string>
+				<key>fw_app_version</key>
+				<string>%version%</string>
+				<key>fw_destination_root</key>
+				<string>/</string>
+				<key>fw_fileset_name</key>
+				<string>%NAME% %version%</string>
+				<key>fw_import_source</key>
+				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
