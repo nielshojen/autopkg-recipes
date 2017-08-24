@@ -16,10 +16,64 @@
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.nielshojen.pkg.AdobeOutputModuleCC2015</string>
+	<string>com.github.nielshojen.download.AdobeOutputModuleCC2015</string>
 	<key>Process</key>
 	<array>
-
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>Comment</key>
+				<string>"Workspaces" permissions are Adobe's default</string>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Library</key>
+					<string>0755</string>
+					<key>Library/Application Support</key>
+					<string>0755</string>
+					<key>Library/Application Support/Adobe</key>
+					<string>0775</string>
+					<key>Library/Application Support/Adobe/Bridge CC 2015 Extensions</key>
+					<string>0775</string>
+					<key>Library/Application Support/Adobe/Bridge CC 2015 Extensions/Workspaces</key>
+					<string>0777</string>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Bridge CC 2015 Extensions/Workspaces/AdobeOutputModule.workspace</string>
+				<key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/AOM_Mac/AdobeOutputModule.workspace</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Bridge CC 2015 Extensions/Adobe Output Module</string>
+				<key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/AOM_Mac/Adobe Output Module</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
+		</dict>
 	</array>
 </dict>
 </plist>
