@@ -89,6 +89,19 @@
                 <string>%RECIPE_CACHE_DIR%/payload</string>
             </dict>
         </dict>
+	<dict>
+            <key>Processor</key>
+            <string>Unarchiver</string>
+            <key>Arguments</key>
+            <dict>
+	    	<key>purge_destination</key>
+		<true/>
+                <key>archive_path</key>
+                <string>%RECIPE_CACHE_DIR%/payload/Library/Application Support/Blackmagic Design/DaVinci Resolve/Prereqs/davinci_panels.zip</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/tmp</string>
+            </dict>
+        </dict>
         <dict>
         	<key>Processor</key>
         	<string>PathDeleter</string>
