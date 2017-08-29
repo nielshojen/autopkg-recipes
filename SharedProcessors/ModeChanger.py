@@ -14,6 +14,10 @@ class ModeChanger(Processor):
 			'required': True,
 			'description': 'Name of filename resource',
 		},
+		'recurse': {
+			'required': False,
+			'description': 'chmod(1) recursive mode'
+		},
 		'mode': {
 			'required': True,
 			'description': 'chmod(1) mode string to apply to file. E.g. "o-w"'
@@ -24,9 +28,13 @@ class ModeChanger(Processor):
 
 	def main(self):
 		filename = self.env.get('filename')
+		recurse = self.env.get('recurse')
 		mode = self.env.get('mode')
 
-		retcode = subprocess.call(['/bin/chmod', mode, filename])
+		if recurse:
+			retcode = subprocess.call(['/bin/chmod','-R', mode, filename])
+		else:
+			retcode = subprocess.call(['/bin/chmod', mode, filename])
 		if retcode:
 			raise ProcessorError('Error setting mode (chmod %s) for %s' % (mode, filename))
 
