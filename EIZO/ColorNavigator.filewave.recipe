@@ -5,16 +5,16 @@
 	<key>Description</key>
 	<string>Downloads the current release version of Camtasia and imports a fileset.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.Camtasia</string>
+	<string>com.github.nielshojen.filewave.ColorNavigator</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Camtasia</string>
+		<string>EIZO Color Navigator</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.Camtasia</string>
+		<string>com.github.nielshojen.filewave.ColorNavigator</string>
 	</dict>
 	<key>ParentRecipe</key>
-	<string>com.github.jps3.download.Camtasia</string>
+	<string>com.github.foigus.download.ColorNavigator</string>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>Process</key>
