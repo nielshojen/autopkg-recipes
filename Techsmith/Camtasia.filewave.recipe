@@ -35,11 +35,9 @@
 				<dict>
 					<key>Applications</key>
 					<string>0775</string>
-					<key>System</key>
+					<key>Library</key>
 					<string>0775</string>
-					<key>System/Library</key>
-					<string>0775</string>
-					<key>System/Library/Extensions</key>
+					<key>Library/Extensions</key>
 					<string>0775</string>
 				</dict>
 				<key>pkgroot</key>
@@ -85,7 +83,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%pkgroot%/System/Library/Extensions</string>
+				<string>%pkgroot%/Library/Extensions/TACC.kext</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/tmp/TACC.kext</string>
 			</dict>
