@@ -87,7 +87,7 @@
 				<key>destination_path</key>
 				<string>%pkgroot%/System/Library/Extensions</string>
 				<key>source_path</key>
-				<string>RECIPE_CACHE_DIR%/tmp/TACC.kext</string>
+				<string>%RECIPE_CACHE_DIR%/tmp/TACC.kext</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
