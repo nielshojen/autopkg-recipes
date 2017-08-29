@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the current release version of Camtasia and imports a fileset.</string>
+	<key>Identifier</key>
+	<string>com.github.nielshojen.filewave.Camtasia</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Camtasia</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.nielshojen.filewave.Camtasia</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.jps3.download.Camtasia</string>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>AppDmgVersioner</string>
+			<key>Arguments</key>
+			<dict>
+				<key>dmg_path</key>
+				<string>%pathname%</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Applications</key>
+					<string>0775</string>
+					<key>Library</key>
+					<string>0775</string>
+					<key>Library/Extensions</key>
+					<string>0775</string>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/payload</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+	</array>
+</dict>
+</plist>
