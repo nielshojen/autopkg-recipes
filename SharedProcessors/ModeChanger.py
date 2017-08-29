@@ -31,7 +31,7 @@ class ModeChanger(Processor):
 		recurse = self.env.get('recurse')
 		mode = self.env.get('mode')
 
-		if recurse:
+		if recurse == True:
 			retcode = subprocess.call(['/bin/chmod','-R', mode, filename])
 		else:
 			retcode = subprocess.call(['/bin/chmod', mode, filename])
