@@ -59,6 +59,10 @@
 					<string>0775</string>
 					<key>Library</key>
 					<string>0775</string>
+					<key>Library/Extensis</key>
+					<string>0775</string>
+					<key>Library/Extensis/UTC</key>
+					<string>0775</string>
 				</dict>
 				<key>pkgroot</key>
 				<string>%RECIPE_CACHE_DIR%/payload</string>
