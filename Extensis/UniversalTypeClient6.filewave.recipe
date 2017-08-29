@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>EIZO Color Navigator</string>
+		<string>Universal Type Client</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.filewave.UniversalTypeClient6</string>
 	</dict>
@@ -80,6 +80,23 @@
                 		<key>destination_path</key>
 				<string>%pkgroot%/Applications</string>
 			</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>fw_app_bundle_id</key>
+				<string>%bundleid%</string>
+				<key>fw_app_version</key>
+				<string>%version%</string>
+				<key>fw_fileset_name</key>
+				<string>%NAME% - %version%</string>
+				<key>fw_import_source</key>
+				<string>%RECIPE_CACHE_DIR%/payload</string>
+				<key>fw_destination_root</key>
+				<string>/</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
 		</dict>
 	</array>
 </dict>
