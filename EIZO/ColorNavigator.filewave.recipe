@@ -102,6 +102,28 @@
 			<string>Unarchiver</string>
 		</dict>
 		<dict>
+        		<key>Processor</key>
+        		<string>PathDeleter</string>
+			<key>Arguments</key>
+			<dict>
+       		    		<key>path_list</key>
+        	    		<array>
+		    			<string>%RECIPE_CACHE_DIR%/payload/Library/Application Support/EIZO/ColorNavigator 6/temp</string>
+        	   		</array>
+        		</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>source</key>
+				<string>%RECIPE_CACHE_DIR%/payload/Library/Application Support/EIZO/ColorNavigator 6/data_def</string>
+				<key>target</key>
+				<string>%RECIPE_CACHE_DIR%/payload/Library/Application Support/EIZO/ColorNavigator 6/data</string>
+			</dict>
+			<key>Processor</key>
+			<string>FileMover</string>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>fw_app_bundle_id</key>
