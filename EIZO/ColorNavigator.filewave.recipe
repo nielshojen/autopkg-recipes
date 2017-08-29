@@ -108,6 +108,8 @@
 			<dict>
 				<key>filename</key>
 				<string>%RECIPE_CACHE_DIR%/payload/System/Library/Extensions/basICColorDISCUS.kext</string>
+				<key>recurse</key>
+				<true/>
 				<key>mode</key>
 				<string>+x</string>
 			</dict>
