@@ -82,6 +82,15 @@
 			</dict>
 		</dict>
 		<dict>
+            		<key>Processor</key>
+            		<string>Versioner</string>
+            		<key>Arguments</key>
+            		<dict>
+                		<key>input_plist_path</key>
+                		<string>%pkgroot%/Applications/Universal Type Client.app/Contents/Info.plist</string>
+			</dict>
+            	</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>fw_app_bundle_id</key>
