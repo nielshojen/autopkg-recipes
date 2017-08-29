@@ -111,7 +111,7 @@
 				<key>recurse</key>
 				<true/>
 				<key>mode</key>
-				<string>+x</string>
+				<string>+rx</string>
 			</dict>
 		</dict>
 		<dict>
