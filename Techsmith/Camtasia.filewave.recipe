@@ -35,11 +35,11 @@
 				<dict>
 					<key>Applications</key>
 					<string>0775</string>
-					<key>/System</key>
+					<key>System</key>
 					<string>0775</string>
-					<key>/System/Library</key>
+					<key>System/Library</key>
 					<string>0775</string>
-					<key>/System/Library/Extensions</key>
+					<key>System/Library/Extensions</key>
 					<string>0775</string>
 				</dict>
 				<key>pkgroot</key>
