@@ -102,6 +102,17 @@
 			<string>Unarchiver</string>
 		</dict>
 		<dict>
+			<key>Processor</key>
+			<string>com.github.nielshojen.SharedProcessors/ModeChanger</string>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%RECIPE_CACHE_DIR%/payload/System/Library/Extensions/basICColorDISCUS_10.9+.kext</string>
+				<key>mode</key>
+				<string>r+x</string>
+			</dict>
+		</dict>
+		<dict>
         		<key>Processor</key>
         		<string>PathDeleter</string>
 			<key>Arguments</key>
