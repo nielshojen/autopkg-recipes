@@ -109,7 +109,7 @@
 				<key>filename</key>
 				<string>%RECIPE_CACHE_DIR%/payload/System/Library/Extensions/basICColorDISCUS_10.9+.kext</string>
 				<key>mode</key>
-				<string>r+x</string>
+				<string>+x</string>
 			</dict>
 		</dict>
 		<dict>
