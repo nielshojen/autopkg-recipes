@@ -91,6 +91,17 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>archive_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload/Library/Application Support/EIZO/ColorNavigator 6/tmp/basICColorDISCUS_10.9+.kext.zip</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/tmp</string>
+			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
 				<key>fw_app_bundle_id</key>
 				<string>%bundleid%</string>
 				<key>fw_app_version</key>
