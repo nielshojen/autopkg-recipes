@@ -35,6 +35,12 @@
 				<dict>
 					<key>Applications</key>
 					<string>0775</string>
+					<key>/System</key>
+					<string>0775</string>
+					<key>/System/Library</key>
+					<string>0775</string>
+					<key>/System/Library/Extensions</key>
+					<string>0775</string>
 				</dict>
 				<key>pkgroot</key>
 				<string>%RECIPE_CACHE_DIR%/payload</string>
@@ -72,8 +78,19 @@
                 		<key>pkg_payload_path</key>
                 		<string>%RECIPE_CACHE_DIR%/unpack/techsmithsystemaudio.pkg/Payload</string>
                 		<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload_test</string>
+				<string>%RECIPE_CACHE_DIR%/tmp</string>
 			</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%pkgroot%/System/Library/Extensions</string>
+				<key>source_path</key>
+				<string>RECIPE_CACHE_DIR%/tmp/TACC.kext</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
