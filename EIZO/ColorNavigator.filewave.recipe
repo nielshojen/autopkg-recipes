@@ -107,7 +107,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%RECIPE_CACHE_DIR%/payload/System/Library/Extensions/basICColorDISCUS_10.9+.kext</string>
+				<string>%RECIPE_CACHE_DIR%/payload/System/Library/Extensions/basICColorDISCUS.kext</string>
 				<key>mode</key>
 				<string>+x</string>
 			</dict>
