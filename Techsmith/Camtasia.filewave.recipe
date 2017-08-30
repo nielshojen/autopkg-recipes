@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current release version of Camtasia and imports a fileset.</string>
+	<string>Downloads the current release version of Camtasia, creates a fileset and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.Camtasia</string>
 	<key>Input</key>
