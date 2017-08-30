@@ -22,8 +22,8 @@
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
-				<key>url</key>
-				<string>http://download.tidal.com/desktop/TIDAL.dmg</string>
+		<key>url</key>
+		<string>http://download.tidal.com/desktop/TIDAL.dmg</string>
             </dict>
         </dict>
         <dict>
