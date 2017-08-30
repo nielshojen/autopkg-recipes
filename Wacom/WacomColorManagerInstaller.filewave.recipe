@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest Wacom Color Manager driver fileset and imports into Filewave</string>
+	<string>Downloads latest Wacom Color Manager driver installer and imports into Filewave</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.WacomColorManagerInstaller</string>
 	<key>Input</key>
@@ -93,7 +93,7 @@
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% %version% Installer</string>
+				<string>%NAME% Installer - %version%</string>
 				<key>fw_import_source</key>
 				<string>%found_filename%</string>
 			</dict>
