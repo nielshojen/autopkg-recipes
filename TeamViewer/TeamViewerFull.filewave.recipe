@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest TeamViewer disk image and import to Filewave.</string>
+	<string>Downloads latest version of TeamViewer Full, creates a fileset and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.TeamViewer</string>
 	<key>Input</key>
@@ -170,7 +170,7 @@
 				<key>fw_destination_root</key>
 				<string>/</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/payload/root</string>
 			</dict>
