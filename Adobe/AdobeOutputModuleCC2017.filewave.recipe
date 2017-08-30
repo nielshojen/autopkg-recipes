@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest Adobe Output Module for 2015 and imports into Filewave</string>
+	<string>Downloads latest Adobe Output Module for 2015, creates a fileset and imports into Filewave</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.AdobeOutputModuleCC2017</string>
 	<key>Input</key>
@@ -84,7 +84,7 @@
 				<key>fw_destination_root</key>
 				<string>/</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
 			</dict>
