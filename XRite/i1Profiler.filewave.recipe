@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Import X-Rite i1Profiler into FileWave</string>
+    <string>Donload newest release of X-Rite i1Profiler, create a fileset and import into FileWave</string>
     <key>Identifier</key>
     <string>com.github.nielshojen.filewave.i1Profiler</string>
     <key>Input</key>
@@ -171,7 +171,7 @@
 				<key>fw_destination_root</key>
 				<string>/</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/root</string>
 			</dict>
