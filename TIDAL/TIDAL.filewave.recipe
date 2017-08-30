@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Sonos</string>
+		<string>TIDAL</string>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.nielshojen.download.TIDAL</string>
