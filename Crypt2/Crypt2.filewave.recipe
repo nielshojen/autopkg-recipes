@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release of Crypt 2 from Github and imports into Filewave.
+    <string>Downloads the current release of Crypt 2 installer from Github and imports into Filewave.
     </string>
     <key>Identifier</key>
     <string>com.github.nielshojen.filewave.Crypt2</string>
@@ -28,7 +28,7 @@
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%pathname%</string>
 			</dict>
