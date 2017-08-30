@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads latest version of HyperDeck</string>
+    <string>Downloads latest version of HyperDeck 5</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.download.HyperDeck</string>
+    <string>com.github.nielshojen.download.HyperDeck5</string>
     <key>Input</key>
     <dict>
         <key>PRODUCT_NAME_PATTERN</key>
-        <string>^HyperDeck (?P&lt;version&gt;10(\.\d+)*)( Update)*$</string>
+        <string>^HyperDeck (?P&lt;version&gt;5(\.\d+)*)( Update)*$</string>
         <key>NAME</key>
         <string>Desktop Video</string>
     </dict>
