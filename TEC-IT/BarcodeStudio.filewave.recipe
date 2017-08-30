@@ -12,8 +12,8 @@
 	<string>com.github.nielshojen.download.BarcodeStudio</string>
 	<key>Input</key>
 	<dict>
-	<key>NAME</key>
-	<string>BarCode Studio</string>
+		<key>NAME</key>
+		<string>BarCode Studio</string>
         <key>fw_app_bundle_id</key>
         <string>com.github.nielshojen.filewave.BarcodeStudio</string>
 	</dict>
