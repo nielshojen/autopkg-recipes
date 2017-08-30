@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current release version of Universal Type Client 6 and imports a fileset.</string>
+	<string>Downloads the current release version of Universal Type Client 6, creates a fileset and imports into FIleWave.</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.UniversalTypeClient6</string>
 	<key>Input</key>
