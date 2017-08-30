@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current release version of Sonos and builds a package.</string>
+	<string>Downloads the current release version of Sonos, creates a fileset and imports in FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.Sonos</string>
 	<key>Input</key>
