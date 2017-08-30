@@ -12,7 +12,7 @@
 		<string>Sonos</string>
 	</dict>
 	<key>ParentRecipe</key>
-	<string>com.github.nielshojen.download.Sonos</string>
+	<string>com.github.autopkg.download.Sonos</string>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>Process</key>
