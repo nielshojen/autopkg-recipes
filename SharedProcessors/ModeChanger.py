@@ -15,7 +15,7 @@ class ModeChanger(Processor):
 			'description': 'Name of filename resource',
 		},
 		'recurse': {
-			'required': True,
+			'required': False,
 			'description': 'chmod(1) recursive mode'
 		},
 		'mode': {
