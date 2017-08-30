@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest Spotify and imports into FileWave.</string>
+    <string>Downloads the latest Spotify, creates a fileset and imports into FileWave.</string>
     <key>Identifier</key>
     <string>com.github.nielshojen.filewave.Spotify</string>
     <key>Input</key>
@@ -64,7 +64,7 @@
 		</dict>
 		<dict>
 			<key>Processor</key>
-			<string>ModeChanger</string>
+			<string>com.github.nielshojen.SharedProcessors/ModeChanger</string>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
@@ -75,7 +75,7 @@
 		</dict>
 		<dict>
 			<key>Processor</key>
-			<string>ModeChanger</string>
+			<string>com.github.nielshojen.SharedProcessors/ModeChanger</string>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
@@ -86,7 +86,7 @@
 		</dict>
 		<dict>
 			<key>Processor</key>
-			<string>ModeChanger</string>
+			<string>com.github.nielshojen.SharedProcessors/ModeChanger</string>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
@@ -97,7 +97,7 @@
 		</dict>
 		<dict>
 			<key>Processor</key>
-			<string>ModeChanger</string>
+			<string>com.github.nielshojen.SharedProcessors/ModeChanger</string>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
@@ -114,7 +114,7 @@
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%pkgroot%/Applications/%app_name%</string>
 				<key>fw_destination_root</key>
