@@ -68,6 +68,8 @@
 				<string>PkgPayloadUnpacker</string>
 				<key>Arguments</key>
 				<dict>
+					<key>purge_destination</key>
+					<false/>
 					<key>pkg_payload_path</key>
 					<string>%RECIPE_CACHE_DIR%/unpack/HyperDeckAssets.pkg/Payload</string>
 					<key>destination_path</key>
