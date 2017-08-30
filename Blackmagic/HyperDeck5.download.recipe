@@ -11,7 +11,7 @@
         <key>PRODUCT_NAME_PATTERN</key>
         <string>^HyperDeck (?P&lt;version&gt;5(\.\d+)*)( Update)*$</string>
         <key>NAME</key>
-        <string>Desktop Video</string>
+        <string>HyperDeck</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
