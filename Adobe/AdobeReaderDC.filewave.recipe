@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Adobe Reader TC and imports into FileWave.</string>
+	<string>Downloads the latest Adobe Acrobat Reader DC, creates a fileset and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.AdobeReaderDC</string>
 	<key>Input</key>
