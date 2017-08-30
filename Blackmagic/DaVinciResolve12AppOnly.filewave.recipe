@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the most recent version of DaVinci Resolve Studio 12 and imports into FileWave.</string>
+    <string>Downloads the most recent version of DaVinci Resolve 12, creates fileset and imports into FileWave.</string>
     <key>Identifier</key>
     <string>com.github.nielshojen.filewave.davinciresolve12apponly</string>
     <key>Input</key>
@@ -87,7 +87,7 @@
 				<key>fw_destination_root</key>
 				<string>/Applications/DaVinci Resolve/%NAME%.app</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/payload/Applications/DaVinci Resolve/%NAME%.app</string>
 			</dict>
