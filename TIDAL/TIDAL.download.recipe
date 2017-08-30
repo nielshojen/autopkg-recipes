@@ -22,8 +22,8 @@
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
-								<key>url</key>
-								<string>http://download.tidal.com/desktop/TIDAL.dmg</string>
+				<key>url</key>
+				<string>http://download.tidal.com/desktop/TIDAL.dmg</string>
             </dict>
         </dict>
         <dict>
@@ -38,7 +38,7 @@
                 <key>input_path</key>
                 <string>%pathname%/%NAME%.app</string>
                 <key>requirement</key>
-                <string>identifier "com.sonos.macController" and anchor apple generic</string>
+                <string>identifier "com.tidal.desktop" and anchor apple generic</string>
             </dict>
         </dict>
     </array>
