@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest Adobe Output Module for 2015 and imports into Filewave</string>
+	<string>Downloads latest Adobe Output Module for 2015, creates a fileset and imports into Filewave</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.AdobeOutputModuleCC2015</string>
 	<key>Input</key>
