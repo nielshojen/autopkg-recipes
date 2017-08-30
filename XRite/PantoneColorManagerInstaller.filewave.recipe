@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current release version of PANTONE Color Manager and imports into filewave</string>
+	<string>Downloads the current release version of PANTONE Color Manager Installer and imports into FileWave</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.PantoneColorManagerInstaller</string>
 	<key>Input</key>
@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>PANTONE Color Manager</string>
 		<key>fw_app_bundle_id</key>
-    <string>com.github.nielshojen.filewave.PantoneColorManagerInstaller</string>
+		<string>com.github.nielshojen.filewave.PantoneColorManagerInstaller</string>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.nielshojen.download.PantoneColorManager</string>
@@ -107,7 +107,7 @@
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% %version% Installer</string>
+				<string>%NAME% - %version% Installer</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/pkg/%NAME%.pkg</string>
 			</dict>
