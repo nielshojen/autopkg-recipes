@@ -23,7 +23,7 @@
 	<array>
 		<dict>
 			<key>Processor</key>
-			<string>SourceForgeURLProvider</string>
+			<string>com.github.nielshojen.SharedProcessors/SourceForgeURLProvider</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
