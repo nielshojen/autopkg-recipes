@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest MS Teams disk image and import to Filewave.</string>
+	<string>Downloads latest MS Teams, creates a fileset and import to Filewave.</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.MSTeams</string>
 	<key>Input</key>
@@ -18,7 +18,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.nielshojen.download.MSTeams</string>
+	<string>com.github.apettinen.download.MSTeams</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -65,7 +65,7 @@
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%pkgroot%/Applications/%app_name%</string>
 			</dict>
