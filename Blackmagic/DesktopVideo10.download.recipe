@@ -33,7 +33,7 @@
     <array>
         <dict>
             <key>Processor</key>
-            <string>BlackMagicURLProvider</string>
+            <string>com.github.nielshojen.SharedProcessors/BlackMagicURLProvider</string>
             <key>Arguments</key>
             <dict>
                 <key>product_name_pattern</key>
