@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Description</key>
+		<string>Downloads the latest version of Blackmagic HyperDeck 5, creates a fileset and imports into FileWave</string>
+		<key>Identifier</key>
+		<string>com.github.nielshojen.filewave.HyperDeck5</string>
+		<key>Input</key>
+		<dict>
+			<key>NAME</key>
+			<string>Desktop Video</string>
+			<key>fw_app_bundle_id</key>
+			<string>com.github.nielshojen.filewave.HyperDeck5</string>
+		</dict>
+		<key>MinimumVersion</key>
+		<string>0.2.0</string>
+		<key>ParentRecipe</key>
+		<string>com.github.nielshojen.download.HyperDeck5</string>
+		<key>Process</key>
+		<array>
+			<dict>
+				<key>Processor</key>
+				<string>Unarchiver</string>
+				<key>Arguments</key>
+				<dict>
+					<key>archive_path</key>
+					<string>%pathname%</string>
+					<key>destination_path</key>
+					<string>%RECIPE_CACHE_DIR%/unzip</string>
+					<key>purge_destination</key>
+					<true/>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>FileFinder</string>
+				<key>Arguments</key>
+				<dict>
+					<key>pattern</key>
+					<string>%RECIPE_CACHE_DIR%/unzip/*.dmg</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>FlatPkgUnpacker</string>
+				<key>Arguments</key>
+				<dict>
+					<key>flat_pkg_path</key>
+					<string>%found_filename%/*.pkg</string>
+					<key>destination_path</key>
+					<string>%RECIPE_CACHE_DIR%/unpack</string>
+				</dict>
+			</dict>
+
+		</array>
+	</dict>
+</plist>
