@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the most recent version of DaVinci Resolve Studio 12 and imports into FileWave.</string>
+    <string>Downloads the most recent version of DaVinci Resolve 12, creates a fileset and imports into FileWave.</string>
     <key>Identifier</key>
     <string>com.github.nielshojen.filewave.davinciresolve12</string>
     <key>Input</key>
@@ -16,7 +16,7 @@
     <key>MinimumVersion</key>
     <string>0.2.9</string>
     <key>ParentRecipe</key>
-    <string>com.github.nielshojen.download.davinciresolve12</string>
+    <string>com.github.timsutton.download.davinciresolve12</string>
     <key>Process</key>
     <array>
         <dict>
