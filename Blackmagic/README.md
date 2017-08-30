@@ -5,7 +5,7 @@ Remember to add registraion info to your overrides
         <key>REG_LASTNAME</key>
         <string></string>
         <key>REG_EMAIL</key>
-        <string>/string>
+        <string></string>
         <key>REG_PHONE</key>
         <string></string>
         <key>REG_CITY</key>
