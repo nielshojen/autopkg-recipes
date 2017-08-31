@@ -42,9 +42,9 @@
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack/VirtualBox.pkg/Payload</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/VirtualBox.pkg.unpacked/</string>
+                <string>%RECIPE_CACHE_DIR%/payload_app</string>
                 <key>purge_destination</key>
-                <true/>
+                <false/>
             </dict>
         </dict>
         <dict>
@@ -55,7 +55,7 @@
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack/VirtualBoxCLI.pkg/Payload</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/payload</string>
+                <string>%RECIPE_CACHE_DIR%/payload_cli</string>
                 <key>purge_destination</key>
                 <false/>
             </dict>
@@ -68,7 +68,7 @@
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack/VBoxKEXTs.pkg.pkg/Payload</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/VirtualBox.pkg.unpacked/</string>
+                <string>%RECIPE_CACHE_DIR%/payload_kext</string>
                 <key>purge_destination</key>
                 <false/>
             </dict>
