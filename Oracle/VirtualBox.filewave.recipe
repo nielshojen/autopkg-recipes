@@ -11,9 +11,7 @@
 		<key>NAME</key>
 		<string>VirtualBox</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.peshay.filewave.VirtualBox</string>
-		<key>fw_destination_root</key>
-		<string>/Applications/%NAME%.app</string>
+		<string>com.github.nielshojen.filewave.VirtualBox</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
@@ -108,6 +106,23 @@
                 <string>%RECIPE_CACHE_DIR%/payload/Applications/VirtualBox.app/Contents/Info.plist</string>
             </dict>
 	</dict>
+	        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>fw_app_bundle_id</key>
+                <string>%fw_app_bundle_id%</string>
+                <key>fw_app_version</key>
+                <string>%version%</string>
+                <key>fw_destination_root</key>
+                <string>/</string>
+                <key>fw_fileset_name</key>
+                <string>%NAME% - %version%</string>
+                <key>fw_import_source</key>
+                <string>%RECIPE_CACHE_DIR%/payload</string>
+            </dict>
+            <key>Processor</key>
+            <string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
+        </dict>
 	</array>
 </dict>
 </plist>
