@@ -106,7 +106,7 @@
                 <string>%RECIPE_CACHE_DIR%/payload/Applications/VirtualBox.app/Contents/Info.plist</string>
             </dict>
 	</dict>
-	        <dict>
+	<dict>
             <key>Arguments</key>
             <dict>
                 <key>fw_app_bundle_id</key>
