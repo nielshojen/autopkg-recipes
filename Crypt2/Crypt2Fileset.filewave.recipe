@@ -20,7 +20,17 @@
     <string>com.github.nielshojen.download.Crypt2</string>
     <key>Process</key>
     <array>
-
+	<dict>
+		<key>Arguments</key>
+		<dict>
+			<key>destination_path</key>
+			<string>%RECIPE_CACHE_DIR%/unpack</string>
+			<key>flat_pkg_path</key>
+			<string>%pathname%</string>
+		</dict>
+		<key>Processor</key>
+		<string>FlatPkgUnpacker</string>
+	</dict>
     </array>
 </dict>
 </plist>
