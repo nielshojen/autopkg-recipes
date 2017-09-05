@@ -32,6 +32,20 @@
 			<string>FlatPkgUnpacker</string>
 		</dict>
 		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgdirs</key>
+				<dict>
+					<key>tmp</key>
+					<string>0777</string>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/payload</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+		<dict>
             <key>Processor</key>
             <string>PkgPayloadUnpacker</string>
             <key>Arguments</key>
@@ -42,15 +56,6 @@
                 <string>%RECIPE_CACHE_DIR%/payload</string>
             </dict>
         </dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>input_plist_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload/Library/Security/SecurityAgentPlugins/Crypt.bundle/Contents/Info.plist</string>
-			</dict>
-			<key>Processor</key>
-			<string>Versioner</string>
-		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
