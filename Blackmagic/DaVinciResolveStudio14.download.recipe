@@ -25,7 +25,7 @@
                 <key>product_name_pattern</key>
                 <string>%PRODUCT_NAME_PATTERN%</string>
                 <key>product_name</key>
-                <string>DaVinci Resolve Studio</string>
+                <string>DaVinci Resolve</string>
                 <key>registration_info</key>
                 <dict>
                     <key>firstname</key>
@@ -40,6 +40,8 @@
                     <string>%REG_CITY%</string>
                     <key>state</key>
                     <string>%REG_STATE%</string>
+                    <key>country</key>
+                    <string>%REG_COUNTRY%</string>
                 </dict>
             </dict>
         </dict>
