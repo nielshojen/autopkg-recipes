@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest MS Lynx, creates a fileset and import to Filewave.</string>
+	<string>Downloads latest MS Lync, creates a fileset and import to Filewave.</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.MSLync</string>
 	<key>Input</key>
