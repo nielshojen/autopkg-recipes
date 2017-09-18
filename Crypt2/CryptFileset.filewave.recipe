@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release of Crypt 2 installer from Github and imports into Filewave.
+    <string>Downloads the current release of Crypt installer from Github and imports fileset into Filewave.
     </string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.filewave.Crypt2Fileset</string>
+    <string>com.github.nielshojen.filewave.CryptFileset</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
         <string>Crypt2</string>
         <key>fw_app_bundle_id</key>
-        <string>com.github.nielshojen.filewave.Crypt2Fileset</string>
+        <string>com.github.nielshojen.filewave.CryptFileset</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.5.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.nielshojen.download.Crypt2</string>
+    <string>com.github.nielshojen.download.Crypt</string>
     <key>Process</key>
     <array>
 		<dict>
