@@ -30,6 +30,8 @@
 					<string>0775</string>
 					<key>Library</key>
 					<string>0775</string>
+					<key>Library/Internet Plug-Ins</key>
+					<string>0775</string>
 				</dict>
 				<key>pkgroot</key>
 				<string>%RECIPE_CACHE_DIR%/payload</string>
@@ -67,7 +69,7 @@
 				<key>purge_destination</key>
 				<string>TRUE</string>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/Applications</string>
+				<string>%pkgroot%/Applications</string>
 				<key>pkg_payload_path</key>
 				<string>%found_filename%/Payload</string>
 			</dict>
