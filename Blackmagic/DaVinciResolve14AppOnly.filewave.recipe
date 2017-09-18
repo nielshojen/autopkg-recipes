@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the most recent version of DaVinci Resolve 14, creates fileset and imports into FileWave.</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.filewave.davinciresolve12apponly</string>
+    <string>com.github.nielshojen.filewave.davinciresolve14apponly</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
