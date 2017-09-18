@@ -98,7 +98,7 @@
 				<key>fw_destination_root</key>
 				<string>/Applications/DaVinci Resolve/%NAME%.app</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/payload/Applications/DaVinci Resolve/%NAME%.app</string>
 			</dict>
