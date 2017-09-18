@@ -26,10 +26,6 @@
 				<dict>
 					<key>Applications</key>
 					<string>0775</string>
-					<key>Library</key>
-					<string>0775</string>
-					<key>Library/Internet Plug-Ins</key>
-					<string>0775</string>
 				</dict>
 				<key>pkgroot</key>
 				<string>%RECIPE_CACHE_DIR%/payload</string>
@@ -89,7 +85,7 @@
 				<key>purge_destination</key>
 				<string>TRUE</string>
 				<key>destination_path</key>
-				<string>%pkgroot%/Library/Plug-Ins</string>
+				<string>%pkgroot%</string>
 				<key>pkg_payload_path</key>
 				<string>%found_filename%/Payload</string>
 			</dict>
