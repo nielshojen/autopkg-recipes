@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads latest version of DaVinci Resolve Studio 12.</string>
+    <string>Downloads latest version of DaVinci Resolve Studio 14.</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.download.davinciresolvestudio12</string>
+    <string>com.github.nielshojen.download.davinciresolvestudio14</string>
     <key>Input</key>
     <dict>
         <key>PRODUCT_NAME_PATTERN</key>
         <string>^DaVinci Resolve (?P&lt;version&gt;14(\.\d+)*) Studio( Update)*$</string>
         <key>NAME</key>
-        <string>DaVinciResolveStudio12</string>
+        <string>DaVinciResolveStudio14</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
