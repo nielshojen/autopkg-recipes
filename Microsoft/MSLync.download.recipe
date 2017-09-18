@@ -21,7 +21,7 @@
     <array>
         <dict>
             <key>Processor</key>
-            <string>arubdesu-recipes/MSLync/MSLyncURLandUpdateInfoProvider</string>
+            <string>SharedProcessors/MSLyncURLandUpdateInfoProvider</string>
             <key>Arguments</key>
             <dict>
                 <key>culture_code</key>
