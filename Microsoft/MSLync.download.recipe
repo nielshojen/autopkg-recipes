@@ -21,7 +21,7 @@
     <array>
         <dict>
             <key>Processor</key>
-            <string>SharedProcessors/MSLyncURLandUpdateInfoProvider</string>
+            <string>com.github.nielshojen.SharedProcessors/MSLyncURLandUpdateInfoProvider</string>
             <key>Arguments</key>
             <dict>
                 <key>culture_code</key>
