@@ -10,8 +10,8 @@
     <dict>
         <key>NAME</key>
         <string>DaVinci Resolve Shared</string>
-		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.davinciresolvestudio14shared</string>
+	<key>fw_app_bundle_id</key>
+	<string>com.github.nielshojen.filewave.davinciresolvestudio14shared</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.9</string>
