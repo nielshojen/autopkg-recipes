@@ -61,7 +61,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>purge_destination</key>
-				<string>TRUE</string>
+				<true/>
 				<key>destination_path</key>
 				<string>%pkgroot%/Applications</string>
 				<key>pkg_payload_path</key>
@@ -83,7 +83,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>purge_destination</key>
-				<string>TRUE</string>
+				<false/>
 				<key>destination_path</key>
 				<string>%pkgroot%</string>
 				<key>pkg_payload_path</key>
