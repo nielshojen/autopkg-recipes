@@ -7,13 +7,13 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Zeplin and creates a package.</string>
 	<key>Identifier</key>
-	<string>com.github.hobbithardcase.pkg.Zeplin</string>
+	<string>com.github.nielshojen.filewave.Zeplin</string>
 	<key>Input</key>
 	<dict>
-		<key>BUNDLE_ID</key>
-		<string>io.zeplin.osx</string>
 		<key>NAME</key>
 		<string>Zeplin</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.nielshojen.filewave.Zeplin</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
@@ -21,7 +21,23 @@
 	<string>com.github.hobbithardcase.download.Zeplin</string>
 	<key>Process</key>
 	<array>
-
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>fw_app_bundle_id</key>
+				<string>%fw_app_bundle_id%</string>
+				<key>fw_app_version</key>
+				<string>%version%</string>
+				<key>fw_fileset_name</key>
+				<string>%NAME% - %version%</string>
+				<key>fw_import_source</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
+				<key>fw_destination_root</key>
+				<string>/Applications/%NAME%.app</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
+		</dict>
 	</array>
 </dict>
 </plist>
