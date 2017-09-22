@@ -45,7 +45,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%RECIPE_CACHE_DIR%/payload%PATH%/Contents/_MASRecipt/recipt</string>
+				<string>%destination_path%/Contents/_MASReceipt/receipt</string>
 			</dict>
 		</dict>
 	</array>
