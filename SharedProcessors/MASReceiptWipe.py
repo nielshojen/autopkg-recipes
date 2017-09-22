@@ -21,8 +21,8 @@ class ModeChanger(Processor):
 	def main(self):
 		filename = self.env.get('filename')
 
-			retcode = subprocess.call(['/bin/chmod', mode, filename])
+			retcode = subprocess.call(['/bin/echo 0 > ',filename])
 		if retcode:
-			raise ProcessorError('Error setting mode (chmod %s) for %s' % (mode, filename))
+			raise ProcessorError('Error wiping MAS recipt for %s' % (mode, filename))
 
 		return
