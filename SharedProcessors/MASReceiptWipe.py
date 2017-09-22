@@ -21,7 +21,7 @@ class MASReceiptWipe(Processor):
 	def main(self):
 		filename = self.env.get('filename')
 
-		cmd = '/bin/echo 0 \> ' + filename
+		cmd = '/bin/echo 0 > ' + filename
 
 		retcode = subprocess.call([cmd], shell = True)
 		
