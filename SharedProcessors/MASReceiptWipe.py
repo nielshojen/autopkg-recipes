@@ -21,7 +21,7 @@ class MASReceiptWipe(Processor):
 	def main(self):
 		filename = self.env.get('filename')
 
-		retcode = subprocess.Popen(['/bin/echo', '0', '>', filename])
+		retcode = subprocess.call(['/bin/echo', '0', '>', filename])
 		
 		if retcode:
 			raise ProcessorError('Error wiping MAS recipt for %s' % (filename))
