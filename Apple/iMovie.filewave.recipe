@@ -41,7 +41,7 @@
 		</dict>
 		<dict>
 			<key>Processor</key>
-			<string>com.github.nielshojen.SharedProcessors/MASReciptWipe</string>
+			<string>com.github.nielshojen.SharedProcessors/MASReceiptWipe</string>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
