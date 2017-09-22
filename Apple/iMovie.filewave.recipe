@@ -39,6 +39,15 @@
 				<true/>
 			</dict>
 		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>com.github.nielshojen.SharedProcessors/MASReciptWipe</string>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%RECIPE_CACHE_DIR%/payload/%PATH%/Contents/_MASRecipt/recipt</string>
+			</dict>
+		</dict>
 	</array>
 </dict>
 </plist>
