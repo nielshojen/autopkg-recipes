@@ -34,7 +34,7 @@
 				<key>source_path</key>
 				<string>%PATH%/Contents/_MASReceipt/receipt</string>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/receipt</string>
+				<string>%RECIPE_CACHE_DIR%/receipt_original</string>
 				<key>overwrite</key>
 				<true/>
 			</dict>
@@ -45,7 +45,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%RECIPE_CACHE_DIR%/receipt</string>
+				<string>%PATH%/_MASReceipt/receipt</string>
 			</dict>
 		</dict>
 	</array>
