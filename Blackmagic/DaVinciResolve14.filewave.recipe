@@ -121,7 +121,7 @@
                 <key>flat_pkg_path</key>
                 <string>%found_filename%</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/distpkg</string>
+                <string>%RECIPE_CACHE_DIR%/distpkg_panels</string>
             </dict>
         </dict>
 	<dict>
@@ -132,7 +132,7 @@
 	    	<key>purge_destination</key>
 		<false/>
                 <key>pkg_payload_path</key>
-                <string>%RECIPE_CACHE_DIR%/distpkg/Payload</string>
+                <string>%RECIPE_CACHE_DIR%/distpkg_panels/Payload</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/payload</string>
             </dict>
