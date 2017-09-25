@@ -86,7 +86,7 @@
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/distpkg/ManifestPanels.pkg/Payload</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/tmp</string>
+                <string>%RECIPE_CACHE_DIR%/payload</string>
             </dict>
         </dict>
         <dict>
@@ -95,7 +95,7 @@
             <key>Arguments</key>
             <dict>
                 <key>archive_path</key>
-                <string>%RECIPE_CACHE_DIR%/tmp/Library/Application Support/Blackmagic Design/DaVinci Resolve/Prereqs/davinci_panels.zip</string>
+                <string>%RECIPE_CACHE_DIR%/payload/Library/Application Support/Blackmagic Design/DaVinci Resolve/Prereqs/davinci_panels.zip</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/unzip_panels</string>
                 <key>purge_destination</key>
@@ -117,7 +117,7 @@
             <key>Arguments</key>
             <dict>
 	    	<key>purge_destination</key>
-		<false/>
+		<true/>
                 <key>pkg_payload_path</key>
                 <string>%found_filename%</string>
                 <key>destination_path</key>
@@ -129,6 +129,8 @@
             <string>PkgPayloadUnpacker</string>
             <key>Arguments</key>
             <dict>
+	    	<key>purge_destination</key>
+		<false/>
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/distpkg/Manifest.pkg/Payload</string>
                 <key>destination_path</key>
