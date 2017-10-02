@@ -16,7 +16,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.arubdesu.download.santa</string>
+	<string>com.github.autopkg.arubdesu.download.santa</string>
 	<key>Process</key>
 	<array>
 		<dict>
