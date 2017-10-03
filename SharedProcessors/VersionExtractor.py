@@ -43,5 +43,5 @@ class VersionExtractor(Processor):
 
 
 if __name__ == "__main__":
-    processor = VersionSplitter()
+    processor = VersionExtractor()
     processor.execute_shell()
