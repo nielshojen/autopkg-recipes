@@ -45,7 +45,7 @@
    		<key>Arguments</key>
     		<dict>
         		<key>input</key>
-        		<string>osquery-2.8.0.pkg</string>
+        		<string>1.0.0-2.8.0</string>
         		<key>split_on_in</key>
         		<string>-</string>
         		<key>split_on_out</key>
