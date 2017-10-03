@@ -23,7 +23,7 @@
                 <key>github_repo</key>
                 <string>facebook/osquery</string>
                 <key>include_prereleases</key>
-                <false/>
+                <true/>
             </dict>
         </dict>
         <dict>
