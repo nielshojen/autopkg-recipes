@@ -22,8 +22,6 @@
             <dict>
                 <key>github_repo</key>
                 <string>facebook/osquery</string>
-                <key>include_prereleases</key>
-                <true/>
             </dict>
         </dict>
         <dict>
