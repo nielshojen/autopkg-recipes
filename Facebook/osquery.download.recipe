@@ -45,7 +45,7 @@
    		<key>Arguments</key>
     		<dict>
         		<key>input</key>
-        		<string>%filename%</string>
+        		<string>%RECIPE_CACHE_DIR%/downloads/*.pkg</string>
         		<key>split_on_in</key>
         		<string>-</string>
         		<key>split_on_out</key>
