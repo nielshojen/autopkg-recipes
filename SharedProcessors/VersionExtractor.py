@@ -9,7 +9,7 @@ __all__ = ["VersionExtractor"]
 class VersionExtractor(Processor):
 
     input_variables = {
-        "input": {
+        "input_file": {
             "required": True,
             "description": "The version string that needs splitting."
         },
