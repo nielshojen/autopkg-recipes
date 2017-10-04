@@ -54,7 +54,7 @@
    		<key>Arguments</key>
     		<dict>
         		<key>input_file</key>
-        		<string>%found_filename%</string>
+        		<string>%pathname%</string>
         		<key>split_on_in</key>
         		<string>-</string>
         		<key>split_on_out</key>
