@@ -16,8 +16,6 @@
 		<string>osquery</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.filewave.osquery</string>
-		<key>version</key>
-		<string>2.8.0</string>
 	</dict>
 	<key>Process</key>
 	<array>
