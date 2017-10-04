@@ -19,6 +19,11 @@ class VersionExtractor(Processor):
                            "version. (Defaults to a space.)"
         },
         "split_on_out": {
+            "required": True,
+            "description": "The character(s) to use for splitting the  "
+                           "version. (Defaults to 0.)"
+        },
+        "index": {
             "required": False,
             "description": "The character(s) to use for splitting the  "
                            "version. (Defaults to 0.)"
@@ -34,6 +39,7 @@ class VersionExtractor(Processor):
     def main(self):
 
         split_on_in = self.env.get("split_on_in", " ")
+        split_on_out = self.env.get("split_on_out", " ")
         index = self.env.get("index", 0)
         self.env["version"] = self.env["input_file"].split(split_on_in)[index]
         self.output("Version: %s" % self.env["version"])
