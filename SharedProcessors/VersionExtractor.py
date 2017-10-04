@@ -40,7 +40,7 @@ class VersionExtractor(Processor):
 
         split_on_in = self.env.get("split_on_in", " ")
         split_on_out = self.env.get("split_on_out", " ")
-        index = self.env.get("index", 0)
+        index = self.env.get("index", 1)
         self.env["version"] = self.env["input_file"].split(split_on_in)[index]
         self.output("Version: %s" % self.env["version"])
 
