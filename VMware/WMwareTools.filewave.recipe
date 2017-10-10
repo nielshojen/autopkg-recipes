@@ -61,7 +61,8 @@
                 <string>%RECIPE_CACHE_DIR%/%NAME%.iso</string>                                
                 </array>
             </dict>
-        </dict>        
+        </dict>
+		
 	</array>
 </dict>
 </plist>
