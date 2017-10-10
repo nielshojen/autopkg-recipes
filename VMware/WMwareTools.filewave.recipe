@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current release version of VMware Tools and extracts the installer package.</string>
+	<string>Downloads the current release version of VMware Tools, extracts the installer package and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.VMwareTools</string>
 	<key>Input</key>
