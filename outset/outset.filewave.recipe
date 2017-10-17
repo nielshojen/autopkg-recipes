@@ -11,7 +11,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Crypt</string>
+        <string>outset</string>
         <key>fw_app_bundle_id</key>
         <string>com.github.nielshojen.filewave.outset</string>
     </dict>
