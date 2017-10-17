@@ -43,28 +43,6 @@
                 <string>%RECIPE_CACHE_DIR%/payload</string>
             </dict>
         </dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload/tmp/preinstall.py</string>
-				<key>source_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/Crypt.pkg/Scripts/preinstall</string>
-			</dict>
-			<key>Processor</key>
-			<string>Copier</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload/tmp/postinstall.py</string>
-				<key>source_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/Crypt.pkg/Scripts/postinstall</string>
-			</dict>
-			<key>Processor</key>
-			<string>Copier</string>
-		</dict>
         	<dict>
             		<key>Arguments</key>
             		<dict>
