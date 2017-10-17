@@ -1,1 +1,87 @@
 
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the current release of outset installer from Github, umpacks and imports fileset into Filewave.
+    </string>
+    <key>Identifier</key>
+    <string>com.github.nielshojen.filewave.outset</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>Crypt</string>
+        <key>fw_app_bundle_id</key>
+        <string>com.github.nielshojen.filewave.outset</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.0</string>
+    <key>ParentRecipe</key>
+    <string>com.github.grahamgilbert.download.outset</string>
+    <key>Process</key>
+    <array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack</string>
+				<key>flat_pkg_path</key>
+				<string>%pathname%</string>
+			</dict>
+			<key>Processor</key>
+			<string>FlatPkgUnpacker</string>
+		</dict>
+		<dict>
+            <key>Processor</key>
+            <string>PkgPayloadUnpacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/unpack/*/Payload</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/payload</string>
+            </dict>
+        </dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload/tmp/preinstall.py</string>
+				<key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack/Crypt.pkg/Scripts/preinstall</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload/tmp/postinstall.py</string>
+				<key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack/Crypt.pkg/Scripts/postinstall</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
+		</dict>
+        	<dict>
+            		<key>Arguments</key>
+            		<dict>
+               			<key>fw_app_bundle_id</key>
+                		<string>%fw_app_bundle_id%</string>
+                		<key>fw_app_version</key>
+                		<string>%version%</string>
+                		<key>fw_destination_root</key>
+               			<string>/</string>
+                		<key>fw_fileset_name</key>
+                		<string>%NAME% - %version%</string>
+                		<key>fw_import_source</key>
+               			<string>%RECIPE_CACHE_DIR%/payload</string>
+            		</dict>
+            		<key>Processor</key>
+            		<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
