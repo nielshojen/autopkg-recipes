@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads DYMO Label installer, creates fileset andd imports into filewave.</string>
+    <string>Downloads DYMO Label installer and imports into filewave.</string>
     <key>Identifier</key>
     <string>com.github.nielshojen.filewave.DYMOLabel</string>
     <key>Input</key>
@@ -22,53 +22,18 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack</string>
-				<key>flat_pkg_path</key>
+				<key>fw_app_bundle_id</key>
+				<string>%fw_app_bundle_id%</string>
+				<key>fw_app_version</key>
+				<string>%version%</string>
+				<key>fw_fileset_name</key>
+				<string>%NAME% - %version%</string>
+				<key>fw_import_source</key>
 				<string>%pathname%/*.pkg</string>
 			</dict>
 			<key>Processor</key>
-			<string>FlatPkgUnpacker</string>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
 		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload</string>
-				<key>pkg_payload_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/AdobeFlashPlayerComponent.pkg/Payload</string>
-			</dict>
-			<key>Processor</key>
-			<string>PkgPayloadUnpacker</string>
-		</dict>
-    	<dict>
-    		<key>Processor</key>
-    		<string>com.github.nielshojen.SharedProcessors/LZMADecompress</string>
-    		<key>Arguments</key>
-    		<dict>
-    			<key>lzma_file</key>
-    			<string>%RECIPE_CACHE_DIR%/payload/</string>
-    			<key>decompressor</key>
-    			<string>%RECIPE_CACHE_DIR%/unpack/AdobeFlashPlayerComponent.pkg/Scripts/finalize</string>
-    		</dict>
-	</dict>
-	<dict>
-		<key>Arguments</key>
-		<dict>
-			<key>fw_app_bundle_id</key>
-			<string>%fw_app_bundle_id%</string>
-			<key>fw_app_version</key>
-			<string>%version%</string>
-			<key>fw_destination_root</key>
-			<string>/</string>
-			<key>fw_fileset_name</key>
-			<string>%NAME% - %version%</string>
-			<key>fw_import_source</key>
-			<string>%RECIPE_CACHE_DIR%/payload</string>
-		</dict>
-		<key>Processor</key>
-		<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
-	</dict>
     </array>
 </dict>
 </plist>
