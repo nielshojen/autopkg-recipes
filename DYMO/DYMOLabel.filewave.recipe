@@ -19,6 +19,15 @@
     <string>com.github.joshua-d-miller.download.dymolabel</string>
     <key>Process</key>
     <array>
+        <dict>
+            <key>Processor</key>
+            <string>FileFinder</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pattern</key>
+                <string>%pathname%/*.pkg</string>
+            </dict>
+        </dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -29,7 +38,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %build%</string>
 				<key>fw_import_source</key>
-				<string>%pathname%/*.pkg</string>
+				<string>%found_filename%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
