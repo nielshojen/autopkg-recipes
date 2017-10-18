@@ -28,7 +28,17 @@
                 	<string>%pathname%/*.pkg</string>
             	</dict>
         	</dict>
-        	<dict>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/payload</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+			<dict>
 				<key>Arguments</key>
  				<dict>
  					<key>destination_path</key>
