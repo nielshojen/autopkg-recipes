@@ -12,6 +12,8 @@
         <string>Android Studio</string>
 	<key>fw_app_bundle_id</key>
 	<string>com.github.nielshojen.filewave.AndroidStudio</string>
+	<key>version</key>
+	<string>100</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
