@@ -28,12 +28,9 @@
                 	<string>%pathname%/*.pkg</string>
             	</dict>
         	</dict>
-
 			<dict>
 				<key>Arguments</key>
  				<dict>
- 					<key>destination_path</key>
- 					<string>%RECIPE_CACHE_DIR%/payload</string>
  					<key>source_pkg</key>
  					<string>%pathname%/%dmg_found_filename%</string>
  				</dict>
@@ -50,7 +47,7 @@
 					<key>fw_fileset_name</key>
 					<string>%NAME% - %build%</string>
 					<key>fw_import_source</key>
-					<string>%RECIPE_CACHE_DIR%/payload/%dmg_found_filename%</string>
+					<string>%pkg_path%</string>
 				</dict>
 				<key>Processor</key>
 				<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
