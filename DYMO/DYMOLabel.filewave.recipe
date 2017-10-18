@@ -42,6 +42,7 @@
   			</dict>
 			<dict>
 				<dict>
+					<key>pkgdirs</key>
 					<key>pkgroot</key>
 					<string>%RECIPE_CACHE_DIR%/payload</string>
 				</dict>
