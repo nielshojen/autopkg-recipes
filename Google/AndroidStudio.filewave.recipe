@@ -12,7 +12,7 @@
         <string>Android Studio</string>
 	<key>fw_app_bundle_id</key>
 	<string>com.github.nielshojen.filewave.AndroidStudio</string>
-	<key>version</key>
+	<key>fw_app_version</key>
 	<string>100</string>
     </dict>
     <key>MinimumVersion</key>
@@ -61,7 +61,7 @@
 				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
-				<string>%version%</string>
+				<string>%fw_app_version%</string>
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
