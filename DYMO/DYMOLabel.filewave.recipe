@@ -18,31 +18,42 @@
     <key>ParentRecipe</key>
     <string>com.github.joshua-d-miller.download.dymolabel</string>
     <key>Process</key>
-    <array>
-        <dict>
-            <key>Processor</key>
-            <string>FileFinder</string>
-            <key>Arguments</key>
-            <dict>
-                <key>pattern</key>
-                <string>%pathname%/*.pkg</string>
-            </dict>
-        </dict>
-		<dict>
-			<key>Arguments</key>
+    	<array>
+        	<dict>
+            	<key>Processor</key>
+            	<string>FileFinder</string>
+            	<key>Arguments</key>
+            	<dict>
+                	<key>pattern</key>
+                	<string>%pathname%/*.pkg</string>
+            	</dict>
+        	</dict>
 			<dict>
-				<key>fw_app_bundle_id</key>
-				<string>%fw_app_bundle_id%</string>
-				<key>fw_app_version</key>
-				<string>%build%</string>
-				<key>fw_fileset_name</key>
-				<string>%NAME% - %build%</string>
-				<key>fw_import_source</key>
-				<string>%found_filename%</string>
+				<key>Arguments</key>
+				<dict>
+					<key>destination_path</key>
+					<string>%RECIPE_CACHE_DIR/payload</string>
+					<key>source_path</key>
+					<string>%found_filename%</string>
+				</dict>
+				<key>Processor</key>
+				<string>Copier</string>
 			</dict>
-			<key>Processor</key>
-			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
-		</dict>
-    </array>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>fw_app_bundle_id</key>
+					<string>%fw_app_bundle_id%</string>
+					<key>fw_app_version</key>
+					<string>%build%</string>
+					<key>fw_fileset_name</key>
+					<string>%NAME% - %build%</string>
+					<key>fw_import_source</key>
+					<string>%RECIPE_CACHE_DIR/payload/*.pkg</string>
+				</dict>
+				<key>Processor</key>
+				<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
+			</dict>
+    	</array>
 </dict>
 </plist>
