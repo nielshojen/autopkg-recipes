@@ -32,7 +32,7 @@
 				<key>Arguments</key>
  				<dict>
  					<key>destination_path</key>
- 					<string>%RECIPE_CACHE_DIR%/payload</string>
+ 					<string>%RECIPE_CACHE_DIR%/payload/%dmg_found_filename%</string>
  					<key>source_path</key>
  					<string>%pathname%/%dmg_found_filename%</string>
  				</dict>
