@@ -60,8 +60,7 @@
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
-				<key>FW_RELAX_VERSION</key>
-				</true>
+
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
