@@ -4,7 +4,7 @@ from autopkglib import Processor, ProcessorError
 import subprocess
 import os
 
-__all__ = ["ModeChanger"]
+__all__ = ["OwnerChanger"]
 
 class ModeChanger(Processor):
 	'''Changes file modes'''
