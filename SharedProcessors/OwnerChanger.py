@@ -32,10 +32,10 @@ class OwnerChanger(Processor):
 		owner = self.env.get('owner')
 
 		if recurse == True:
-			retcode = subprocess.call(['/bin/chown', owner, target])
+			retcode = subprocess.call(['/usr/sbin/chown', '-R', owner, target])
 		
 		else:
-			retcode = subprocess.call(['/bin/chown', owner, target])
+			retcode = subprocess.call(['/usr/sbin/chown', owner, target])
 		
 		if retcode:
 			raise ProcessorError('Error setting mode (chown %s) for %s' % (owner, target))
