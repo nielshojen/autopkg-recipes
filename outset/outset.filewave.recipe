@@ -21,41 +21,41 @@
     <string>com.github.grahamgilbert.download.outset</string>
     <key>Process</key>
     <array>
-		<dict>
-			<key>Arguments</key>
 			<dict>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack</string>
-				<key>flat_pkg_path</key>
-				<string>%pathname%</string>
+				<key>Arguments</key>
+				<dict>
+					<key>destination_path</key>
+					<string>%RECIPE_CACHE_DIR%/unpack</string>
+					<key>flat_pkg_path</key>
+					<string>%pathname%</string>
+				</dict>
+				<key>Processor</key>
+				<string>FlatPkgUnpacker</string>
 			</dict>
-			<key>Processor</key>
-			<string>FlatPkgUnpacker</string>
-		</dict>
-		<dict>
-            <key>Processor</key>
-            <string>PkgPayloadUnpacker</string>
-            <key>Arguments</key>
-            <dict>
-                <key>pkg_payload_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/Payload</string>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/payload</string>
-            </dict>
-        </dict>
-		<dict>
-			<key>Processor</key>
-			<string>com.github.nielshojen.SharedProcessors/OwnerChanger</string>
-			<key>Arguments</key>
 			<dict>
-				<key>target</key>
-				<string>%RECIPE_CACHE_DIR%</string>
-				<key>owner</key>
-				<string>root:wheel</string>
-				<key>recurse</key>
-				<true/>
+            	<key>Processor</key>
+            	<string>PkgPayloadUnpacker</string>
+            	<key>Arguments</key>
+            	<dict>
+                	<key>pkg_payload_path</key>
+                	<string>%RECIPE_CACHE_DIR%/unpack/Payload</string>
+                	<key>destination_path</key>
+                	<string>%RECIPE_CACHE_DIR%/payload</string>
+            	</dict>
 			</dict>
-		</dict>
+			<dict>
+				<key>Processor</key>
+				<string>com.github.nielshojen.SharedProcessors/OwnerChanger</string>
+				<key>Arguments</key>
+				<dict>
+					<key>target</key>
+					<string>%RECIPE_CACHE_DIR%/payload/Library/LaunchAgents</string>
+					<key>owner</key>
+					<string>root:wheel</string>
+					<key>recurse</key>
+					<true/>
+				</dict>
+			</dict>
         	<dict>
             		<key>Arguments</key>
             		<dict>
