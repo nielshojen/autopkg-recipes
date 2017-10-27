@@ -6,13 +6,13 @@ import os
 
 __all__ = ["OwnerChanger"]
 
-class ModeChanger(Processor):
+class OwnerChanger(Processor):
 	'''Changes file modes'''
 
 	input_variables = {
-		'filename': {
+		'target': {
 			'required': True,
-			'description': 'Name of filename resource',
+			'description': 'Name of target resource',
 		},
 		'recurse': {
 			'required': False,
@@ -27,15 +27,14 @@ class ModeChanger(Processor):
 	}
 
 	def main(self):
-		filename = self.env.get('filename')
+		target = self.env.get('target')
 		recurse = self.env.get('recurse')
-		mode = self.env.get('mode')
+		owner = self.env.get('owner')
 
 		if recurse == True:
-			retcode = subprocess.call(['/bin/chown','-R', owner, filename])
+			retcode = subprocess.call(['/bin/chown','-R', owner, target])
 		else:
-			retcode = subprocess.call(['/bin/chown', owner, filename])
+			retcode = subprocess.call(['/bin/chown', owner, target])
 		if retcode:
-			raise ProcessorError('Error setting mode (chown %s) for %s' % (owner, filename))
-
+			raise ProcessorError('Error setting mode (chown %s) for %s' % (owner, target))
 		return
