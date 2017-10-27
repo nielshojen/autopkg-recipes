@@ -10,7 +10,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>outset</string>
+        <string>outset Installer</string>
         <key>fw_app_bundle_id</key>
         <string>com.github.nielshojen.filewave.outsetinstaller</string>
     </dict>
