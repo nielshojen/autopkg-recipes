@@ -43,17 +43,6 @@
                 	<string>%RECIPE_CACHE_DIR%/payload</string>
             	</dict>
 			</dict>
-			<dict>
-				<key>Processor</key>
-				<string>com.github.nielshojen.SharedProcessors/OwnerChanger</string>
-				<key>Arguments</key>
-				<dict>
-					<key>target</key>
-					<string>%RECIPE_CACHE_DIR%/payload/Library/LaunchAgents/com.github.outset.login.plist</string>
-					<key>owner</key>
-					<string>root:wheel</string>
-				</dict>
-			</dict>
         	<dict>
             		<key>Arguments</key>
             		<dict>
