@@ -45,7 +45,7 @@
         </dict>
 		<dict>
 			<key>Processor</key>
-			<string>com.github.nielshojen.SharedProcessors/ModeChanger</string>
+			<string>com.github.nielshojen.SharedProcessors/OwnerChanger</string>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
