@@ -43,6 +43,19 @@
                 <string>%RECIPE_CACHE_DIR%/payload</string>
             </dict>
         </dict>
+		<dict>
+			<key>Processor</key>
+			<string>com.github.nielshojen.SharedProcessors/ModeChanger</string>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%RECIPE_CACHE_DIR%/payload/LaunchAgents</string>
+				<key>owner</key>
+				<string>root:wheel</string>
+				<key>recurse</key>
+				<true/>
+			</dict>
+		</dict>
         	<dict>
             		<key>Arguments</key>
             		<dict>
