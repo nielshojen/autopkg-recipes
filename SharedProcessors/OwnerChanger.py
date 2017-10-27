@@ -16,11 +16,11 @@ class ModeChanger(Processor):
 		},
 		'recurse': {
 			'required': False,
-			'description': 'chmod(1) recursive mode'
+			'description': 'chown(1) recursive mode'
 		},
 		'owner': {
 			'required': True,
-			'description': 'chmod(1) mode string to apply to file. E.g. "o-w"'
+			'description': 'chown(1) mode string to apply to file. E.g. "o-w"'
 		},
 	}
 	output_variables = {
@@ -32,10 +32,10 @@ class ModeChanger(Processor):
 		mode = self.env.get('mode')
 
 		if recurse == True:
-			retcode = subprocess.call(['/bin/chmod','-R', owner, filename])
+			retcode = subprocess.call(['/bin/chown','-R', owner, filename])
 		else:
-			retcode = subprocess.call(['/bin/chmod', owner, filename])
+			retcode = subprocess.call(['/bin/chown', owner, filename])
 		if retcode:
-			raise ProcessorError('Error setting mode (chmod %s) for %s' % (owner, filename))
+			raise ProcessorError('Error setting mode (chown %s) for %s' % (owner, filename))
 
 		return
