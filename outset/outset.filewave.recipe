@@ -52,8 +52,6 @@
 					<string>%RECIPE_CACHE_DIR%/payload/Library/LaunchAgents</string>
 					<key>owner</key>
 					<string>root:wheel</string>
-					<key>recurse</key>
-					<true/>
 				</dict>
 			</dict>
         	<dict>
