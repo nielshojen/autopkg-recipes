@@ -48,7 +48,7 @@
 			<string>com.github.nielshojen.SharedProcessors/OwnerChanger</string>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
+				<key>target</key>
 				<string>%RECIPE_CACHE_DIR%/payload/Library/LaunchAgents</string>
 				<key>owner</key>
 				<string>root:wheel</string>
