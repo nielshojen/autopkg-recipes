@@ -44,6 +44,19 @@
             		</dict>
         	</dict>
 		<dict>
+             		<key>Processor</key>
+             		<string>Copier</string>
+             		<key>Arguments</key>
+             		<dict>
+                 		<key>source_path</key>
+                 		<string>%pathname%/*.tool</string>
+	               		<key>destination_path</key>
+                 		<string>%RECIPE_CACHE_DIR%/installer/uninstall.sh</string>
+                		<key>overwrite</key>
+                		<true/>
+            		</dict>
+        	</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>fw_app_bundle_id</key>
