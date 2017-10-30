@@ -26,6 +26,19 @@
                 <string>http://download\.virtualbox\.org/virtualbox/[0-9\.]*/VirtualBox-[0-9\.-]*-OSX.dmg</string>
             </dict>
         </dict>
+		<dict>
+			<key>Processor</key>
+			<string>com.github.nielshojen.SharedProcessors/VersionExtractor</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_file</key>
+				<string>%match%</string>
+				<key>split_on_in</key>
+				<string>-</string>
+				<key>split_on_out</key>
+				<string>-</string>
+			</dict>
+		</dict>
         <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
