@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Docker.</string>
+        <string>Docker</string>
 	<key>fw_app_bundle_id</key>
 	<string>com.github.nielshojen.filewave.docker</string>
     </dict>
