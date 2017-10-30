@@ -9,9 +9,9 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Charles</string>
-		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.docker</string>
+        <string>Docker.</string>
+	<key>fw_app_bundle_id</key>
+	<string>com.github.nielshojen.filewave.docker</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
