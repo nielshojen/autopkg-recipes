@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads latest IntelliJ CE disk image.</string>
     <key>Identifier</key>
-    <string>com.nielshojen.autopkg.download.intellijce</string>
+    <string>com.github.nielshojen.download.intellijce</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
