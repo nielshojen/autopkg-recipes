@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads latest IntelliJ CE disk image.</string>
+    <string>Downloads latest IntelliJ disk image.</string>
     <key>Identifier</key>
-    <string>com.nielshojen.autopkg.download.intellijce</string>
+    <string>com.nielshojen.autopkg.download.intellij</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>IntelliJ Ultimate</string>
+        <string>IntelliJ IDEA</string>
         <key>edition</key>
         <string>U</string>
     </dict>
