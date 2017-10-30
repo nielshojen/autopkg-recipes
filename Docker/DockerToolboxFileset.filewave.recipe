@@ -5,13 +5,13 @@
     <key>Description</key>
     <string>Downloads Docker Toolbox installer and imports into filewave.</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.filewave.DockerToolbox</string>
+    <string>com.github.nielshojen.filewave.DockerToolboxFileset</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
         <string>Docker Toolbox</string>
 	<key>fw_app_bundle_id</key>
-	<string>com.github.nielshojen.filewave.DockerToolbox</string>
+	<string>com.github.nielshojen.filewave.DockerToolboxFileset</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.6.0</string>
