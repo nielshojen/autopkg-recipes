@@ -10,13 +10,13 @@
     <dict>
         <key>NAME</key>
         <string>Docker Toolbox</string>
-	<key>fw_app_bundle_id</key>
-	<string>com.github.nielshojen.filewave.VirtualBox</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.nielshojen.filewave.VirtualBox</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.6.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.homebysix.download.DockerToolbox</string>
+    <string>com.github.nielshojen.download.VirtualBox</string>
     <key>Process</key>
     	<array>
 		<dict>
