@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>DYMO Label</string>
+        <string>Docker Toolbox</string>
 	<key>fw_app_bundle_id</key>
 	<string>com.github.nielshojen.filewave.DockerToolbox</string>
     </dict>
