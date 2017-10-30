@@ -28,6 +28,8 @@
 				<string>%RECIPE_CACHE_DIR%/%NAME%.app</string>
 				<key>source_path</key>
 				<string>%pathname%/*.app</string>
+				<key>overwrite</key>
+				<true/>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
