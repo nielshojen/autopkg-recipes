@@ -17,7 +17,7 @@
     <array>
         <dict>
             <key>Processor</key>
-            <string>com.github.facebook.SharedProcessors/IntellijURLProvider</string>
+            <string>com.facebook.autopkg.shared/IntellijURLProvider</string>
         </dict>
         <dict>
             <key>Processor</key>
