@@ -10,8 +10,8 @@
     <dict>
         <key>NAME</key>
         <string>IntelliJ IDEA</string>
-		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.intellij</string>
+	<key>fw_app_bundle_id</key>
+	<string>com.github.nielshojen.filewave.intellij</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
