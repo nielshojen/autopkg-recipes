@@ -19,7 +19,7 @@
     <array>
         <dict>
             <key>Processor</key>
-            <string>com.facebook.autopkg.shared/IntellijURLProvider</string>
+            <string>com.github.nielshojen.SharedProcessors/IntellijURLProvider</string>
         </dict>
         <dict>
             <key>Processor</key>
