@@ -5,13 +5,13 @@
 	<key>Description</key>
 	<string>Downloads latest version of VirtualBox and imports into FileWave.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.VirtualBox</string>
+	<string>com.github.nielshojen.filewave.VirtualBoxFileset</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>VirtualBox</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.VirtualBox</string>
+		<string>com.github.nielshojen.filewave.VirtualBoxFileset</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
