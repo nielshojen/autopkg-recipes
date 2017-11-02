@@ -45,9 +45,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload/Library/Application Support/Tablet/WacomTabletDriver.app/Contents/Info.plist</string>
+				<string>%RECIPE_CACHE_DIR%/payload/Unity/Unity.app/Contents/Info.plist</string>
 				<key>plist_version_key</key>
-				<string>CFBundleVersion</string>
+				<string>CFBundleShortVersion</string>
 			</dict>
 			<key>Processor</key>
 			<string>Versioner</string>
@@ -60,7 +60,7 @@
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_destination_root</key>
-				<string>/</string>
+				<string>/Applications</string>
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
