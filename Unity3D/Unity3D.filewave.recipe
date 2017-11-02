@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Unity </string>
+		<string>Unity</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.filewave.Unity3D</string>
 	</dict>
@@ -36,7 +36,7 @@
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/payload</string>
 				<key>pkg_payload_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/content.pkg/Payload</string>
+				<string>%RECIPE_CACHE_DIR%/unpack/Unity.pkg.tmp/Payload</string>
 			</dict>
 			<key>Processor</key>
 			<string>PkgPayloadUnpacker</string>
