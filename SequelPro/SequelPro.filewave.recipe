@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>SequelPro</string>
+		<string>Sequel Pro</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.filewave.SequelPro</string>
 	</dict>
@@ -22,35 +22,27 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack</string>
-				<key>flat_pkg_path</key>
-				<string>%pathname%/*.pkg</string>
-			</dict>
-			<key>Processor</key>
-			<string>FlatPkgUnpacker</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Applications</key>
+					<string>0775</string>
+				</dict>
+				<key>pkgroot</key>
 				<string>%RECIPE_CACHE_DIR%/payload</string>
-				<key>pkg_payload_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/content.pkg/Payload</string>
 			</dict>
 			<key>Processor</key>
-			<string>PkgPayloadUnpacker</string>
+			<string>PkgRootCreator</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>input_plist_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload/Library/Application Support/Tablet/WacomTabletDriver.app/Contents/Info.plist</string>
-				<key>plist_version_key</key>
-				<string>CFBundleVersion</string>
+				<key>destination_path</key>
+				<string>%pkgroot%/Applications/%app_name%</string>
+				<key>source_path</key>
+				<string>%pathname%/%app_name%</string>
 			</dict>
 			<key>Processor</key>
-			<string>Versioner</string>
+			<string>Copier</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
