@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the current release of osquery client from Github.</string>
+    <key>Identifier</key>
+    <string>com.github.nielshojen.download.osquery</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>osquery</string>
+        <key>DOWNLOAD_PATTERN</key>
+		<string>(https://pkg.osquery.io/darwin/osquery-+[0-9].+[0-9].+[0-9].pkg)</string>
+		<key>DOWNLOAD_URL</key>
+		<string>https://osquery.io/downloads/</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.0</string>
+    <key>Process</key>
+    <array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
+				<string>%DOWNLOAD_PATTERN%</string>
+				<key>url</key>
+				<string>%DOWNLOAD_URL%</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%match%</string>
+			</dict>
+        </dict>
+	<dict>
+    		<key>Processor</key>
+    		<string>com.github.nielshojen.SharedProcessors/VersionExtractor</string>
+   		<key>Arguments</key>
+    		<dict>
+        		<key>input_file</key>
+        		<string>%pathname%</string>
+        		<key>split_on_in</key>
+        		<string>-</string>
+        		<key>split_on_out</key>
+        		<string>.p</string>
+    		</dict>
+	</dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+    </array>
+</dict>
+</plist>
