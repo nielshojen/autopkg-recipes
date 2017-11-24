@@ -5,7 +5,7 @@
   <key>Description</key>
 	<string>Downloads latest version of Skype for Business, creates a fileset and imports into FileWave.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.MSSkypeforBusiness</string>
+	<string>com.github.nielshojen.filewave.fileset.MSSkypeforBusiness</string>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
@@ -15,7 +15,7 @@
     <key>NAME</key>
     <string>Skype for Business</string>
     <key>fw_app_bundle_id</key>
-    <string>com.github.nielshojen.filewave.MSSkypeforBusiness</string>
+    <string>com.github.nielshojen.filewave.fileset.MSSkypeforBusiness</string>
     <key>fw_destination_root</key>
     <string>/Applications/%NAME%.app</string>
 	</dict>
@@ -34,17 +34,17 @@
                 <string>%pathname%</string>
             </dict>
         </dict>
-	<dict>
-		<key>Arguments</key>
 		<dict>
-			<key>pkgdirs</key>
-			<dict/>
-			<key>pkgroot</key>
-			<string>%RECIPE_CACHE_DIR%/Applications</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgdirs</key>
+				<dict/>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/Applications</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
 		</dict>
-		<key>Processor</key>
-		<string>PkgRootCreator</string>
-	</dict>
         <dict>
             <key>Processor</key>
             <string>PkgPayloadUnpacker</string>
