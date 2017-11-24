@@ -16,8 +16,6 @@
 		<string>Microsoft PowerPoint</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.filewave.pkg.MSPowerPoint2016</string>
-		<key>fw_destination_root</key>
-		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>Process</key>
 	<array>
