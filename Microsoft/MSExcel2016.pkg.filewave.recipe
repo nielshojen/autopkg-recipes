@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest version of Excel 2016, creates a fileset and imports into FileWave.</string>
+	<string>Downloads latest version of Excel 2016 updater and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.pkg.MSExcel2016</string>
 	<key>MinimumVersion</key>
