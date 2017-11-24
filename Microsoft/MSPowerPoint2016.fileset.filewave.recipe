@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads latest version of PowerPoint 2016, creates a fileset and imports into FileWave.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.MSPowerPoint2016</string>
+	<string>com.github.nielshojen.filewave.fileset.MSPowerPoint2016</string>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
@@ -15,7 +15,7 @@
 		<key>NAME</key>
 		<string>Microsoft PowerPoint</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.MSPowerPoint2016</string>
+		<string>com.github.nielshojen.filewave.fileset.MSPowerPoint2016</string>
 		<key>fw_destination_root</key>
 		<string>/Applications/%NAME%.app</string>
 	</dict>
