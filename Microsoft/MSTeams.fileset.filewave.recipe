@@ -5,13 +5,13 @@
 	<key>Description</key>
 	<string>Downloads latest MS Teams, creates a fileset and import to Filewave.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.MSTeams</string>
+	<string>com.github.nielshojen.filewave.fileset.MSTeams</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>Microsoft Teams</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.MSTeams</string>
+		<string>com.github.nielshojen.filewave.fileset.MSTeams</string>
 		<key>fw_destination_root</key>
 		<string>/Applications/%NAME%.app</string>
 	</dict>
