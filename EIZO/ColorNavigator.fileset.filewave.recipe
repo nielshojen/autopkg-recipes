@@ -5,13 +5,13 @@
 	<key>Description</key>
 	<string>Downloads the current release version of EIZO ColorManager, creates a fileset and imports into FIleWave.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.ColorNavigator</string>
+	<string>com.github.nielshojen.filewave.fileset.ColorNavigator</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>EIZO Color Navigator</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.ColorNavigator</string>
+		<string>com.github.nielshojen.filewave.fileset.ColorNavigator</string>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.foigus.download.ColorNavigator</string>
