@@ -64,6 +64,20 @@
 				<string>%destination_path%/Contents/_MASReceipt/receipt</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_request</key>
+				<dict>
+					<key>pkg_path</key>
+					<string>%RECIPE_CACHE_DIR%/pkg/%NAME%_%version%.pkg</string>
+					<key>app_path</key>
+					<string>%pkgroot%%PATH%</string>
+				</dict>
+			</dict>
+			<key>Processor</key>
+			<string>PkgCreator</string>
+		</dict>
 	</array>
 </dict>
 </plist>
