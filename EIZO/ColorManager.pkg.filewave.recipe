@@ -19,6 +19,56 @@
 	<string>0.2.0</string>
 	<key>Process</key>
 	<array>
+        	<dict>
+            		<key>Processor</key>
+            		<string>FlatPkgUnpacker</string>
+            		<key>Arguments</key>
+            		<dict>
+                		<key>flat_pkg_path</key>
+                		<string>%pathname%/*.pkg</string>
+                		<key>destination_path</key>
+                		<string>%RECIPE_CACHE_DIR%/unpack</string>
+            		</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pattern</key>
+				<string>%RECIPE_CACHE_DIR%/unpack/*.pkg</string>
+			</dict>
+			<key>Processor</key>
+			<string>FileFinder</string>
+		</dict>
+		<dict>
+           		<key>Processor</key>
+            		<string>PkgPayloadUnpacker</string>
+            		<key>Arguments</key>
+            		<dict>
+                		<key>pkg_payload_path</key>
+                		<string>%found_filename%/Payload</string>
+                		<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pattern</key>
+				<string>%RECIPE_CACHE_DIR%/payload/Applications/*.app</string>
+			</dict>
+			<key>Processor</key>
+			<string>FileFinder</string>
+		</dict>
+		<dict>
+            		<key>Processor</key>
+            		<string>Versioner</string>
+            		<key>Arguments</key>
+            		<dict>
+                		<key>input_plist_path</key>
+                		<string>%found_filename%/Contents/Info.plist</string>
+			</dict>
+            	</dict>
+
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -29,13 +79,12 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%RECIPE_CACHE_DIR%/payload</string>
-				<key>fw_destination_root</key>
-				<string>/</string>
+				<string>%found_filename%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
 		</dict>
+	</array>
 	</array>
 </dict>
 </plist>
