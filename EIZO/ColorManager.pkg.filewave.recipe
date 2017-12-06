@@ -68,7 +68,15 @@
                 		<string>%found_filename%/Contents/Info.plist</string>
 			</dict>
             	</dict>
-
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pattern</key>
+				<string>%pathname%/*.pkg</string>
+			</dict>
+			<key>Processor</key>
+			<string>FileFinder</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
