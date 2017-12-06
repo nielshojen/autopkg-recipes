@@ -50,34 +50,6 @@
 				<string>%destination_path%/Contents/_MASReceipt/receipt</string>
 			</dict>
 		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>fw_app_bundle_id</key>
-				<string>%fw_app_bundle_id%</string>
-				<key>fw_app_version</key>
-				<string>%version%</string>
-				<key>fw_fileset_name</key>
-				<string>%NAME% - %version%</string>
-				<key>fw_import_source</key>
-				<string>%destination_path%</string>
-				<key>fw_destination_root</key>
-				<string>%PATH%</string>
-			</dict>
-			<key>Processor</key>
-			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
-		</dict>
-        <dict>
-        	<key>Processor</key>
-        	<string>PathDeleter</string>
-		<key>Arguments</key>
-		<dict>
-       		    <key>path_list</key>
-        	    <array>
-        	        <string>%RECIPE_CACHE_DIR%/payload</string>
-        	    </array>
-        	</dict>
-	</dict>
 	</array>
 </dict>
 </plist>
