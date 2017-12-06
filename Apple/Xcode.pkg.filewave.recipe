@@ -29,27 +29,20 @@
 			</dict>
 		</dict>
 		<dict>
-			<key>Processor</key>
-			<string>Copier</string>
 			<key>Arguments</key>
 			<dict>
-				<key>source_path</key>
-				<string>%PATH%</string>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload%PATH%</string>
-				<key>overwrite</key>
-				<true/>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Applications</key>
+					<string>0775</string>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
 			</dict>
-		</dict>
-		<dict>
 			<key>Processor</key>
-			<string>com.github.nielshojen.SharedProcessors/MASReceiptWipe</string>
-			<key>Arguments</key>
-			<dict>
-				<key>filename</key>
-				<string>%destination_path%/Contents/_MASReceipt/receipt</string>
-			</dict>
+			<string>PkgRootCreator</string>
 		</dict>
+
 	</array>
 </dict>
 </plist>
