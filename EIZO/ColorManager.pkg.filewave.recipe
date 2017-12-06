@@ -83,7 +83,7 @@
 				<key>source_path</key>
 				<string>%pathname%/*.pkg</string>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkg/%NAME% %VERSION.pkg</string>
+				<string>%RECIPE_CACHE_DIR%/pkg/%NAME% %VERSION%.pkg</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
@@ -98,7 +98,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%found_filename%</string>
+				<string>%RECIPE_CACHE_DIR%/pkg/%NAME% %VERSION%.pkg</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
