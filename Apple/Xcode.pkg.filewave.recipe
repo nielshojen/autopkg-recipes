@@ -67,13 +67,10 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>pkg_request</key>
-				<dict>
-					<key>pkg_path</key>
-					<string>%RECIPE_CACHE_DIR%/pkg/%NAME%_%version%.pkg</string>
-					<key>app_path</key>
-					<string>%pkgroot%/Applications/%NAME%.app</string>
-				</dict>
+				<key>pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/pkg/%NAME%_%version%.pkg</string>
+				<key>app_path</key>
+				<string>%pkgroot%/Applications/%NAME%.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>AppPkgCreator</string>
