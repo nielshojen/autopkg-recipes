@@ -36,7 +36,7 @@
 				<key>source_path</key>
 				<string>%PATH%</string>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload</string>
+				<string>%RECIPE_CACHE_DIR%/payload%PATH%</string>
 				<key>overwrite</key>
 				<true/>
 			</dict>
@@ -47,7 +47,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%PATH%/Contents/_MASReceipt/receipt</string>
+				<string>%RECIPE_CACHE_DIR%/payload%PATH%/Contents/_MASReceipt/receipt</string>
 			</dict>
 		</dict>
 		<dict>
@@ -60,9 +60,9 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%PATH%</string>
+				<string>%RECIPE_CACHE_DIR%/payload</string>
 				<key>fw_destination_root</key>
-				<string>%PATH%</string>
+				<string>/</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
