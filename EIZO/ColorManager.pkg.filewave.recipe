@@ -71,15 +71,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>pattern</key>
-				<string>%pathname%/*.pkg</string>
-			</dict>
-			<key>Processor</key>
-			<string>FileFinder</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
 				<key>source_path</key>
 				<string>%pathname%/*.pkg</string>
 				<key>destination_path</key>
@@ -91,6 +82,15 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>pattern</key>
+				<string>%RECIPE_CACHE_DIR%/payload/*.pkg</string>
+			</dict>
+			<key>Processor</key>
+			<string>FileFinder</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
 				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
@@ -98,7 +98,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%RECIPE_CACHE_DIR%/payload/%NAME% %VERSION%.pkg</string>
+				<string>%found_filename%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
