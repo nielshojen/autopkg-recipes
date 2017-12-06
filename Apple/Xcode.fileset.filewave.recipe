@@ -70,14 +70,14 @@
         <dict>
         	<key>Processor</key>
         	<string>PathDeleter</string>
-		<key>Arguments</key>
-		<dict>
+			<key>Arguments</key>
+			<dict>
        		    <key>path_list</key>
         	    <array>
         	        <string>%RECIPE_CACHE_DIR%/payload</string>
         	    </array>
         	</dict>
-	</dict>
+		</dict>
 	</array>
 </dict>
 </plist>
