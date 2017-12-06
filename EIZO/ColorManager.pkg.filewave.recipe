@@ -83,7 +83,7 @@
 				<key>source_path</key>
 				<string>%pathname%/*.pkg</string>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload/%NAME% %VERSION%.pkg</string>
+				<string>%RECIPE_CACHE_DIR%/payload</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
