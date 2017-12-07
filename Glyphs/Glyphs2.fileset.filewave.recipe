@@ -24,6 +24,8 @@
 			<dict>
 				<key>archive_path</key>
 				<string>%download_path%</string>
+				<key>archive_format</key>
+				<string>zip</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
