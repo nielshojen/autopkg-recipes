@@ -33,6 +33,10 @@
 		<dict>
 			<key>Processor</key>
 			<string>AppPkgCreator</string>
+			<dict>
+				<key>app_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+			</dict>
 		</dict>
 		<dict>
 			<key>Arguments</key>
