@@ -19,6 +19,17 @@
 	<string>com.github.timsutton.download.Glyphs2</string>
 	<key>Process</key>
 	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>archive_path</key>
+				<string>%download_path%</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
 	</array>
 </dict>
 </plist>
