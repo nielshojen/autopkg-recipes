@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Santa</string>
+		<string>Google Chrome</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.filewave.pkg.googlechrome</string>
 	</dict>
