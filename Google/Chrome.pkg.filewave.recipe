@@ -19,6 +19,10 @@
 	<string>com.github.autopkg.download.googlechrome</string>
 	<key>Process</key>
 	<array>
+		<dict>
+			<key>Processor</key>
+			<string>AppPkgCreator</string>
+		</dict>
 	</array>
 </dict>
 </plist>
