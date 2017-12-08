@@ -16,7 +16,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.download.Firefox-rc-en_US</string>
+	<string>com.github.autopkg.download.firefox-rc-en_US</string>
 	<key>Process</key>
 	<array>
 		<dict>
