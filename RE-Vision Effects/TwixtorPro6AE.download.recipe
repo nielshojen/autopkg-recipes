@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the current release of osquery client from Github.</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.download.osquery</string>
+    <string>com.github.nielshojen.download.TwixtorPro6AE</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
