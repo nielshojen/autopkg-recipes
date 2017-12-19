@@ -16,7 +16,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.pkg.OmniPlan3</string>
+	<string>com.github.autopkg.pkg.omniplan3</string>
 	<key>Process</key>
 	<array>
 		<dict>
