@@ -13,7 +13,7 @@
         <key>NAME</key>
         <string>HipChat</string>
         <key>fw_app_bundle_id</key>
-        <string>com.github.nielshojen.filewave.HipChat</string>
+        <string>com.github.nielshojen.filewave.pkg.HipChat</string>
     </dict>
     <key>Process</key>
     <array>
