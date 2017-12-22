@@ -11,7 +11,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>HipChat</string>
+        <string>SourceTree</string>
         <key>fw_app_bundle_id</key>
         <string>com.github.nielshojen.filewave.pkg.SourceTree</string>
     </dict>
