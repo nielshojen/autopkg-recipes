@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the current release version of HipChat, creates a fileset and imports into FileWave.</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.filewave.HipChat</string>
+    <string>com.github.nielshojen.filewave.pkg.HipChat</string>
     <key>ParentRecipe</key>
     <string>com.github.arubdesu.pkg.HipChat</string>
     <key>Input</key>
