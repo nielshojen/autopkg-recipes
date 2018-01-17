@@ -110,6 +110,24 @@
 			<key>Processor</key>
 			<string>PathDeleter</string>
 		</dict>
+		<dict>		
+			<key>Processor</key>		
+			<string>MunkiPkginfoMerger</string>		
+			<key>Arguments</key>		
+			<dict>		
+			</dict>		
+		</dict>		
+		<dict>		
+			<key>Arguments</key>		
+			<dict>		
+				<key>pkg_path</key>		
+				<string>%pkg_path%</string>		
+				<key>repo_subdirectory</key>		
+				<string>%MUNKI_REPO_SUBDIR%</string>		
+			</dict>		
+			<key>Processor</key>		
+			<string>MunkiImporter</string>		
+		</dict>
 	</array>
 </dict>
 </plist>
