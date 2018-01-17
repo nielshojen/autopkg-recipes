@@ -10,8 +10,33 @@
 	<dict>
 		<key>NAME</key>
 		<string>Xcode</string>
-		<key>PATH</key>
-		<string>/Applications/%NAME%.app</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/apple</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Developer Tools</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string></string>
+			<key>developer</key>
+			<string>Apple</string>
+			<key>display_name</key>
+			<string>Xcode</string>
+			<key>minimum_os_version</key>
+			<string>10.6</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<fasle/>
+			<key>unattended_uninstall</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.nmcspadden.check.appstore</string>
@@ -65,24 +90,44 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>pkg_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%_%version%.pkg</string>
-				<key>app_path</key>
-				<string>%pkgroot%/Applications/%NAME%.app</string>
+				<key>faux_root</key>
+				<string>%RECIPE_CACHE_DIR%/payload/root</string>
+				<key>installs_item_paths</key>
+				<array>
+					<string>%destination_path%</string>
+				</array>
 			</dict>
 			<key>Processor</key>
-			<string>AppPkgCreator</string>
+			<string>MunkiInstallsItemsCreator</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
-			<string>PathDeleter</string>
+			<string>MunkiPkginfoMerger</string>
+			<key>Arguments</key>
+			<dict>
+			</dict>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>path_list</key>
 				<array>
 					<string>%RECIPE_CACHE_DIR%/pkgroot</string>
 				</array>
-        		</dict>
+			</dict>
+			<key>Processor</key>
+			<string>PathDeleter</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
 		</dict>
 	</array>
 </dict>
