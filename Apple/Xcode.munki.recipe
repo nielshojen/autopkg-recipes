@@ -90,6 +90,17 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%_%version%.pkg</string>
+				<key>app_path</key>
+				<string>%pkgroot%/Applications/%NAME%.app</string>
+			</dict>
+			<key>Processor</key>
+			<string>AppPkgCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
 				<key>faux_root</key>
 				<string>%RECIPE_CACHE_DIR%/payload/root</string>
 				<key>installs_item_paths</key>
@@ -111,7 +122,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>pkg_path</key>
-				<string>%destination_path%</string>
+				<string>%pkg_path%</string>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
 			</dict>
