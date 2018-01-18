@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest version of CitrixReceiver installer and imports into FileWave.</string>
+	<string>Downloads latest version of OmniPlan 3 installer and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.pkg.OmniPlan3</string>
 	<key>Input</key>
