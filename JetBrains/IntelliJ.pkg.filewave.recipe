@@ -59,7 +59,7 @@
 				<key>pkg_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%_%version%.pkg</string>
 				<key>app_path</key>
-				<string>%pkgroot%/Applications/%NAME%.app</string>
+				<string>%pathname%/*.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>AppPkgCreator</string>
