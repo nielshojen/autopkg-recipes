@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>Visual Studio Code</string>
 		<key>DOWNLOAD_URL</key>
-		<string>https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15#</string>
+		<string>https://dr.dk</string>
 		<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
 		<false/>
 	</dict>
