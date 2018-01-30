@@ -9,12 +9,14 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Visual Studio</string>
+		<string>Visual Studio Code</string>
 		<key>DOWNLOAD_URL</key>
 		<string>https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15#</string>
+		<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
+		<false/>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.5.0</string>
+	<string>0.2.0</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -26,6 +28,31 @@
 				<string>%DOWNLOAD_URL%</string>
 				<key>filename</key>
 				<string>%NAME%.zip</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+			<key>Arguments</key>
+			<dict>
+				<key>archive_path</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.zip</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
+				<key>requirement</key>
+				<string>identifier "com.microsoft.VSCode" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9</string>
+			</dict>
 		</dict>
 	</array>
 </dict>
