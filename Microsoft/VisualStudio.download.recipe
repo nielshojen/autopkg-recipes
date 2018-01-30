@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest Visual Studio Code.</string>
+	<string>Downloads latest Visual Studio Community Edition.</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.download.visualstudio</string>
 	<key>Input</key>
@@ -14,7 +14,7 @@
 		<string>https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15#</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.2.0</string>
+	<string>0.5.0</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -25,10 +25,6 @@
 				<key>url</key>
 				<string>%DOWNLOAD_URL%</string>
 			</dict>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>EndOfCheckPhase</string>
 		</dict>
 	</array>
 </dict>
