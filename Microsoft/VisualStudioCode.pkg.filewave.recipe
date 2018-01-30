@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest version of Excel 2016 updater and imports into FileWave.</string>
+	<string>Downloads latest version of Visual Studio Code updater and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.pkg.VisualStudioCode</string>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.killahquam.pkg.visualstudiocode</string>
+	<string>com.github.killahquam.pkg.visualstudioscode</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
