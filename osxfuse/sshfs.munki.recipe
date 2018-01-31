@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads latest sshfs package and imports it into Munki</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.munki.sshfs.munki.sshfs</string>
+    <string>com.github.nielshojen.munki.sshfs</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -31,7 +31,7 @@
     <key>MinimumVersion</key>
     <string>0.2.9</string>
     <key>ParentRecipe</key>
-    <string>com.github.nielshojen.munki.sshfs.download.sshfs</string>
+    <string>com.github.nielshojen.download.sshfs</string>
     <key>Process</key>
     <array>
         <dict>
