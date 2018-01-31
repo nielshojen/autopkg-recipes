@@ -21,7 +21,7 @@
             <key>Arguments</key>
             <dict>
                 <key>github_repo</key>
-                <string>osxfuser/sshfs</string>
+                <string>osxfuse/sshfs</string>
             </dict>
         </dict>
         <dict>
