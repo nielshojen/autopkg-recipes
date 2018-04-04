@@ -44,6 +44,10 @@
         </dict>
         <dict>
             <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
             <string>VersionExtractor</string>
             <key>Arguments</key>
             <dict>
@@ -52,10 +56,6 @@
                 <key>split_on_in</key>
                 <string>-</string>
             </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
         </dict>
     </array>
 </dict>
