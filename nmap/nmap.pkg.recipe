@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ParentRecipe</key>
+	<string>com.github.nielshojen.download.nmap</string>
+	<key>Description</key>
+	<string>Download the latest version of nmap and build a pkg.</string>
+	<key>Identifier</key>
+	<string>com.github.nielshojen.pkg.nmap</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>nmap</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.4.0</string>
+	<key>Process</key>
+	<array>
+		<dict>
+            <key>Processor</key>
+            <string>FlatPkgUnpacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>flat_pkg_path</key>
+                <string>%pathname%/*.mpkg</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/unpack</string>
+            </dict>
+        </dict>
+	</array>
+</dict>
+</plist>
