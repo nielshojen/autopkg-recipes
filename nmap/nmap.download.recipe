@@ -44,6 +44,17 @@
         </dict>
         <dict>
             <key>Processor</key>
+            <string>SharedProcessors/VersionExtractor</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_file</key>
+                <string>%pathname%</string>
+                <key>split_on_in</key>
+                <string>-</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
             <string>EndOfCheckPhase</string>
         </dict>
     </array>
