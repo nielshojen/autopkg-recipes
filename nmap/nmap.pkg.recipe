@@ -17,6 +17,17 @@
 	<string>0.4.0</string>
 	<key>Process</key>
 	<array>
+        <dict>
+            <key>Processor</key>
+            <string>VersionExtractor</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_file</key>
+                <string>%pathname%</string>
+                <key>split_on_in</key>
+                <string>-</string>
+            </dict>
+        </dict>
 		<dict>
             <key>Processor</key>
             <string>Copier</string>
@@ -28,6 +39,6 @@
                 <string>%RECIPE_CACHE_DIR%/%NAME%.mpkg</string>
             </dict>
         </dict>
-	</array>
+</array>
 </dict>
 </plist>
