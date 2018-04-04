@@ -30,7 +30,7 @@
         </dict>
 		<dict>
             <key>Processor</key>
-            <string>PkgUnpacker</string>
+            <string>PkgExtractor</string>
             <key>Arguments</key>
             <dict>
                 <key>pkg_path</key>
