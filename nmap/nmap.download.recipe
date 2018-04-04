@@ -28,7 +28,7 @@
                     <string>Safari 8.0.2</string>
                 </dict>
                 <key>re_pattern</key>
-                <string>(nmap-*.dmg)</string>
+                <string>(https://nmap.org/dist/nmap-*.dmg)</string>
                 <key>result_output_var_name</key>
                 <string>match</string>
             </dict>
@@ -39,8 +39,6 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://nmap.org/dist/%match%</string>
-                <key>filename</key>
                 <string>%match%</string>
             </dict>
         </dict>
