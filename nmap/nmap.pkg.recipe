@@ -26,7 +26,7 @@
                 <string>%pathname%</string>
                 <key>split_on_in</key>
                 <string>-</string>
-				<key>split_on_ouy</key>
+				<key>split_on_out</key>
                 <string>.</string>
             </dict>
         </dict>
