@@ -9,27 +9,17 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Spotify</string>
-		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.pkg.Wireshark</string>
+        <string>Wireshark</string>
+	<key>fw_app_bundle_id</key>
+	<string>com.github.nielshojen.filewave.pkg.Wireshark</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.autopkg.cgerke-recipes.download.Wireshark</string>
+    <string>com.github.autopkg.cgerke-recipes.pkg.Wireshark</string>
     <key>Process</key>
     <array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
-				<string>%pkgroot%/Applications/%app_name%</string>
-				<key>source_path</key>
-				<string>%pathname%/%app_name%</string>
-			</dict>
-			<key>Processor</key>
-			<string>Copier</string>
-		</dict>
+
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -40,7 +30,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/Applications/%app_name%</string>
+				<string>%pkg_path%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
