@@ -44,7 +44,7 @@
         </dict>
         <dict>
             <key>Processor</key>
-            <string>SharedProcessors/VersionExtractor.py</string>
+            <string>VersionExtractor</string>
             <key>Arguments</key>
             <dict>
                 <key>input_file</key>
