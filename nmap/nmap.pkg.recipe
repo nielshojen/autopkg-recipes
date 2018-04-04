@@ -50,7 +50,7 @@
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack/ncat.pkg/Payload</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/payload</string>
+                <string>%pkgroot%</string>
             </dict>
 	</dict>
 	<dict>
@@ -61,7 +61,7 @@
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack/ndiff.pkg/Payload</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/payload</string>
+                <string>%pkgroot%</string>
             </dict>
 	</dict>
 	<dict>
@@ -72,7 +72,7 @@
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack/nmap-update.pkg/Payload</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/payload</string>
+                <string>%pkgroot%</string>
             </dict>
 	</dict>
 	<dict>
@@ -83,7 +83,7 @@
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack/nmap.pkg/Payload</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/payload</string>
+                <string>%pkgroot%</string>
             </dict>
 	</dict>
 	<dict>
@@ -94,7 +94,7 @@
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack/nping.pkg/Payload</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/payload</string>
+                <string>%pkgroot%</string>
             </dict>
 	</dict>
 	<dict>
@@ -105,8 +105,19 @@
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack/zenmap.pkg/Payload</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/payload/Applications</string>
+                <string>%pkgroot%/Applications</string>
             </dict>
+	</dict>
+	<dict>
+		<key>Arguments</key>
+		<dict>
+			<key>pkg_path</key>
+			<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
+			<key>source_flatpkg_dir</key>
+			<string>%pkgroot%</string>
+		</dict>
+		<key>Processor</key>
+		<string>FlatPkgPacker</string>
 	</dict>
 	</array>
 </dict>
