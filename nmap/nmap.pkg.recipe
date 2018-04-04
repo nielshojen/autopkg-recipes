@@ -19,10 +19,10 @@
 	<array>
 		<dict>
             <key>Processor</key>
-            <string>FlatPkgUnpacker</string>
+            <string>Copier</string>
             <key>Arguments</key>
             <dict>
-                <key>flat_pkg_path</key>
+                <key>source_path</key>
                 <string>%pathname%/*.mpkg</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack</string>
