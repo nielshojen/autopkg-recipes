@@ -111,7 +111,7 @@
 	<dict>
 		<key>Arguments</key>
 		<dict>
-			<key>pkg_path</key>
+			<key>destination_pkg</key>
 			<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
 			<key>source_flatpkg_dir</key>
 			<string>%pkgroot%</string>
