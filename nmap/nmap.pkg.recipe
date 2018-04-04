@@ -27,7 +27,7 @@
                 <key>split_on_in</key>
                 <string>-</string>
 				<key>split_on_out</key>
-                <string>.</string>
+                <string>.dmg</string>
             </dict>
         </dict>
 		<dict>
