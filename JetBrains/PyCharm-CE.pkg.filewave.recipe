@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the latest PyCharm CE, creates a fileset and imports into FileWave.</string>
+    <key>Identifier</key>
+    <string>com.github.nielshojen.filewave.pkg.pycharmce</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>PyCharm CE</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.nielshojen.filewave.pkg.pycharmce</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.0</string>
+    <key>ParentRecipe</key>
+    <string>com.github.hansen-m.download.pycharm</string>
+    <key>Process</key>
+    <array>
+		<dict>
+			<key>Processor</key>
+			<string>AppDmgVersioner</string>
+			<key>Arguments</key>
+			<dict>
+				<key>dmg_path</key>
+				<string>%pathname%</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%_%version%.pkg</string>
+				<key>app_path</key>
+				<string>%pathname%/*.app</string>
+			</dict>
+			<key>Processor</key>
+			<string>AppPkgCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>fw_app_bundle_id</key>
+				<string>%fw_app_bundle_id%</string>
+				<key>fw_app_version</key>
+				<string>%version%</string>
+				<key>fw_fileset_name</key>
+				<string>%NAME% - %version%</string>
+				<key>fw_import_source</key>
+				<string>%pkg_path%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
+		</dict>
+    </array>
+</dict>
+</plist>
