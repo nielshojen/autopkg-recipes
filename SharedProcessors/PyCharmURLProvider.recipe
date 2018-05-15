@@ -13,10 +13,10 @@ __all__ = ["PyCharmURLProvider"]
 pycharm_version_url = 'https://www.jetbrains.com/updates/updates.xml'
 
 
-class IntellijURLProvider(Processor):
+class PyCharmURLProvider(Processor):
   """Provide URL for latest PyCharm build."""
 
-  description = "Provides URL and version for the latest release of Intellij."
+  description = "Provides URL and version for the latest release of PyCharm."
   input_variables = {
     "base_url": {
       "required": False,
@@ -25,34 +25,34 @@ class IntellijURLProvider(Processor):
     },
     "edition": {
       "required": False,
-      "description": ('Either "C" for "Community" or "U" for "Ultimate" '
+      "description": ('Either "C" for "Community" or "P" for "Professional" '
                       'edition. Defaults to "C".')
     }
   }
   output_variables = {
     "url": {
-      "description": "URL to the latest release of Intellij",
+      "description": "URL to the latest release of PyCharm",
     }
   }
 
   __doc__ = description
 
-  def get_intellij_version(self, intellij_version_url):
+  def get_pycharm_version(self, pycharm_version_url):
     """Retrieve version number from XML."""
     # Read XML
     try:
-        req = urllib2.Request(intellij_version_url)
+        req = urllib2.Request(pycharm_version_url)
         f = urllib2.urlopen(req)
         html = f.read()
         f.close()
     except BaseException as e:
         raise ProcessorError(
           "Can't download %s: %s" % (
-            intellij_version_url, e)
+            pycharm_version_url, e)
         )
     # Search for download link.
     root = ET.fromstring(html)
-    # root[0][-1] is always the last IDEA release
+    # root[0][-1] is always the last PyCHarm release
     build = root[0][-1].find('build')
     version = build.attrib['version']
     # Return pkg url.
@@ -61,16 +61,16 @@ class IntellijURLProvider(Processor):
   def main(self):
     """Main function."""
     # Determine values.
-    version_url = self.env.get('version_url', intellij_version_url)
-    version = self.get_intellij_version(version_url)
+    version_url = self.env.get('version_url', pycharm_version_url)
+    version = self.get_pycharm_version(version_url)
     download_url = (
-      "https://download.jetbrains.com/idea/"
-      "ideaI%s-%s.dmg" % (self.env.get('edition', 'C'), version)
+      "https://download.jetbrains.com/pycharm/"
+      "pycharm%s-%s.dmg" % (self.env.get('edition', 'C'), version)
     )
 
     self.env["url"] = download_url
     self.output("URL: %s" % self.env["url"])
 
 if __name__ == '__main__':
-    processor = IntellijURLProvider()
+    processor = PyCharmURLProvider()
     processor.execute_shell()
