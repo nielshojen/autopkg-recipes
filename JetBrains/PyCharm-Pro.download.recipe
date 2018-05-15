@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version PyCharm Professional.</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.download.pycharmce</string>
+    <string>com.github.nielshojen.download.pycharmpro</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
