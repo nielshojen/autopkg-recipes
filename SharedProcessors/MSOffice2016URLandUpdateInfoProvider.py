@@ -159,7 +159,7 @@ class MSOffice2016URLandUpdateInfoProvider(Processor):
         only manifest data, making the assumption that CFBundleVersion and
         CFBundleShortVersionString are equal. Skip SkypeForBusiness as its
         xml does not contain a 'Trigger Condition'"""
-        if self.env["product"] != 'SkypeForBusiness':
+        if self.env["product"] != 'SkypeForBusiness'and self.env["product"] != 'IntuneCompanyPortal':
             self.sanity_check_expected_triggers(item)
         version = self.get_version(item)
         # Skipping CFBundleShortVersionString because it doesn't contain
