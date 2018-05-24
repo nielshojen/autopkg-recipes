@@ -26,10 +26,6 @@
             <dict>
                 <key>product</key>
                 <string>%NAME%</string>
-                <key>culture_code</key>
-                <string>%CULTURE_CODE%</string>
-                <key>version</key>
-                <string>%VERSION%</string>
             </dict>
         </dict>
         <dict>
