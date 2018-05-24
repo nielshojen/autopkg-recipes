@@ -48,7 +48,7 @@ PROD_DICT = {
     'Word': {'id': 'MSWD15', 'path': '/Applications/Microsoft Word.app'},
     'SkypeForBusiness': {'id': 'MSFB16', 'path': '/Applications/Skype for Business.app'},
     'IntuneCompanyPortal': {'id': 'IMCP01', 'path': '/Applications/Company Portal.app'},
-    'Remote Desktop': {'id': 'MSRD10', 'path': '/Applications/Microsoft Remote Desktop.app'},
+    'RemoteDesktop': {'id': 'MSRD10', 'path': '/Applications/Microsoft Remote Desktop.app'},
     'AutoUpdate': {
         'id': 'MSau03',
         'path': '/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app'
