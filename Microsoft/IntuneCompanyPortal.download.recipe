@@ -11,6 +11,8 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
+        <string>Intune Company Portal</string>
+        <key>PRODUCT</key>
         <string>IntuneCompanyPortal</string>
     </dict>
     <key>Process</key>
@@ -21,7 +23,7 @@
             <key>Arguments</key>
             <dict>
                 <key>product</key>
-                <string>%NAME%</string>
+                <string>%PRODUCT%</string>
             </dict>
         </dict>
         <dict>
