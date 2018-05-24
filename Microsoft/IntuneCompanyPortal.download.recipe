@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Finds latest Lync installer, downloads the disk image.</string>
+    <string>Finds latest Intune Company Portal installer, downloads the pkg.</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.download.MSLync</string>
+    <string>com.github.nielshojen.download.IntuneCompanyPortal</string>
     <key>MinimumVersion</key>
     <string>0.3.1</string>
     <key>Input</key>
