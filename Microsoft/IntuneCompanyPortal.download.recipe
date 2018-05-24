@@ -11,11 +11,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>RemoteDesktop</string>
-        <key>VERSION</key>
-        <string>latest</string>
-        <key>CULTURE_CODE</key>
-        <string>0409</string>
+        <string>Excel</string>
     </dict>
     <key>Process</key>
     <array>
