@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the most recent version of DaVinci Resolve Studio 14 and imports into FileWave.</string>
+    <string>Downloads the most recent version of DaVinci Resolve Studio 15 and imports into FileWave.</string>
     <key>Identifier</key>
     <string>com.github.nielshojen.filewave.fileset.davinciresolvestudio15</string>
     <key>Input</key>
