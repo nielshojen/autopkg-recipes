@@ -35,29 +35,33 @@
 			<dict>
 				<key>pkgdirs</key>
 				<dict>
-					<key>Applications</key>
+					<key>Library</key>
 					<string>0775</string>
-					<key>Applications/Adobe Photoshop CC 2018</key>
+					<key>Library/Application Support</key>
 					<string>0775</string>
-					<key>Applications/Adobe Photoshop CC 2018/Plug-ins</key>
+					<key>Library/Application Support/Adobe</key>
 					<string>0775</string>
-					<key>Applications/Adobe Photoshop CC 2018/Plug-ins/Google</key>
+					<key>Library/Application Support/Adobe/Plug-Ins</key>
 					<string>0775</string>
-					<key>Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Analog Efex Pro 2</key>
+					<key>Library/Application Support/Adobe/Plug-Ins/CC</key>
+					<string>0775</string>
+					<key>Library/Application Support/Adobe/Plug-Ins/CC/DxO</key>
+					<string>0775</string>
+					<key>Library/Application Support/Adobe/Plug-Ins/CC/DxO/Analog Efex Pro 2</key>
 					<string>0755</string>
-					<key>Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Color Efex Pro 4</key>
+					<key>Library/Application Support/Adobe/Plug-Ins/CC/DxO/Color Efex Pro 4</key>
 					<string>0755</string>
-					<key>Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Dfine 2</key>
+					<key>Library/Application Support/Adobe/Plug-Ins/CC/DxO/Dfine 2</key>
 					<string>0755</string>
-					<key>Applications/Adobe Photoshop CC 2018/Plug-ins/Google/HDR Efex Pro 2</key>
+					<key>Library/Application Support/Adobe/Plug-Ins/CC/DxO/HDR Efex Pro 2</key>
 					<string>0755</string>
-					<key>Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Selective Tool</key>
+					<key>Library/Application Support/Adobe/Plug-Ins/CC/DxO/Selective Tool</key>
 					<string>0755</string>
-					<key>Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Sharpener Pro 3</key>
+					<key>Library/Application Support/Adobe/Plug-Ins/CC/DxO/Sharpener Pro 3</key>
 					<string>0755</string>
-					<key>Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Silver Efex Pro 2</key>
+					<key>Library/Application Support/Adobe/Plug-Ins/CC/DxO/Silver Efex Pro 2</key>
 					<string>0755</string>
-					<key>Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Viveza 2</key>
+					<key>Library/Application Support/Adobe/Plug-Ins/CC/DxO/Viveza 2</key>
 					<string>0755</string>
 					<key>Applications/Nik Collection</key>
 					<string>0775</string>
@@ -65,9 +69,9 @@
 					<string>0755</string>
 					<key>Library/Preferences</key>
 					<string>0755</string>
-					<key>Library/Preferences/Google</key>
+					<key>Library/Preferences/DxO</key>
 					<string>0755</string>
-					<key>Library/Preferences/Google/Nik Collection</key>
+					<key>Library/Preferences/DxO/Nik Collection</key>
 					<string>0755</string>
 				</dict>
 				<key>pkgroot</key>
@@ -93,7 +97,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Analog Efex Pro 2/Analog Efex Pro 2.plugin</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Analog Efex Pro 2/Analog Efex Pro 2.plugin</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/Analog Efex Pro 2.plugin</string>
 			</dict>
@@ -104,7 +108,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Analog Efex Pro 2/AnalogEfexPro2.config</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Analog Efex Pro 2/AnalogEfexPro2.config</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/AnalogEfexPro2.config</string>
 			</dict>
@@ -126,7 +130,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Analog Efex Pro 2/Analog Efex Pro 2.plugin/Contents/PlugIns/Analog Efex Pro 2.bundle/Contents/Frameworks/Breakpad.framework</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Analog Efex Pro 2/Analog Efex Pro 2.plugin/Contents/PlugIns/Analog Efex Pro 2.bundle/Contents/Frameworks/Breakpad.framework</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/Analog Efex Pro 2.app/Contents/Frameworks/Breakpad.framework</string>
 			</dict>
@@ -137,7 +141,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Analog Efex Pro 2/Analog Efex Pro 2.plugin/Contents/PlugIns/Analog Efex Pro 2.bundle/Contents/Resources</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Analog Efex Pro 2/Analog Efex Pro 2.plugin/Contents/PlugIns/Analog Efex Pro 2.bundle/Contents/Resources</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/Analog Efex Pro 2.app/Contents/Resources</string>
 			</dict>
@@ -161,7 +165,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Color Efex Pro 4/Color Efex Pro 4.plugin</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Color Efex Pro 4/Color Efex Pro 4.plugin</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/Color Efex Pro 4.plugin</string>
 			</dict>
@@ -172,7 +176,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Color Efex Pro 4/ColorEfexPro4.config</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Color Efex Pro 4/ColorEfexPro4.config</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/ColorEfexPro4.config</string>
 			</dict>
@@ -194,7 +198,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Color Efex Pro 4/Color Efex Pro 4.plugin/Contents/PlugIns/Color Efex Pro 4.bundle/Contents/Frameworks/Breakpad.framework</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Color Efex Pro 4/Color Efex Pro 4.plugin/Contents/PlugIns/Color Efex Pro 4.bundle/Contents/Frameworks/Breakpad.framework</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/Color Efex Pro 4.app/Contents/Frameworks/Breakpad.framework</string>
 			</dict>
@@ -205,7 +209,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Color Efex Pro 4/Color Efex Pro 4.plugin/Contents/PlugIns/Color Efex Pro 4.bundle/Contents/Resources</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Color Efex Pro 4/Color Efex Pro 4.plugin/Contents/PlugIns/Color Efex Pro 4.bundle/Contents/Resources</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/Color Efex Pro 4.app/Contents/Resources</string>
 			</dict>
@@ -229,7 +233,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Dfine 2/BackgroundFilter.plugin</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Dfine 2/BackgroundFilter.plugin</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/BackgroundFilter.plugin</string>
 			</dict>
@@ -240,7 +244,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Dfine 2/Dfine2.config</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Dfine 2/Dfine2.config</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/Dfine2.config</string>
 			</dict>
@@ -251,7 +255,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Dfine 2/Dfine2.plugin</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Dfine 2/Dfine2.plugin</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/Dfine2.plugin</string>
 			</dict>
@@ -262,7 +266,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Dfine 2/FineStructuresFilter.plugin</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Dfine 2/FineStructuresFilter.plugin</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/FineStructuresFilter.plugin</string>
 			</dict>
@@ -273,7 +277,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Dfine 2/HotPixelsFilter.plugin</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Dfine 2/HotPixelsFilter.plugin</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/HotPixelsFilter.plugin</string>
 			</dict>
@@ -284,7 +288,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Dfine 2/ShadowsFilter.plugin</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Dfine 2/ShadowsFilter.plugin</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/ShadowsFilter.plugin</string>
 			</dict>
@@ -295,7 +299,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Dfine 2/SkinFilter.plugin</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot//Dfine 2/SkinFilter.plugin</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/SkinFilter.plugin</string>
 			</dict>
@@ -306,7 +310,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Dfine 2/SkyFilter.plugin</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Dfine 2/SkyFilter.plugin</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/SkyFilter.plugin</string>
 			</dict>
@@ -317,7 +321,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Dfine 2/StrongNoiseFilter.plugin</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Dfine 2/StrongNoiseFilter.plugin</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/StrongNoiseFilter.plugin</string>
 			</dict>
@@ -352,7 +356,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/HDR Efex Pro 2/HDR Efex Pro 2 Automation.plugin</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/HDR Efex Pro 2/HDR Efex Pro 2 Automation.plugin</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/HDR Efex Pro 2 Automation.plugin</string>
 			</dict>
@@ -363,7 +367,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/HDR Efex Pro 2/HDR Efex Pro 2.plugin</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/HDR Efex Pro 2/HDR Efex Pro 2.plugin</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/HDR Efex Pro 2.plugin</string>
 			</dict>
@@ -374,7 +378,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/HDR Efex Pro 2/HDREfexPro2.config</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/HDR Efex Pro 2/HDREfexPro2.config</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/HDREfexPro2.config</string>
 			</dict>
@@ -396,7 +400,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/HDR Efex Pro 2/HDR Efex Pro 2.plugin/Contents/PlugIns/HDR Efex Pro 2.bundle/Contents/Frameworks/Breakpad.framework</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/HDR Efex Pro 2/HDR Efex Pro 2.plugin/Contents/PlugIns/HDR Efex Pro 2.bundle/Contents/Frameworks/Breakpad.framework</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/HDR Efex Pro 2.app/Contents/Frameworks/Breakpad.framework</string>
 			</dict>
@@ -407,7 +411,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/HDR Efex Pro 2/HDR Efex Pro 2.plugin/Contents/PlugIns/HDR Efex Pro 2.bundle/Contents/Resources</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/HDR Efex Pro 2/HDR Efex Pro 2.plugin/Contents/PlugIns/HDR Efex Pro 2.bundle/Contents/Resources</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/HDR Efex Pro 2.app/Contents/Resources</string>
 			</dict>
@@ -431,7 +435,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Selective Tool/SelectivePalette.plugin</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Selective Tool/SelectivePalette.plugin</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/SelectivePalette.plugin</string>
 			</dict>
@@ -442,7 +446,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Selective Tool/SelToolInst.cfg</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Selective Tool/SelToolInst.cfg</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/SelectivePalette.plugin/Contents/Resources/SelToolInst.cfg</string>
 			</dict>
@@ -466,7 +470,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Sharpener Pro 3/SHP3.config</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Sharpener Pro 3/SHP3.config</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/SHP3.config</string>
 			</dict>
@@ -477,7 +481,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Sharpener Pro 3/SHP3OS.plugin</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Sharpener Pro 3/SHP3OS.plugin</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/SHP3OS.plugin</string>
 			</dict>
@@ -488,7 +492,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Sharpener Pro 3/SHP3RPS.plugin</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Sharpener Pro 3/SHP3RPS.plugin</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/SHP3RPS.plugin</string>
 			</dict>
@@ -534,7 +538,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Silver Efex Pro 2/Silver Efex Pro 2.plugin</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Silver Efex Pro 2/Silver Efex Pro 2.plugin</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/Silver Efex Pro 2.plugin</string>
 			</dict>
@@ -545,7 +549,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Silver Efex Pro 2/SilverEfexPro2.config</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Silver Efex Pro 2/SilverEfexPro2.config</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/SilverEfexPro2.config</string>
 			</dict>
@@ -567,7 +571,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Silver Efex Pro 2/Silver Efex Pro 2.plugin/Contents/PlugIns/Silver Efex Pro 2.bundle/Contents/Frameworks/Breakpad.framework</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Silver Efex Pro 2/Silver Efex Pro 2.plugin/Contents/PlugIns/Silver Efex Pro 2.bundle/Contents/Frameworks/Breakpad.framework</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/Silver Efex Pro 2.app/Contents/Frameworks/Breakpad.framework</string>
 			</dict>
@@ -578,7 +582,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Silver Efex Pro 2/Silver Efex Pro 2.plugin/Contents/PlugIns/Silver Efex Pro 2.bundle/Contents/Resources</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Silver Efex Pro 2/Silver Efex Pro 2.plugin/Contents/PlugIns/Silver Efex Pro 2.bundle/Contents/Resources</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/Silver Efex Pro 2.app/Contents/Resources</string>
 			</dict>
@@ -602,7 +606,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Viveza 2/Viveza2.plugin</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Viveza 2/Viveza2.plugin</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/Viveza2.plugin</string>
 			</dict>
@@ -613,7 +617,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Adobe Photoshop CC 2018/Plug-ins/Google/Viveza 2/Viveza2.config</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Viveza 2/Viveza2.config</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/Viveza2.config</string>
 			</dict>
@@ -664,7 +668,7 @@
 				<key>file_mode</key>
 				<string>0666</string>
 				<key>file_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Preferences/Google/Nik Collection/NikCollection.cfg</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Preferences/DxO/Nik Collection/NikCollection.cfg</string>
 			</dict>
 			<key>Comment</key>
 			<string>If the mode isn't read-write for everyone it causes Photoshop to hang when the plugins are invoked.</string>
