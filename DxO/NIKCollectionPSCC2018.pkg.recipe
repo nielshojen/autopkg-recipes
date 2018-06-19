@@ -299,7 +299,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot//Dfine 2/SkinFilter.plugin</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/Application Support/Adobe/Plug-Ins/CC/DxO/Dfine 2/SkinFilter.plugin</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive/SkinFilter.plugin</string>
 			</dict>
