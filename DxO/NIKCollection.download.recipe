@@ -16,10 +16,13 @@
 	<key>Process</key>
 	<array>
 		<dict>
-			<key>Comment</key>
-			<string>Not going to tackle downloading the software right now</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://nikcollection.dxo.com/v2018/Mac/DxO_Nik_Collection.dmg</string>
+			</dict>
 			<key>Processor</key>
-			<string>PackageRequired</string>
+			<string>URLDownloader</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
