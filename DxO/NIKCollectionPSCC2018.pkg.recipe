@@ -638,17 +638,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Nik Collection/Uninstaller.app</string>
-				<key>source_path</key>
-				<string>%pathname%/Nik Collection.app/Contents/Helpers/Uninstaller.app</string>
-			</dict>
-			<key>Processor</key>
-			<string>Copier</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
 				<key>file_content</key>
 				<string>&lt;configuration&gt;
 	&lt;group name="Update"&gt;
