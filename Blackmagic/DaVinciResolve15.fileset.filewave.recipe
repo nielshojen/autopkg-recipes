@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>DaVinci Resolve</string>
 	<key>fw_app_bundle_id</key>
-	<string>com.github.nielshojen.filewave.fileset.davinciresolve15/string>
+	<string>com.github.nielshojen.filewave.fileset.davinciresolve15</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.9</string>
