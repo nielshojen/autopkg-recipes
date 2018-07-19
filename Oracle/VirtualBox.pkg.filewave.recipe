@@ -19,6 +19,7 @@
     <string>com.github.sheagcraig.pkg.VirtualBox</string>
     <key>Process</key>
     	<array>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>fw_app_bundle_id</key>
