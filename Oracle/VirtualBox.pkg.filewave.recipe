@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads VirtualBox installer and imports into filewave.</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.filewave.VirtualBox</string>
+    <string>com.github.nielshojen.filewave.pkg.VirtualBox</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
