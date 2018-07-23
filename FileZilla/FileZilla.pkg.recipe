@@ -5,11 +5,11 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Nik Collection and packages it for Photoshop CC 2018.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.pkg.NikCollectionPSCC2018</string>
+	<string>com.github.nielshojen.pkg.FileZilla</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>NikCollectionPSCC2018</string>
+		<string>FileZilla</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
