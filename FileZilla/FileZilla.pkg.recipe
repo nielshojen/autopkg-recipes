@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Nik Collection and packages it for Photoshop CC 2018.</string>
+	<string>Downloads the latest version of FileZilla and makes a package.</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.pkg.FileZilla</string>
 	<key>Input</key>
