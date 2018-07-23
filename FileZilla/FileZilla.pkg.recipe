@@ -65,7 +65,7 @@
 					<key>pkgname</key>
 					<string>%NAME%-%version%</string>
 					<key>pkgroot</key>
-					<string>%RECIPE_CACHE_DIR%/pkgroot</string>
+					<string>%pkgroot%</string>
 					<key>pkgtype</key>
 					<string>flat</string>
 					<key>version</key>
