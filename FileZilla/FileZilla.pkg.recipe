@@ -37,7 +37,7 @@
 				<key>archive_path</key>
 				<string>%pathname%</string>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%pkgroot%/Applications</string>
+				<string>%pkgroot%/Applications</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
