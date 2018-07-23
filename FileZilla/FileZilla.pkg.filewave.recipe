@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>FileZilla</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.pkg.NikCollectionPSCC2018</string>
+		<string>com.github.nielshojen.filewave.pkg.FileZilla</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
