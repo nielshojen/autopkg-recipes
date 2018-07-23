@@ -35,7 +35,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>archive_path</key>
-				<string>%download_path%</string>
+				<string>%pathname%</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/%pkgroot%/Applications</string>
 				<key>purge_destination</key>
