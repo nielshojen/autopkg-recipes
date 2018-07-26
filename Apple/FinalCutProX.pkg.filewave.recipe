@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>FinalCutProX</string>
+		<string>Final Cut Pro</string>
 		<key>PATH</key>
 		<string>/Applications/%NAME%.app</string>
 		<key>fw_app_bundle_id</key>
