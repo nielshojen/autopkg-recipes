@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Checks for the update of a MAS app.  If the version on disk is up to date, then copy to  cache, edit MAS recipt and import into FileWave directly. If out of date, abort.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.pkg.filewave.MSRMSSharing</string>
+	<string>com.github.nielshojen.filewave.pkg.MSRMSSharing</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -13,7 +13,7 @@
 		<key>PATH</key>
 		<string>/Applications/%NAME%.app</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.pkg.filewave.MSRMSSharing</string>
+		<string>com.github.nielshojen.filewave.pkg.MSRMSSharing</string>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.nmcspadden.check.appstore</string>
