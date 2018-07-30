@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the current release of FUSE for macOS driver from Github.</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.download.FUSEformacOS</string>
+    <string>com.github.nielshojen.download.osxfuse</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
