@@ -5,13 +5,13 @@
 	<key>Description</key>
 	<string>Downloads latest Wacom Intuos driver installer and imports into Filewave</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.WacomIntuosDriverInstaller</string>
+	<string>com.github.nielshojen.filewave.pkg.WacomIntuosDriver</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>Wacom Intuos Driver</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.WacomIntuosDriverInstaller</string>
+		<string>com.github.nielshojen.filewave.pkg.WacomIntuosDriver</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
@@ -51,7 +51,7 @@
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% Installer - %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/installer/Install_Wacom_Tablet_%version%.pkg</string>
 			</dict>
