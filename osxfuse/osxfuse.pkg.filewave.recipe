@@ -21,13 +21,15 @@
 	<array>
     	<dict>
     		<key>Processor</key>
-    		<string>com.github.nielshojen.SharedProcessors/LZMADecompress</string>
+    		<string>com.github.nielshojen.SharedProcessors/VersionExtractor.</string>
     		<key>Arguments</key>
     		<dict>
-    			<key>lzma_file</key>
-    			<string>%RECIPE_CACHE_DIR%/payload/</string>
-    			<key>decompressor</key>
-    			<string>%RECIPE_CACHE_DIR%/unpack/AdobeFlashPlayerComponent.pkg/Scripts/finalize</string>
+			<key>input_file</key>
+			<string>%version%</string>
+    			<key>split_on_in</key>
+    			<string>-</string>
+    			<key>split_on_out</key>
+    			<string></string>
     		</dict>
 		<dict>
 			<key>Arguments</key>
