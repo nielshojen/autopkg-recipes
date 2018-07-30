@@ -19,6 +19,16 @@
 	<string>com.github.nielshojen.download.osxfuse</string>
 	<key>Process</key>
 	<array>
+    	<dict>
+    		<key>Processor</key>
+    		<string>com.github.nielshojen.SharedProcessors/LZMADecompress</string>
+    		<key>Arguments</key>
+    		<dict>
+    			<key>lzma_file</key>
+    			<string>%RECIPE_CACHE_DIR%/payload/</string>
+    			<key>decompressor</key>
+    			<string>%RECIPE_CACHE_DIR%/unpack/AdobeFlashPlayerComponent.pkg/Scripts/finalize</string>
+    		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
