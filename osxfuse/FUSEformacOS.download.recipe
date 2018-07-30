@@ -23,7 +23,7 @@
                 <key>github_repo</key>
                 <string>osxfuse/osxfuse</string>
                 <key>asset_regex</key>
-                <string>osxfuse-*.dmg</string>
+                <string>(osxfuse-[1-9].[1-9].[1-9]\.dmg)</string>
             </dict>
         </dict>
         <dict>
