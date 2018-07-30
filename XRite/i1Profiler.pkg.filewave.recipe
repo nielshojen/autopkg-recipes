@@ -5,13 +5,13 @@
     <key>Description</key>
     <string>Download lastest X-Rite i1Profiler Installer and import into FileWave</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.filewave.i1ProfilerInstaller</string>
+    <string>com.github.nielshojen.filewave.pkg.i1Profiler</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
         <string>i1Profiler</string>
         <key>fw_app_bundle_id</key>
-        <string>com.github.nielshojen.filewave.i1ProfilerInstaller</string>
+        <string>com.github.nielshojen.filewave.pkg.i1Profiler</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
@@ -93,7 +93,7 @@
 			<key>fw_app_version</key>
 			<string>%version%</string>
 			<key>fw_fileset_name</key>
-			<string>%NAME% Installer - %version%</string>
+			<string>%NAME% - %version%</string>
 			<key>fw_import_source</key>
 			<string>%RECIPE_CACHE_DIR%/pkg/i1Profiler.pkg</string>
 		</dict>
