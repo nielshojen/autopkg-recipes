@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Adobe Reader DC</string>
+		<string>Adobe Acrobat Reader DC</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.filewave.pkg.AdobeReaderDC</string>
 	</dict>
