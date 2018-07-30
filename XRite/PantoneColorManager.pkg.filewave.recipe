@@ -27,7 +27,7 @@
  				<key>purge_destination</key>
  				<true/>
  				<key>destination_path</key>
- 				<string>%RECIPE_CACHE_DIR%/pkg</string>
+ 				<string>%RECIPE_CACHE_DIR%/unpack</string>
  			</dict>
  			<key>Processor</key>
  			<string>Unarchiver</string>
