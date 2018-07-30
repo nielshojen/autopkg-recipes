@@ -32,24 +32,7 @@
  			<key>Processor</key>
  			<string>Unarchiver</string>
  		</dict>
-		<dict>
- 			<key>Arguments</key>
- 			<dict>
- 				<key>pattern</key>
- 				<string>%RECIPE_CACHE_DIR%/unpack/*.dmg</string>
- 			</dict>
- 			<key>Processor</key>
- 			<string>FileFinder</string>
- 		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>AppPkgCreator</string>
-			<key>Arguments</key>
-			<dict>
-				<key>app_path</key>
-				<string>%found_file%/*.app
-			</dict>
-		</dict>
+
 		<dict>
 			<key>Arguments</key>
 			<dict>
