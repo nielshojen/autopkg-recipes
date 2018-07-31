@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_PATTERN</key>
-		<string>(http://cdn.wacom.com/u/color/Mac/Wacom Color Manager.pkg)</string>
+		<string>(u/color/[0-9].[0-9].[0-9]mac/Wacom_[0-9])</string>
 		<key>DOWNLOAD_URL</key>
 		<string>https://www.wacom.com/en-us/support/product-support/other</string>
 		<key>NAME</key>
