@@ -22,6 +22,15 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>pattern</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/Wacom_*/Wacom*.pkg</string>
+			</dict>
+			<key>Processor</key>
+			<string>FileFinder</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/unpack</string>
 				<key>flat_pkg_path</key>
@@ -75,15 +84,6 @@
 				<key>overwrite</key>
 				<true/>
 			</dict>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>pattern</key>
-				<string>%RECIPE_CACHE_DIR%/installer/WacomColorManager_*.pkg</string>
-			</dict>
-			<key>Processor</key>
-			<string>FileFinder</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
