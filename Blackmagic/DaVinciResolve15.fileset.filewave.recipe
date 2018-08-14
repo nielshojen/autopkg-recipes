@@ -95,7 +95,7 @@
             <key>Arguments</key>
             <dict>
                 <key>archive_path</key>
-                <string>%RECIPE_CACHE_DIR%/payload/Library/Application Support/Blackmagic Design/DaVinci Resolve/Prereqs/davinci_panels.zip</string>
+                <string>%RECIPE_CACHE_DIR%/payload/Library/Application Support/Blackmagic Design/DaVinci Resolve/Prereqs/davinci_panels.tgz</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/unzip_panels</string>
                 <key>purge_destination</key>
