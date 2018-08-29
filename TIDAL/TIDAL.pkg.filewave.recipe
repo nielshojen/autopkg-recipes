@@ -15,7 +15,7 @@
 		<key>NAME</key>
 		<string>TIDAL</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.pkg.filewave.TIDAL</string>
+		<string>com.github.nielshojen.filewave.pkg.TIDAL</string>
 	</dict>
 	<key>Process</key>
 	<array>
