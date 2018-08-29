@@ -9,7 +9,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.keeleysam.recipes.osquery.download</string>
+	<string>com.github.nielshojen.download.osquery</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
