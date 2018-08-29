@@ -21,11 +21,13 @@
     <array>
 	<dict>
 		<key>Processor</key>
-		<string>GitHubReleasesInfoProvider</string>
+		<string>URLTextSearcher</string>
 		<key>Arguments</key>
 		<dict>
-			<key>github_repo</key>
-			<string>grahamgilbert/crypt</string>
+			<key>url</key>
+			<string>https://api.github.com/repos/facebook/osquery/releases/latest</string>
+			<key>re_pattern</key>
+			<string>name</string>
 		</dict>
 	</dict>
     </array>
