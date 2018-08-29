@@ -5,13 +5,13 @@
 	<key>Description</key>
 	<string>Downloads latest Unity 3D, creates a fileset and imports into Filewave</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.Unity3D</string>
+	<string>com.github.nielshojen.filewave.fileset.Unity3D</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>Unity</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.Unity3D</string>
+		<string>com.github.nielshojen.filewave.fileset.Unity3D</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
