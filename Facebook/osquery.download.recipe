@@ -20,6 +20,17 @@
     <key>Process</key>
     <array>
 	<dict>
+		<key>Processor</key>
+		<string>GitHubReleasesInfoProvider</string>
+		<key>Arguments</key>
+		<dict>
+			<key>github_repo</key>
+			<string>facebook/osquery</string>
+			<key>sort_by_highest_tag_names</key>
+			<true/>
+		</dict>
+	</dict>
+	<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
