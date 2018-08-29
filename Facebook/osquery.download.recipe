@@ -43,6 +43,17 @@
 			<string>"</string>
 		</dict>
 	</dict>
+	<dict>
+		<key>Processor</key>
+		<string>URLTextSearcher</string>
+		<key>Arguments</key>
+		<dict>
+			<key>re_pattern</key>
+			<string>https://osquery.io/downloads/official/undefined/undefined/osquery-%version%.pkg</string>
+			<key>url</key>
+			<string>https://osquery.io/downloads/official/%version%</string>
+		</dict>
+		</dict>
     </array>
 </dict>
 </plist>
