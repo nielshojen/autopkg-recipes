@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest version of Whatsapp, creates a fileset and imports into FileWave.</string>
+	<string>Downloads latest version of WhatsApp, creates a fileset and imports into FileWave.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.pkg.Whatsapp</string>
+	<string>com.github.nielshojen.filewave.pkg.WhatsApp</string>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
@@ -13,9 +13,9 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Whatsapp</string>
+		<string>WhatsApp</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.pkg.filewave.Whatsapp</string>
+		<string>com.github.nielshojen.pkg.filewave.WhatsApp</string>
 	</dict>
 	<key>Process</key>
 	<array>
