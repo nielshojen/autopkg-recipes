@@ -13,7 +13,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Cyberduck</string>
+		<string>Whatsapp</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.pkg.filewave.Whatsapp</string>
 	</dict>
