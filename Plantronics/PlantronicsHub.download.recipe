@@ -27,17 +27,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>source_pkg</key>
-				<string>%pathname%/*.pkg</string>
-				<key>pkg_path</key>
-				<string>%RECIPE_CACHE_DIR%/Plantronics Software.pkg</string>
-			</dict>
-			<key>Processor</key>
-			<string>PkgCopier</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
 				<key>flat_pkg_path</key>
 				<string>%pathname%/*.pkg</string>
 				<key>destination_path</key>
@@ -65,6 +54,17 @@
 			</dict>
 			<key>Processor</key>
 			<string>Versioner</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>source_pkg</key>
+				<string>%pathname%/*.pkg</string>
+				<key>pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/Plantronics Software - %version%.pkg</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgCopier</string>
 		</dict>
 	</array>
 </dict>
