@@ -24,6 +24,15 @@
 			<key>Processor</key>
 			<string>URLDownloader</string>
 		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>source_pkg</key>
+				<string>%pathname%/PlantronicsHubInstaller.dmg/*.pkg</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgCopier</string>
+		</dict>
 	</array>
 </dict>
 </plist>
