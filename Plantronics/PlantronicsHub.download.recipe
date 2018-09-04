@@ -38,13 +38,13 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>pkg_path</key>
+				<key>flat_pkg_path</key>
 				<string>%pkg_path%</string>
-				<key>extract_root</key>
+				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/extract</string>
 			</dict>
 			<key>Processor</key>
-			<string>PkgExtractor</string>
+			<string>FlatPkgUnpacker</string>
 		</dict>
 	</array>
 </dict>
