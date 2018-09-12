@@ -21,11 +21,13 @@
 	<array>
 		<dict>
 			<key>Processor</key>
-			<string>AppDmgVersioner</string>
+			<string>Versioner</string>
 			<key>Arguments</key>
 			<dict>
-				<key>dmg_path</key>
-				<string>%pathname%</string>
+				<key>input_plist_path</key>
+				<string>%pathname%/*.app/Contents/Info.plist</string>
+				<key>plist_version_key</key>
+				<string>CFBundleVersionString</string>
 			</dict>
 		</dict>
 		<dict>
