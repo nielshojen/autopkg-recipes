@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>AxureRP</string>
+		<string>Axure RP 8</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.pkg.AxureRP</string>
 	</dict>
