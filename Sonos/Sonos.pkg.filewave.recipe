@@ -16,7 +16,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.nielshojen.pkg.AxureRP</string>
+	<string>com.github.autopkg.pkg.Sonos</string>
 	<key>Process</key>
 	<array>
 		<dict>
