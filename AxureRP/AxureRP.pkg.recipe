@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the current release version of AxureRP, creates a fileset and imports in FileWave.</string>
+	<key>Identifier</key>
+	<string>com.github.nielshojen.pkg.AxureRP</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>AxureRP</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.nielshojen.pkg.AxureRP</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.thenikola.download.AxureRP</string>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>AppDmgVersioner</string>
+			<key>Arguments</key>
+			<dict>
+				<key>dmg_path</key>
+				<string>%pathname%</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>AppPkgCreator</string>
+		</dict>
+	</array>
+</dict>
+</plist>
