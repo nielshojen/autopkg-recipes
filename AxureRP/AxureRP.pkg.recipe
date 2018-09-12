@@ -22,6 +22,11 @@
 		<dict>
 			<key>Processor</key>
 			<string>AppPkgCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>app_path</key>
+				<string>%pathname%/*.app</string>
+			</dict>
 		</dict>
 	</array>
 </dict>
