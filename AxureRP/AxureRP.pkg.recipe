@@ -25,7 +25,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>dmg_path</key>
-				<string>%pathname%</string>
+				<string>%download_path%</string>
 			</dict>
 		</dict>
 		<dict>
