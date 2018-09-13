@@ -13,7 +13,7 @@
         <key>NAME</key>
         <string>Microsoft Outlook 365</string>
         <key>PRODUCT</key>
-        <string>IntuneCompanyPortal</string>
+        <string>Outlook</string>
     </dict>
     <key>Process</key>
     <array>
