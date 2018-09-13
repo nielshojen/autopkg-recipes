@@ -9,13 +9,13 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.rtrouton.pkg.microsoftword365</string>
+	<string>com.github.nielshojen.download.MicrosoftWord365</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>Microsoft Word 365</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.pkg.MicrosoftWord</string>
+		<string>com.github.nielshojen.filewave.pkg.MicrosoftWord365</string>
 	</dict>
 	<key>Process</key>
 	<array>

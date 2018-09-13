@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest version of Outlook365 updater and imports into FileWave.</string>
+	<string>Downloads latest version of Microsoft OneNote 365 updater and imports into FileWave.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.pkg.Outlook365</string>
+	<string>com.github.nielshojen.filewave.pkg.MicrosoftOneNote365</string>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.download.Outlook365</string>
+	<string>com.github.nielshojen.download.MicrosoftOneNote365</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Microsoft Outlook 365</string>
+		<string>Microsoft OneNote 365</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.rtrouton.pkg.microsoftoutlook365</string>
+		<string>com.github.nielshojen.filewave.pkg.MicrosoftOneNote365</string>
 	</dict>
 	<key>Process</key>
 	<array>
