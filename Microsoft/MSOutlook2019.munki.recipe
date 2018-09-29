@@ -32,6 +32,8 @@
             <array>
                 <string>testing</string>
             </array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
             <key>description</key>
             <string>Get a clear view of your email, calendars, contacts and even the weather to connect with others more effectively. Designed for Mac, Outlook efficiently keeps track of your digital life.</string>
             <key>display_name</key>
