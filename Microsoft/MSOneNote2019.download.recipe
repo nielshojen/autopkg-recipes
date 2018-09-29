@@ -5,13 +5,13 @@
     <key>Description</key>
     <string>Finds latest Microsoft Office 365 Update, downloads the pkg.</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.download.MicrosoftOneNote365</string>
+    <string>com.github.nielshojen.download.msonenote2019</string>
     <key>MinimumVersion</key>
     <string>0.3.1</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Microsoft OneNote 365</string>
+        <string>MSOneNote2019</string>
         <key>PRODUCT</key>
         <string>OneNote</string>
     </dict>
