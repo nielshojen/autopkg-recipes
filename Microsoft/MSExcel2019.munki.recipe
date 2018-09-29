@@ -66,7 +66,7 @@
             <key>Arguments</key>
             <dict>
                 <key>pkg_path</key>
-                <string>%download_path%</string>
+                <string>%pathname%</string>
                 <key>repo_subdirectory</key>
                 <string>%MUNKI_REPO_SUBDIR%</string>
             </dict>
