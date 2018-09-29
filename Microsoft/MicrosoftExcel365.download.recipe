@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Finds latest Microsoft Office 365 Update, downloads the pkg.</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.download.MicrosoftExcel365</string>
+    <string>com.github.nielshojen.download.msexcel2019</string>
     <key>MinimumVersion</key>
     <string>0.3.1</string>
     <key>Input</key>
