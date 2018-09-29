@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Finds latest Microsoft Office 365 Update, downloads the pkg.</string>
+    <string>Finds latest Microsoft Office 2019 Update, downloads the pkg.</string>
     <key>Identifier</key>
     <string>com.github.nielshojen.download.msexcel2019</string>
     <key>MinimumVersion</key>
@@ -11,7 +11,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Microsoft Excel 365</string>
+        <string>MSExcel2019</string>
         <key>PRODUCT</key>
         <string>Excel</string>
     </dict>
