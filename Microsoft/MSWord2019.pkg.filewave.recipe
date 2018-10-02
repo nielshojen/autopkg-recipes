@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads latest version of Microsoft Word 2019 updater and imports into FileWave.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.pkg.MicrosoftWord365</string>
+	<string>com.github.nielshojen.filewave.pkg.MSWord2019</string>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
@@ -13,9 +13,9 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Microsoft Word 365</string>
+		<string>Microsoft Word</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.pkg.MicrosoftWord365</string>
+		<string>com.github.nielshojen.filewave.pkg.MSWord2019</string>
 	</dict>
 	<key>Process</key>
 	<array>
