@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest version of Microsoft Excel 365 updater and imports into FileWave.</string>
+	<string>Downloads latest version of Microsoft Excel 2019 updater and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.pkg.MSExcel2019</string>
 	<key>MinimumVersion</key>
