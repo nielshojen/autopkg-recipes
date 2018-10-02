@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads latest version of Microsoft Excel 365 updater and imports into FileWave.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.pkg.MicrosoftExcel365</string>
+	<string>com.github.nielshojen.filewave.pkg.MSExcel2019</string>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
@@ -13,9 +13,9 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Microsoft Excel 365</string>
+		<string>Microsoft Excel</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.pkg.MicrosoftExcel365</string>
+		<string>com.github.nielshojen.filewave.pkg.MSExcel2019</string>
 	</dict>
 	<key>Process</key>
 	<array>
