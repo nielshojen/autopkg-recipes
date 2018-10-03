@@ -8,8 +8,8 @@
     <string>com.github.nielshojen.munki.MSOneNote2019</string>
     <key>Input</key>
     <dict>
-	<key>MUNKI_CATEGORY</key>
-	<string>Office</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Office</string>
         <key>NAME</key>
         <string>MSOneNote2019</string>
         <key>MUNKI_REPO_SUBDIR</key>
@@ -28,8 +28,8 @@
             <array>
                 <string>testing</string>
             </array>
-	    <key>category</key>
-	    <string>%MUNKI_CATEGORY%</string>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
             <key>description</key>
             <string>Your world, organized. Get organized in notebooks you can divide into sections and pages. With easy navigation and search, you’ll always find your notes right where you left them.</string>
             <key>display_name</key>
