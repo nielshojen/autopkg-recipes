@@ -16,13 +16,9 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.novaksam.pkg.googlechrome</string>
+	<string>com.github.novaksam.pkg.AndroidStudio</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Processor</key>
-			<string>AppPkgCreator</string>
-		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
