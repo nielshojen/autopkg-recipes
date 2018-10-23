@@ -42,6 +42,7 @@
 				<key>path_list</key>
 				<array>
 					<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+					<string>%pkg_path%</string>
 				</array>
 			</dict>
 		</dict>
