@@ -3,7 +3,7 @@
 <plist version="1.0">
     <dict>
         <key>Description</key>
-        <string>Download recipe for Puppet6.</string>
+        <string>Download recipe for Puppet6 Agent.</string>
         <key>Identifier</key>
         <string>com.github.nielshojen.download.puppet6</string>
         <key>Input</key>
@@ -25,7 +25,7 @@
                     <key>url</key>
                     <string>%URL%/%OS_VERSION%/x86_64/puppet-agent-latest.dmg</string>
                     <key>filename</key>
-                    <string>%NAME%.dmg</string>
+                    <string>puppet-agent-latest.dmg</string>
                 </dict>
                 <key>Processor</key>
                 <string>URLDownloader</string>
