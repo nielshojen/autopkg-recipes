@@ -61,7 +61,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%destination_path%/Contents/_MASReceipt/receipt</string>
+				<string>%pkgroot%/Applications/%NAME%.app/Contents/_MASReceipt/receipt</string>
 			</dict>
 		</dict>
 		<dict>
