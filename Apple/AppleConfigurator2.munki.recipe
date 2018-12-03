@@ -93,7 +93,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>pkg_path</key>
-				<string>%RECIPE_CACHE_DIR%/%displayname%_%version%.pkg</string>
+				<string>%RECIPE_CACHE_DIR%/%display_name%_%version%.pkg</string>
 				<key>app_path</key>
 				<string>%pkgroot%%PATH%</string>
 			</dict>
