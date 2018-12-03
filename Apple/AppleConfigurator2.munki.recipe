@@ -27,7 +27,7 @@
 			<key>developer</key>
 			<string>Apple</string>
 			<key>display_name</key>
-			<string>Apple Configurator</string>
+			<string>Apple Configurator 2</string>
 			<key>minimum_os_version</key>
 			<string>10.14</string>
 			<key>name</key>
@@ -71,9 +71,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>source_path</key>
-				<string>%PATH%</string>
+				<string>/Applications/%display_name%.app</string>
 				<key>destination_path</key>
-				<string>%pkgroot%%PATH%</string>
+				<string>%pkgroot%/Applications/%display_name%.app</string>
 				<key>overwrite</key>
 				<true/>
 			</dict>
