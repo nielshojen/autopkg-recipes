@@ -13,7 +13,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>.NET Core SDK</string>
+		<string>DotNetCoreSDK</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.filewave.pkg.dotnetcoresdk</string>
 	</dict>
