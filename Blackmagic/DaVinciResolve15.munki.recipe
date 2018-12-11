@@ -19,9 +19,9 @@
                 <string>testing</string>
             </array>
             <key>description</key>
-            <string>This software installs the free version of DaVinci Resolve 14 which features up to 10x faster editing performance, Fairlight audio post production, dozens of new filters and effects and more. Technical support is available via the Blackmagic Design community forums.</string>
+            <string>This software installs the free version of DaVinci Resolve 15 which features up to 10x faster editing performance, Fairlight audio post production, dozens of new filters and effects and more. Technical support is available via the Blackmagic Design community forums.</string>
             <key>display_name</key>
-            <string>DaVinci Resolve 14</string>
+            <string>DaVinci Resolve 15</string>
             <key>minimum_os_version</key>
             <string>10.11.6</string>
             <key>name</key>
