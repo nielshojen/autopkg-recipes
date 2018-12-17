@@ -11,9 +11,9 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>MSWord2019</string>
+        <string>MSSkypeforBusiness</string>
         <key>PRODUCT</key>
-        <string>Word</string>
+        <string>SkypeForBusiness</string>
     </dict>
     <key>Process</key>
     <array>
