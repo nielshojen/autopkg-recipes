@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Finds latest Microsoft Office 2019 Update, downloads the pkg.</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.download.msskypeforbusiness</string>
+    <string>com.github.nielshojen.download.MSSkypeforBusiness</string>
     <key>MinimumVersion</key>
     <string>0.3.1</string>
     <key>Input</key>
