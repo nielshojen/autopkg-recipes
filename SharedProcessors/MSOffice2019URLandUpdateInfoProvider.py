@@ -41,16 +41,16 @@ BASE_URL = "https://officecdn.microsoft.com/pr/%s/OfficeMac/%s.xml"
 # Note that Skype, 'MSFB' has a '16' after it, AutoUpdate has a '03' after it while all the other products have '15'
 
 PROD_DICT = {
-    'Excel': {'id': 'XCEL2019', 'path': '/Applications/Microsoft Excel.app'},
-    'OneNote': {'id': 'ONMC2019', 'path': '/Applications/Microsoft OneNote.app'},
-    'Outlook': {'id': 'OPIM2019', 'path': '/Applications/Microsoft Outlook.app'},
-    'PowerPoint': {'id': 'PPT32019', 'path': '/Applications/Microsoft PowerPoint.app'},
-    'Word': {'id': 'MSWD2019', 'path': '/Applications/Microsoft Word.app'},
-    'SkypeForBusiness': {'id': 'MSFB16', 'path': '/Applications/Skype for Business.app'},
-    'IntuneCompanyPortal': {'id': 'IMCP01', 'path': '/Applications/Company Portal.app'},
-    'RemoteDesktop': {'id': 'MSRD10', 'path': '/Applications/Microsoft Remote Desktop.app'},
+    'Excel': {'id': 'XCEL2019-CHK', 'path': '/Applications/Microsoft Excel.app'},
+    'OneNote': {'id': 'ONMC2019-CHK', 'path': '/Applications/Microsoft OneNote.app'},
+    'Outlook': {'id': 'OPIM2019-CHK', 'path': '/Applications/Microsoft Outlook.app'},
+    'PowerPoint': {'id': 'PPT32019-CHK', 'path': '/Applications/Microsoft PowerPoint.app'},
+    'Word': {'id': 'MSWD2019-CHK', 'path': '/Applications/Microsoft Word.app'},
+    'SkypeForBusiness': {'id': 'MSFB16-CHK', 'path': '/Applications/Skype for Business.app'},
+    'IntuneCompanyPortal': {'id': 'IMCP01-CHK', 'path': '/Applications/Company Portal.app'},
+    'RemoteDesktop': {'id': 'MSRD10-CHK', 'path': '/Applications/Microsoft Remote Desktop.app'},
     'AutoUpdate': {
-        'id': 'MSau03',
+        'id': 'MSAU03-CHK',
         'path': '/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app'
     }
 }
