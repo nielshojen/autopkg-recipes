@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads Java 8, Creates a package and imports into FileWave.</string>
+	<string>Downloads Java 10, Creates a package and imports into FileWave.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.OracleJava19</string>
+	<string>com.github.nielshojen.filewave.OracleJava10</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
