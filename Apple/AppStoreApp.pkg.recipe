@@ -30,7 +30,7 @@
         </dict>
         <dict>
             <key>Processor</key>
-            <string>PkgBuildTester</string>
+            <string>com.github.nielshojen.SharedProcessors/PkgBuildTester</string>
             <key>comment</key>
             <string>Look in our recipe cache for an existing, current package.</string>
             <key>Arguments</key>
