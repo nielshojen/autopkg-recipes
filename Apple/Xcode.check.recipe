@@ -24,7 +24,7 @@
                 <string>%PATH%</string>
             </dict>
             <key>Processor</key>
-            <string>AppStoreUpdateChecker</string>
+            <string>com.github.nielshojen.SharedProcessors/AppStoreUpdateChecker</string>
         </dict>
         <dict>
             <key>Processor</key>
