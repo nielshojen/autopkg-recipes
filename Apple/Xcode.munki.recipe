@@ -56,6 +56,15 @@
 					</array>
 					<key>minimum_os_version</key>
 					<string>%version%</string>
+					<key>postinstall_script</key>
+					<string>#!/bin/sh
+
+# create _MASReceipt folder (if it does not exist)
+mkdir -p &quot;/Applications/%APP_NAME%/Contents/_MASReceipt&quot;
+
+# create/overwrite the receipt file
+cat /dev/null &gt; &quot;/Applications/%APP_NAME%/Contents/_MASReceipt/receipt&quot;
+</string>
 				</dict>	
 			</dict>
 		</dict>
