@@ -2,137 +2,100 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Description</key>
-	<string>Checks for the update of a MAS app.  If the version on disk is up to date, then copy to  cache, edit MAS recipt and import into Munki directly. If out of date, abort.</string>
-	<key>Identifier</key>
-	<string>com.github.nielshojen.munki.iMovie</string>
-	<key>Input</key>
-	<dict>
-		<key>NAME</key>
-		<string>iMovie</string>
+    <key>Description</key>
+    <string>Checks for the update of a MAS app.  If the version on disk is up to date, then package it up and import into Munki.  If out of date, abort. If pyasn1 is installed, updates will be checked beforehand from the App Store.  Install pyasn1 here: sudo pip install git+https://github.com/geertj/python-asn1.git#egg=pyasn1</string>
+    <key>Identifier</key>
+    <string>com.github.nielshojen.munki.iMovie</string>
+    <key>Input</key>
+    <dict>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/apple/iMovie</string>
+        <key>NAME</key>
+        <string>iMovie</string>
         <key>PATH</key>
         <string>/Applications/%NAME%.app</string>
-		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/apple</string>
-		<key>MUNKI_CATEGORY</key>
-		<string>Productivity</string>
-		<key>pkginfo</key>
-		<dict>
-			<key>catalogs</key>
-			<array>
-				<string>testing</string>
-			</array>
-			<key>category</key>
-			<string>%MUNKI_CATEGORY%</string>
-			<key>description</key>
-			<string></string>
-			<key>developer</key>
-			<string>Apple</string>
-			<key>display_name</key>
-			<string>iMovie</string>
-			<key>minimum_os_version</key>
-			<string>10.6</string>
-			<key>name</key>
-			<string>%NAME%</string>
-			<key>unattended_install</key>
-			<true/>
-			<key>unattended_uninstall</key>
-			<true/>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing</string>
+            </array>
+            <key>display_name</key>
+            <string>%NAME%</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>unattended_install</key>
+            <true/>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
-	<string>com.github.nmcspadden.check.appstore</string>
+	<string>com.github.nielshojen.pkg.appstore</string>
 	<key>Process</key>
-	<array>
+    <array>
+	<dict>
+		<key>Processor</key>
+		<string>Versioner</string>
+		<key>Arguments</key>
 		<dict>
-			<key>Processor</key>
-			<string>StopProcessingIf</string>
-			<key>Arguments</key>
-			<dict>
-				<key>predicate</key>
-				<string>update_available == YES</string>
-			</dict>
+			<key>input_plist_path</key>
+			<string>/Applications/%NAME%.app/Contents/Info.plist</string>
+			<key>plist_version_key</key>
+			<string>LSMinimumSystemVersion</string>
 		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>pkgdirs</key>
+	</dict>
+    	<dict>
+    		<key>Processor</key>
+    		<string>MunkiPkginfoMerger</string>
+    		<key>Arguments</key>
+    		<dict>
+				<key>additional_pkginfo</key>
 				<dict>
-					<key>Applications</key>
-					<string>0775</string>
-				</dict>
-				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
-			</dict>
-			<key>Processor</key>
-			<string>PkgRootCreator</string>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>Copier</string>
-			<key>Arguments</key>
-			<dict>
-				<key>source_path</key>
-				<string>%PATH%</string>
-				<key>destination_path</key>
-				<string>%pkgroot%%PATH%</string>
-				<key>overwrite</key>
-				<true/>
+					<key>blocking_applications</key>
+					<array>
+						<string>%NAME%</string>
+					</array>
+					<key>minimum_os_version</key>
+					<string>%version%</string>
+					<key>postinstall_script</key>
+					<string>#!/bin/sh
+
+# create _MASReceipt folder (if it does not exist)
+mkdir -p &quot;%PATH%/Contents/_MASReceipt&quot;
+
+# create/overwrite the receipt file
+cat /dev/null &gt; &quot;%PATH%/Contents/_MASReceipt/receipt&quot;
+</string>
+				</dict>	
 			</dict>
 		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>com.github.nielshojen.SharedProcessors/MASReceiptWipe</string>
-			<key>Arguments</key>
-			<dict>
-				<key>filename</key>
-				<string>%destination_path%/Contents/_MASReceipt/receipt</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>pkg_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%_%version%.pkg</string>
-				<key>app_path</key>
-				<string>%pkgroot%/Applications/%NAME%.app</string>
-			</dict>
-			<key>Processor</key>
-			<string>AppPkgCreator</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>path_list</key>
-				<array>
-					<string>%RECIPE_CACHE_DIR%/pkgroot</string>
+     	<dict>
+    		<key>Processor</key>
+    		<string>MunkiInstallsItemsCreator</string>
+    		<key>Arguments</key>
+    		<dict>
+    			<key>faux_root</key>
+    			<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+    			<key>installs_item_paths</key>
+    			<array>
+	    			<string>%PATH%</string>
 				</array>
-			</dict>
-			<key>Processor</key>
-			<string>PathDeleter</string>
-		</dict>
-		<dict>		
-			<key>Arguments</key>		
-			<dict>		
-				<key>pkg_path</key>		
-				<string>%pkg_path%</string>		
-				<key>repo_subdirectory</key>		
-				<string>%MUNKI_REPO_SUBDIR%</string>		
-			</dict>		
-			<key>Processor</key>		
-			<string>MunkiImporter</string>		
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>path_list</key>
-				<array>
-					<string>%RECIPE_CACHE_DIR%/%NAME%_%version%.pkg</string>
-				</array>
-			</dict>
-			<key>Processor</key>
-			<string>PathDeleter</string>
-		</dict>
-	</array>
+    		</dict>
+    	</dict>
+    	<dict>
+    		<key>Processor</key>
+    		<string>MunkiPkginfoMerger</string>
+    	</dict>
+	   	<dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pkg_path%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+        </dict>
+    </array>
 </dict>
 </plist>
