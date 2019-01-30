@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current release version of Screaming Frog Log Analyser, creates a fileset and imports in FileWave.</string>
+	<string>Downloads the current release version of Screaming Frog Log File Analyser, creates a fileset and imports in FileWave.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.ScreamingFrogLogAnalyser</string>
+	<string>com.github.nielshojen.filewave.ScreamingFrogLogFileAnalyser</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>Screaming Frog Log Analyser</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.ScreamingFrogLogAnalyser</string>
+		<string>com.github.nielshojen.filewave.ScreamingFrogLogFileAnalyser</string>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.nielshojen.download.ScreamingFrogLogFileAnalyser</string>
