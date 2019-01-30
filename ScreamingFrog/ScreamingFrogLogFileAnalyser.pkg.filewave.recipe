@@ -21,37 +21,7 @@
 	<array>
 		<dict>
 			<key>Processor</key>
-			<string>AppDmgVersioner</string>
-			<key>Arguments</key>
-			<dict>
-				<key>dmg_path</key>
-				<string>%pathname%</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>pkgdirs</key>
-				<dict>
-					<key>Applications</key>
-					<string>0775</string>
-				</dict>
-				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/payload</string>
-			</dict>
-			<key>Processor</key>
-			<string>PkgRootCreator</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
-				<string>%pkgroot%/Applications/%app_name%</string>
-				<key>source_path</key>
-				<string>%pathname%/%app_name%</string>
-			</dict>
-			<key>Processor</key>
-			<string>Copier</string>
+			<string>AppPkgCreator</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
@@ -63,9 +33,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/Applications/%app_name%</string>
-				<key>fw_destination_root</key>
-				<string>/Applications/%app_name%</string>
+				<string>%pkg_path%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
