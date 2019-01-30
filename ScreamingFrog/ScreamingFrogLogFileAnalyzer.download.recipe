@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest Screaming Frog SEO disk image.</string>
+	<string>Downloads latest Screaming Frog Log Analyzer disk image.</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.download.ScreamingFrogLogFileAnalyzer</string>
 	<key>Input</key>
