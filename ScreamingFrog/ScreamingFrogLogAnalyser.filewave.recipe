@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version of Screaming Frog Log Analyser, creates a fileset and imports in FileWave.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.pkg.ScreamingFrogLogAnalyser</string>
+	<string>com.github.nielshojen.filewave.ScreamingFrogLogAnalyser</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
