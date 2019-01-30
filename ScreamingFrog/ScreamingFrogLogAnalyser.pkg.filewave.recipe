@@ -14,7 +14,7 @@
 		<string>com.github.nielshojen.filewave.pkg.ScreamingFrogLogAnalyser</string>
 	</dict>
 	<key>ParentRecipe</key>
-	<string>com.github.nielshojen.download.ScreamingLogFileAnalyser</string>
+	<string>com.github.nielshojen.download.ScreamingFrogLogFileAnalyser</string>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>Process</key>
