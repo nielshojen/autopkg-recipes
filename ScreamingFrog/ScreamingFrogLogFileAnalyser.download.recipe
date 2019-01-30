@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Screaming Frog Log File Analyzer</string>
+		<string>Screaming Frog Log File Analyser</string>
 		<key>SEARCH_PATTERN</key>
 		<string>(?P&lt;url&gt;https://download.screamingfrog.co.uk/products/log-file-analyser/ScreamingFrogLogFileAnalyser-(?P&lt;version&gt;.*?).dmg)</string>
 		<key>SEARCH_URL</key>
