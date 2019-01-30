@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>Screaming Frog Log Analyser</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.pkg.ScreamingFrogLogAnalyser</string>
+		<string>com.github.nielshojen.filewave.ScreamingFrogLogAnalyser</string>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.nielshojen.download.ScreamingFrogLogFileAnalyser</string>
