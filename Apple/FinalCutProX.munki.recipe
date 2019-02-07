@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps/apple/FinaCutProX</string>
+        <string>apps/apple</string>
         <key>NAME</key>
         <string>Final Cut Pro</string>
         <key>PATH</key>
