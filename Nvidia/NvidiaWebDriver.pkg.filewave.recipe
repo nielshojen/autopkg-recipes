@@ -5,18 +5,18 @@
 	<key>Description</key>
 	<string>Downloads the latest version of the Nvidia Quadro-Certified and GeForce Web Driver and imports into Filewave</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.pkg.NvidiaQuadroDriver</string>
+	<string>com.github.nielshojen.filewave.pkg.NvidiaWebDriver</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>NVidia Quadro Driver</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.pkg.NvidiaQuadroDriver</string>
+		<string>com.github.nielshojen.filewave.pkg.NvidiaWebDriver</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jaharmi.download.Nvidia.WebDriverQuadroCertified</string>
+	<string>com.github.nielshojen.download.NvidiaWebDriver</string>
 	<key>Process</key>
 	<array>
 		<dict>
