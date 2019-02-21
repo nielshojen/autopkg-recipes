@@ -13,7 +13,7 @@
 		<key>NAME</key>
 		<string>Nvidia Web Driver</string>
 		<key>PRODUCT_RE_PATTERN</key>
-		<string>.string.(images.nvidia.com/mac/pkg/\d{3}/WebDriver-\d{3}.\d{2}.\d{2}.\d{2}.[0-9a-z]{3}.pkg).\/string.</string>
+		<string>.string.(https://images.nvidia.com/mac/pkg/\d{3}/WebDriver-\d{3}.\d{2}.\d{2}.\d{2}.[0-9a-z]{3}.pkg).\/string.</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.5.0</string>
