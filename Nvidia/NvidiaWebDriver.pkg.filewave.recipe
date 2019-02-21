@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of the Nvidia Quadro-Certified and GeForce Web Driver and imports into Filewave</string>
+	<string>Downloads the latest version of the Nvidia Web Driver and imports into Filewave</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.pkg.NvidiaWebDriver</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>NVidia Quadro Driver</string>
+		<string>NVidia Web Driver</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.filewave.pkg.NvidiaWebDriver</string>
 	</dict>
