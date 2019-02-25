@@ -37,7 +37,7 @@
     <key>MinimumVersion</key>
     <string>1.0.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.novaksam.pkg.nodejs</string>
+    <string>com.github.novaksam.pkg.NodeJS</string>
     <key>Process</key>
     <array>
         <dict>
