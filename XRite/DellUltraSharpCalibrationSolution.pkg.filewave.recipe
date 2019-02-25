@@ -23,7 +23,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>pattern</key>
-				<string>%RECIPE_CACHE_DIR%/Dell Calibration Solution/Dell*.pkg</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Dell*.pkg</string>
  			</dict>
  			<key>Processor</key>
  			<string>FileFinder</string>
