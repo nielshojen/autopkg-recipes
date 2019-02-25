@@ -20,8 +20,8 @@
             <array>
                 <string>testing</string>
             </array>
-			<key>category</key>
-			<string>%MUNKI_CATEGORY%</string>
+            <key>category</key>
+            <string>%MUNKI_CATEGORY%</string>
             <key>description</key>
             <string></string>
             <key>display_name</key>
