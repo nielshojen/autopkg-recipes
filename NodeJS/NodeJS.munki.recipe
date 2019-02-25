@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>This recipe downloads and imports the latest NodeJS into Munki</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.munki.nodejs</string>
+    <string>com.github.nielshojen.munki.NodeJS</string>
     <key>Input</key>
     <dict>
 	<key>MUNKI_CATEGORY</key>
@@ -13,7 +13,7 @@
         <key>NAME</key>
         <string>NodeJS</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps/NodeJS/string>
+        <string>apps/NodeJS</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
