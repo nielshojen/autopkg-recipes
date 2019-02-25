@@ -8,6 +8,8 @@
     <string>com.github.nielshojen.munki.NvidiaWebDriver</string>
     <key>Input</key>
     <dict>
+        <key>MAJOR_OS_VERSION</key>
+        <string>10.13</string>
 	<key>MUNKI_CATEGORY</key>
 	<string>Drivers</string>
         <key>NAME</key>
