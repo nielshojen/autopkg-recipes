@@ -17,7 +17,7 @@
     <array>
         <dict>
             <key>Processor</key>
-            <string>com.github.nielshojen.SharedProcessors/IntellijURLProvider</string>
+            <string>com.github.nielshojen.SharedProcessors/JetbrainsURLProvider</string>
             <key>Arguments</key>
             <dict>
                 <key>product_code</key>
