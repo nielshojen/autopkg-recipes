@@ -32,7 +32,7 @@
     <key>MinimumVersion</key>
     <string>0.2.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.its-unibas.download.Intellij</string>
+    <string>com.github.nielshojen.download.intellij</string>
     <key>Process</key>
     <array>
         <dict>
