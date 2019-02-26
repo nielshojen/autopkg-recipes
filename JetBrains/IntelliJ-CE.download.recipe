@@ -18,6 +18,11 @@
         <dict>
             <key>Processor</key>
             <string>com.github.nielshojen.SharedProcessors/JetbrainsURLProvider</string>
+            <key>Arguments</key>
+            <dict>
+                <key>product_code</key>
+                <string>IIU</string>
+            </dict>
         </dict>
         <dict>
             <key>Processor</key>
