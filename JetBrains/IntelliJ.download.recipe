@@ -10,8 +10,6 @@
     <dict>
         <key>NAME</key>
         <string>IntelliJ IDEA</string>
-        <key>edition</key>
-        <string>U</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.6.0</string>
@@ -20,6 +18,11 @@
         <dict>
             <key>Processor</key>
             <string>com.github.nielshojen.SharedProcessors/IntellijURLProvider</string>
+            <key>Arguments</key>
+            <dict>
+                <key>product_code</key>
+                <string>IIU</string>
+            </dict>
         </dict>
         <dict>
             <key>Processor</key>
