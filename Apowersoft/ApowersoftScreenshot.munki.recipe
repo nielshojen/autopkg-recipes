@@ -5,15 +5,15 @@
 	<key>Description</key>
 	<string>Checks for the update of a MAS app.  If the version on disk is up to date, then copy to  cache, edit MAS recipt and import into Munki directly. If out of date, abort.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.munki.AppleConfigurator2</string>
+	<string>com.github.nielshojen.munki.ApowersoftScreenshot</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>AppleConfigurator2</string>
+		<string>ApowersoftScreenshot</string>
 		<key>PATH</key>
-		<string>/Applications/Apple Configurator 2.app</string>
+		<string>/Applications/Apowersoft Screenshot.app</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/apple</string>
+		<string>apps/Apowersoft</string>
 		<key>MUNKI_CATEGORY</key>
 		<string>Utilities</string>
 		<key>pkginfo</key>
@@ -27,11 +27,11 @@
 			<key>description</key>
 			<string></string>
 			<key>developer</key>
-			<string>Apple</string>
+			<string>Apowersoft</string>
 			<key>display_name</key>
-			<string>Apple Configurator 2</string>
+			<string>Apowersoft Screenshot</string>
 			<key>minimum_os_version</key>
-			<string>10.14</string>
+			<string>10.8</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
