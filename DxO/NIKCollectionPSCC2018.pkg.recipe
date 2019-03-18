@@ -96,10 +96,10 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/tmp2</string>
 				<key>pkg_payload_path</key>
 				<string>%RECIPE_CACHE_DIR%/tmp/Payload</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/unarchive</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
@@ -164,15 +164,28 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>archive_path</key>
-				<string>%RECIPE_CACHE_DIR%/copied_resources/ColorEfexPro4.tar.gz</string>
+				<key>flat_pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/copied_resources/ColorEfexPro4.pkg</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/tmp</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>FlatPkgUnpacker</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_payload_path</key>
+				<string>%RECIPE_CACHE_DIR%/tmp/Payload</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
 			<key>Processor</key>
-			<string>Unarchiver</string>
+			<string>PkgPayloadUnpacker</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
@@ -232,15 +245,28 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>archive_path</key>
-				<string>%RECIPE_CACHE_DIR%/copied_resources/Dfine2.tar.gz</string>
+				<key>flat_pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/copied_resources/Dfine2.pkg</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/tmp</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>FlatPkgUnpacker</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_payload_path</key>
+				<string>%RECIPE_CACHE_DIR%/tmp/Payload</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
 			<key>Processor</key>
-			<string>Unarchiver</string>
+			<string>PkgPayloadUnpacker</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
@@ -355,15 +381,28 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>archive_path</key>
-				<string>%RECIPE_CACHE_DIR%/copied_resources/HDREfexPro2.tar.gz</string>
+				<key>flat_pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/copied_resources/HDREfexPro2.pkg</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/tmp</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>FlatPkgUnpacker</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_payload_path</key>
+				<string>%RECIPE_CACHE_DIR%/tmp/Payload</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
 			<key>Processor</key>
-			<string>Unarchiver</string>
+			<string>PkgPayloadUnpacker</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
@@ -434,15 +473,28 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>archive_path</key>
-				<string>%RECIPE_CACHE_DIR%/copied_resources/SelectiveTool.tar.gz</string>
+				<key>flat_pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/copied_resources/SelectiveTool.pkg</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/tmp</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>FlatPkgUnpacker</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_payload_path</key>
+				<string>%RECIPE_CACHE_DIR%/tmp/Payload</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
 			<key>Processor</key>
-			<string>Unarchiver</string>
+			<string>PkgPayloadUnpacker</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
@@ -469,15 +521,28 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>archive_path</key>
-				<string>%RECIPE_CACHE_DIR%/copied_resources/SharpenerPro3.tar.gz</string>
+				<key>flat_pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/copied_resources/SharpenerPro3.pkg</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/tmp</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>FlatPkgUnpacker</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_payload_path</key>
+				<string>%RECIPE_CACHE_DIR%/tmp/Payload</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
 			<key>Processor</key>
-			<string>Unarchiver</string>
+			<string>PkgPayloadUnpacker</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
@@ -537,15 +602,28 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>archive_path</key>
-				<string>%RECIPE_CACHE_DIR%/copied_resources/SilverEfexPro2.tar.gz</string>
+				<key>flat_pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/copied_resources/SilverEfexPro2.pkg</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/tmp</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>FlatPkgUnpacker</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_payload_path</key>
+				<string>%RECIPE_CACHE_DIR%/tmp/Payload</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
 			<key>Processor</key>
-			<string>Unarchiver</string>
+			<string>PkgPayloadUnpacker</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
@@ -605,15 +683,28 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>archive_path</key>
-				<string>%RECIPE_CACHE_DIR%/copied_resources/Viveza2.tar.gz</string>
+				<key>flat_pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/copied_resources/Viveza2.pkg</string>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/tmp</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>FlatPkgUnpacker</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_payload_path</key>
+				<string>%RECIPE_CACHE_DIR%/tmp/Payload</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/unarchive</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
 			<key>Processor</key>
-			<string>Unarchiver</string>
+			<string>PkgPayloadUnpacker</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
