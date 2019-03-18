@@ -1,1 +1,60 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the current release version of BarcodeStudio and imports into Munki.</string>
+	<key>Identifier</key>
+	<string>com.github.nielshojen.munki.BarcodeStudio</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>BarcodeStudio</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/TEC-IT</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Utilities</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Barcode Studio is the perfect tool for designing and creating barcodes. This barcode creator software supports all common linear codes, all 2D-Codes and GS1-DataBar/RSS. Barcode Studio prints the bar codes on any printer or saves them as images. Please select the operating system on which you want to use Barcode Studio.</string>
+			<key>developer</key>
+			<string>TEC-IT</string>
+			<key>display_name</key>
+			<string>Barcode Studio</string>
+			<key>minimum_os_version</key>
+			<string>10.12</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<false/>
+			<key>unattended_uninstall</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.nielshojen.download.BarcodeStudio</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
