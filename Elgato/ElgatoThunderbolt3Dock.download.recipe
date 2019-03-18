@@ -9,7 +9,7 @@
 		<key>NAME</key>
 		<string>Elgato Thunderbolt 3 Dock Software</string>
 		<key>DOWNLOAD_URL</key>
-		<string>https://update.elgato.com/mac/thunderbolt-dock-update/download.php</string>
+		<string>http://dl.elgato.com/thunderbolt/dockutility/Elgato_Thunderbolt_Dock_Software_1.2.9_130.pkg</string>
 		<key>USER_AGENT</key>
 		<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15</string>
 	</dict>
