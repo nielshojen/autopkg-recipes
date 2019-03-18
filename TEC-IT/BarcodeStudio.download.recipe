@@ -125,6 +125,7 @@
 				<array>
 					<string>%RECIPE_CACHE_DIR%/flat</string>
 					<string>%RECIPE_CACHE_DIR%/app</string>
+					<string>%RECIPE_CACHE_DIR%/unpack</string>
 				</array>
         		</dict>
 		</dict>
