@@ -10,8 +10,6 @@
 	<dict>
 		<key>NAME</key>
 		<string>Universal Type Client</string>
-		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.pkg.UniversalTypeClient7</string>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.nielshojen.download.UniversalTypeClient7</string>
