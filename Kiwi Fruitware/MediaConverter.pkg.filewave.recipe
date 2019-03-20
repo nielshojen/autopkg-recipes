@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>Media Converter</string>
 		<key>fw_app_bundle_id</key>
-        	<string>com.github.nielshojen.filewave.MediaConverter</string>
+        	<string>com.github.nielshojen.filewave.pkg.MediaConverter</string>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.nielshojen.pkg.MediaConverter</string>
