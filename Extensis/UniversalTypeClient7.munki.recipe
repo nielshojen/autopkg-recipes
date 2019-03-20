@@ -143,14 +143,6 @@ Store all of your fonts in a centralized, server-based font manager to ensure co
 				<string>%found_filename%</string>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
-				<key>additional_makepkginfo_options</key>
-				<array>
-					<string>--uninstall_script=%RECIPE_CACHE_DIR%/utc-removal-tool/UTC-Removal-Tool.command</string>
-				</array>
-				<key>_additional_makepkginfo_options</key>
-				<array>
-					<string>--installcheck_script=%RECIPE_CACHE_DIR%/%PKG_INSTALLCHECK%</string>
-				</array>
 			</dict>
 			<key>Processor</key>
 			<string>MunkiImporter</string>
@@ -163,6 +155,7 @@ Store all of your fonts in a centralized, server-based font manager to ensure co
 				<key>path_list</key>
 				<array>
 					<string>%RECIPE_CACHE_DIR%/payload</string>
+					<string>%RECIPE_CACHE_DIR%/utc-removal-tool</string>
 				</array>
 			</dict>
 		</dict>
