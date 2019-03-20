@@ -43,7 +43,7 @@ Media Converter is absolutely free and open source. Media Converter also uses a 
         </dict>
 	</dict>
 	<key>ParentRecipe</key>
-	<string>com.github.nielshojen.download.MediaConverter</string>
+	<string>com.github.nielshojen.pkg.MediaConverter</string>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>Process</key>
