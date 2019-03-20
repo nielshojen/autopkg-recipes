@@ -103,7 +103,7 @@ Media Converter is absolutely free and open source. Media Converter also uses a 
 				<key>pkg_request</key>
 				<dict>
 					<key>id</key>
-					<string>com.kiwifruitware.Media_Converter</string>
+					<string>com.kiwifruitware.MediaConverter</string>
 					<key>pkgname</key>
 					<string>%NAME%-%version%</string>
 					<key>pkgroot</key>
@@ -117,17 +117,5 @@ Media Converter is absolutely free and open source. Media Converter also uses a 
 			<key>Processor</key>
 			<string>PkgCreator</string>
 		</dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>pkg_path</key>
-                <string>%pkg_path%</string>
-                <key>repo_subdirectory</key>
-                <string>%MUNKI_REPO_SUBDIR%</string>
-            </dict>
-            <key>Processor</key>
-            <string>MunkiImporter</string>
-        </dict>
-	</array>
 </dict>
 </plist>
