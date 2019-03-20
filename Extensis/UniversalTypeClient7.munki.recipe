@@ -21,7 +21,7 @@
 		<key>PKG_POSTINSTALL</key>
 		<string>UniversalTypeClient7.postinstall</string>
 		<key>PKG_UNINSTALL_SCRIPT</key>
-		<string>%RECIPE_CACHE_DIR%/%NAME%-removal-tool/UTC-Removal-Tool.command</string>
+		<string>%RECIPE_CACHE_DIR%/utc-removal-tool/UTC-Removal-Tool.command</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>blocking_applications</key>
@@ -109,7 +109,7 @@ Store all of your fonts in a centralized, server-based font manager to ensure co
 				<key>archive_path</key>
 				<string>%RECIPE_CACHE_DIR%/downloads/utc-removal-tool.zip</string>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%-removal-tool</string>
+				<string>%RECIPE_CACHE_DIR%/utc-removal-tool</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
