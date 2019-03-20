@@ -165,6 +165,8 @@ Store all of your fonts in a centralized, server-based font manager to ensure co
 					<string>%RECIPE_CACHE_DIR%/payload</string>
 					<string>%RECIPE_CACHE_DIR%/unzip</string>
 					<string>%RECIPE_CACHE_DIR%/utc-removal-tool</string>
+					<string>%RECIPE_CACHE_DIR%/UniversalTypeClient7.installcheck</string>
+					<string>%RECIPE_CACHE_DIR%/downloads/utc-removal-tool.zip</string>
 				</array>
 			</dict>
 		</dict>
