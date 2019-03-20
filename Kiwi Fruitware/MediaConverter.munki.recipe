@@ -88,7 +88,7 @@ Media Converter is absolutely free and open source. Media Converter also uses a 
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Media Converter.app</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/unpack/Media Converter.localized/Media Converter.app</string>
 				<key>overwrite</key>
