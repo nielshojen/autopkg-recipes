@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version Media Converter and imports into filewave</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.MediaConverter</string>
+	<string>com.github.nielshojen.filewave.pkg.MediaConverter</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
