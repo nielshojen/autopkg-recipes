@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the current release version Media Converter and imports into Munki</string>
+	<key>Identifier</key>
+	<string>com.github.nielshojen.munki.MediaConverter</string>
+	<key>Input</key>
+	<dict>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/MediaConverter</string>
+		<key>NAME</key>
+		<string>MediaConverter</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing</string>
+            </array>
+            <key>description</key>
+            <string>Convert almost every input file.
+
+Since Media Converter uses ffmpeg a lot of file formats are supported. Convert avi, wmv, mkv, rm, mov and more to other formats.
+
+Some files aren't supported by ffmpeg, but can be decoded with QuickTime®. Media Converter uses movtowav and movtoy4m to decode them.
+
+Media Converter comes with presets to convert to popular video and audio formats. These presets can be fine-tuned in the Preferences.
+
+You also can create your own presets in the Preferences. Send them to us to share them with the world. A bit too Advance for you? No problem, this site contains presets.
+
+Media Converter shares a lot of internals with Burn (disc burning application). This way both can be improved based on user experiences.
+
+Since Media Converter batch converts media files, it contains some smart settings to ease the mind. For example it can auto create bars to keep the right aspect ratio. It also can switch between 4:3 and 16:9 aspect ratio when needed. And there's more to come in the future.
+
+Media Converter is absolutely free and open source. Media Converter also uses a lot of great free open source utilities to make it tick. Utilities: ffmpeg, lame, x264, libogg, libvorbis, libtheora, libvpx, faac, movtoy4m, movtowav, mkvtoolnix, spumux (part of dvdauthor), libkate, MP4Box (part of GPAC), fondu, liboggz and youtube-dl.</string>
+            <key>display_name</key>
+            <string>Media Converter</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>unattended_install</key>
+            <true/>
+        </dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.nielshojen.download.MediaConverter</string>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>archive_path</key>
+				<string>%pathname%</string>
+				<key>purge_destination</key>
+				<true/>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack</string>
+			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack/Media Converter.localized/Media Converter.app/Contents/Info.plist</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+		</dict>
+		<dict>
+            <key>Arguments</key>
+            <dict>
+                <key>app_path</key>
+                <string>%RECIPE_CACHE_DIR%/unpack/Media Converter.localized/Media Converter.app</string>
+            </dict>
+			<key>Processor</key>
+			<string>AppPkgCreator</string>
+		</dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pkg_path%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+        </dict>
+	</array>
+</dict>
+</plist>
