@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC '-//Apple//DTD PLIST 1.0//EN' 'http://www.apple.com/DTDs/PropertyList-1.0.dtd'>
+<plist version="1.0">
+	<dict>
+		<key>Description</key>
+		<string>Downloads the current release version of Wacom Bamboo Driver and imports into Munki.</string>
+		<key>Identifier</key>
+		<string>com.github.nielshojen.munki.WacomBambooDriver</string>
+		<key>Input</key>
+		<dict>
+			<key>NAME</key>
+			<string>WacomBambooDriver</string>
+			<key>MUNKI_REPO_SUBDIR</key>
+			<string>Drivers</string>
+			<key>MUNKI_DESCRIPTION</key>
+			<string>Drivers and support software for the Wacom Bamboo tablets.</string>
+			<key>MUNKI_DISPLAYNAME</key>
+			<string>Wacom BamBoo Driver</string>
+			<key>MUNKI_NAME</key>
+			<string>%NAME%</string>
+			<key>pkginfo</key>
+            <dict>
+                <key>blocking_applications</key>
+                <array>
+                    <string>Pen Tablet Utility.app</string>
+                </array>
+				<key>name</key>
+				<string>%MUNKI_NAME%</string>
+				<key>display_name</key>
+				<string>%MUNKI_DISPLAYNAME%</string>
+				<key>description</key>
+				<string>%MUNKI_DESCRIPTION%</string>
+				<key>catalogs</key>
+				<array>
+					<string>testing</string>
+				</array>
+				<key>uninstall_method</key>
+				<string>removepackages</string>
+				<key>preuninstall_script</key>
+				<string>#!/bin/bash
+PATH=/bin:/sbin:/usr/bin:/usr/sbin
+
+# 2017-10-12 'uninstall.pl' no longer appears to exist.
+#
+#            TODO: Create custom pre/post uninstall scripts for Munki pkginfo file after
+#                  attempting to reverse engineer what is performed by Wacom Tablet Utility
+#                  (Objective-C), no longer by separate script.
+#
+# uninstall_script=&quot;/Applications/Wacom Tablet.localized/Wacom Tablet Utility.app/Contents/Resources/# uninstall.pl&quot;
+# 
+# # Because Wacom's uninstall.pl script will fail when run from Munki
+# # (it assumes $HOME and $USER are not empty), we are going to trick
+# # the script just enough so that it uninstalls everything, and does
+# # not fail or complain. See notes keys in pkginfo file for more
+# # information on why we need to use this script.
+# fakeout_user=&quot;foo&quot;
+# fakeout_home=&quot;$(mktemp -d -t _wacom_uninstall_XXXXX)&quot;
+# 
+# if [[ -f &quot;$uninstall_script&quot; &amp;&amp; -x &quot;$uninstall_script&quot; ]]; then
+#     echo &quot;preuninstall_script: Calling Wacom uninstall script: ${uninstall_script}&quot;
+#     USER=&quot;${fakeout_user}&quot; HOME=&quot;${fakeout_home}&quot; &quot;$uninstall_script&quot;
+#     echo &quot;preuninstall_script: End of Wacom uninstall script.&quot;
+# else
+# 	echo &quot;preuninstall_script ERROR: Could not locate uninstall_script: $uninstall_script&quot;
+# 	exit 1
+# fi
+# 
+# exit 0
+    </string>
+			</dict>
+		</dict>
+		<key>MinimumVersion</key>
+		<string>1.0.0</string>
+		<key>ParentRecipe</key>
+		<string>com.github.novaksam.pkg.WacomBamboo</string>
+		<key>Process</key>
+		<array>
+			<dict>
+				<key>Processor</key>
+				<string>FlatPkgUnpacker</string>
+				<key>Arguments</key>
+				<dict>
+					<key>purge_destination</key>
+					<true/>
+					<key>destination_path</key>
+					<string>%RECIPE_CACHE_DIR%/pkgtmp</string>
+					<key>flat_pkg_path</key>
+					<string>%pkg_path%</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>FileFinder</string>
+				<key>Arguments</key>
+				<dict>
+					<key>pattern</key>
+					<string>%RECIPE_CACHE_DIR%/pkgtmp/*.pkg</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>PkgPayloadUnpacker</string>
+				<key>Arguments</key>
+				<dict>
+					<key>purge_destination</key>
+					<false/>
+					<key>destination_path</key>
+					<string>%RECIPE_CACHE_DIR%/faux_root</string>
+					<key>pkg_payload_path</key>
+					<string>%found_filename%/Payload</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>MunkiInstallsItemsCreator</string>
+				<key>Arguments</key>
+				<dict>
+					<key>faux_root</key>
+					<string>%RECIPE_CACHE_DIR%/faux_root</string>
+					<key>installs_item_paths</key>
+					<array>
+						<string>/Applications/Wacom Tablet.localized/Wacom Desktop Center.app</string>
+						<string>/Applications/Wacom Tablet.localized/Wacom Display Settings.app</string>
+						<string>/Applications/Wacom Tablet.localized/Wacom Tablet Utility.app</string>
+						<string>/Library/Application Support/Tablet/WacomTabletDriver.app</string>
+						<string>/Library/Extensions/Wacom Tablet.kext</string>
+						<string>/Library/PreferencePanes/WacomTablet.prefpane</string>
+						<string>/Library/PrivilegedHelperTools/com.wacom.DataStoreMgr.app</string>
+						<string>/Library/PrivilegedHelperTools/com.wacom.UpdateHelper.app</string>
+					</array>
+					<key>version_comparison_key</key>
+					<string>CFBundleVersion</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>MunkiPkginfoMerger</string>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+					<key>url</key>
+					<string>file://localhost/%RECIPE_CACHE_DIR%/pkgtmp/Distribution</string>
+					<key>re_pattern</key>
+					<string>&lt;os-version min=&quot;(?P&lt;minimum_os_version&gt;.*?)&quot;/&gt;</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>MunkiPkginfoMerger</string>
+				<key>Arguments</key>
+				<dict>
+					<key>additional_pkginfo</key>
+					<dict>
+						<key>minimum_os_version</key>
+						<string>%minimum_os_version%</string>
+						<key>version</key>
+						<string>%version%</string>
+					</dict>
+				</dict>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>MunkiImporter</string>
+				<key>Arguments</key>
+				<dict>
+					<key>pkg_path</key>
+					<string>%pathname%</string>
+					<key>repo_subdirectory</key>
+					<string>%MUNKI_REPO_SUBDIR%</string>
+					<key>munkiimport_pkgname</key>
+					<string>%WACOM_PKG_NAME%</string>
+				</dict>
+			</dict>
+			<dict>
+				<!-- 
+					Manual cleanup since we need to add the AddExecutePermissionsToDirectories 
+					step, thus precluding having PkgPayloadUnpacker purge 
+				-->
+				<key>Processor</key>
+				<string>PathDeleter</string>
+				<key>Arguments</key>
+				<dict>
+					<key>path_list</key>
+					<array>
+						<string>%RECIPE_CACHE_DIR%/faux_root</string>
+						<string>%RECIPE_CACHE_DIR%/pkgtmp</string>
+					</array>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+</plist>
