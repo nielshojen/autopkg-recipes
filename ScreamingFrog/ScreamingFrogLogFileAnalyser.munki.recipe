@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads Slido Switcher disk image and imports into Munki.</string>
+    <string>ScreamingFrog Log File Analyser disk image and imports into Munki.</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.munki.SlidoSwitcher</string>
+    <string>com.github.nielshojen.munki.ScreamingFrogLogFileAnalyser</string>
     <key>Input</key>
     <dict>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps/Slido</string>
+        <string>apps/ScreamingFrog</string>
         <key>NAME</key>
-        <string>SlidoSwitcher</string>
+        <string>ScreamingFrogLogFileAnalyser</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
@@ -21,7 +21,7 @@
             <key>description</key>
             <string>Slido Switcher allows you to easily display Slido questions or polls on top of your presentation.</string>
             <key>display_name</key>
-            <string>Slido Switcher</string>
+            <string>ScreamingFrog Log File Analyser</string>
             <key>name</key>
             <string>%NAME%</string>
             <key>unattended_install</key>
@@ -31,7 +31,7 @@
     <key>MinimumVersion</key>
     <string>0.2.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.nielshojen.download.SlidoSwitcher</string>
+    <string>com.github.nielshojen.download.ScreamingFrogLogFileAnalyser</string>
     <key>Process</key>
     <array>
         <dict>
