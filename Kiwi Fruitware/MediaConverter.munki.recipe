@@ -117,5 +117,6 @@ Media Converter is absolutely free and open source. Media Converter also uses a 
 			<key>Processor</key>
 			<string>PkgCreator</string>
 		</dict>
+	</array>
 </dict>
 </plist>
