@@ -11,7 +11,7 @@
 			<key>NAME</key>
 			<string>WacomBambooDriver</string>
 			<key>MUNKI_REPO_SUBDIR</key>
-			<string>Drivers</string>
+			<string>apps/Wacom</string>
 			<key>MUNKI_DESCRIPTION</key>
 			<string>Drivers and support software for the Wacom Bamboo tablets.</string>
 			<key>MUNKI_DISPLAYNAME</key>
@@ -168,7 +168,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin
 					<key>repo_subdirectory</key>
 					<string>%MUNKI_REPO_SUBDIR%</string>
 					<key>munkiimport_pkgname</key>
-					<string>%WACOM_PKG_NAME%</string>
+					<string>%pkg_path%</string>
 				</dict>
 			</dict>
 			<dict>
