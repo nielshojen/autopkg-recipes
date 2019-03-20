@@ -119,14 +119,11 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin
 					<string>%RECIPE_CACHE_DIR%/faux_root</string>
 					<key>installs_item_paths</key>
 					<array>
-						<string>/Applications/Wacom Tablet.localized/Wacom Desktop Center.app</string>
-						<string>/Applications/Wacom Tablet.localized/Wacom Display Settings.app</string>
-						<string>/Applications/Wacom Tablet.localized/Wacom Tablet Utility.app</string>
-						<string>/Library/Application Support/Tablet/WacomTabletDriver.app</string>
-						<string>/Library/Extensions/Wacom Tablet.kext</string>
-						<string>/Library/PreferencePanes/WacomTablet.prefpane</string>
-						<string>/Library/PrivilegedHelperTools/com.wacom.DataStoreMgr.app</string>
-						<string>/Library/PrivilegedHelperTools/com.wacom.UpdateHelper.app</string>
+						<string>/Applications/Pen Tablet.localized/Pen Tablet Utility.app</string>
+						<string>/Library/Application Support/Tablet/PenTabletDriver.app</string>
+						<string>/Library/Extensions/Pen Tablet.kext</string>
+						<string>/Library/PreferencePanes/PenTablet.prefpane</string>
+						<string>/Library/PrivilegedHelperTools/com.wacom.TebletHelper.app</string>
 					</array>
 					<key>version_comparison_key</key>
 					<string>CFBundleVersion</string>
