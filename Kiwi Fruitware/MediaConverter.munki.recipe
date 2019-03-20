@@ -75,6 +75,8 @@ Media Converter is absolutely free and open source. Media Converter also uses a 
             <dict>
                 <key>app_path</key>
                 <string>%RECIPE_CACHE_DIR%/unpack/Media Converter.localized/Media Converter.app</string>
+                <key>bundleid</key>
+                <string>com.kiwifruitware.Media_Converter</string>
             </dict>
 			<key>Processor</key>
 			<string>AppPkgCreator</string>
