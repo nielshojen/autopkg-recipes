@@ -20,8 +20,6 @@
 		<string>UniversalTypeClient7.installcheck</string>
 		<key>PKG_POSTINSTALL</key>
 		<string>UniversalTypeClient7.postinstall</string>
-		<key>PKG_UNINSTALL_SCRIPT</key>
-		<string>%RECIPE_CACHE_DIR%/utc-removal-tool/UTC-Removal-Tool.command</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>blocking_applications</key>
@@ -147,7 +145,7 @@ Store all of your fonts in a centralized, server-based font manager to ensure co
 				<string>%MUNKI_REPO_SUBDIR%</string>
 				<key>additional_makepkginfo_options</key>
 				<array>
-					<string>--uninstall_script=%PKG_UNINSTALL_SCRIPT%</string>
+					<string>--uninstall_script=%RECIPE_CACHE_DIR%/utc-removal-tool/UTC-Removal-Tool.command</string>
 				</array>
 				<key>_additional_makepkginfo_options</key>
 				<array>
