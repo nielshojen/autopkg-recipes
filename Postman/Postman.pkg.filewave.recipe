@@ -14,7 +14,7 @@
 		<string>com.github.nielshojen.pkg.filewave.postman</string>
 	</dict>
 	<key>ParentRecipe</key>
-	<string>com.github.bnpl.autopkg.pkg.postman</string>
+	<string>com.github.nielshojen.pkg.postman</string>
 	<key>Process</key>
 	<array>
 		<dict>
