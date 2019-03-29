@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current release version of EIZO ColorManager, creates a fileset and imports into FIleWave.</string>
+	<string>Downloads the current release version of EIZO ColorManager 7 and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.pkg.ColorNavigator</string>
 	<key>Input</key>
@@ -14,7 +14,7 @@
 		<string>com.github.nielshojen.filewave.pkg.ColorNavigator</string>
 	</dict>
 	<key>ParentRecipe</key>
-	<string>com.github.foigus.download.ColorNavigator</string>
+	<string>com.github.foigus.download.ColorNavigator7</string>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>Process</key>
