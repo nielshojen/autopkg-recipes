@@ -13,7 +13,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>AzureStorageExplorer</string>
+		<string>Azure Storage Explorer</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.filewave.pkg.azurestorageexplorer</string>
 	</dict>
