@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>AzureStorageExplorer</string>
 		<key>DOWNLOAD_URL</key>
-		<string>https://go.microsoft.com/fwlink/?linkid=708343</string>
+		<string>https://go.microsoft.com/fwlink/?linkid=708342</string>
 		<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
 		<false/>
 	</dict>
