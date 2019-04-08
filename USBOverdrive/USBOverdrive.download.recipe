@@ -28,8 +28,6 @@
 			<dict>
 				<key>re_pattern</key>
 				<string>%PRODUCT_RE_PATTERN%</string>
-				<key>result_output_var_name</key>
-				<string>version</string>
 				<key>url</key>
 				<string>%PRODUCT_RE_URL%</string>
 			</dict>
