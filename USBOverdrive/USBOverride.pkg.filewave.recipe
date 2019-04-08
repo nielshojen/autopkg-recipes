@@ -10,6 +10,8 @@
 	<dict>
 		<key>NAME</key>
 		<string>USB Overdrive</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.nielshojen.pkg.filewave.USBOverdrive</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.5.0</string>
@@ -77,6 +79,21 @@
  			<key>Processor</key>		
  			<string>PathDeleter</string>		
  		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>fw_app_bundle_id</key>
+				<string>%fw_app_bundle_id%</string>
+				<key>fw_app_version</key>
+				<string>%version%</string>
+				<key>fw_fileset_name</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME% - %version%.pkg</string>
+				<key>fw_import_source</key>
+				<string>%pkg_path%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
+		</dict>
 	</array>
 </dict>
 </plist>
