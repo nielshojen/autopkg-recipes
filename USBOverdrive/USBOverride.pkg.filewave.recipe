@@ -67,18 +67,6 @@
                 <true/>
             </dict>
         </dict>
-		<dict>		
- 			<key>Arguments</key>		
- 			<dict>		
- 				<key>path_list</key>		
- 				<array>		
-					<string>%RECIPE_CACHE_DIR%/unpack</string>		
-					<string>%RECIPE_CACHE_DIR%/unpack2</string>		
- 				</array>		
- 			</dict>		
- 			<key>Processor</key>		
- 			<string>PathDeleter</string>		
- 		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -94,6 +82,20 @@
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
 		</dict>
+
+		<dict>		
+ 			<key>Arguments</key>		
+ 			<dict>		
+ 				<key>path_list</key>		
+ 				<array>		
+					<string>%RECIPE_CACHE_DIR%/unpack</string>		
+					<string>%RECIPE_CACHE_DIR%/unpack2</string>
+					<string>%RECIPE_CACHE_DIR%/%NAME% - %version%.pkg</string>
+ 				</array>		
+ 			</dict>		
+ 			<key>Processor</key>		
+ 			<string>PathDeleter</string>		
+ 		</dict>
 	</array>
 </dict>
 </plist>
