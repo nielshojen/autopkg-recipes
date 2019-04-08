@@ -66,51 +66,5 @@
                 <true/>
             </dict>
         </dict>
-        <dict>
-            <key>Processor</key>
-            <string>MunkiInstallsItemsCreator</string>
-            <key>Arguments</key>
-            <dict>
-                <key>faux_root</key>
-                <string>%RECIPE_CACHE_DIR%/unpack2</string>
-                <key>installs_item_paths</key>
-                <array>
-                    <string>/Library/PreferencePanes/USB Overdrive.prefPane</string>
-                </array>
-                <key>version_comparison_key</key>
-                <string>CFBundleVersion</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>MunkiPkginfoMerger</string>
-            <key>Arguments</key>
-            <dict/>
-        </dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-            <key>additional_pkginfo</key>
-                <dict>
-                    <key>version</key>
-                    <string>%version%</string>
-                </dict>
-            </dict>
-            <key>Processor</key>
-            <string>MunkiPkginfoMerger</string>
-        </dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>pkg_path</key>
-                <string>%pathname%</string>
-                <key>repo_subdirectory</key>
-                <string>%MUNKI_REPO_SUBDIR%</string>
-                <key>munkiimport_pkgname</key>
-                <string>%PRODUCT_PACKAGE_NAME%.pkg</string>
-            </dict>
-            <key>Processor</key>
-            <string>MunkiImporter</string>
-        </dict>
     </array>
 </dict>
