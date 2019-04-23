@@ -48,7 +48,6 @@ MUNKI_ICON should be overridden with your icon name.
         <string></string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>munkitools</string>
-        <!--  -->
         <key>MUNKITOOLS_ADMIN_NAME</key>
         <string>munkitools_admin</string>
         <key>MUNKITOOLS_ADMIN_DISPLAYNAME</key>
