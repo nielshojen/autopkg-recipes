@@ -39,7 +39,7 @@ MUNKI_ICON should be overridden with your icon name.
         <key>NAME</key>
         <string>munkitools3</string>
         <key>MUNKI_CATALOG</key>
-        <string>uat</string>
+        <string>testing</string>
         <key>MUNKI_CATEGORY</key>
         <string>munkitools</string>
         <key>MUNKI_DEVELOPER</key>
