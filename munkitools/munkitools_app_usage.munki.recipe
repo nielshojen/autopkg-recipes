@@ -54,6 +54,10 @@ MUNKI_ICON should be overridden with your icon name.
         <string>Managed Software Center app usage</string>
         <key>MUNKITOOLS_APP_USAGE_DESCRIPTION</key>
         <string>Application usage statistics for Managed Software Center.</string>
+        <key>MUNKITOOLS_LAUNCHD_NAME</key>
+        <string>munkitools_launchd</string>
+        <key>MUNKITOOLS_CORE_NAME</key>
+        <string>munkitools_core</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.5.0</string>
