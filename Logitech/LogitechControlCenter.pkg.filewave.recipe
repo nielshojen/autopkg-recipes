@@ -97,6 +97,19 @@
         <dict>
             <key>Arguments</key>
             <dict>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/Unpack/logitechUpdater.pkg/Payload</string>
+                <key>destination_path</key>
+                <string>%pkgroot%</string>
+                <key>purge_destination</key>
+                <false/>
+            </dict>
+            <key>Processor</key>
+            <string>PkgPayloadUnpacker</string>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
                 <key>path_list</key>
                 <array>
                     <string>%RECIPE_CACHE_DIR%/LogiMgr/</string>
