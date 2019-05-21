@@ -3,36 +3,15 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Download the latest version of Logitech Options (Bluetooth and USB) and imports it into Munki.</string>
+    <string>Download the latest version of Logitech Options (Bluetooth and USB) and imports it into FileWave.</string>
     <key>Identifier</key>
-    <string>com.github.joshua-d-miller.autopkg.munki.logitechoptions</string>
+    <string>com.github.nielshojen.pkg.filewave.logitechoptions</string>
     <key>Input</key>
     <dict>
-        <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps/logitech</string>
         <key>NAME</key>
         <string>Logitech Options</string>
-    	<key>pkginfo</key>
-    	<dict>
-    		<key>catalogs</key>
-    		<array>
-    			<string>testing</string>
-    		</array>
-            <key>category</key>
-            <string>Peripherals</string>
-            <key>developer</key>
-            <string>Logitech International S.A.</string>
-            <key>display_name</key>
-            <string>Logitech Options</string>
-            <key>RestartAction</key>
-            <string>RequireRestart</string>
-    	    <key>description</key>
-    	    <string>Logitech Options lets you customize gesture controls for Logitech touch products. It also adds enhanced key functions for Logitech keyboards, and notification for device-specific status features such as battery level, key backlighting level, and Caps Lock.</string>
-            <key>name</key>
-            <string>%NAME%</string>
-            <key>display_name</key>
-            <string>%NAME%</string>
-    	</dict>
+        <key>fw_app_bundle_id</key>
+        <string>com.github.nielshojen.pkg.filewave.logitechoptions</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.9</string>
@@ -74,80 +53,17 @@
         <dict>
             <key>Arguments</key>
             <dict>
-                <key>flat_pkg_path</key>
+                <key>fw_app_bundle_id</key>
+                <string>%fw_app_bundle_id%</string>
+                <key>fw_app_version</key>
+                <string>%version%</string>
+                <key>fw_fileset_name</key>
+                <string>%NAME% - %version%</string>
+                <key>fw_import_source</key>
                 <string>%RECIPE_CACHE_DIR%/Logitech Options.mpkg</string>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/Unpack/</string>
             </dict>
             <key>Processor</key>
-            <string>FlatPkgUnpacker</string>
-        </dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>pkgroot</key>
-                <string>%RECIPE_CACHE_DIR%/application_payload</string>
-                <key>pkgdirs</key>
-                <dict/>
-            </dict>
-            <key>Processor</key>
-            <string>PkgRootCreator</string>
-        </dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>pkg_payload_path</key>
-                <string>%RECIPE_CACHE_DIR%/Unpack/LogiMgrComponent.pkg/Payload</string>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/application_payload</string>
-                <key>purge_destination</key>
-                <true/>
-            </dict>
-            <key>Processor</key>
-            <string>PkgPayloadUnpacker</string>
-        </dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>faux_root</key>
-                <string>%RECIPE_CACHE_DIR%/application_payload</string>
-                <key>installs_item_paths</key>
-                <array>
-                    <string>/Applications/Logi Options.app</string>
-                    <string>/Library/PreferencePanes/Logi Options Launcher.prefPane</string>
-                </array>
-            </dict>
-            <key>Processor</key>
-            <string>MunkiInstallsItemsCreator</string>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>MunkiPkginfoMerger</string>
-        </dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>additional_pkginfo</key>
-                <dict>
-                    <key>version</key>
-                    <string>%version%</string>
-                    <key>minimum_os_version</key>
-                    <string>10.10.0</string>
-                </dict>
-            </dict>
-            <key>Processor</key>
-            <string>MunkiPkginfoMerger</string>
-        </dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>pkg_path</key>
-                <string>%RECIPE_CACHE_DIR%/Logitech Options.mpkg</string>
-                <key>repo_subdirectory</key>
-                <string>%MUNKI_REPO_SUBDIR%</string>
-            </dict>
-            <key>Processor</key>
-            <string>MunkiImporter</string>
+            <string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
         </dict>
     </array>
 </dict>
