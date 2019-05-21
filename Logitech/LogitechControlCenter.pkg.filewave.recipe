@@ -36,7 +36,7 @@
             <key>Arguments</key>
             <dict>
                 <key>info_path</key>
-                <string>%found_filename%</string>
+                <string>%RECIPE_CACHE_DIR%/LCC/Logitech Control Center Installer.app</string>
                 <key>plist_keys</key>
                 <dict>
                     <key>CFBundleShortVersionString</key>
