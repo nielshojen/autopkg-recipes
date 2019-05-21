@@ -112,13 +112,9 @@
             <dict>
                 <key>path_list</key>
                 <array>
-                    <string>%RECIPE_CACHE_DIR%/LogiMgr/</string>
-                    <string>%pkgroot%/Applications/Logicool</string>
-                    <string>%pkgroot%/Applications/Utilities/Logicool</string>
-                    <string>%pkgroot%/Library/Application Support/Logitech.localized/Logitech Options.localized/Logicool</string>
-                    <string>%pkgroot%/Library/PreferencePanes/Logicool</string>
+                    <string>%RECIPE_CACHE_DIR%/LCC/</string>
                     <string>%RECIPE_CACHE_DIR%/Unpack</string>
-                    <string>%RECIPE_CACHE_DIR%/Logitech Options.mpkg</string>
+                    <string>%RECIPE_CACHE_DIR%/Logitech Control Center.mpkg</string>
                 </array>
             </dict>
             <key>Processor</key>
