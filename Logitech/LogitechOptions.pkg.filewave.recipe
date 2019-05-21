@@ -67,7 +67,7 @@
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/Unpack/LogiMgrComponent.pkg/Payload</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/application_payload</string>
+                <string>%pkgroot%</string>
                 <key>purge_destination</key>
                 <true/>
             </dict>
@@ -80,7 +80,7 @@
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/Unpack/signedKextComponent.pkg/Payload</string>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/test</string>
+                <string>%pkgroot%/Library/Extensions/</string>
                 <key>purge_destination</key>
                 <false/>
             </dict>
@@ -97,6 +97,7 @@
                     <string>%pkgroot%/Applications/Utilities/Logicool</string>
                     <string>%pkgroot%/Library/Application Support/Logitech.localized/Logitech Options.localized/Logicool</string>
                     <string>%pkgroot%/Library/PreferencePanes/Logicool</string>
+                    <string>%RECIPE_CACHE_DIR%/Unpack</string>
                 </array>
             </dict>
             <key>Processor</key>
