@@ -82,7 +82,7 @@
                     <string>%RECIPE_CACHE_DIR%/LogiMgr/</string>
                     <string>%pkgroot%/Applications/Logicool</string>
                     <string>%pkgroot%/Applications/Utilities/Logicool</string>
-                    <string>%pkgroot%/Library/Application Support/Logitech/Logitech Options/Logicool</string>
+                    <string>%pkgroot%/Library/Application Support/Logitech.localized/Logitech Options.localized/Logicool</string>
                     <string>%pkgroot%/Library/Preference Panes/Logicool</string>
                 </array>
             </dict>
