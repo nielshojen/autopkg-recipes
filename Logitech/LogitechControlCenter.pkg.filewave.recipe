@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Logitech Options</string>
+        <string>Logitech Control Center</string>
         <key>fw_app_bundle_id</key>
         <string>com.github.nielshojen.pkg.filewave.logitechcontrolcenter</string>
     </dict>
