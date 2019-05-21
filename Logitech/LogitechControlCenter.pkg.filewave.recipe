@@ -72,7 +72,7 @@
             <key>Arguments</key>
             <dict>
                 <key>pkg_payload_path</key>
-                <string>%RECIPE_CACHE_DIR%/Unpack/LogiMgrComponent.pkg/Payload</string>
+                <string>%RECIPE_CACHE_DIR%/Unpack/logitechControlCenter.pkg/Payload</string>
                 <key>destination_path</key>
                 <string>%pkgroot%</string>
                 <key>purge_destination</key>
@@ -85,7 +85,7 @@
             <key>Arguments</key>
             <dict>
                 <key>pkg_payload_path</key>
-                <string>%RECIPE_CACHE_DIR%/Unpack/signedKextComponent.pkg/Payload</string>
+                <string>%RECIPE_CACHE_DIR%/Unpack/logitechUnifyingSoftware.pkg/Payload</string>
                 <key>destination_path</key>
                 <string>%pkgroot%</string>
                 <key>purge_destination</key>
