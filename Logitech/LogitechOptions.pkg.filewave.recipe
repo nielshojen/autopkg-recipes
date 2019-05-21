@@ -31,13 +31,20 @@
             <string>FileMover</string>
         </dict>
         <dict>
+            <key>Processor</key>
+            <string>PlistReader</string>
             <key>Arguments</key>
             <dict>
-                <key>input_plist_path</key>
-                <string>%found_filename%/Contents/Info.plist</string>
+                <key>info_path</key>
+                <string>%found_filename%</string>
+                <key>plist_keys</key>
+                <dict>
+                    <key>CFBundleShortVersionString</key>
+                    <string>version</string>
+                    <key>CFBundleIdentifier</key>
+                    <string>PKG_ID</string>
+                </dict>
             </dict>
-            <key>Processor</key>
-            <string>Versioner</string>
         </dict>
         <dict>
             <key>Arguments</key>
@@ -110,6 +117,15 @@
             <dict>
                 <key>pkgname</key>
                 <string>%NAME%-%version%</string>
+                <key>pkg_request</key>
+                <dict>
+                    <key>pkgdir</key>
+                    <string>%RECIPE_CACHE_DIR%</string>
+                    <key>id</key>
+                    <string>%PKG_ID%</string>
+                    <key>options</key>
+                    <string>purge_ds_store</string>
+                </dict>
             </dict>
         </dict>
     </array>
