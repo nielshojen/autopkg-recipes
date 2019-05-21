@@ -80,7 +80,7 @@
                 <key>pkg_payload_path</key>
                 <string>%RECIPE_CACHE_DIR%/Unpack/signedKextComponent.pkg/Payload</string>
                 <key>destination_path</key>
-                <string>%pkgroot%/Library/Extensions/</string>
+                <string>%pkgroot%</string>
                 <key>purge_destination</key>
                 <false/>
             </dict>
