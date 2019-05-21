@@ -42,6 +42,41 @@
         <dict>
             <key>Arguments</key>
             <dict>
+                <key>flat_pkg_path</key>
+                <string>%RECIPE_CACHE_DIR%/Logitech Options.mpkg</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/Unpack/</string>
+            </dict>
+            <key>Processor</key>
+            <string>FlatPkgUnpacker</string>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkgroot</key>
+                <string>%RECIPE_CACHE_DIR%/application_payload</string>
+                <key>pkgdirs</key>
+                <dict/>
+            </dict>
+            <key>Processor</key>
+            <string>PkgRootCreator</string>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/Unpack/LogiMgrComponent.pkg/Payload</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/application_payload</string>
+                <key>purge_destination</key>
+                <true/>
+            </dict>
+            <key>Processor</key>
+            <string>PkgPayloadUnpacker</string>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
                 <key>path_list</key>
                 <array>
                     <string>%RECIPE_CACHE_DIR%/LogiMgr/</string>
