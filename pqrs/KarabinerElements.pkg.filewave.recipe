@@ -9,9 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Xcode</string>
-		<key>PATH</key>
-		<string>/Applications/%NAME%.app</string>
+		<string>Karabiner</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.filewave.pkg.KarabinerElements</string>
 	</dict>
