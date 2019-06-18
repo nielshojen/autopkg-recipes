@@ -2,43 +2,77 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>Description</key>
-    <string>Downloads the current release version of Karabiner Elements.</string>
-    <key>Identifier</key>
-    <string>com.github.nielshojen.download.KarabinerElements</string>
-    <key>Input</key>
-    <dict>
-        <key>NAME</key>
-        <string>TIDAL</string>
-    </dict>
-    <key>MinimumVersion</key>
-    <string>0.3.1</string>
-    <key>Process</key>
-    <array>
-        <dict>
-            <key>Processor</key>
-            <string>URLDownloader</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>http://download.tidal.com/desktop/TIDAL.dmg</string>
+	<key>Description</key>
+	<string>Downloads the latest version of the Karabiner Elements.</string>
+	<key>Identifier</key>
+	<string>com.github.nielshojen.download.KarabinerElements</string>
+	<key>Input</key>
+	<dict>
+		<key>PRODUCT_DOWNLOAD_URL</key>
+		<string>https://pqrs.org/osx/karabiner/</string>
+		<key>NAME</key>
+		<string>Nvidia Web Driver</string>
+		<key>PRODUCT_RE_PATTERN</key>
+		<string>href="(files\/Karabiner\-Elements\-[\d\.]+\.dmg)"</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.5.0</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
+				<string>%PRODUCT_RE_PATTERN%</string>
+				<key>result_output_var_name</key>
+				<string>FILE_DOWNLOAD_URL</string>
+				<key>url</key>
+				<string>%PRODUCT_DOWNLOAD_URL%</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%PRODUCT_DOWNLOAD_URL%%FILE_DOWNLOAD_URL%</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+    			<key>Processor</key>
+    			<string>com.github.nielshojen.SharedProcessors/VersionExtractor</string>
+    			<key>Arguments</key>
+    			<dict>
+				<key>input_file</key>
+				<string>%pathname%</string>
+    				<key>split_on_in</key>
+    				<string>-</string>
+    				<key>split_on_out</key>
+    				<string>.dmg</string>
+    			</dict>
+		</dict>
+        <dict>   
+            <key>Processor</key>   
+            <string>CodeSignatureVerifier</string>   
+            <key>Arguments</key>   
+            <dict>   
+                <key>input_path</key>   
+                <string>%pathname%</string>
+                <key>expected_authority_names</key>
+                <array>
+                    <string>Developer ID Installer: NVIDIA Corporation (6KR3T733EC)</string>
+                    <string>Developer ID Certification Authority</string>
+                    <string>Apple Root CA</string>
+                </array>
             </dict>
         </dict>
-        <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>CodeSignatureVerifier</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_path</key>
-                <string>%pathname%/%NAME%.app</string>
-                <key>requirement</key>
-                <string>identifier "com.tidal.desktop" and anchor apple generic</string>
-            </dict>
-        </dict>
-    </array>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
 </dict>
 </plist>
