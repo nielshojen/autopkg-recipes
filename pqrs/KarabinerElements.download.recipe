@@ -49,7 +49,7 @@
 				<key>input_file</key>
 				<string>%pathname%</string>
     				<key>split_on_in</key>
-    				<string>-</string>
+    				<string>Elements-</string>
     				<key>split_on_out</key>
     				<string>.dmg</string>
     			</dict>
