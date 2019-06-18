@@ -63,7 +63,7 @@
                 <string>%pathname%</string>
                 <key>expected_authority_names</key>
                 <array>
-                    <string>Developer ID Installer: NVIDIA Corporation (6KR3T733EC)</string>
+                    <string>Developer ID Installer: Fumihiko Takayama (G43BCU2T37)</string>
                     <string>Developer ID Certification Authority</string>
                     <string>Apple Root CA</string>
                 </array>
