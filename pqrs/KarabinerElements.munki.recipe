@@ -71,9 +71,18 @@
 				<string>%RECIPE_CACHE_DIR%/payload</string>
 				<key>installs_item_paths</key>
 				<array>
-					<string>/Applications/Karabiner.app</string>
-					<string>/Library/LaunchDaemons/org.pqrs.Karabiner.load.plist</string>
-					<string>/Library/Application Support/org.pqrs/Karabiner/Karabiner.signed.kext</string>
+					<string>/Applications/Karabiner-Elements.app</string>
+					<string>/Applications/Karabiner-Eventviewer.app</string>
+					<string>/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli</string>
+					<string>/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_console_user_server</string>
+					<string>/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_grabber</string>
+					<string>/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_observer</string>
+					<string>/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_session_monitor</string>
+					<string>/Library/Application Support/org.pqrs/Karabiner-VirtualHIDDevice/Extensions/org.pqrs.driver.Karabiner.VirtualHIDDevice.v061000.kext</string>
+					<string>/Library/LaunchAgents/org.pqrs.karabiner.karabiner_console_user_server.plist</string>
+					<string>/Library/Launchagents/org.pqrs.karabiner.karabiner_session_monitor.plist</string>
+					<string>/Library/LaunchDaemons/org.pqrs.karabiner.karabiner_grabber.plist</string>
+					<string>/Library/LaunchDaemons/org.pqrs.karabiner.karabiner_observer.plist</string>
 				</array>
 			</dict>
 			<key>Processor</key>
