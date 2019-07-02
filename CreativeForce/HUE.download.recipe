@@ -9,11 +9,11 @@
     <key>Input</key>
     <dict>
         <key>DOWNLOAD_PATTERN</key>
-		<string>(Kelvin-+[0-9].+[0-9].+[0-9]-mac)</string>
+		<string>(HUE-+[0-9].+[0-9].+[0-9]-mac)</string>
 		<key>DOWNLOAD_URL</key>
 		<string>https://download.creativeforce.io/hue/latest-mac.yml</string>
         <key>NAME</key>
-        <string>Kelvin</string>
+        <string>HUE</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
