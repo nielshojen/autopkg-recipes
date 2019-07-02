@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>DOWNLOAD_PATTERN</key>
-		<string>(path: Kelvin-+[0-9].+[0-9].+[0-9]-mac.zip)</string>
+		<string>(Kelvin-+[0-9].+[0-9].+[0-9]-mac.zip)</string>
 		<key>DOWNLOAD_URL</key>
 		<string>https://download.creativeforce.io/mac/latest-mac.yml</string>
         <key>NAME</key>
