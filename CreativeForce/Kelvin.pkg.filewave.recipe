@@ -9,7 +9,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>io.github.nielshojen.download.Kelvin</string>
+	<string>com.github.nielshojen.download.Kelvin</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
