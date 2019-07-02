@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of HUE.</string>
+    <string>Downloads the current release version of Kelvin.</string>
     <key>Identifier</key>
     <string>com.github.nielshojen.download.Kelvin</string>
     <key>Input</key>
@@ -13,7 +13,7 @@
 		<key>DOWNLOAD_URL</key>
 		<string>https://download.creativeforce.io/mac/latest-mac.yml</string>
         <key>NAME</key>
-        <string>HUE</string>
+        <string>Kelvin</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
