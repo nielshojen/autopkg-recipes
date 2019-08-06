@@ -68,11 +68,20 @@
 	        </dict>
 	        <dict>
 	            <key>Processor</key>
+	            <string>FileFinder</string>
+	            <key>Arguments</key>
+	            <dict>
+	                <key>pattern</key>
+	                <string>%pkgroot%/Applications/Fuze*.app</string>
+	            </dict>
+	        </dict>
+	        <dict>
+	            <key>Processor</key>
 	            <string>FileMover</string>
 	            <key>Arguments</key>
 	            <dict>
 	                <key>source</key>
-	                <string>%pkgroot%/Applications/Fuze*.app</string>
+	                <string>%found_filename%</string>
 	                <key>target</key>
 	                <string>%pkgroot%/Applications/Fuze.app</string>
 	            </dict>
