@@ -32,27 +32,6 @@
                     <string>%PKG_ID%</string>
                     <key>options</key>
                     <string>purge_ds_store</string>
-                    <key>chown</key>
-                    <array>
-                        <dict>
-                            <key>path</key>
-                            <string>Applications</string>
-                            <key>user</key>
-                            <string>root</string>
-                            <key>group</key>
-                            <string>admin</string>
-                        </dict>
-                        <dict>
-                            <key>path</key>
-                            <string>Applications/Postman.app/Contents/MacOS/Postman</string>
-                            <key>user</key>
-                            <string>root</string>
-                            <key>group</key>
-                            <string>admin</string>
-                            <key>mode</key>
-                            <string>755</string>
-                        </dict>
-                    </array>
                 </dict>
             </dict>
         </dict>
