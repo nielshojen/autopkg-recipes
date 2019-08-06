@@ -72,6 +72,17 @@
 	        </dict>
 	        <dict>
 	            <key>Processor</key>
+	            <string>FileMover</string>
+	            <key>Arguments</key>
+	            <dict>
+	                <key>source</key>
+	                <string>%pkgroot%/Applications/Fuze*.app</string>
+	                <key>target</key>
+	                <string>%pkgroot%/Applications/Fuze.app</string>
+	            </dict>
+	        </dict>
+	        <dict>
+	            <key>Processor</key>
 	            <string>PlistReader</string>
 	            <key>Arguments</key>
 	            <dict>
