@@ -47,10 +47,6 @@
 	        <dict>
 	            <key>Processor</key>
 	            <string>Unarchiver</string>
-	        </dict>
-	        <dict>
-	            <key>Processor</key>
-	            <string>Unarchiver</string>
 	            <key>Arguments</key>
 	            <dict>
 	                <key>purge_destination</key>
