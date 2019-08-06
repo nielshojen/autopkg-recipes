@@ -47,6 +47,21 @@
         <dict>
             <key>Processor</key>
             <string>Unarchiver</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Unarchiver</string>
+            <key>Arguments</key>
+            <dict>
+                <key>purge_destination</key>
+                <true/>
+                <key>destination_path</key>
+                <string>%pkgroot%/Applications</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Unarchiver</string>
             <key>Arguments</key>
             <dict>
                 <key>purge_destination</key>
