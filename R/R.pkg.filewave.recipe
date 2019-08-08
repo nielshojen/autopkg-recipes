@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Fuze</string>
+		<string>R</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.pkg.filewave.R</string>
 	</dict>
