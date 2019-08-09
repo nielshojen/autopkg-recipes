@@ -21,7 +21,7 @@
 	            <key>Arguments</key>
 	            <dict>
 	                <key>url</key>
-	                <string>https://api.fuzemeeting.com/v1/launch/mac_download</string>
+	                <string>https://citadel.thinkingphones.com/api/v1/applications/fuzeapp/mac/versions/latest/download/update?channel=stable</string>
 	                <key>filename</key>
 	                <string>Fuze.zip</string>
 	            </dict>
