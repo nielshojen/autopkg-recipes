@@ -25,7 +25,7 @@
                 <key>product_name_pattern</key>
                 <string>%PRODUCT_NAME_PATTERN%</string>
                 <key>product_name</key>
-                <string>DaVinci Resolve</string>
+                <string>DaVinci Resolve Studio</string>
                 <key>registration_info</key>
                 <dict>
                     <key>firstname</key>
