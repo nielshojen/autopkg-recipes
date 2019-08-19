@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>This recipe downloads and imports the latest version of HUE and imports into Munki</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.munki.HUE</string>
+    <string>com.github.nielshojen.munki.fuze</string>
     <key>Input</key>
     <dict>
 		<key>MUNKI_CATEGORY</key>
@@ -43,7 +43,7 @@
     <key>MinimumVersion</key>
     <string>1.0.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.nielshojen.pkg.Fuze</string>
+    <string>com.github.nielshojen.pkg.fuze</string>
     <key>Process</key>
     <array>
         <dict>
