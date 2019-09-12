@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Team Viewer Quick Support</string>
+		<string>TeamViewer Quick Support</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.pkg.filewave.TeamViewerQSCustom</string>
 	</dict>
