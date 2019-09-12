@@ -20,7 +20,7 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>fw_app_bundle_id</key>fuze
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
