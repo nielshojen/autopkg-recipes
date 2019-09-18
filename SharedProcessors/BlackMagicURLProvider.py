@@ -42,16 +42,6 @@ class BlackMagicURLProvider(Processor):
     """Provides a version and dmg download for the Barebones product given."""
     description = __doc__
     input_variables = {
-        "version_pattern": {
-            "required": False,
-            "description":
-                "Regex pattern that will applied to all 'name' elements in, "
-                "the downloads JSON metadata. Only downloads matching this "
-                "pattern will be considered. This pattern _must_ contain "
-                "at least a named group 'version', which will be used to "
-                "sort the results by evaluating this using distutils' "
-                "LooseVersion."
-        },
         "product_name": {
             "required": True,
             "description":
@@ -122,13 +112,11 @@ class BlackMagicURLProvider(Processor):
 
             match = re.match(self.env["product_name_pattern"], m_prod["name"])
             if match:
-                if not match.group("version"):
-                    self.output("WARNING: Regex matched but no "
-                                "named group 'version' matched!")
                 p = m_prod.copy()
-                # recording the version extracted by our named group in
-                # 'product_name_pattern'
-                p["version"] = match.group("version")
+                major_version = p["urls"]["Mac OS X"][0]["major"]
+                minor_version = p["urls"]["Mac OS X"][0]["minor"]
+                release_version = p["urls"]["Mac OS X"][0]["releaseNum"]
+                p["version"] = str(major_version) + "." + str(minor_version) + "." + str(release_version)
                 prods.append(p)
         # sort by version and grab the highest one
         latest_prod = sorted(
