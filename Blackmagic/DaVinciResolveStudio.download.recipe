@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>PRODUCT_NAME_PATTERN</key>
-        <string>^DaVinci Resolve [0-9\.]((?!Beta).)*$</string>
+        <string>^DaVinci Resolve Studio[0-9\.]((?!Beta).)*$</string>
         <key>PRODUCT_NAME</key>
         <string>DaVinci Resolve Studio</string>
         <key>NAME</key>
