@@ -9,9 +9,11 @@
     <key>Input</key>
     <dict>
         <key>PRODUCT_NAME_PATTERN</key>
-        <string>^DaVinci Resolve Studio (?P&lt;version&gt;16(\.\d+)*)( Update)*$</string>
+        <string>^DaVinci Resolve Studio((?!Beta).)*$</string>
+        <key>PRODUCT_NAME</key>
+        <string>DaVinci Resolve Studio</string>
         <key>NAME</key>
-        <string>DaVinciResolveStudio16</string>
+        <string>DaVinciResolveStudio</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
@@ -25,7 +27,7 @@
                 <key>product_name_pattern</key>
                 <string>%PRODUCT_NAME_PATTERN%</string>
                 <key>product_name</key>
-                <string>DaVinci Resolve Studio</string>
+                <string>%PRODUCT_NAME%</string>
                 <key>registration_info</key>
                 <dict>
                     <key>firstname</key>
