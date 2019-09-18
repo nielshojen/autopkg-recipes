@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads latest version of DaVinci Resolve Studio 16.</string>
+    <string>Downloads latest version of DaVinci Resolve Studio.</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.download.davinciresolvestudio16</string>
+    <string>com.github.nielshojen.download.davinciresolvestudio</string>
     <key>Input</key>
     <dict>
         <key>PRODUCT_NAME_PATTERN</key>
-        <string>^DaVinci Resolve Studio((?!Beta).)*$</string>
+        <string>^DaVinci Resolve [0-9\.]((?!Beta).)*$</string>
         <key>PRODUCT_NAME</key>
         <string>DaVinci Resolve Studio</string>
         <key>NAME</key>
