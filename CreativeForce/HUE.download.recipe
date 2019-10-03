@@ -11,7 +11,7 @@
         <key>DOWNLOAD_PATTERN</key>
 		<string>(HUE-+[0-9].+[0-9].+[0-9]-mac)</string>
 		<key>DOWNLOAD_URL</key>
-		<string>https://download.creativeforce.io/hue/mac/latest-mac.yml</string>
+		<string>https://lh-applications-release.s3.amazonaws.com/prod/hue/mac/latest-mac.yml</string>
         <key>NAME</key>
         <string>HUE</string>
     </dict>
