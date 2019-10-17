@@ -153,7 +153,6 @@ class BlackMagicURLProvider(Processor):
                 "name": self.env["product_name"]
             }
         }
-        req_data = json.dumps(req_data)
         for k in self.env["registration_info"]:
             req_data[k] = self.env["registration_info"][k]
         req_data = json.dumps(req_data)
