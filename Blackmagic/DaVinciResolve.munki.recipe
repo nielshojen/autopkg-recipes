@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the most recent version of DaVinci Resolve 15 and imports into Munki.</string>
+    <string>Downloads the most recent version of DaVinci Resolve and imports into Munki.</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.munki.davinciresolve15</string>
+    <string>com.github.nielshojen.munki.davinciresolve</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>DaVinciResolve15</string>
+        <string>DaVinciResolve</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/%NAME%</string>
         <key>pkginfo</key>
@@ -19,9 +19,9 @@
                 <string>testing</string>
             </array>
             <key>description</key>
-            <string>This software installs the free version of DaVinci Resolve 15 which features up to 10x faster editing performance, Fairlight audio post production, dozens of new filters and effects and more. Technical support is available via the Blackmagic Design community forums.</string>
+            <string>This software installs the free version of DaVinci Resolve which features up to 10x faster editing performance, Fairlight audio post production, dozens of new filters and effects and more. Technical support is available via the Blackmagic Design community forums.</string>
             <key>display_name</key>
-            <string>DaVinci Resolve 15</string>
+            <string>DaVinci Resolve</string>
             <key>minimum_os_version</key>
             <string>10.11.6</string>
             <key>name</key>
@@ -51,7 +51,7 @@
     <key>MinimumVersion</key>
     <string>0.2.9</string>
     <key>ParentRecipe</key>
-    <string>com.github.nielshojen.download.davinciresolve15</string>
+    <string>com.github.nielshojen.download.davinciresolve</string>
     <key>Process</key>
     <array>
         <dict>

@@ -3,15 +3,17 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads latest version of DaVinci Resolve Studio 12.</string>
+    <string>Downloads latest version of Desktop Video</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.download.davinciresolvestudio12</string>
+    <string>com.github.nielshojen.download.desktopvideo</string>
     <key>Input</key>
     <dict>
+		<key>APP_VERSION</key>
+		<string>11</string>
         <key>PRODUCT_NAME_PATTERN</key>
-        <string>^DaVinci Resolve (?P&lt;version&gt;12(\.\d+)*) Studio( Update)*$</string>
+        <string>^Desktop Video (?P&lt;version&gt;%APP_VERSION%(\.\d+)*)( Update)*$</string>
         <key>NAME</key>
-        <string>DaVinciResolveStudio12</string>
+        <string>Desktop Video</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
@@ -25,7 +27,7 @@
                 <key>product_name_pattern</key>
                 <string>%PRODUCT_NAME_PATTERN%</string>
                 <key>product_name</key>
-                <string>DaVinci Resolve Studio</string>
+                <string>Desktop Video</string>
                 <key>registration_info</key>
                 <dict>
                     <key>firstname</key>
@@ -40,6 +42,8 @@
                     <string>%REG_CITY%</string>
                     <key>state</key>
                     <string>%REG_STATE%</string>
+                    <key>country</key>
+                    <string>%REG_COUNTRY%</string>
                 </dict>
             </dict>
         </dict>

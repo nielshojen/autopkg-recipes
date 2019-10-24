@@ -3,20 +3,20 @@
 <plist version="1.0">
 	<dict>
 		<key>Description</key>
-		<string>Downloads the latest version of Blackmagic Desktop Video 10, creates a fileset and imports into FileWave</string>
+		<string>Downloads the latest version of Blackmagic Desktop Video, creates a fileset and imports into FileWave</string>
 		<key>Identifier</key>
-		<string>com.github.nielshojen.filewave.DesktopVideo10</string>
+		<string>com.github.nielshojen.filewave.desktopvideo</string>
 		<key>Input</key>
 		<dict>
 			<key>NAME</key>
 			<string>Desktop Video</string>
 			<key>fw_app_bundle_id</key>
-			<string>com.github.nielshojen.filewave.DesktopVideo10</string>
+			<string>com.github.nielshojen.filewave.desktopvideo</string>
 		</dict>
 		<key>MinimumVersion</key>
 		<string>0.2.0</string>
 		<key>ParentRecipe</key>
-		<string>com.github.nielshojen.download.DesktopVideo10</string>
+		<string>com.github.nielshojen.download.desktopvideo</string>
 		<key>Process</key>
 		<array>
 			<dict>

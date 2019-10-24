@@ -3,20 +3,20 @@
 <plist version="1.0">
 	<dict>
 		<key>Description</key>
-		<string>Downloads the latest version of Blackmagic HyperDeck 5, creates a fileset and imports into FileWave</string>
+		<string>Downloads the latest version of Blackmagic HyperDeck, creates a fileset and imports into FileWave</string>
 		<key>Identifier</key>
-		<string>com.github.nielshojen.filewave.HyperDeck5</string>
+		<string>com.github.nielshojen.filewave.hyperdeck</string>
 		<key>Input</key>
 		<dict>
 			<key>NAME</key>
 			<string>HyperDeck</string>
 			<key>fw_app_bundle_id</key>
-			<string>com.github.nielshojen.filewave.HyperDeck5</string>
+			<string>com.github.nielshojen.filewave.hyperdeck</string>
 		</dict>
 		<key>MinimumVersion</key>
 		<string>0.2.0</string>
 		<key>ParentRecipe</key>
-		<string>com.github.nielshojen.download.HyperDeck5</string>
+		<string>com.github.nielshojen.download.hyperdeck</string>
 		<key>Process</key>
 		<array>
 			<dict>
