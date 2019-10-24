@@ -3,15 +3,17 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads latest version of DaVinci Resolve.</string>
+    <string>Downloads latest version of DaVinci Resolve. Major version to search for is set in the APP_VERSION variable.</string>
     <key>Identifier</key>
     <string>com.github.nielshojen.download.davinciresolve</string>
     <key>ParentRecipe</key>
     <string>com.github.timsutton.download.davinciresolve14</string>
     <key>Input</key>
     <dict>
-        <key>PRODUCT_NAME_PATTERN</key>
-        <string>^DaVinci Resolve [0-9\.]((?!Beta).)*$</string>
+		<key>APP_VERSION</key>
+		<string>16</string>
+		<key>PRODUCT_NAME_PATTERN</key>
+		<string>^DaVinci Resolve (?P&lt;version&gt;%APP_VERSION%(\.\d+)*)( Update)*$</string>
         <key>NAME</key>
         <string>DaVinciResolve</string>
         <key>REG_FIRSTNAME</key>
