@@ -11,6 +11,8 @@
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/apple</string>
         <key>NAME</key>
+        <string>FinalCutPro</string>
+        <key>DISPLAY_NAME</key>
         <string>Final Cut Pro</string>
         <key>PATH</key>
         <string>/Applications/%NAME%.app</string>
@@ -21,7 +23,7 @@
                 <string>testing</string>
             </array>
             <key>display_name</key>
-            <string>%NAME%</string>
+            <string>%DISPLAY_NAME%</string>
             <key>name</key>
             <string>%NAME%</string>
             <key>unattended_install</key>
@@ -38,7 +40,7 @@
 		<key>Arguments</key>
 		<dict>
 			<key>input_plist_path</key>
-			<string>/Applications/%NAME%.app/Contents/Info.plist</string>
+			<string>/Applications/%DISPLAY_NAME%.app/Contents/Info.plist</string>
 			<key>plist_version_key</key>
 			<string>LSMinimumSystemVersion</string>
 		</dict>
