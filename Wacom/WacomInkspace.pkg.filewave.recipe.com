@@ -16,7 +16,7 @@
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.nielshojen.pkf.WacomInkspace</string>
+	<string>com.github.nielshojen.pkg.WacomInkspace</string>
 	<key>Process</key>
 	<array>
 		<dict>
