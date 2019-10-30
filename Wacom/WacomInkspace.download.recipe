@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Wacom Intuos tablet drivers.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.download.WacomIntuos</string>
+	<string>com.github.nielshojen.download.WacomInkspace</string>
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_PATTERN</key>
@@ -13,7 +13,7 @@
 		<key>DOWNLOAD_URL</key>
 		<string>http://link.wacom.com/i/m?os=mac</string>
 		<key>NAME</key>
-		<string>Wacom Intuos Driver</string>
+		<string>WacomInkspace</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
