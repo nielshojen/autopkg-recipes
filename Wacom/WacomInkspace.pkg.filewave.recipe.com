@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads latest Wacom Intuos driver installer and imports into Filewave</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.pkg.WacomIntuosDriver</string>
+	<string>com.github.nielshojen.filewave.pkg.WacomInkspace</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
