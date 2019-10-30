@@ -3,13 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Wacom Intuos tablet drivers.</string>
+	<string>Downloads the latest version of Wacom Inkspace App.</string>
 	<key>Identifier</key>
 	<string>com.github.nielshojen.download.WacomInkspace</string>
 	<key>Input</key>
 	<dict>
-		<key>DOWNLOAD_PATTERN</key>
-		<string>(http://cdn.wacom.com/i/m/mac/WacomInkspaceApp_+[0-9].+[0-9].+[0-9].zip)</string>
 		<key>DOWNLOAD_URL</key>
 		<string>http://link.wacom.com/i/m?os=mac</string>
 		<key>NAME</key>
@@ -37,17 +35,11 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>expected_authority_names</key>
-				<array>
-					<string>Developer ID Installer: Wacom Technology Corp. (EG27766DY7)</string>
-					<string>Developer ID Certification Authority</string>
-					<string>Apple Root CA</string>
-				</array>
-				<key>input_path</key>
-				<string>%pathname%/*.pkg</string>
+				<key>input_plist_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Wacom Inkspace App.app/Content/Info.plist</string>
 			</dict>
 			<key>Processor</key>
-			<string>CodeSignatureVerifier</string>
+			<string>Versioner</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
