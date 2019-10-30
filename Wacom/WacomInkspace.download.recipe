@@ -11,7 +11,7 @@
 		<key>DOWNLOAD_PATTERN</key>
 		<string>(http://cdn.wacom.com/i/m/mac/WacomInkspaceApp_+[0-9].+[0-9].+[0-9].zip)</string>
 		<key>DOWNLOAD_URL</key>
-		<string>http://link.wacom.com/i/m\?os=mac</string>
+		<string>http://link.wacom.com/i/m?os=mac</string>
 		<key>NAME</key>
 		<string>WacomInkspace</string>
 	</dict>
@@ -22,32 +22,8 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>re_pattern</key>
-				<string>%DOWNLOAD_PATTERN%</string>
 				<key>url</key>
 				<string>%DOWNLOAD_URL%</string>
-			</dict>
-			<key>Processor</key>
-			<string>URLTextSearcher</string>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>com.github.nielshojen.SharedProcessors/VersionExtractor</string>
-			<key>Arguments</key>
-			<dict>
-				<key>input_file</key>
-				<string>%match%</string>
-				<key>split_on_in</key>
-				<string>_</string>
-				<key>split_on_out</key>
-				<string>.dmg</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>url</key>
-				<string>%match%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
