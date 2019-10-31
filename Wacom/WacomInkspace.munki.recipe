@@ -64,7 +64,6 @@
 					<array>
 						<string>%RECIPE_CACHE_DIR%/payload</string>
 						<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-						<string>%RECIPE_CACHE_DIR%/%pkg_path%</string>
 					</array>
 				</dict>
 			</dict>
