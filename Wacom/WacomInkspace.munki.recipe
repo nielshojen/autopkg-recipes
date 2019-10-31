@@ -11,7 +11,7 @@
 			<key>NAME</key>
 			<string>WacomInkspace</string>
 			<key>MUNKI_REPO_SUBDIR</key>
-			<string>apps/Wacom</string>
+			<string>apps/wacom</string>
 			<key>MUNKI_DESCRIPTION</key>
 			<string>Wacom Inkspace App</string>
 			<key>MUNKI_DISPLAYNAME</key>
