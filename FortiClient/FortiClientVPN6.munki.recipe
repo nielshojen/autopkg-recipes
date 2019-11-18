@@ -33,7 +33,7 @@
         </dict>
     </dict>
     <key>ParentRecipe</key>
-    <string>com.github.dataJAR-recipes.pkg.forticlientvpn</string>
+    <string>com.github.nielshojen.download.forticlientvpn</string>
     <key>Process</key>
     <array>
         <dict>
