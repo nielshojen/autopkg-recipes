@@ -9,6 +9,8 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
+		<string>AppleRemoteDesktop</string>
+		<key>DISPLAY_NAME</key>
 		<string>Remote Desktop</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/apple</string>
@@ -27,7 +29,7 @@
 			<key>developer</key>
 			<string>Apple</string>
 			<key>display_name</key>
-			<string>Remote Desktop</string>
+			<string>%DISPLAY_NAME%</string>
 			<key>minimum_os_version</key>
 			<string>10.6</string>
 			<key>name</key>
@@ -93,7 +95,7 @@
 				<key>pkg_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%_%version%.pkg</string>
 				<key>app_path</key>
-				<string>%pkgroot%/Applications/%NAME%.app</string>
+				<string>%pkgroot%/Applications/%DISPLAY_NAME%.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>AppPkgCreator</string>
