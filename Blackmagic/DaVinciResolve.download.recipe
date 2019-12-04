@@ -10,10 +10,8 @@
     <string>com.github.timsutton.download.davinciresolve14</string>
     <key>Input</key>
     <dict>
-		<key>APP_VERSION</key>
-		<string>16</string>
-		<key>PRODUCT_NAME_PATTERN</key>
-		<string>^DaVinci Resolve (?P&lt;version&gt;%APP_VERSION%(\.\d+)*)( Update)*$</string>
+	<key>PRODUCT_NAME_PATTERN</key>
+	<string>^DaVinci Resolve (?P&lt;version&gt;16(\.\d+)*)( Update)*$</string>
         <key>NAME</key>
         <string>DaVinciResolve</string>
         <key>REG_FIRSTNAME</key>
