@@ -31,7 +31,7 @@ descending by tag names according to LooseVersion semantics.
 MUNKI_ICON should be overridden with your icon name.
 </string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.munki.munkitools_app_usage</string>
+    <string>com.github.nielshojen.munki.munkitools_python</string>
     <key>Input</key>
     <dict>
         <key>INCLUDE_PRERELEASES</key>
@@ -48,16 +48,12 @@ MUNKI_ICON should be overridden with your icon name.
         <string></string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>munkitools</string>
-        <key>MUNKITOOLS_APP_USAGE_NAME</key>
-        <string>munkitools_app_usage</string>
-        <key>MUNKITOOLS_APP_USAGE_DISPLAYNAME</key>
-        <string>Managed Software Center app usage</string>
-        <key>MUNKITOOLS_APP_USAGE_DESCRIPTION</key>
-        <string>Application usage statistics for Managed Software Center.</string>
-        <key>MUNKITOOLS_LAUNCHD_NAME</key>
-        <string>munkitools_launchd</string>
-        <key>MUNKITOOLS_CORE_NAME</key>
-        <string>munkitools_core</string>
+        <key>MUNKITOOLS_PYTHON_NAME</key>
+        <string>munkitools_python</string>
+        <key>MUNKITOOLS_PYTHON_DISPLAYNAME</key>
+        <string>Managed Software Center python files</string>
+        <key>MUNKITOOLS_PYTHON_DESCRIPTION</key>
+        <string>Python files for use by Managed Software Center.</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.5.0</string>
@@ -112,7 +108,7 @@ MUNKI_ICON should be overridden with your icon name.
             <key>Arguments</key>
             <dict>
                 <key>pattern</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/munkitools_app_usage-*</string>
+                <string>%RECIPE_CACHE_DIR%/unpack/munkitools_python-*</string>
             </dict>
         </dict>
         <dict>
@@ -123,7 +119,7 @@ MUNKI_ICON should be overridden with your icon name.
                 <key>source_flatpkg_dir</key>
                 <string>%found_filename%</string>
                 <key>destination_pkg</key>
-                <string>%RECIPE_CACHE_DIR%/repack/munkitools_app_usage.pkg</string>
+                <string>%RECIPE_CACHE_DIR%/repack/munkitools_python.pkg</string>
             </dict>
         </dict>
         <dict>
@@ -134,7 +130,7 @@ MUNKI_ICON should be overridden with your icon name.
                 <key>repo_subdirectory</key>
                 <string>%MUNKI_REPO_SUBDIR%</string>
                 <key>pkg_path</key>
-                <string>%RECIPE_CACHE_DIR%/repack/munkitools_app_usage.pkg</string>
+                <string>%RECIPE_CACHE_DIR%/repack/munkitools_python.pkg</string>
                 <key>pkginfo</key>
                 <dict>
                     <key>catalogs</key>
@@ -144,24 +140,17 @@ MUNKI_ICON should be overridden with your icon name.
                     <key>category</key>
                     <string>%MUNKI_CATEGORY%</string>
                     <key>description</key>
-                    <string>%MUNKITOOLS_APP_USAGE_DESCRIPTION%</string>
+                    <string>%MUNKITOOLS_PYTHON_DESCRIPTION%</string>
                     <key>developer</key>
                     <string>%MUNKI_DEVELOPER%</string>
                     <key>display_name</key>
-                    <string>%MUNKITOOLS_APP_USAGE_DISPLAYNAME%</string>
+                    <string>%MUNKITOOLS_PYTHON_DISPLAYNAME%</string>
                     <key>icon_name</key>
                     <string>%MUNKI_ICON%</string>
                     <key>minimum_os_version</key>
-                    <string>10.10.0</string>
+                    <string>10.8.0</string>
                     <key>name</key>
-                    <string>%MUNKITOOLS_APP_USAGE_NAME%</string>
-                    <key>requires</key>
-                    <array>
-                        <string>%MUNKITOOLS_CORE_NAME%</string>
-                        <string>%MUNKITOOLS_LAUNCHD_NAME%</string>
-                    </array>
-                    <key>unattended_install</key>
-                    <true/>
+                    <string>%MUNKITOOLS_PYTHON_NAME%</string>
                 </dict>
             </dict>
         </dict>
