@@ -49,7 +49,7 @@ MUNKI_ICON should be overridden with your icon name.
         <key>MUNKI_REPO_SUBDIR</key>
         <string>munkitools</string>
         <key>MUNKITOOLS_APP_NAME</key>
-        <string>munkitools</string>
+        <string>munkitools_app</string>
         <key>MUNKITOOLS_APP_DISPLAYNAME</key>
         <string>Managed Software Center</string>
         <key>MUNKITOOLS_APP_DESCRIPTION</key>
