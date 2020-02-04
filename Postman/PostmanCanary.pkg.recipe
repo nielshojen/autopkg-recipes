@@ -65,6 +65,8 @@
             <dict>
                 <key>input_file</key>
                 <string>%version%</string>
+                <key>split_on_in</key>
+                <string></string>
                 <key>split_on_out</key>
                 <string>-</string>
             </dict>
