@@ -14,14 +14,14 @@ class VersionExtractor(Processor):
             "description": "The version string that needs splitting."
         },
         "split_on_in": {
-            "required": True,
+            "required": False,
             "description": "The character(s) to use for splitting the "
-                           "version. (Defaults to a space.)"
+                           "version."
         },
         "split_on_out": {
-            "required": True,
+            "required": False,
             "description": "The character(s) to use for splitting the  "
-                           "version. (Defaults to 0.)"
+                           "version."
         }
     }
     output_variables = {
@@ -33,12 +33,14 @@ class VersionExtractor(Processor):
 
     def main(self):
 
-        split_on_in = self.env.get("split_on_in", " ")
-        split_on_out = self.env.get("split_on_out", " ")
-        index = self.env.get("index", 1)
-        self.env["version"] = self.env["input_file"].split(split_on_in)[index]
-        index = self.env.get("index", 0)
-        self.env["version"] = self.env["version"].split(split_on_out)[index]
+        split_on_in = self.env.get("split_on_in")
+        split_on_out = self.env.get("split_on_out")
+        if split_on_in:
+            index = self.env.get("index", 1)
+            self.env["version"] = self.env["input_file"].split(split_on_in)[index]
+        if split_on_out:
+            index = self.env.get("index", 0)
+            self.env["version"] = self.env["version"].split(split_on_out)[index]
         self.output("Version: %s" % self.env["version"])
 
 
