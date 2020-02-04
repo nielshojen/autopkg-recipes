@@ -96,7 +96,7 @@
                         </dict>
                         <dict>
                             <key>path</key>
-                            <string>Applications/PostmanCabary.app/Contents/MacOS/PostmanCanary</string>
+                            <string>Applications/PostmanCanary.app/Contents/MacOS/PostmanCanary</string>
                             <key>user</key>
                             <string>root</string>
                             <key>group</key>
