@@ -23,7 +23,7 @@
             <key>category</key>
             <string>Developer Tools</string>
             <key>description</key>
-            <string>Create and send any HTTP request using the awesome Postman Canary request builder. Write your own test cases to validate response data, response times, and more!</string>
+            <string>Be the first to experience new Postman features! Can't wait to see what Postman has in store for you? Be the first to try out the newest features. Canary builds are designed for early adopters and may sometimes break.</string>
             <key>developer</key>
             <string>Postdot Technologies, Inc.</string>
             <key>display_name</key>
