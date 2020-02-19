@@ -15,8 +15,14 @@
 # limitations under the License.
 
 import urllib.request, urllib.error, urllib.parse
-import plistlib
 import sys
+
+try:
+    from plistlib import loads as load_plist
+    from plistlib import dumps as dump_plist
+except ImportError:
+    from FoundationPlist import readPlistFromString as load_plist
+    from FoundationPlist import writePlistToString as dump_plist
 
 from autopkglib import Processor, ProcessorError
 from Foundation import NSData, NSPropertyListSerialization, NSPropertyListMutableContainers
@@ -217,7 +223,7 @@ def check_app_updates(app_info_list, raw_result=False):
                      'installed-version-identifier': an_app.get('installed-version-identifier', 0)}
         local_software.append(app_entry)
     plist_dict = {'local-software': local_software}
-    plist_str = plistlib.writePlistToString(plist_dict)
+    plist_str = dump_plist(plist_dict)
     request.add_data(plist_str)
     # Build the connection
     response_handle = urllib.request.urlopen(request)
@@ -234,7 +240,7 @@ def check_app_updates(app_info_list, raw_result=False):
     # - 'current-version' is the CFBundleShortVersionString
     # - 'bundle-id' is the CFBundleIdentifier
     # - 'preflight' is a *very* interesting 'pfpkg'. See details at bottom.
-    return plistlib.readPlistFromString(response)
+    return load_plist(response)
 
 #
 # End of pudquick code
