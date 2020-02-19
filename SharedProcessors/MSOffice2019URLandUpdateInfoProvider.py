@@ -209,9 +209,13 @@ class MSOffice2019URLandUpdateInfoProvider(Processor):
         req.add_header(
             "User-Agent",
             "Microsoft%20AutoUpdate/3.6.16080300 CFNetwork/760.6.3 Darwin/15.6.0 (x86_64)")
+        
+        ctx = ssl.create_default_context()
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
 
         try:
-            fdesc = urllib.request.urlopen(req)
+            fdesc = urllib.request.urlopen(req, context=ctx)
             data = fdesc.read()
             fdesc.close()
         except BaseException as err:
