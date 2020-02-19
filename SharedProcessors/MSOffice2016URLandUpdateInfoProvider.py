@@ -23,6 +23,7 @@
 
 import plistlib
 import re
+import ssl
 import urllib.request, urllib.error, urllib.parse
 
 from autopkglib import Processor, ProcessorError
