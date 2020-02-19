@@ -221,7 +221,7 @@ class MSOffice2019URLandUpdateInfoProvider(Processor):
         except BaseException as err:
             raise ProcessorError("Can't download %s: %s" % (base_url, err))
 
-        metadata = FoundationPlist.readPlist(data)
+        metadata = FoundationPlist.readPlistFromString(data)
         item = {}
         # Update feeds for a given 'channel' will have either combo or delta
         # pkg urls, with delta's additionally having a 'FullUpdaterLocation' key.
