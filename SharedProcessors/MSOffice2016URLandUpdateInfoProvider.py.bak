@@ -19,16 +19,16 @@
 # Modified to add Remote Desktop Standalone and Intune Company Portal
 #
 #pylint:disable=e1101
-"""See docstring for MSOffice2019URLandUpdateInfoProvider class"""
+"""See docstring for MSOffice2016URLandUpdateInfoProvider class"""
 
 import plistlib
 import re
-import urllib.request, urllib.error, urllib.parse
+import urllib2
 
 from autopkglib import Processor, ProcessorError
 
 
-__all__ = ["MSOffice2019URLandUpdateInfoProvider"]
+__all__ = ["MSOffice2016URLandUpdateInfoProvider"]
 
 # CULTURE_CODE defaulting to 'en-US' as the installers and updates seem to be
 # multilingual.
@@ -41,11 +41,11 @@ BASE_URL = "https://officecdn-microsoft-com.akamaized.net/pr/%s/MacAutoupdate/%s
 # Note that Skype, 'MSFB' has a '16' after it, AutoUpdate has a '03' after it while all the other products have '15'
 
 PROD_DICT = {
-    'Excel': {'id': 'XCEL2019', 'path': '/Applications/Microsoft Excel.app'},
-    'OneNote': {'id': 'ONMC2019', 'path': '/Applications/Microsoft OneNote.app'},
-    'Outlook': {'id': 'OPIM2019', 'path': '/Applications/Microsoft Outlook.app'},
-    'PowerPoint': {'id': 'PPT32019', 'path': '/Applications/Microsoft PowerPoint.app'},
-    'Word': {'id': 'MSWD2019', 'path': '/Applications/Microsoft Word.app'},
+    'Excel': {'id': 'XCEL15', 'path': '/Applications/Microsoft Excel.app'},
+    'OneNote': {'id': 'ONMC15', 'path': '/Applications/Microsoft OneNote.app'},
+    'Outlook': {'id': 'OPIM15', 'path': '/Applications/Microsoft Outlook.app'},
+    'PowerPoint': {'id': 'PPT315', 'path': '/Applications/Microsoft PowerPoint.app'},
+    'Word': {'id': 'MSWD15', 'path': '/Applications/Microsoft Word.app'},
     'SkypeForBusiness': {'id': 'MSFB16', 'path': '/Applications/Skype for Business.app'},
     'IntuneCompanyPortal': {'id': 'IMCP01', 'path': '/Applications/Company Portal.app'},
     'RemoteDesktop': {'id': 'MSRD10', 'path': '/Applications/Microsoft Remote Desktop.app'},
@@ -64,8 +64,8 @@ CHANNELS = {
 }
 DEFAULT_CHANNEL = "Production"
 
-class MSOffice2019URLandUpdateInfoProvider(Processor):
-    """Provides a download URL for the most recent version of MS Office 2019."""
+class MSOffice2016URLandUpdateInfoProvider(Processor):
+    """Provides a download URL for the most recent version of MS Office 2016."""
     input_variables = {
         "locale_id": {
             "required": False,
@@ -106,7 +106,7 @@ class MSOffice2019URLandUpdateInfoProvider(Processor):
                  "Defaults to %s, acceptable values are either a custom "
                  "UUID or one of: %s" % (
                     DEFAULT_CHANNEL,
-                    ", ".join(list(CHANNELS.keys()))))
+                    ", ".join(CHANNELS.keys())))
         }
     }
     output_variables = {
@@ -188,10 +188,10 @@ class MSOffice2019URLandUpdateInfoProvider(Processor):
         channel_input = self.env.get("channel", DEFAULT_CHANNEL)
         rex = r"^([0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12})$"
         match_uuid = re.match(rex, channel_input)
-        if not match_uuid and channel_input not in list(CHANNELS.keys()):
+        if not match_uuid and channel_input not in CHANNELS.keys():
             raise ProcessorError(
                 "'channel' input variable must be one of: %s or a custom "
-                "uuid" % (", ".join(list(CHANNELS.keys()))))
+                "uuid" % (", ".join(CHANNELS.keys())))
         if match_uuid:
             channel = match_uuid.groups()[0]
         else:
@@ -201,7 +201,7 @@ class MSOffice2019URLandUpdateInfoProvider(Processor):
 
         # Get metadata URL
         self.output("Requesting xml: %s" % base_url)
-        req = urllib.request.Request(base_url)
+        req = urllib2.Request(base_url)
         # Add the MAU User-Agent, since MAU feed server seems to explicitly
         # block a User-Agent of 'Python-urllib/2.7' - even a blank User-Agent
         # string passes.
@@ -210,7 +210,7 @@ class MSOffice2019URLandUpdateInfoProvider(Processor):
             "Microsoft%20AutoUpdate/3.6.16080300 CFNetwork/760.6.3 Darwin/15.6.0 (x86_64)")
 
         try:
-            fdesc = urllib.request.urlopen(req)
+            fdesc = urllib2.urlopen(req)
             data = fdesc.read()
             fdesc.close()
         except BaseException as err:
@@ -233,10 +233,10 @@ class MSOffice2019URLandUpdateInfoProvider(Processor):
         item = item[0]
         
         if self.env["version"] == "latest-standalone":
-            p = re.compile(r'(^[a-zA-Z0-9:/.-]*_[a-zA-Z]*_)(.*)Updater.pkg')
+            p = re.compile(ur'(^[a-zA-Z0-9:/.-]*_[a-zA-Z]*_)(.*)Updater.pkg')
             url = item["Location"]
             (firstGroup, secondGroup) = re.search(p, url).group(1, 2)
-            item["Location"] = firstGroup + "2019_"+ secondGroup + "Installer.pkg"
+            item["Location"] = firstGroup + "2016_"+ secondGroup + "Installer.pkg"
 
         self.env["url"] = item["Location"]
         self.output("Found URL %s" % self.env["url"])
@@ -252,7 +252,7 @@ class MSOffice2019URLandUpdateInfoProvider(Processor):
                 "Locale ID %s not found in manifest metadata. Available IDs: "
                 "%s. See %s for more details." % (
                     lcid,
-                    ", ".join(list(all_localizations.keys())),
+                    ", ".join(all_localizations.keys()),
                     LOCALE_ID_INFO_URL))
         manifest_description = all_localizations[lcid]['Short Description']
         # Store the description in a separate output variable and in our pkginfo
@@ -311,5 +311,5 @@ class MSOffice2019URLandUpdateInfoProvider(Processor):
 
 
 if __name__ == "__main__":
-    PROCESSOR = MSOffice2019URLandUpdateInfoProvider()
+    PROCESSOR = MSOffice2016URLandUpdateInfoProvider()
     PROCESSOR.execute_shell()

@@ -15,8 +15,8 @@
 # limitations under the License.
 
 import re
-import urllib
-import urllib2
+import urllib.request, urllib.parse, urllib.error
+import urllib.request, urllib.error, urllib.parse
 import json
 
 from autopkglib import Processor, ProcessorError
@@ -111,10 +111,10 @@ class JetbrainsURLProvider(Processor):
     def xhr_release_info(self, product_code):
         """Request release information from JetBrains XHR Endpoint"""
         url = RELEASE_XHR_ENDPOINT.format(product_code, "123123123")
-        request = urllib2.Request(url)
+        request = urllib.request.Request(url)
 
         try:
-            handle = urllib2.urlopen(request)
+            handle = urllib.request.urlopen(request)
             response = handle.read()
             handle.close()
         except BaseException as e:

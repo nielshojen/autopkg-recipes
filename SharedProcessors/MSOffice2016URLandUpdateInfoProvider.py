@@ -23,7 +23,7 @@
 
 import plistlib
 import re
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 
 from autopkglib import Processor, ProcessorError
 
@@ -106,7 +106,7 @@ class MSOffice2016URLandUpdateInfoProvider(Processor):
                  "Defaults to %s, acceptable values are either a custom "
                  "UUID or one of: %s" % (
                     DEFAULT_CHANNEL,
-                    ", ".join(CHANNELS.keys())))
+                    ", ".join(list(CHANNELS.keys()))))
         }
     }
     output_variables = {
@@ -188,10 +188,10 @@ class MSOffice2016URLandUpdateInfoProvider(Processor):
         channel_input = self.env.get("channel", DEFAULT_CHANNEL)
         rex = r"^([0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12})$"
         match_uuid = re.match(rex, channel_input)
-        if not match_uuid and channel_input not in CHANNELS.keys():
+        if not match_uuid and channel_input not in list(CHANNELS.keys()):
             raise ProcessorError(
                 "'channel' input variable must be one of: %s or a custom "
-                "uuid" % (", ".join(CHANNELS.keys())))
+                "uuid" % (", ".join(list(CHANNELS.keys()))))
         if match_uuid:
             channel = match_uuid.groups()[0]
         else:
@@ -201,7 +201,7 @@ class MSOffice2016URLandUpdateInfoProvider(Processor):
 
         # Get metadata URL
         self.output("Requesting xml: %s" % base_url)
-        req = urllib2.Request(base_url)
+        req = urllib.request.Request(base_url)
         # Add the MAU User-Agent, since MAU feed server seems to explicitly
         # block a User-Agent of 'Python-urllib/2.7' - even a blank User-Agent
         # string passes.
@@ -210,7 +210,7 @@ class MSOffice2016URLandUpdateInfoProvider(Processor):
             "Microsoft%20AutoUpdate/3.6.16080300 CFNetwork/760.6.3 Darwin/15.6.0 (x86_64)")
 
         try:
-            fdesc = urllib2.urlopen(req)
+            fdesc = urllib.request.urlopen(req)
             data = fdesc.read()
             fdesc.close()
         except BaseException as err:
@@ -233,7 +233,7 @@ class MSOffice2016URLandUpdateInfoProvider(Processor):
         item = item[0]
         
         if self.env["version"] == "latest-standalone":
-            p = re.compile(ur'(^[a-zA-Z0-9:/.-]*_[a-zA-Z]*_)(.*)Updater.pkg')
+            p = re.compile(r'(^[a-zA-Z0-9:/.-]*_[a-zA-Z]*_)(.*)Updater.pkg')
             url = item["Location"]
             (firstGroup, secondGroup) = re.search(p, url).group(1, 2)
             item["Location"] = firstGroup + "2016_"+ secondGroup + "Installer.pkg"
@@ -252,7 +252,7 @@ class MSOffice2016URLandUpdateInfoProvider(Processor):
                 "Locale ID %s not found in manifest metadata. Available IDs: "
                 "%s. See %s for more details." % (
                     lcid,
-                    ", ".join(all_localizations.keys()),
+                    ", ".join(list(all_localizations.keys())),
                     LOCALE_ID_INFO_URL))
         manifest_description = all_localizations[lcid]['Short Description']
         # Store the description in a separate output variable and in our pkginfo

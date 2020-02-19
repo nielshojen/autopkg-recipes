@@ -17,7 +17,7 @@
 
 import json
 import re
-import urllib.request, urllib.error, urllib.parse
+import urllib2
 
 from distutils.version import LooseVersion, StrictVersion
 from operator import itemgetter
@@ -85,9 +85,9 @@ class BlackMagicURLProvider(Processor):
     def get_downloads_metadata(self):
         '''Return a deserialized json object from the BM downloads metadata.'''
         try:
-            metadata = urllib.request.urlopen(DOWNLOADS_URL).read()
+            metadata = urllib2.urlopen(DOWNLOADS_URL).read()
             json_data = json.loads(metadata)
-        except urllib.error.HTTPError as ValueError:
+        except urllib2.HTTPError, ValueError:
             raise ProcessorError("Could not parse downloads metadata.")
         return json_data
 
@@ -160,13 +160,13 @@ class BlackMagicURLProvider(Processor):
         url = "https://www.blackmagicdesign.com/api/register/us/download/"
         url += str(download_id)
 
-        request = urllib.request.Request(url, req_data)
+        request = urllib2.Request(url, req_data)
         request.add_header("Content-Type", "application/json;charset=UTF-8")
         request.add_header("User-Agent", "Mozilla/5.0")
         try:
-            result = urllib.request.urlopen(request)
+            result = urllib2.urlopen(request)
             download_url = result.read()
-        except urllib.error.HTTPError as exc:
+        except urllib2.HTTPError as exc:
             raise ProcessorError(
                 "Could not get a download URL: %s" % exc)
 

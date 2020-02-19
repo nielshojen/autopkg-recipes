@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import urllib.request, urllib.error, urllib.parse
+import urllib2
 import plistlib
 import sys
 
@@ -197,7 +197,7 @@ def check_app_updates(app_info_list, raw_result=False):
     # being provided which, as long as the adam-id is present, the App Store update mechanism doesn't seem to
     # care about.
     update_url = 'https://su.itunes.apple.com/WebObjects/MZSoftwareUpdate.woa/wa/availableSoftwareUpdatesExtended'
-    request = urllib.request.Request(update_url)
+    request = urllib2.Request(update_url)
     # Headers #
     # This sets us to the US store. See:
     # http://blogs.oreilly.com/iphone/2008/08/scraping-appstore-reviews.html
@@ -220,10 +220,10 @@ def check_app_updates(app_info_list, raw_result=False):
     plist_str = plistlib.writePlistToString(plist_dict)
     request.add_data(plist_str)
     # Build the connection
-    response_handle = urllib.request.urlopen(request)
+    response_handle = urllib2.urlopen(request)
     try:
         response = response_handle.read()
-    except HTTPError as e:
+    except HTTPError, e:
         raise ProcessorError("Invalid adam-id %s" % e)
     response_handle.close()
     # Currently returning the raw response
@@ -304,7 +304,7 @@ class AppStoreUpdateChecker(Processor):
                 return
             try:
                 decoded_receipt = get_app_receipt(app_item)
-            except IOError as e:
+            except IOError, e:
                 raise ProcessorError("Invalid path %s: %s" % (app_item, e))
             details = { t.type: t.value for t in decoded_receipt }
             app_dict['CFBundleIdentifier'] = details['Bundle Identifier']
@@ -317,7 +317,7 @@ class AppStoreUpdateChecker(Processor):
         app_details.append(app_dict)
         try:
             item_details = check_app_updates(app_details)
-        except urllib.error.HTTPError as e:
+        except urllib2.HTTPError, e:
             raise ProcessorError("Invalid adam-id %s: %s" % (app_item, e))
         # If item_details contains a key 'incompatible-items', it means the version we have is not up to date.
         # So now we can check for the presence of 'incompatible-items' and then report that there's an update available with a specific version

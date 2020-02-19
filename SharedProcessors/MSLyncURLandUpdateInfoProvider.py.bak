@@ -16,7 +16,7 @@
 
 
 import plistlib
-import urllib.request, urllib.error, urllib.parse
+import urllib2
 
 from distutils.version import LooseVersion
 from operator import itemgetter
@@ -110,7 +110,7 @@ class MSLyncURLandUpdateInfoProvider(Processor):
         """Attempts to parse the Triggers to create an installs item"""
         self.sanityCheckExpectedTriggers(item)
         triggers = item.get("Triggers", {})
-        paths = [triggers[key].get("File") for key in list(triggers.keys())]
+        paths = [triggers[key].get("File") for key in triggers.keys()]
         if "Contents/Info.plist" in paths:
             # use the apps info.plist as installs item
             installs_item = {
@@ -138,7 +138,7 @@ class MSLyncURLandUpdateInfoProvider(Processor):
         """Converts a value to an OS X version number"""
         if isinstance(value, int):
             version_str = hex(value)[2:]
-        elif isinstance(value, str):
+        elif isinstance(value, basestring):
             if value.startswith('0x'):
                 version_str = value[2:]
         # OS versions are encoded as hex:
@@ -172,14 +172,14 @@ class MSLyncURLandUpdateInfoProvider(Processor):
         if not version_str:
             version_str = "latest"
         # Get metadata URL
-        req = urllib.request.Request(base_url)
+        req = urllib2.Request(base_url)
         # Add the MAU User-Agent, since MAU feed server seems to explicitly block
         # a User-Agent of 'Python-urllib/2.7' - even a blank User-Agent string
         # passes.
         req.add_header("User-Agent",
             "Microsoft%20AutoUpdate/3.0.2 CFNetwork/720.2.4 Darwin/14.1.0 (x86_64)")
         try:
-            f = urllib.request.urlopen(req)
+            f = urllib2.urlopen(req)
             data = f.read()
             f.close()
         except BaseException as err:
