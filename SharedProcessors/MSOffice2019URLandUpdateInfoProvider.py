@@ -21,7 +21,7 @@
 #pylint:disable=e1101
 """See docstring for MSOffice2019URLandUpdateInfoProvider class"""
 
-import plistlib
+import FoundationPlist
 import re
 import ssl
 import urllib.request, urllib.error, urllib.parse
@@ -221,7 +221,7 @@ class MSOffice2019URLandUpdateInfoProvider(Processor):
         except BaseException as err:
             raise ProcessorError("Can't download %s: %s" % (base_url, err))
 
-        metadata = plistlib.readPlistFromString(data)
+        metadata = FoundationPlist.readPlist(data)
         item = {}
         # Update feeds for a given 'channel' will have either combo or delta
         # pkg urls, with delta's additionally having a 'FullUpdaterLocation' key.
