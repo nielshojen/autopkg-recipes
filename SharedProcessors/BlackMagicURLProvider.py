@@ -86,7 +86,10 @@ class BlackMagicURLProvider(Processor):
     def get_downloads_metadata(self):
         '''Return a deserialized json object from the BM downloads metadata.'''
         try:
-            metadata = urllib.request.urlopen(DOWNLOADS_URL).read()
+            ctx = ssl.create_default_context()
+            ctx.check_hostname = False
+            ctx.verify_mode = ssl.CERT_NONE
+            metadata = urllib.request.urlopen(DOWNLOADS_URL, context=ctx).read()
             json_data = json.loads(metadata)
         except urllib.error.HTTPError as ValueError:
             raise ProcessorError("Could not parse downloads metadata.")
