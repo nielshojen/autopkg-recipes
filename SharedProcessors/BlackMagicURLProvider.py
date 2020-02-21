@@ -13,6 +13,9 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
+# Modified by Niels Højen for Python 3 compatibility
+
 """See docstring for BlackMagicURLProvider class"""
 
 import json
@@ -123,10 +126,7 @@ class BlackMagicURLProvider(Processor):
                 p["version"] = str(major_version) + "." + str(minor_version) + "." + str(release_version)
                 prods.append(p)
         # sort by version and grab the highest one
-        latest_prod = sorted(
-            prods,
-            key=itemgetter("version"),
-            cmp=compare_version)[-1]
+        latest_prod = sorted(prods, key=itemgetter("version"))[-1]
 
         # ensure our product contains info we need
         try:
@@ -160,19 +160,22 @@ class BlackMagicURLProvider(Processor):
         for k in self.env["registration_info"]:
             req_data[k] = self.env["registration_info"][k]
         req_data = json.dumps(req_data)
+        req_data = req_data.encode("utf-8")
 
         url = "https://www.blackmagicdesign.com/api/register/us/download/"
         url += str(download_id)
 
-        request = urllib.request.Request(url, req_data)
+        request = urllib.request.Request(url, data=req_data)
         request.add_header("Content-Type", "application/json;charset=UTF-8")
         request.add_header("User-Agent", "Mozilla/5.0")
+
         ctx = ssl.create_default_context()
         ctx.check_hostname = False
         ctx.verify_mode = ssl.CERT_NONE
+
         try:
             result = urllib.request.urlopen(request, context=ctx)
-            download_url = result.read()
+            download_url = result.read().decode("utf-8")
         except urllib.error.HTTPError as exc:
             raise ProcessorError(
                 "Could not get a download URL: %s" % exc)
