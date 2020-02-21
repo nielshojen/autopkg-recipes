@@ -17,6 +17,7 @@
 
 import json
 import re
+import ssl
 import urllib.request, urllib.error, urllib.parse
 
 from distutils.version import LooseVersion, StrictVersion
@@ -163,8 +164,11 @@ class BlackMagicURLProvider(Processor):
         request = urllib.request.Request(url, req_data)
         request.add_header("Content-Type", "application/json;charset=UTF-8")
         request.add_header("User-Agent", "Mozilla/5.0")
+        ctx = ssl.create_default_context()
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
         try:
-            result = urllib.request.urlopen(request)
+            result = urllib.request.urlopen(request, context=ctx)
             download_url = result.read()
         except urllib.error.HTTPError as exc:
             raise ProcessorError(
