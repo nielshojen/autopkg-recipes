@@ -17,13 +17,13 @@
     <array>
         <dict>
             <key>Processor</key>
-            <string>URLDownloader</string>
+            <string>URLTextSearcher</string>
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://www.pantone.com/downloads/support/macfiles/PANTONE_COLOR_MANAGER_MAC.zip</string>
-                <key>filename</key>
-                <string>%NAME%.zip</string>
+                <string>https://www.xrite.com/service-support/product-support/calibration-solutions/colorchecker-digital-sg</string>
+                <key>re_pattern</key>
+                <string>(/service-support/downloads/c/colorchecker_camera_calibration_v[0-9].[0-9].+[0-9])</string>
             </dict>
         </dict>
         <dict>
