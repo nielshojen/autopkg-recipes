@@ -37,6 +37,15 @@
                 <string>(https://my.xrite.com/downloader.aspx\?FileID=\D*?(\d+)\D*?Type=M)</string>
             </dict>
         </dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%match%</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
         <dict>
             <key>Processor</key>
             <string>EndOfCheckPhase</string>
