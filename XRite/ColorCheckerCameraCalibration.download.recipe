@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Download the current release of Pantone Color Manager</string>
+    <string>Download the current release of ColorChecker Camera Calibration</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.download.ColorCheckerCameraCalibration</string>
+    <string>com.github.nielshojen.download.ColorChecker</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>ColorCheckerCameraCalibration</string>
+        <string>XRiteColorCheckerCameraCalibration</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
