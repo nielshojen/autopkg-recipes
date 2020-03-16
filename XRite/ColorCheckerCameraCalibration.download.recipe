@@ -21,7 +21,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://xritephoto.com/downloader.aspx?FileID=2030&Type=M&returnurl=%2fph_product_overview.aspx%3fID%3d938%26Action%3dSupport%26SoftwareID%3d2030</string>
+                <string>http://www.pantone.com/downloads/support/macfiles/PANTONE_COLOR_MANAGER_MAC.zip</string>
                 <key>filename</key>
                 <string>%NAME%.zip</string>
             </dict>
