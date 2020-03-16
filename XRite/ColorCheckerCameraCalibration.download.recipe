@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Download the current release of Pantone Color Manager</string>
+    <key>Identifier</key>
+    <string>com.github.nielshojen.download.ColorCheckerCameraCalibration</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>ColorCheckerCameraCalibration</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.0</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://xritephoto.com/downloader.aspx\?FileID\=2030\&Type\=M\&returnurl\=%2fph_product_overview.aspx%3fID%3d938%26Action%3dSupport%26SoftwareID%3d2030</string>
+                <key>filename</key>
+                <string>%NAME%.zip</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+    </array>
+</dict>
+</plist>
