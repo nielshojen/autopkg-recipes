@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Download the current release of ColorChecker Camera Calibration</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.download.ColorChecker</string>
+    <string>com.github.nielshojen.download.ColorCheckerCameraCalibration</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -34,7 +34,7 @@
                 <key>url</key>
                 <string>https://www.xrite.com%match%</string>
                 <key>re_pattern</key>
-                <string>(https://my.xrite.com/downloader.aspx\?FileID=[0-9][0-9][0-9][0-9]\&amp\;Type=M)</string>
+                <string>(https://my.xrite.com/downloader.aspx\?FileID=[0-9][0-9][0-9][0-9])</string>
             </dict>
         </dict>
         <dict>
