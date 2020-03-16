@@ -34,7 +34,7 @@
                 <key>url</key>
                 <string>https://www.xrite.com%match%</string>
                 <key>re_pattern</key>
-                <string>(https://my.xrite.com/downloader.aspx?FileID=.[0-9][0-9][0-9][0-9].&amp;Type=M])</string>
+                <string>(https://my.xrite.com/downloader.aspx?FileID=*Type=M])</string>
             </dict>
         </dict>
         <dict>
