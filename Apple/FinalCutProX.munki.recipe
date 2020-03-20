@@ -15,7 +15,7 @@
         <key>DISPLAY_NAME</key>
         <string>Final Cut Pro</string>
         <key>PATH</key>
-        <string>/Applications/%NAME%.app</string>
+        <string>/Applications/%DISPLAY_NAME%.app</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
@@ -31,7 +31,7 @@
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
-	<string>com.github.nielshojen.pkg.appstorespecial</string>
+	<string>com.github.nielshojen.pkg.appstore</string>
 	<key>Process</key>
     <array>
 	<dict>
@@ -40,7 +40,7 @@
 		<key>Arguments</key>
 		<dict>
 			<key>input_plist_path</key>
-			<string>/Applications/%DISPLAY_NAME%.app/Contents/Info.plist</string>
+			<string>%PATH%/Contents/Info.plist</string>
 			<key>plist_version_key</key>
 			<string>LSMinimumSystemVersion</string>
 		</dict>
