@@ -22,6 +22,8 @@
             <array>
                 <string>testing</string>
             </array>
+			<key>developer</key>
+			<string>Apple</string>
             <key>display_name</key>
             <string>%DISPLAY_NAME%</string>
             <key>name</key>

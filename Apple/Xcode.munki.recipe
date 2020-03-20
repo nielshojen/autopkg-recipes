@@ -20,6 +20,8 @@
             <array>
                 <string>testing</string>
             </array>
+			<key>developer</key>
+			<string>Apple</string>
             <key>display_name</key>
             <string>%NAME%</string>
             <key>name</key>
@@ -38,7 +40,7 @@
 		<key>Arguments</key>
 		<dict>
 			<key>input_plist_path</key>
-			<string>/Applications/%NAME%.app/Contents/Info.plist</string>
+			<string>%PATH%/Contents/Info.plist</string>
 			<key>plist_version_key</key>
 			<string>LSMinimumSystemVersion</string>
 		</dict>
