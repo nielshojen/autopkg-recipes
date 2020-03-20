@@ -15,19 +15,8 @@
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.filewave.pkg.Garageband</string>
 	</dict>
-	<key>ParentRecipe</key>
-	<string>com.github.nmcspadden.check.appstore</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Processor</key>
-			<string>StopProcessingIf</string>
-			<key>Arguments</key>
-			<dict>
-				<key>predicate</key>
-				<string>update_available == YES</string>
-			</dict>
-		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -105,3 +94,4 @@
 	</array>
 </dict>
 </plist>
+

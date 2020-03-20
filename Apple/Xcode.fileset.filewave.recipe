@@ -15,19 +15,8 @@
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.fileset.filewave.Xcode</string>
 	</dict>
-	<key>ParentRecipe</key>
-	<string>com.github.nmcspadden.check.appstore</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Processor</key>
-			<string>StopProcessingIf</string>
-			<key>Arguments</key>
-			<dict>
-				<key>predicate</key>
-				<string>update_available == YES</string>
-			</dict>
-		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>Copier</string>
@@ -47,7 +36,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%RECIPE_CACHE_DIR%/payload%PATH%/Contents/_MASReceipt/receipt</string>
+				<string>%destination_path%/Contents/_MASReceipt/receipt</string>
 			</dict>
 		</dict>
 		<dict>
@@ -60,13 +49,24 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%RECIPE_CACHE_DIR%/payload</string>
+				<string>%destination_path%</string>
 				<key>fw_destination_root</key>
-				<string>/</string>
+				<string>%PATH%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
 		</dict>
+        <dict>
+        	<key>Processor</key>
+        	<string>PathDeleter</string>
+		<key>Arguments</key>
+		<dict>
+       		    <key>path_list</key>
+        	    <array>
+        	        <string>%RECIPE_CACHE_DIR%/payload</string>
+        	    </array>
+        	</dict>
+	</dict>
 	</array>
 </dict>
 </plist>

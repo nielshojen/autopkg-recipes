@@ -15,19 +15,8 @@
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.filewave.pkg.MSRMSSharing</string>
 	</dict>
-	<key>ParentRecipe</key>
-	<string>com.github.nmcspadden.check.appstore</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Processor</key>
-			<string>StopProcessingIf</string>
-			<key>Arguments</key>
-			<dict>
-				<key>predicate</key>
-				<string>update_available == YES</string>
-			</dict>
-		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -61,7 +50,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%pkgroot%/Applications/%NAME%.app/Contents/_MASReceipt/receipt</string>
+				<string>%destination_path%/Contents/_MASReceipt/receipt</string>
 			</dict>
 		</dict>
 		<dict>

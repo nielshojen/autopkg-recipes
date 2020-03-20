@@ -15,33 +15,8 @@
 		<key>fw_app_bundle_id</key>
 		<string>com.github.nielshojen.fileset.filewave.MSRMSSharing</string>
 	</dict>
-	<key>ParentRecipe</key>
-	<string>com.github.nmcspadden.check.appstore</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Processor</key>
-			<string>StopProcessingIf</string>
-			<key>Arguments</key>
-			<dict>
-				<key>predicate</key>
-				<string>update_available == YES</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>pkgdirs</key>
-				<dict>
-					<key>Applications</key>
-					<string>0775</string>
-				</dict>
-				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
-			</dict>
-			<key>Processor</key>
-			<string>PkgRootCreator</string>
-		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>Copier</string>
@@ -50,7 +25,7 @@
 				<key>source_path</key>
 				<string>%PATH%</string>
 				<key>destination_path</key>
-				<string>%pkgroot%%PATH%</string>
+				<string>%RECIPE_CACHE_DIR%/payload%PATH%</string>
 				<key>overwrite</key>
 				<true/>
 			</dict>
@@ -81,18 +56,17 @@
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
 		</dict>
-        	<dict>
-        		<key>Processor</key>
-        		<string>PathDeleter</string>
-			<key>Arguments</key>
-			<dict>
-				<key>path_list</key>
-				<array>
-					<string>%RECIPE_CACHE_DIR%/payload</string>
-					<string>%RECIPE_CACHE_DIR%/pkgroot</string>
-				</array>
-        		</dict>
-		</dict>
+        <dict>
+        	<key>Processor</key>
+        	<string>PathDeleter</string>
+		<key>Arguments</key>
+		<dict>
+       		    <key>path_list</key>
+        	    <array>
+        	        <string>%RECIPE_CACHE_DIR%/payload</string>
+        	    </array>
+        	</dict>
+	</dict>
 	</array>
 </dict>
 </plist>
