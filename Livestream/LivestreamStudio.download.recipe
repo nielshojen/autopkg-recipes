@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version of Livestream Studio.</string>
     <key>Identifier</key>
-    <string>com.github.apizz.download.LivestreamStudio</string>
+    <string>com.github.nielshojen.download.LivestreamStudio</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
