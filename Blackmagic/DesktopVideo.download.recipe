@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads latest version of Desktop Video</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.download.desktopvideo</string>
+    <string>com.github.nielshojen.download.DesktopVideo</string>
     <key>Input</key>
     <dict>
 		<key>APP_VERSION</key>
