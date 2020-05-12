@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
       <key>MUNKI_REPO_SUBDIR</key>
-      <string>apps/blackmagicdesign/%NAME%</string>
+      <string>apps/%NAME%</string>
       <key>pkginfo</key>
       <dict>
         <key>catalogs</key>
