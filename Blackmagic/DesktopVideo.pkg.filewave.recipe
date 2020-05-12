@@ -16,7 +16,7 @@
 		<key>MinimumVersion</key>
 		<string>0.2.0</string>
 		<key>ParentRecipe</key>
-		<string>com.github.nielshojen.download.desktopvideo</string>
+		<string>com.github.nielshojen.download.DesktopVideo</string>
 		<key>Process</key>
 		<array>
 			<dict>
