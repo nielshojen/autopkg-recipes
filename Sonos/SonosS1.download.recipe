@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the current release version of Sonos.</string>
+    <key>Identifier</key>
+    <string>com.github.nielshojen.download.SonosS1</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>SonosS1</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.3.1</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>filename</key>
+                <string>SonosDesktopController.dmg</string>
+                <key>url</key>
+                <string>https://www.sonos.com/redir/controller_software_mac</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>CodeSignatureVerifier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_path</key>
+                <string>%pathname%/Sonos*.app</string>
+                <key>requirement</key>
+                <string>identifier "com.sonos.macController" and anchor apple generic</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
