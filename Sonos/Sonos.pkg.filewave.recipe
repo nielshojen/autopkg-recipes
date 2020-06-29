@@ -5,18 +5,18 @@
 	<key>Description</key>
 	<string>Downloads latest version of Sonos, creates an installer and imports into FileWave.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.filewave.pkg.Sonos</string>
+	<string>com.github.nielshojen.filewave.pkg.SonosS1</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Sonos</string>
+		<string>Sonos S1 Controller</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.nielshojen.filewave.pkg.Sonos</string>
+		<string>com.github.nielshojen.filewave.pkg.SonosS1</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.pkg.Sonos</string>
+	<string>com.github.autopkg.pkg.SonosS1</string>
 	<key>Process</key>
 	<array>
 		<dict>
