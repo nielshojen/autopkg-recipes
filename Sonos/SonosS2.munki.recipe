@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>SonosS2</string>
         <key>DISPLAY_NAME</key>
-        <string>Sonos S2</string>
+        <string>Sonos</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/sonos</string>
         <key>pkginfo</key>
