@@ -29,6 +29,17 @@
 			<string>URLDownloader</string>
 		</dict>
 		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%pathname%</string>
+			    <key>plist_version_key</key>
+			    <string>Version</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+		</dict>
+		<dict>
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
 		</dict>
