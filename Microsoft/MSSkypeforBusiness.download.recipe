@@ -3,52 +3,25 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Finds latest Microsoft Office 2019 Update, downloads the pkg.</string>
+    <string>Downloads the latest SkypeForBusiness 2019 multilingual update pkg</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.download.MSSkypeforBusiness</string>
+    <string>com.github.nielshojen.download.MSSkypeForBusiness2019</string>
     <key>MinimumVersion</key>
-    <string>0.3.1</string>
+    <string>1.4</string>
     <key>Input</key>
     <dict>
+        <key>CHANNEL</key>
+        <string>Production</string>
+        <key>LOCALE_ID</key>
+        <string>1033</string>
         <key>NAME</key>
-        <string>MSSkypeforBusiness</string>
+        <string>MSSkypeForBusiness2019</string>
         <key>PRODUCT</key>
-        <string>SkypeForBusiness</string>
+        <string>SkypeForBusiness2019</string>
+        <key>VERSION</key>
+        <string>latest</string>
     </dict>
-    <key>Process</key>
-    <array>
-        <dict>
-            <key>Processor</key>
-            <string>com.github.nielshojen.SharedProcessors/MSOfficeMacURLandUpdateInfoProvider</string>
-            <key>Arguments</key>
-            <dict>
-                <key>product</key>
-                <string>%PRODUCT%</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>URLDownloader</string>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>CodeSignatureVerifier</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_path</key>
-                <string>%pathname%</string>
-                <key>expected_authority_names</key>
-                <array>
-                    <string>Developer ID Installer: Microsoft Corporation (UBF8T346G9)</string>
-                    <string>Developer ID Certification Authority</string>
-                    <string>Apple Root CA</string>
-                </array>
-            </dict>
-        </dict>
-    </array>
+    <key>ParentRecipe</key>
+    <string>com.github.nielshojen.download.MSOfficeMacProduct</string>
 </dict>
 </plist>

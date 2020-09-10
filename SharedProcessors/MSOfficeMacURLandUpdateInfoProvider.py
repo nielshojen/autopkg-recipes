@@ -15,6 +15,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
+# Modified to add Remote Desktop Standalone and Intune Company Portal
 """See docstring for MSOfficeMacURLandUpdateInfoProvider class"""
 
 import re
@@ -101,6 +103,14 @@ PROD_DICT = {
         "id": "WDAV00",
         "path": "/Applications/Microsoft Defender ATP.app",
         "minimum_os": "10.12",
+    },
+    "IntuneCompanyPortal": {
+        'id': 'IMCP01',
+        'path': '/Applications/Company Portal.app'
+    },
+    "RemoteDesktop": {
+        'id': 'MSRD10',
+        'path': '/Applications/Microsoft Remote Desktop.app'
     },
 }
 LOCALE_ID_INFO_URL = "https://msdn.microsoft.com/en-us/goglobal/bb964664.aspx"
