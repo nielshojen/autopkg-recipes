@@ -7,9 +7,9 @@
 	<key>Identifier</key>
 	<string>com.github.nielshojen.filewave.pkg.MSOutlook2019</string>
 	<key>MinimumVersion</key>
-	<string>0.6.1</string>
+	<string>1.4.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.nielshojen.download.msoutlook2019</string>
+	<string>com.github.nielshojen.download.MSOutlook2019</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>

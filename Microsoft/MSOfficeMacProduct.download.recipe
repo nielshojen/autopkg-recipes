@@ -49,7 +49,7 @@ installer for the given CHANNEL. 'latest-standalone' does not support
     <array>
         <dict>
             <key>Processor</key>
-            <string>MSOfficeMacURLandUpdateInfoProvider</string>
+            <string>com.github.nielshojen.SharedProcessors/MSOfficeMacURLandUpdateInfoProvider</string>
             <key>Arguments</key>
             <dict>
                 <key>channel</key>
