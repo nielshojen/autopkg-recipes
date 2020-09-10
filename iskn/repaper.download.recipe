@@ -38,9 +38,9 @@
 				<key>input_file</key>
 				<string>%match%</string>
 				<key>split_on_in</key>
-				<string><Version></string>
+				<string>Version</string>
 				<key>split_on_out</key>
-				<string></Version></string>
+				<string>/Version</string>
 			</dict>
 		</dict>
 		<dict>
