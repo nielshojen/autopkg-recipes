@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest SkypeForBusiness 2019 multilingual update pkg</string>
+    <string>Downloads the latest SkypeForBusiness multilingual update pkg</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.download.MSSkypeForBusiness2019</string>
+    <string>com.github.nielshojen.download.MSSkypeForBusiness</string>
     <key>MinimumVersion</key>
     <string>1.4</string>
     <key>Input</key>
