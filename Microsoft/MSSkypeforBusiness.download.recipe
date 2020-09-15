@@ -15,9 +15,9 @@
         <key>LOCALE_ID</key>
         <string>1033</string>
         <key>NAME</key>
-        <string>MSSkypeForBusiness2019</string>
+        <string>MSSkypeForBusiness</string>
         <key>PRODUCT</key>
-        <string>SkypeForBusiness2019</string>
+        <string>SkypeForBusiness</string>
         <key>VERSION</key>
         <string>latest</string>
     </dict>
