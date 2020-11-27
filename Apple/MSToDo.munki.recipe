@@ -12,6 +12,8 @@
         <string>apps/Microsoft</string>
         <key>NAME</key>
         <string>MSToDo</string>
+        <key>DISPLAY_NAME</key>
+        <string>Microsoft To Do</string>
         <key>PATH</key>
         <string>/Applications/Microsoft To Do.app</string>
         <key>pkginfo</key>
@@ -20,10 +22,10 @@
             <array>
                 <string>testing</string>
             </array>
-			<key>developer</key>
-			<string>Microsoft</string>
+            <key>developer</key>
+            <string>Microsoft</string>
             <key>display_name</key>
-            <string>Microsoft To Do</string>
+            <string>%DISPLAY_NAME%</string>
             <key>name</key>
             <string>%NAME%</string>
             <key>unattended_install</key>
@@ -54,7 +56,7 @@
 				<dict>
 					<key>blocking_applications</key>
 					<array>
-						<string>%NAME%</string>
+						<string>%DISPLAY_NAME%</string>
 					</array>
 					<key>minimum_os_version</key>
 					<string>%version%</string>
@@ -87,7 +89,7 @@ cat /dev/null &gt; &quot;%PATH%/Contents/_MASReceipt/receipt&quot;
     		<key>Processor</key>
     		<string>MunkiPkginfoMerger</string>
     	</dict>
-	   	<dict>
+	<dict>
             <key>Processor</key>
             <string>MunkiImporter</string>
             <key>Arguments</key>
