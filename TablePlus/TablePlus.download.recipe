@@ -30,7 +30,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>%match%</string>
+				<string>https://download.tableplus.com/macos/%match%/TablePlus.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
