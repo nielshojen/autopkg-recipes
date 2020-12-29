@@ -26,15 +26,6 @@
 			<key>Processor</key>
 			<string>URLTextSearcher</string>
 		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>url</key>
-				<string>https://download.tableplus.com/macos/%match%/TablePlus.dmg</string>
-			</dict>
-			<key>Processor</key>
-			<string>URLDownloader</string>
-		</dict>
         <dict>
             <key>Processor</key>
             <string>CodeSignatureVerifier</string>
