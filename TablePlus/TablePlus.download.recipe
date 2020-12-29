@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>DOWNLOAD_PATTERN</key>
-		<string>(https://download.tableplus.com)</string>
+		<string>(download.tableplus.com)</string>
         <key>NAME</key>
         <string>TablePlus</string>
     </dict>
