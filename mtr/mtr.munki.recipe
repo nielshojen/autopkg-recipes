@@ -40,6 +40,18 @@
     <array>
       <dict>
         <key>Processor</key>
+        <string>MunkiPkginfoMerger</string>
+        <key>Arguments</key>
+        <dict>
+          <key>additional_pkginfo</key>
+          <dict>
+              <key>minimum_os_version</key>
+              <string>%OSX_VER%.0</string>
+          </dict>
+        </dict>
+      </dict>
+      <dict>
+        <key>Processor</key>
         <string>MunkiImporter</string>
         <key>Arguments</key>
         <dict>
@@ -47,11 +59,6 @@
           <string>%pathname%</string>
           <key>repo_subdirectory</key>
           <string>%MUNKI_REPO_SUBDIR%</string>
-            <key>pkginfo</key>
-            <dict>
-                <key>minimum_os_version</key>
-                <string>%OSX_VER%.0</string>
-            </dict>
         </dict>
       </dict>
     </array>
