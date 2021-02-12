@@ -3,29 +3,29 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads latest version of DaVinci Resolve Studio.</string>
+    <string>Downloads latest version of Blackmagic RAW.</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.download.davinciresolvestudio</string>
+    <string>com.github.nielshojen.download.blackmagicraw</string>
     <key>Input</key>
     <dict>
-		<key>PRODUCT_NAME_PATTERN</key>
-		<string>^DaVinci Resolve Studio (?P&lt;version&gt;[0-9]+(\.\d+)*)( Update)*$</string>
+	<key>PRODUCT_NAME_PATTERN</key>
+	<string>^Blackmagic RAW (?P&lt;version&gt;[0-9]+(\.\d+)*)( Update)*$</string>
         <key>NAME</key>
-        <string>DaVinciResolveStudio</string>
+        <string>BlackmagicRAW</string>
         <key>REG_FIRSTNAME</key>
-        <string></string>
+        <string>yes</string>
         <key>REG_LASTNAME</key>
-        <string></string>
+        <string>sir</string>
         <key>REG_EMAIL</key>
-        <string></string>
+        <string>niels@hojen.net</string>
         <key>REG_PHONE</key>
-        <string></string>
+        <string>99424200</string>
         <key>REG_CITY</key>
-        <string></string>
+        <string>brande</string>
         <key>REG_STATE</key>
-        <string></string>
+        <string>dk</string>
         <key>REG_COUNTRY</key>
-        <string></string>
+        <string>dk</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
@@ -39,7 +39,7 @@
                 <key>product_name_pattern</key>
                 <string>%PRODUCT_NAME_PATTERN%</string>
                 <key>product_name</key>
-                <string>DaVinci Resolve</string>
+                <string>Blackmagic RAW</string>
                 <key>registration_info</key>
                 <dict>
                     <key>firstname</key>

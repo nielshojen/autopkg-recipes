@@ -149,6 +149,10 @@ class BlackMagicURLProvider(Processor):
                        not self.env["registration_info"][key]:
                         raise ProcessorError(errormsg)
 
+        # if this download requires Terms And Conditions, ensure we've set everything
+        if latest_prod["requiresTermsAndConditions"]:
+            self.env["registration_info"]["hasAgreedToTerms"] = 'true'
+
         # now build a request JSON to finally ask for the download URL
         req_data = {
             "country": "us",
