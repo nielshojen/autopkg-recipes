@@ -13,19 +13,19 @@
         <key>NAME</key>
         <string>BlackmagicRAW</string>
         <key>REG_FIRSTNAME</key>
-        <string>yes</string>
+        <string></string>
         <key>REG_LASTNAME</key>
-        <string>sir</string>
+        <string></string>
         <key>REG_EMAIL</key>
-        <string>niels@hojen.net</string>
+        <string></string>
         <key>REG_PHONE</key>
-        <string>99424200</string>
+        <string></string>
         <key>REG_CITY</key>
-        <string>brande</string>
+        <string></string>
         <key>REG_STATE</key>
-        <string>dk</string>
+        <string></string>
         <key>REG_COUNTRY</key>
-        <string>dk</string>
+        <string></string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
