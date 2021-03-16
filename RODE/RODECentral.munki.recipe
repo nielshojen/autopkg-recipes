@@ -27,7 +27,7 @@
             <key>description</key>
             <string>Unlock advanced features for the Wireless GO II with RØDE Central! This easy-to-use companion app lets you set up your device preferences, access, optimise and export recordings, activate and deactivate functions, and update your firmware.</string>
             <key>display_name</key>
-            <string>RØDE Central</string>
+            <string>RODE Central</string>
             <key>name</key>
             <string>%NAME%</string>
             <key>unattended_install</key>
