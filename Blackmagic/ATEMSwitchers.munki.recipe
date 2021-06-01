@@ -87,29 +87,6 @@
             <dict>
                 <key>additional_pkginfo</key>
                 <dict>
-                    <key>installs</key>
-                    <array>
-                        <dict>
-                            <key>CFBundleIdentifier</key>
-                            <string>com.blackmagic-design.atem.utility</string>
-                            <key>CFBundleName</key>
-                            <string>ATEM Setup</string>
-                            <key>path</key>
-                            <string>/Applications/Blackmagic ATEM Switchers/ATEM Setup.app</string>
-                            <key>type</key>
-                            <string>application</string>
-                        </dict>
-                        <dict>
-                            <key>CFBundleIdentifier</key>
-                            <string>com.blackmagic-design.switchers.softwarecontrol</string>
-                            <key>CFBundleName</key>
-                            <string>ATEM Software Control</string>
-                            <key>path</key>
-                            <string>/Applications/Blackmagic ATEM Switchers/ATEM Software Control.app</string>
-                            <key>type</key>
-                            <string>application</string>
-                        </dict>
-                    </array>
                     <key>version</key>
                     <string>%version%</string>
                 </dict>
