@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>PRODUCT_NAME_PATTERN</key>
-        <string>^ATEM Switchers (?P&lt;version&gt;7(\.\d+)*)( Update)*$</string>
+        <string>^ATEM Switchers (?P&lt;version&gt;8(\.\d+)*)( Update)*$</string>
         <key>NAME</key>
         <string>ATEMSwitchers</string>
     </dict>
