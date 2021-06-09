@@ -67,18 +67,40 @@
             <dict>
                 <key>Arguments</key>
                 <dict>
+                    <key>input_plist_path</key>
+                    <string>%RECIPE_CACHE_DIR%/payload/DisplayLink Manager.app/Contents/Info.plist</string>
+                </dict>
+                <key>Processor</key>
+                <string>Versioner</string>
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
                     <key>info_path</key>
                     <string>%RECIPE_CACHE_DIR%/payload/DisplayLink Manager.app</string>
                     <key>plist_keys</key>
                     <dict>
                         <key>CFBundleShortVersionString</key>
-                        <string>version</string>
+                        <string>app_version</string>
                         <key>LSMinimumSystemVersion</key>
                         <string>min_os_version</string>
                     </dict>
                 </dict>
                 <key>Processor</key>
                 <string>PlistReader</string>
+            </dict>
+            <dict>
+                <key>Processor</key>
+                <string>com.github.nielshojen.SharedProcessors/VersionExtractor</string>
+                <key>Arguments</key>
+                <dict>
+                    <key>input_file</key>
+                    <string>%version%</string>
+                    <key>split_on_in</key>
+                    <string></string>
+                    <key>split_on_out</key>
+                    <string> </string>
+                </dict>
             </dict>
             <dict>
                 <key>Arguments</key>
@@ -90,7 +112,7 @@
                             <string>%DISPLAY_NAME%</string>
                         </array>
                         <key>minimum_os_version</key>
-                        <string>%version%</string>
+                        <string>%min_os_version%</string>
                         <key>installs</key>
                         <array>
                             <dict>
@@ -99,7 +121,7 @@
                                 <key>CFBundleName</key>
                                 <string>DisplayLinkUserAgent</string>
                                 <key>CFBundleShortVersionString</key>
-                                <string>%version%</string>
+                                <string>%app_version%</string>
                                 <key>path</key>
                                 <string>/Applications/DisplayLink Manager.app</string>
                                 <key>type</key>
