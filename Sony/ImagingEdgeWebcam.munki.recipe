@@ -24,7 +24,7 @@
 			<key>developer</key>
 			<string>Sony</string>
 			<key>display_name</key>
-			<string>Imaging Edge WEbcam</string>
+			<string>Imaging Edge Webcam</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>minimum_os_version</key>
