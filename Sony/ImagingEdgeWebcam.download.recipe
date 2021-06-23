@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Imaging Edge Webcam plugin.</string>
 	<key>Identifier</key>
-	<string>com.github.nielshojen.download.ImagingEdgewebcam</string>
+	<string>com.github.nielshojen.download.ImagingEdgeWebcam</string>
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
