@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+	<key>Description</key>
+	<string>Downloads the latest version of Imaging Edge Webcam and imports it into Munki.</string>
+	<key>Identifier</key>
+	<string>com.github.nielshojen.munki.ImagingEdgeWebcam</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string></string>
+		<key>NAME</key>
+		<string>ImagingEdgeWebcam</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>description</key>
+			<string>Imaging Edge Webcam lets you connect your Sony camera to your personal computer, and use the camera as a webcam with a livestreaming/web conferencing service.</string>
+			<key>developer</key>
+			<string>Sony</string>
+			<key>display_name</key>
+			<string>Imaging Edge WEbcam</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>minimum_os_version</key>
+			<string>10.13</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.nielshojen.download.ImagingEdgeWebcam</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
