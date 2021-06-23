@@ -42,7 +42,7 @@
 					<string>Apple Root CA</string>
 				</array>
 				<key>input_path</key>
-				<string>%pathname%/IE_INST.pkg</string>
+				<string>%pathname%/IEW_INST.pkg</string>
 			</dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
@@ -53,7 +53,7 @@
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/unpack</string>
 				<key>flat_pkg_path</key>
-				<string>%pathname%/IE_INST.pkg</string>
+				<string>%pathname%/IEW_INST.pkg</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
@@ -66,7 +66,7 @@
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/payload</string>
 				<key>pkg_payload_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/Imaging_Edge.pkg/Payload</string>
+				<string>%RECIPE_CACHE_DIR%/unpack/ImagingEdgeWebcam.pkg/Payload</string>
 				<key>purge_destination</key>
 				<true/>
 			</dict>
@@ -77,7 +77,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload/Imaging Edge/Remote.app/Contents/Info.plist</string>
+				<string>%RECIPE_CACHE_DIR%/payload/Library/CoreMediaIO/Plug-Ins/DAL/ImagingEdgeWebcam.plugin/Contents/Info.plist</string>
 				<key>plist_version_key</key>
 				<string>CFBundleShortVersionString</string>
 			</dict>
