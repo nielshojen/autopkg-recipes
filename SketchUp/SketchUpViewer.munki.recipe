@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of SketchUp Viewer and imports into Munki.</string>
+	<key>Identifier</key>
+	<string>com.github.nielshojen.munki.SketchUpViewer</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>SketchUpViewer</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>description</key>
+			<string>Bring 3D models to life in mixed reality, and step into a powerful new way to explore, understand, and share your work.</string>
+			<key>display_name</key>
+			<string>SketchUp Viewer</string>
+			<key>developer</key>
+			<string>Trimble Navigation Ltd</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>blocking_applications</key>
+			<array>
+				<string>SketchUpViewer</string>
+			</array>
+			<key>unattended_install</key>
+			<true/>
+			<key>unattended_uninstall</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.4.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.nielshojen.pkg.SketchUpViewer</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>MunkiPkginfoMerger</string>
+			<key>Arguments</key>
+			<dict>
+				<key>additional_pkginfo</key>
+				<dict>
+					<key>version</key>
+					<string>%version%</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>MunkiInstallsItemsCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>faux_root</key>
+				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
+				<key>version_comparison_key</key>
+				<string>CFBundleVersion</string>
+				<key>installs_item_paths</key>
+				<array>
+					<string>/Applications/SketchUpViewer.app</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>MunkiPkginfoMerger</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pkg_path%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+                <key>extract_icon</key>
+                <true/>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
