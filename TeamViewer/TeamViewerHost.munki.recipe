@@ -169,6 +169,7 @@
 			<dict>
 				<key>pkg_ids_set_optional_true</key>
 				<array>
+					<string>com.teamviewer.remoteaudiodriver</string>
 					<string>com.teamviewer.RemotePrintingPackage</string>
 				</array>
 			</dict>
