@@ -153,6 +153,17 @@
             <key>Processor</key>
             <string>MunkiImporter</string>
         </dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_ids_set_optional_true</key>
+				<array>
+					<string>com.blackmagic-design.ManifestFairlightAudioAccelerator</string>
+				</array>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.nielshojen.SharedProcessors/MunkiPkginfoReceiptsEditor</string>
+		</dict>
     </array>
 </dict>
 </plist>
