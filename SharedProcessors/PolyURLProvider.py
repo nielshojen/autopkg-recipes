@@ -69,6 +69,7 @@ class PolyURLProvider(Processor):
         '''Find the download URL and version'''
 
         metadata = self.get_downloads_metadata()
+        metadata = metadata['data']['availableProductSoftwareByPid']
 
         try:
             download_url = metadata['productBuild']['archiveUrl']
