@@ -57,7 +57,7 @@ class PolyURLProvider(Processor):
             req = urllib.request.Request(DOWNLOADS_URL)
             req.add_header('Content-Type', 'application/json')
             req.add_header('Apollographql-Client-Name', 'poly.com-website')
-            QUERY = '{ "query": "query { availableProductSoftwareByPid(pid:\\"%s\\") { name version productBuild { archiveUrl } } }" }' % product_pid
+            QUERY = '{ "query": "query { availableProductSoftwareByPid(pid:\\"%s\\") { name version productBuild { archiveUrl } } }" }' % self.env["product_pid"]
             querydata = QUERY.encode('utf-8')
             metadata = urllib.request.urlopen(req, querydata, context=ctx).read()
             json_data = json.loads(metadata)
@@ -85,5 +85,5 @@ class PolyURLProvider(Processor):
 
 
 if __name__ == "__main__":
-    PROCESSOR = BlackMagicURLProvider()
+    PROCESSOR = PolyURLProvider()
     PROCESSOR.execute_shell()
