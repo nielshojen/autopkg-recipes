@@ -17,6 +17,7 @@
 """See docstring for BlackMagicURLProvider class"""
 
 import json
+import ssl
 import urllib.request, urllib.error, urllib.parse
 
 from autopkglib import Processor, ProcessorError
@@ -58,8 +59,7 @@ class PolyURLProvider(Processor):
             req.add_header('Apollographql-Client-Name', 'poly.com-website')
             QUERY = '{ "query": "query { availableProductSoftwareByPid(pid:\\"%s\\") { name version productBuild { archiveUrl } } }" }' % product_pid
             querydata = QUERY.encode('utf-8')
-            metadata = urllib.request.urlopen(req, querydata).read()
-            #metadata = urllib.request.urlopen(DOWNLOADS_URL, context=ctx).read()
+            metadata = urllib.request.urlopen(req, querydata, context=ctx).read()
             json_data = json.loads(metadata)
         except urllib.error.HTTPError as ValueError:
             raise ProcessorError("Could not parse downloads metadata.")
