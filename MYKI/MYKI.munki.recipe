@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the most recent version of the MYKI app and imports into Munki.</string>
+    <key>Identifier</key>
+    <string>com.github.nielshojen.munki.MYKI</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>MYKI</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/%NAME%</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Utilities</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing</string>
+            </array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+            <key>description</key>
+            <string>MYKI helps you securely store and manage passwords locally across your devices.</string>
+            <key>developer</key>
+            <string>MYKI, Inc.</string>
+            <key>display_name</key>
+            <string>MYKI</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>unattended</key>
+            <true/>
+            <key>uninstallable</key>
+            <true/>
+        </dict>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.9</string>
+    <key>ParentRecipe</key>
+    <string>com.github.nielshojen.download.MYKI</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pathname%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+                <key>extract_icon</key>
+                <true/>
+            </dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+        </dict>
+    </array>
+</dict>
+</plist>
