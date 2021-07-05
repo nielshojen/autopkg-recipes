@@ -128,7 +128,7 @@
                             <key>CFBundleShortVersionString</key>
                             <string>%version%</string>
                             <key>path</key>
-                            <string>/Applications/DaVinci Resolve/DaVinci Resolve Studio.app</string>
+                            <string>/Applications/DaVinci Resolve/DaVinci Resolve.app</string>
                             <key>type</key>
                             <string>application</string>
                             <key>version_comparison_key</key>
