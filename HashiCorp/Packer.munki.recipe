@@ -20,6 +20,8 @@
             </array>
             <key>description</key>
             <string>Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.</string>
+			<key>developer</key>
+			<string>HashiCorp</string>
             <key>name</key>
             <string>%NAME%</string>
             <key>unattended_install</key>
