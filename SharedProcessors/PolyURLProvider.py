@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""See docstring for BlackMagicURLProvider class"""
+"""See docstring for PolyURLProvider class"""
 
 import json
 import ssl
