@@ -31,13 +31,20 @@
                 </dict>
             </dict>
             <dict>
+                <key>Processor</key>
+                <string>PlistReader</string>
                 <key>Arguments</key>
                 <dict>
-                    <key>input_plist_path</key>
-                    <string>%RECIPE_CACHE_DIR%/%NAME%/LCC Installer.app/Contents/Info.plist</string>
+                    <key>info_path</key>
+                    <string>%RECIPE_CACHE_DIR%/%NAME%/LCC Installer.app</string>
+                    <key>plist_keys</key>
+                    <dict>
+                        <key>CFBundleIdentifier</key>
+                        <string>PKG_ID</string>
+                        <key>LSMinimumSystemVersion</key>
+                        <string>MIN_OS</string>
+                    </dict>
                 </dict>
-                <key>Processor</key>
-                <string>Versioner</string>
             </dict>
             <dict>
                 <key>Arguments</key>
@@ -61,19 +68,108 @@
                 <key>Processor</key>
                 <string>PathDeleter</string>
             </dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>flat_pkg_path</key>
-				<string>%%RECIPE_CACHE_DIR%/%NAME%-%version%.mpkg</string>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack</string>
-				<key>purge_destination</key>
-				<true/>
-			</dict>
-			<key>Processor</key>
-			<string>FlatPkgUnpacker</string>
-		</dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>flat_pkg_path</key>
+                    <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.mpkg</string>
+                    <key>destination_path</key>
+                    <string>%RECIPE_CACHE_DIR%/unpack</string>
+                </dict>
+                <key>Processor</key>
+                <string>FlatPkgUnpacker</string>
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>path_list</key>
+                    <array>
+                        <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.mpkg</string>
+                    </array>
+                </dict>
+                <key>Processor</key>
+                <string>PathDeleter</string>
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>pkgroot</key>
+                    <string>%RECIPE_CACHE_DIR%/application_payload</string>
+                    <key>pkgdirs</key>
+                    <dict/>
+                </dict>
+                <key>Processor</key>
+                <string>PkgRootCreator</string>
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>pkg_payload_path</key>
+                    <string>%RECIPE_CACHE_DIR%/unpack/logitechControlCenter.pkg/Payload</string>
+                    <key>destination_path</key>
+                    <string>%pkgroot%</string>
+                    <key>purge_destination</key>
+                    <true/>
+                </dict>
+                <key>Processor</key>
+                <string>PkgPayloadUnpacker</string>
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>pkg_payload_path</key>
+                    <string>%RECIPE_CACHE_DIR%/unpack/logitechUnifyingSoftware.pkg/Payload</string>
+                    <key>destination_path</key>
+                    <string>%pkgroot%</string>
+                    <key>purge_destination</key>
+                    <false/>
+                </dict>
+                <key>Processor</key>
+                <string>PkgPayloadUnpacker</string>
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>pkg_payload_path</key>
+                    <string>%RECIPE_CACHE_DIR%/unpack/logitechUpdater.pkg/Payload</string>
+                    <key>destination_path</key>
+                    <string>%pkgroot%</string>
+                    <key>purge_destination</key>
+                    <false/>
+                </dict>
+                <key>Processor</key>
+                <string>PkgPayloadUnpacker</string>
+            </dict>
+            <dict>
+                <key>Processor</key>
+                <string>PkgCreator</string>
+                <key>Arguments</key>
+                <dict>
+                    <key>pkgname</key>
+                    <string>%NAME%-%version%</string>
+                    <key>pkg_request</key>
+                    <dict>
+                        <key>pkgdir</key>
+                        <string>%RECIPE_CACHE_DIR%</string>
+                        <key>id</key>
+                        <string>%PKG_ID%</string>
+                        <key>options</key>
+                        <string>purge_ds_store</string>
+                    </dict>
+                </dict>
+            </dict>
+            <dict>
+                <key>Arguments</key>
+                <dict>
+                    <key>path_list</key>
+                    <array>
+                        <string>%RECIPE_CACHE_DIR%/unpack</string>
+                    <string>%pkgroot%</string>
+                    </array>
+                </dict>
+                <key>Processor</key>
+                <string>PathDeleter</string>
+            </dict>
         </array>
-    </dict>
+    </dict>     
 </plist>
