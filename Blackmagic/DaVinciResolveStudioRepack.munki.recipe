@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the most recent version of DaVinci Resolve Studio and imports into Munki.</string>
+    <key>Identifier</key>
+    <string>com.github.nielshojen.munki.davinciresolvestudio</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>DaVinciResolveStudio</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/%NAME%</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing</string>
+            </array>
+            <key>description</key>
+            <string>DaVinci Resolve Studio combines professional non-linear video editing with the world’s most advanced color corrector so now you can edit, color correct, finish and deliver all from one system! DaVinci Resolve is completely scalable and resolution independent so it can be used on set, in a small studio or integrated into the largest Hollywood production pipeline! From creative editing and multi camera television production to high end finishing and color correction, only DaVinci Resolve features the creative tools, compatibility, speed and legendary image quality you need to manage your entire workflow, which is why it is the number one solution used on Hollywood feature films.</string>
+            <key>display_name</key>
+            <string>DaVinci Resolve Studio</string>
+            <key>minimum_os_version</key>
+            <string>10.10.2</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>uninstallable</key>
+            <true/>
+            <key>uninstall_method</key>
+            <string>uninstall_script</string>
+            <key>uninstall_script</key>
+            <string>#!/bin/sh
+            # Run the uninstaller script provided with the app.
+            # Alternatively, replace this with your own version of their uninstaller.
+            # For example, their uninstaller intentionally leaves the following on the
+            # system, which you may disagree with:
+            # - /Library/Application Support/Blackmagic Design/DaVinci Resolve
+            # - /Library/Preferences/Blackmagic Design/DaVinci Resolve
+            #
+            # Their uninstaller is also executable and world-writable.
+
+            UNINSTALL_SCRIPT="/Applications/DaVinci Resolve/Uninstall Resolve Studio.app/Contents/Resources/uninstall.sh"
+
+            [ -x "${UNINSTALL_SCRIPT}" ] || exit 1
+            "${UNINSTALL_SCRIPT}"
+            </string>
+        </dict>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.9</string>
+    <key>ParentRecipe</key>
+    <string>com.github.nielshojen.download.davinciresolvestudio</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>Unarchiver</string>
+            <key>Arguments</key>
+            <dict>
+                <key>archive_path</key>
+                <string>%pathname%</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/unzip</string>
+                <key>purge_destination</key>
+                <true/>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>FileFinder</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pattern</key>
+                <string>%RECIPE_CACHE_DIR%/unzip/*.dmg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>FlatPkgUnpacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>flat_pkg_path</key>
+                <string>%found_filename%/*.pkg</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/distpkg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%found_filename%/*.pkg</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%.pkg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>CodeSignatureVerifier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%.pkg</string>
+                <key>expected_authority_names</key>
+                <array>
+                    <string>Developer ID Installer: Blackmagic Design Inc (9ZGFBWLSYP)</string>
+                    <string>Developer ID Certification Authority</string>
+                    <string>Apple Root CA</string>
+                </array>
+            </dict>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkgdirs</key>
+                <dict>
+                    <key>Library/Application Support/Blackmagic Design</key>
+                    <string>0755</string>
+                    <key>Applications</key>
+                    <string>0755</string>
+                </dict>
+                <key>pkgroot</key>
+                <string>%RECIPE_CACHE_DIR%/pkgroot</string>
+            </dict>
+            <key>Processor</key>
+            <string>PkgRootCreator</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>PkgPayloadUnpacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/distpkg/Manifest.pkg/Payload</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/pkgroot</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>PkgPayloadUnpacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>purge_destination</key>
+                <false/>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/distpkg/ManifestPanels.pkg/Payload</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/pkgroot</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>PkgPayloadUnpacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>purge_destination</key>
+                <false/>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/distpkg/ManifestBlackMagicRawplayer.pkg/Payload</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/pkgroot</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>PkgPayloadUnpacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>purge_destination</key>
+                <false/>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/distpkg/ManifestFairlightAudioAccelerator.pkg/Payload</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/pkgroot</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>FileMover</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source</key>
+                <string>%RECIPE_CACHE_DIR%/pkgroot/Applications/DaVinci Resolve/DaVinci Resolve.app/</string>
+                <key>target</key>
+                <string>%RECIPE_CACHE_DIR%/pkgroot/Applications/DaVinci Resolve/DaVinci Resolve Studio.app/</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>FileMover</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source</key>
+                <string>%RECIPE_CACHE_DIR%/pkgroot/Applications/DaVinci Resolve/Uninstall Resolve.app/</string>
+                <key>target</key>
+                <string>%RECIPE_CACHE_DIR%/pkgroot/Applications/DaVinci Resolve/Uninstall Resolve Studio.app/</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>FlatPkgPacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_flatpkg_dir</key>
+                <string>%RECIPE_CACHE_DIR%/pkgroot</string>
+                <key>destination_pkg</key>
+                <string>%RECIPE_CACHE_DIR%/repack/%NAME%-%version%</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>additional_pkginfo</key>
+                <dict>
+                    <key>installs</key>
+                    <array>
+                        <dict>
+                            <key>CFBundleIdentifier</key>
+                            <string>com.blackmagic-design.DaVinciResolve</string>
+                            <key>CFBundleName</key>
+                            <string>DaVinci Resolve</string>
+                            <key>CFBundleShortVersionString</key>
+                            <string>%version%</string>
+                            <key>path</key>
+                            <string>/Applications/DaVinci Resolve/DaVinci Resolve Studio.app</string>
+                            <key>type</key>
+                            <string>application</string>
+                            <key>version_comparison_key</key>
+                            <string>CFBundleShortVersionString</string>
+                        </dict>
+                    </array>
+                    <key>version</key>
+                    <string>%version%</string>
+                </dict>
+            </dict>
+            <key>Processor</key>
+            <string>MunkiPkginfoMerger</string>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%RECIPE_CACHE_DIR%/repack/%NAME%-%version%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+        </dict>
+    </array>
+</dict>
+</plist>
