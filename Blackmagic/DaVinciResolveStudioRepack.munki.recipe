@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the most recent version of DaVinci Resolve Studio and imports into Munki.</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.munki.davinciresolvestudio</string>
+    <string>com.github.nielshojen.munki.davinciresolvestudiorepack</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
