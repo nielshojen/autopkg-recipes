@@ -118,7 +118,7 @@
             <dict>
                 <key>pkgdirs</key>
                 <dict>
-                    <key>Library/Application Support/Blackmagic Design</key>
+                    <key>Library/Application Support</key>
                     <string>0755</string>
                     <key>Applications</key>
                     <string>0755</string>
@@ -207,7 +207,7 @@
             <key>Arguments</key>
             <dict>
                 <key>source_flatpkg_dir</key>
-                <string>%RECIPE_CACHE_DIR%/pkgroot</string>
+                <string>%pkgroot%</string>
                 <key>destination_pkg</key>
                 <string>%RECIPE_CACHE_DIR%/repack/%NAME%-%version%</string>
             </dict>
