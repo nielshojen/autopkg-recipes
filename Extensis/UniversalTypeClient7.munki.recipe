@@ -24,9 +24,11 @@
 		<dict>
 			<key>blocking_applications</key>
 			<array>
-				<string>Adobe Photoshop</string>
+				<string>Adobe After Effects</string>
 				<string>Adobe Illustrator</string>
+				<string>Adobe InCopy</string>
 				<string>Adobe InDesign</string>
+				<string>Adobe Photoshop</string>
 				<string>Universal Type Client</string>
 				<string>QuarkXPress</string>
 			</array>
