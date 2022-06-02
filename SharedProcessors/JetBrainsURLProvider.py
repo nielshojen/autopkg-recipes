@@ -114,8 +114,7 @@ class JetbrainsURLProvider(URLGetter):
         """Request release information from JetBrains XHR Endpoint"""
         url = RELEASE_XHR_ENDPOINT.format(product_code, "123123123")
         response = self.download(url)
-        product_info = json.loa
-        (response)
+        product_info = json.loads(response)
         return product_info[product_code][0]
 
     def main(self):
