@@ -33,19 +33,25 @@ __all__ = ["JetbrainsURLProvider"]
 #   },"version":"10.0.3","majorVersion":"10.0","build":"143.1770"}]}
 #
 
-PRODUCTS = ("IntelliJ IDEA", "RubyMine", "PyCharm", "PhpStorm", "WebStorm", "AppCode")
+PRODUCTS = ("IntelliJ IDEA", "RubyMine", "PyCharm", "PhpStorm", "WebStorm", "AppCode", "Rider", "GoLand")
 
 PRODUCT_CODES = {
     "AppCode": "AC",
     "CLion": "CL",
+    "CodeWithMeLobby": "CWML",
+    "CodeWithMeRelay": "CWMR",
     "dotCover": "DC",
     "dotCoverCommandLineTools": "DCCLT",
+    "DataGrip": "DG",
+    "Datalore": "DL",
     "dotMemory": "DM",
+    "dotMemoryCommandLineProfiler": "DMCLP",
     "dotMemoryUnit": "DMU",
     "dotPeek": "DPK",
     "dotTrace": "DP",
     "dotTraceCommandLineTools": "DPCLT",
     "dotTraceProfilingSDK": "DPPS",
+    "DataSpell": "DS",
     "Gateway": "GW",
     "hub": "HB",
     "IntelliJ IDEA Ultimate": "IIU",
@@ -64,12 +70,11 @@ PRODUCT_CODES = {
     "ReSharper Ultimate": "RSU",
     "TeamCity": "TC",
     "WebStorm": "WS",
-    "YouTrack": "YT",  # Not a valid product code as of 2020-01-11.
     "YouTrack Standalone": "YTD",
     "YouTrack Workflow Editor": "YTWE",
     "UpSource": "US",
-    "0xDBE": "DBE",  # Not a valid product code as of 2020-01-11.
-    "DataGrip": "DG",
+    "GoLand": "GO",
+    "Rider": "RD",
 }
 
 RELEASE_XHR_ENDPOINT = "https://data.services.jetbrains.com/products/releases?code={0}&latest=true&type=release&_={1}"
@@ -91,7 +96,7 @@ class JetbrainsURLProvider(URLGetter):
         },
         "platform": {
             "required": False,
-            "description": "[optional] The operating system platform, one of 'mac', 'windows', 'linux'",
+            "description": "[optional] The operating system platform, one of 'mac', 'macM1', 'windows', 'linux'",
         },
     }
     output_variables = {
@@ -109,7 +114,8 @@ class JetbrainsURLProvider(URLGetter):
         """Request release information from JetBrains XHR Endpoint"""
         url = RELEASE_XHR_ENDPOINT.format(product_code, "123123123")
         response = self.download(url)
-        product_info = json.loads(response)
+        product_info = json.loa
+        (response)
         return product_info[product_code][0]
 
     def main(self):
