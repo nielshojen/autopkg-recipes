@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads latest IntelliJ CE disk image.</string>
+    <string>Downloads the latest version Rider.</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.download.intellijce</string>
+    <string>com.github.nielshojen.download.rider</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>IntelliJ IDEA CE</string>
+        <string>Rider</string>
         <key>PLATFORM</key>
         <string>mac</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.6.0</string>
+    <string>0.4.1</string>
     <key>Process</key>
     <array>
         <dict>
@@ -23,7 +23,9 @@
             <key>Arguments</key>
             <dict>
                 <key>product_code</key>
-                <string>IIC</string>
+                <string>RD</string>
+                <key>platform</key>
+                <string>%PLATFORM%</string>
             </dict>
         </dict>
         <dict>
@@ -40,15 +42,15 @@
             <string>EndOfCheckPhase</string>
         </dict>
         <dict>
-          <key>Processor</key>
-          <string>CodeSignatureVerifier</string>
-          <key>Arguments</key>
-          <dict>
-            <key>input_path</key>
-            <string>%pathname%/IntelliJ IDEA CE.app</string>
-            <key>requirement</key>
-            <string>anchor apple generic and identifier "com.jetbrains.intellij.ce" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */) and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "2ZEFAR8TH3"</string>
-          </dict>
+            <key>Processor</key>
+            <string>CodeSignatureVerifier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_path</key>
+                <string>%pathname%/Rider.app</string>
+                <key>requirement</key>
+                <string>identifier "com.jetbrains.rider" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "2ZEFAR8TH3"</string>
+            </dict>
         </dict>
     </array>
 </dict>

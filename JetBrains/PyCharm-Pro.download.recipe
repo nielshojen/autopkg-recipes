@@ -10,24 +10,22 @@
     <dict>
         <key>NAME</key>
         <string>PyCharm</string>
-        <key>SEARCH_URL</key>
-        <string>https://data.services.jetbrains.com/products/releases?code=PCP</string>
-        <key>SEARCH_PATTERN</key>
-        <string>mac":{"link":"(.+?dmg)"</string>
+        <key>PLATFORM</key>
+        <string>mac</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.4.1</string>
     <key>Process</key>
     <array>
-       <dict>
+        <dict>
             <key>Processor</key>
-            <string>URLTextSearcher</string>
+            <string>com.github.nielshojen.SharedProcessors/JetbrainsURLProvider</string>
             <key>Arguments</key>
             <dict>
-                <key>url</key>
-                <string>%SEARCH_URL%</string>
-                <key>re_pattern</key>
-                <string>%SEARCH_PATTERN%</string>
+                <key>product_code</key>
+                <string>PCP</string>
+                <key>platform</key>
+                <string>%PLATFORM%</string>
             </dict>
         </dict>
         <dict>
@@ -36,9 +34,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>%match%</string>
-                <key>filename</key>
-                <string>%NAME%.dmg</string>
+                <string>%url%</string>
             </dict>
         </dict>
         <dict>

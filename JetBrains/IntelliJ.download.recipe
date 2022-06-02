@@ -10,6 +10,8 @@
     <dict>
         <key>NAME</key>
         <string>IntelliJ IDEA</string>
+        <key>PLATFORM</key>
+        <string>mac</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.6.0</string>
@@ -22,6 +24,8 @@
             <dict>
                 <key>product_code</key>
                 <string>IIU</string>
+                <key>platform</key>
+                <string>%PLATFORM%</string>
             </dict>
         </dict>
         <dict>
