@@ -35,6 +35,8 @@
             <dict>
                 <key>url</key>
                 <string>%url%</string>
+				<key>filename</key>
+				<string>%NAME%-%PLATFORM%-%version%.dmg</string>
             </dict>
         </dict>
         <dict>
@@ -49,7 +51,7 @@
                 <key>input_path</key>
                 <string>%pathname%/PyCharm CE.app</string>
                 <key>requirement</key>
-                <string>identifier "com.jetbrains.pycharm" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "2ZEFAR8TH3"</string>
+                <string>identifier "com.jetbrains.pycharm.ce" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "2ZEFAR8TH3"</string>
             </dict>
         </dict>
     </array>

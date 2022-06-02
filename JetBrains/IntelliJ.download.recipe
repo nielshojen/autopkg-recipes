@@ -35,6 +35,8 @@
             <dict>
                 <key>url</key>
                 <string>%url%</string>
+				<key>filename</key>
+				<string>%NAME%-%PLATFORM%-%version%.dmg</string>
             </dict>
         </dict>
         <dict>
