@@ -27,7 +27,7 @@ from autopkglib.URLGetter import URLGetter
 try:
     from plistlib import readPlistFromString
 except ImportError:
-    from plistlib import readPlistFromBytes as readPlistFromString
+    from plistlib import loads as readPlistFromString
 
 __all__ = ["MSOfficeMacURLandUpdateInfoProvider"]
 

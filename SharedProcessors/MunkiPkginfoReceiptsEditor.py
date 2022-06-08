@@ -3,7 +3,16 @@
 from __future__ import absolute_import
 
 from autopkglib import Processor, ProcessorError
-from plistlib import readPlist, writePlist
+
+try:
+    from plistlib import readPlist
+except ImportError:
+    from plistlib import load as readPlist
+
+try:
+    from plistlib import writePlist
+except ImportError:
+    from plistlib import dump as writePlist
 
 __all__ = ["MunkiPkginfoReceiptsEditor"]
 
