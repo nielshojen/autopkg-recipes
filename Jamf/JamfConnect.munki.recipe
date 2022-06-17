@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the latest Jamf Connect DMG and imports into Munki.</string>
+    <key>Identifier</key>
+    <string>com.github.nielshojen.munki.JamfConnect</string>
+    <key>Input</key>
+    <dict>
+        <key>MUNKI_CATEGORY</key>
+        <string>System</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/%NAME%</string>
+        <key>DISPLAY_NAME</key>
+        <string>Jamf Connect</string>
+        <key>NAME</key>
+        <string>JamfConnect</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing</string>
+            </array>
+            <key>category</key>
+            <string>%MUNKI_CATEGORY%</string>
+            <key>description</key>
+            <string>Jamf Connect is a collection of apps allowing for simple provisioning of local user accounts and password synchronization from a cloud identity provider (IdP) during an Apple provisioning workflow. This includes multi-factor authentication (MFA).</string>
+            <key>developer</key>
+            <string>JAMF</string>
+            <key>display_name</key>
+            <string>%DISPLAY_NAME%</string>
+            <key>minimum_os_version</key>
+            <string>10.14.4</string>
+            <key>name</key>
+            <string>%NAME%</string>
+	<key>installcheck_script</key>
+	<string>#!/usr/local/munki/munki-python
+
+from subprocess import check_output
+from distutils.version import StrictVersion
+import plistlib
+import os
+
+def get_mechs():
+    cmd = ["/usr/bin/security", "authorizationdb", "read", "system.login.console"]
+    cur_mech_plist = plistlib.loads(check_output(cmd))
+    mechs_only = cur_mech_plist['mechanisms']
+    return mechs_only
+
+def get_jamfconnect_vers():
+	plistFile = '/Library/Security/SecurityAgentPlugins/JamfConnectLogin.bundle/Contents/Info.plist'
+	with open(plistFile, 'rb') as f:
+		plist = plistlib.load(f)
+		return plist["CFBundleShortVersionString"]
+
+def main():
+
+    pkg_vers = '%version%'
+
+    install_items = ['/Library/Security/SecurityAgentPlugins/JamfConnectLogin.bundle',
+                     '/usr/local/bin/authchanger']
+    for item in install_items:
+        if not os.path.exists(item):
+            exit(0)
+
+    installed_vers = get_jamfconnect_vers()
+    if StrictVersion(installed_vers) &lt; StrictVersion(pkg_vers):
+        exit(0)
+
+    mechs = ['JamfConnectLogin:Initialize', 'JamfConnectLogin:LoginUI', 'JamfConnectLogin:PowerControl,privileged', 'JamfConnectLogin:CreateUser,privileged', 'JamfConnectLogin:EULA', 'JamfConnectLogin:DeMobilize,privileged', 'JamfConnectLogin:RunScript,privileged', 'JamfConnectLogin:Success', 'JamfConnectLogin:EnableFDE,privileged', 'JamfConnectLogin:KeychainAdd,privileged']
+    current_mechs = get_mechs()
+    for jamf_mech in mechs:
+        if not jamf_mech in current_mechs:
+            exit(0)
+
+    exit(1)
+
+if __name__ == "__main__":
+    main()</string>
+            <key>preuninstall_script</key>
+            <string>#!/bin/sh
+
+if [ -f /usr/local/bin/authchanger ]
+then
+    /bin/echo "Resetting the authentication database..."
+    /usr/local/bin/authchanger -reset
+    /bin/echo "Deleting /usr/local/bin/authchanger..."
+    /bin/rm /usr/local/bin/authchanger
+fi
+
+if [ -f /usr/local/lib/pam/pam_saml.so.2 ]
+then
+    /bin/echo "Deleting /usr/local/lib/pam/pam_saml.so.2..."
+    /bin/rm /usr/local/lib/pam/pam_saml.so.2
+fi
+
+if [ -f /Library/Security/SecurityAgentPlugins/JamfConnectLogin.bundle ]
+then
+    /bin/echo "Deleting /Library/Security/SecurityAgentPlugins/JamfConnectLogin.bundle..."
+    /bin/rm -r /Library/Security/SecurityAgentPlugins/JamfConnectLogin.bundle
+fi</string>
+            <key>unattended_install</key>
+            <true/>
+        </dict>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.0</string>
+    <key>ParentRecipe</key>
+    <string>com.github.nielshojen.download.JamfConnect</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>CodeSignatureVerifier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_path</key>
+                <string>%pathname%/JamfConnect.pkg</string>
+                <key>expected_authority_names</key>
+                <array>
+                    <string>Developer ID Installer: JAMF Software (483DWKW443)</string>
+                    <string>Developer ID Certification Authority</string>
+                    <string>Apple Root CA</string>
+                </array>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>FlatPkgUnpacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/unpack</string>
+                <key>flat_pkg_path</key>
+                <string>%pathname%/JamfConnect.pkg</string>
+                <key>purge_destination</key>
+                <true/>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>PkgPayloadUnpacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/payload</string>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/unpack/JamfConnect.pkg/Payload</string>
+                <key>purge_destination</key>
+                <true/>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>MunkiInstallsItemsCreator</string>
+            <key>Arguments</key>
+            <dict>
+                <key>faux_root</key>
+                <string>%RECIPE_CACHE_DIR%/payload/</string>
+                <key>installs_item_paths</key>
+                <array>
+                    <string>/Applications/Jamf Connect.app</string>
+                </array>
+            </dict>
+        </dict>
+       <dict>
+            <key>Processor</key>
+            <string>MunkiPkginfoMerger</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>PlistReader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>info_path</key>
+                <string>%RECIPE_CACHE_DIR%/payload/Applications/Jamf Connect.app/Contents/Info.plist</string>
+                <key>plist_keys</key>
+                <dict>
+                    <key>CFBundleShortVersionString</key>
+                    <string>version</string>
+                    <key>LSMinimumSystemVersion</key>
+                    <string>min_os_version</string>
+                </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>PkgCopier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%.pkg</string>
+                <key>source_pkg</key>
+                <string>%pathname%/JamfConnect.pkg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>MunkiPkginfoMerger</string>
+            <key>Arguments</key>
+            <dict>
+                <key>additional_pkginfo</key>
+                <dict>
+                    <key>minimum_os_version</key>
+                    <string>%min_os_version%</string>
+                    <key>version</key>
+                    <string>%version%</string>
+                </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pkg_path%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>PathDeleter</string>
+            <key>Arguments</key>
+            <dict>
+                <key>path_list</key>
+                <array>
+                    <string>%RECIPE_CACHE_DIR%/unpack</string>
+                    <string>%RECIPE_CACHE_DIR%/payload</string>
+                </array>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
