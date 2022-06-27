@@ -29,7 +29,7 @@
 			<key>category</key>
 			<string>%MUNKI_CATEGORY%</string>
 			<key>developer</key>
-			<string>Splashtop/string>
+			<string>Splashtop</string>
 			<key>description</key>
 			<string>Install the Splashtop Business app on the Mac you want to remote from.</string>
 			<key>developer</key>
