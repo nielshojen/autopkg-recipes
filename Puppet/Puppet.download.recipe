@@ -3,17 +3,19 @@
 <plist version="1.0">
     <dict>
         <key>Description</key>
-        <string>Download recipe for Puppet6 Agent.</string>
+        <string>Download latest Puppet for the chosen architecture</string>
         <key>Identifier</key>
-        <string>com.github.nielshojen.download.puppet6</string>
+        <string>com.github.nielshojen.download.puppet</string>
         <key>Input</key>
         <dict>
             <key>NAME</key>
-            <string>Puppet6</string>
+            <string>Puppet_%ARCH%</string>
             <key>OS_VERSION</key>
-		        <string>10.13</string>
+            <string>12</string>
+            <key>ARCH</key>
+            <string>x86_64</string>
             <key>URL</key>
-            <string>https://downloads.puppetlabs.com/mac/puppet6</string>
+            <string>https://downloads.puppetlabs.com/mac/puppet7</string>
         </dict>
         <key>MinimumVersion</key>
         <string>0.5.0</string>
@@ -23,9 +25,9 @@
                 <key>Arguments</key>
                 <dict>
                     <key>url</key>
-                    <string>%URL%/%OS_VERSION%/x86_64/puppet-agent-latest.dmg</string>
+                    <string>%URL%/%OS_VERSION%/%ARCH%/puppet-agent-latest.dmg</string>
                     <key>filename</key>
-                    <string>puppet-agent-latest.dmg</string>
+                    <string>%NAME%.dmg</string>
                 </dict>
                 <key>Processor</key>
                 <string>URLDownloader</string>
