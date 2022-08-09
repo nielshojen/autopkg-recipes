@@ -17,7 +17,7 @@
             <key>OS_VERSION</key>
             <string>12</string>
             <key>ARCH</key>
-            <string>X86_64</string>
+            <string>x86_64</string>
             <key>URL</key>
             <string>https://downloads.puppetlabs.com/mac/puppet7</string>
             <key>pkginfo</key>
@@ -48,7 +48,7 @@ desired state.</string>
         <key>MinimumVersion</key>
         <string>0.2.0</string>
         <key>ParentRecipe</key>
-        <string>com.github.gerardkok.download.puppet</string>
+        <string>com.github.nielshojen.download.puppet</string>
         <key>Process</key>
         <array>
             <dict>
