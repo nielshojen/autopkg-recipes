@@ -53,7 +53,7 @@
             <dict>
                 <key>Arguments</key>
                 <dict>
-                    <key>source_path</key>
+                    <key>source_pkg</key>
                     <string>%pathname%/*.pkg</string>
                     <key>destination_path</key>
                     <string>%RECIPE_CACHE_DIR%/%NAME%_%version%_%ARCH%.pkg</string>
