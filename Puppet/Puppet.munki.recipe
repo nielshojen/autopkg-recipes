@@ -29,8 +29,7 @@
                 <key>category</key>
                 <string>%MUNKI_CATEGORY%</string>
                 <key>description</key>
-                <string>Puppet is a configuration management solution that allows you to define the state of your IT infrastructure, and then automatically enforces the 
-desired state.</string>
+                <string>Puppet is a configuration management solution that allows you to define the state of your IT infrastructure, and then automatically enforces the desired state.</string>
                 <key>minimum_os_version</key>
                 <string>%OS_VERSION%.0</string>
                 <key>maximum_os_version</key>
@@ -62,7 +61,7 @@ desired state.</string>
                     <true/>
                 </dict>
                 <key>Processor</key>
-                <string>Copier</string>
+                <string>PkgCopier</string>
             </dict>
             <dict>
                 <key>Arguments</key>
