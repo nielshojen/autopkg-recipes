@@ -27,7 +27,7 @@
             <key>description</key>
             <string>Insta360 Studio allows users to edit videos and photos shot on ONE X, EVO and GO. It contains the Insta360 Plugin for Adobe Premiere Pro..</string>
             <key>display_name</key>
-            <string>Insta360 Studio </string>
+            <string>Insta360 Studio</string>
             <key>name</key>
             <string>%NAME%</string>
             <key>unattended_install</key>
