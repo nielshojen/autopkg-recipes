@@ -53,7 +53,6 @@ Store all of your fonts in a centralized, server-based font manager to ensure co
 			<key>supported_architectures</key>
 			<array>
 				<string>arm64</string>
-				<string>i386</string>
 				<string>x86_64</string>
 			</array>
 		</dict>
