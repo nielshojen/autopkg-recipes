@@ -12,6 +12,8 @@
         <string>DaVinciResolveStudio</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/%NAME%</string>
+        <key>FORCE_IMPORT</key>
+        <string>False</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
@@ -149,6 +151,8 @@
                 <string>%RECIPE_CACHE_DIR%/%NAME%.pkg</string>
                 <key>repo_subdirectory</key>
                 <string>%MUNKI_REPO_SUBDIR%</string>
+                <key>force_munkiimport</key>
+                <string>%FORCE_IMPORT%</string>
             </dict>
             <key>Processor</key>
             <string>MunkiImporter</string>
