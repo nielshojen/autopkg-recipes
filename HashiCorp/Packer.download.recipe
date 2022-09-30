@@ -19,17 +19,17 @@
     <string>0.3.0</string>
     <key>Process</key>
     <array>
-        <dict>
-            <key>Processor</key>
-            <string>io.github.hjuutilainen.download.Vault/HashiCorpURLProvider</string>
-            <key>Arguments</key>
-            <dict>
-                <key>arch</key>
-                <string>%ARCH%</string>
-                <key>project_name</key>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>arch</key>
+				<string>%ARCH%</string>
+				<key>project_name</key>
                 <string>%PRODUCT%</string>
-            </dict>
-        </dict>
+			</dict>
+			<key>Processor</key>
+			<string>io.github.hjuutilainen.SharedProcessors/HashiCorpURLProvider</string>
+		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
