@@ -26,7 +26,7 @@
                 <string>testing</string>
             </array>
             <key>description</key>
-            <string>ccProfiler Profile Creation Tool</string>
+            <string>ccProfiler software powered by X-Rite, for calibrating and profiling all modern laptop, desktop monitor and projector technologies</string>
             <key>developer</key>
             <string>Calibrite</string>
             <key>display_name</key>
