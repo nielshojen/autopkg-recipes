@@ -10,18 +10,38 @@
     <dict>
         <key>NAME</key>
         <string>RODECentral</string>
+        <key>DOWNLOAD_PATTERN</key>
+        <string>(?P&lt;url&gt;https:\/\/edge.rode.com\/zip\/page\/[0-9]+\/modules\/[0-9]+\/RODE Central macOS v(?P&lt;version&gt;.*?).zip)</string>
         <key>DOWNLOAD_URL</key>
-        <string>https://www.rode.com/wirelessgo/get_download?os=mac</string>
+        <string>https://rode.com/en/software/rode-central#module_19</string>
     </dict>
     <key>Process</key>
     <array>
-        <dict>
-            <key>Arguments</key>
-            <dict>rodecentral_installation_file_mac.zip
-				<key>filename</key>
-				<string>rodecentral_installation_file_mac.zip</string>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
+				<string>%DOWNLOAD_PATTERN%</string>
 				<key>url</key>
 				<string>%DOWNLOAD_URL%</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>com.github.nielshojen.SharedProcessors/URLEncoder</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_url</key>
+				<string>%match%</string>
+			</dict>
+		</dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+				<key>filename</key>
+				<string>%NAME%.zip</string>
             </dict>
             <key>Processor</key>
             <string>URLDownloader</string>
@@ -58,31 +78,9 @@
 	            <key>source</key>
 	            <string>%found_filename%</string>
 	            <key>target</key>
-	            <string>%RECIPE_CACHE_DIR%/unpack/%NAME%.pkg</string>
+	            <string>%RECIPE_CACHE_DIR%/unpack/%NAME%-%version%.pkg</string>
 	        </dict>
 	    </dict>
-        <dict>
-            <key>Processor</key>
-            <string>FlatPkgUnpacker</string>
-            <key>Arguments</key>
-            <dict>
-                <key>flat_pkg_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/%NAME%.pkg</string>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/flat</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>URLTextSearcher</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>file://localhost/%RECIPE_CACHE_DIR%/flat/Distribution</string>
-                <key>re_pattern</key>
-                <string>CFBundleShortVersionString=&quot;(?P&lt;version&gt;.*?)&quot;</string>
-            </dict>
-        </dict>
         <dict>
             <key>Arguments</key>
             <dict>
@@ -93,7 +91,7 @@
                     <string>Apple Root CA</string>
                 </array>
                 <key>input_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/%NAME%.pkg</string>
+                <string>%RECIPE_CACHE_DIR%/unpack/%NAME%-%version%.pkg</string>
             </dict>
             <key>Processor</key>
             <string>CodeSignatureVerifier</string>
