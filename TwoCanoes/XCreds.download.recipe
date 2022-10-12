@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the current release version of XCreds.</string>
+	<key>Identifier</key>
+	<string>com.github.nielshojen.download.XCreds</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>XCreds</string>
+		<key>DOWNLOAD_URL</key>
+		<string>https://twocanoes-software-updates.s3.amazonaws.com/xcreds/XCreds2.zip</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.1</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%.zip</string>
+				<key>url</key>
+				<string>%DOWNLOAD_URL%</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>FileFinder</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pattern</key>
+				<string>%RECIPE_CACHE_DIR%/unpack/XCreds2/*.pkg</string>
+			</dict>
+		</dict>
+		<dict>
+    			<key>Processor</key>
+    			<string>com.github.nielshojen.SharedProcessors/VersionExtractor</string>
+    			<key>Arguments</key>
+    			<dict>
+				<key>input_file</key>
+				<string>%found_filename%</string>
+    				<key>split_on_in</key>
+    				<string>_Version-</string>
+    				<key>split_on_out</key>
+    				<string>.pkg</string>
+    			</dict>
+		</dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>expected_authority_names</key>
+                <array>
+                    <string>Developer ID Installer: Twocanoes Software, Inc. (UXP6YEHSPW)</string>
+                    <string>Developer ID Certification Authority</string>
+                    <string>Apple Root CA</string>
+                </array>
+                <key>input_path</key>
+                <string>%found_filename%</string>
+            </dict>
+            <key>Processor</key>
+            <string>CodeSignatureVerifier</string>
+        </dict>
+
+	</array>
+</dict>
+</plist>
