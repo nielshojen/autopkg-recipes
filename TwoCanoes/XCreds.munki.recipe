@@ -30,6 +30,129 @@
             <string>XCreds</string>
             <key>name</key>
             <string>%NAME%</string>
+			<key>installcheck_script</key>
+			<string>#!/usr/local/munki/munki-python
+
+from subprocess import check_output
+from distutils.version import StrictVersion
+import plistlib
+import os
+
+def get_mechs():
+    cmd = ["/usr/bin/security", "authorizationdb", "read", "system.login.console"]
+    cur_mech_plist = plistlib.loads(check_output(cmd))
+    mechs_only = cur_mech_plist['mechanisms']
+    return mechs_only
+
+def get_xcreds_vers():
+	plistFile = '/Library/Security/SecurityAgentPlugins/XCredsLoginPlugin.bundle/Contents/Info.plist'
+	with open(plistFile, 'rb') as f:
+		plist = plistlib.load(f)
+		return plist["CFBundleShortVersionString"]
+
+def main():
+
+    pkg_vers = 'CHANGEME'
+
+    install_items = [
+                        '/Library/Security/SecurityAgentPlugins/XCredsLoginPlugin.bundle'
+                    ]
+
+    for item in install_items:
+        if not os.path.exists(item):
+            exit(0)
+
+    installed_vers = get_xcreds_vers()
+    if StrictVersion(installed_vers) &lt; StrictVersion(pkg_vers):
+        exit(0)
+
+    mechs = [
+                'XCredsLoginPlugin:LoginWindow',
+                'XCredsLoginPlugin:PowerControl,privileged',
+                'XCredsLoginPlugin:CreateUser,privileged',
+                'XCredsLoginPlugin:LoginDone',
+                'XCredsLoginPlugin:EnableFDE,privileged',
+                'XCredsLoginPlugin:KeychainAdd,privileged'
+            ]
+
+    current_mechs = get_mechs()
+    for crypt_mech in mechs:
+        if not crypt_mech in current_mechs:
+            exit(0)
+
+    exit(1)
+
+if __name__ == "__main__":
+    main()</string>
+			<key>preuninstall_script</key>
+			<string>#!/usr/local/munki/munki-python
+
+import  os,     \
+        sys,     \
+        plistlib,  \
+        platform,   \
+        subprocess
+from    subprocess import Popen, \
+                          PIPE,   \
+                          STDOUT
+
+system_login_console_plist = "/private/var/tmp/system.login.console.plist"
+
+mechs = [
+            'XCredsLoginPlugin:LoginWindow',
+            'XCredsLoginPlugin:PowerControl,privileged',
+            'XCredsLoginPlugin:CreateUser,privileged',
+            'XCredsLoginPlugin:LoginDone',
+            'XCredsLoginPlugin:EnableFDE,privileged',
+            'XCredsLoginPlugin:KeychainAdd,privileged'
+        ]
+index_mech = "loginwindow:done"
+index_offset = 0
+
+def bash_command(script):
+    try:
+        return subprocess.check_output(script)
+    except (subprocess.CalledProcessError, OSError), err:
+        sys.exit("[* Error] **%s** [%s]" % (err, str(script)))
+
+def remove_mechs_in_db(db, mech_list):
+    for mech in mech_list:
+        for old_mech in filter(lambda x: mech in x, db['mechanisms']):
+            db['mechanisms'].remove(old_mech)
+    return db
+
+def set_mechs_in_db(db, mech_list, index_mech, index_offset):
+    db = remove_mechs_in_db(db, mech_list)
+    return db
+
+def edit_authdb():
+    system_login_console = bash_command(["/usr/bin/security", "authorizationdb", "read", "system.login.console"])
+    f_c = open(system_login_console_plist, 'w')
+    f_c.write(system_login_console)
+    f_c.close()
+    for p in [system_login_console_plist]:
+        with open(p, 'rb') as f:
+            d = plistlib.load(f)
+        d = set_mechs_in_db(d, mechs, index_mech, index_offset)
+        with open(p, "wb") as f:
+            plistlib.dump(d, f)
+
+
+    f_c = open(system_login_console_plist, "r")
+    p = Popen(["/usr/bin/security", "authorizationdb", "write", "system.login.console"], stdout=PIPE, stdin=PIPE, stderr=PIPE)
+    stdout_data = p.communicate(input=f_c.read())
+    f_c.close()
+
+def check_root():
+    if not os.geteuid() == 0:
+        sys.exit("\nOnly root can run this script\n")
+
+def main(argv):
+    check_root()
+    edit_authdb()
+
+if __name__ == '__main__':
+    main(sys.argv)</string>
             <key>unattended_install</key>
             <true/>
         </dict>
