@@ -13,7 +13,7 @@ Use this url for Apple Silicon: https://www.citrix.com/downloads/workspace-app/m
 		<key>NAME</key>
 		<string>CitrixWorkspace</string>
 		<key>URL</key>
-		<string>https://www.citrix.com/downloads/workspace-app/mac/workspace-app-for-mac-latest.html/string>
+		<string>https://www.citrix.com/downloads/workspace-app/mac/workspace-app-for-mac-latest.html</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.3.1</string>
