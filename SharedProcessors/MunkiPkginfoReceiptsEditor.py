@@ -1,18 +1,9 @@
-#!/usr/bin/env python
+#!/usr/local/autopkg/python
 
 from __future__ import absolute_import
 
 from autopkglib import Processor, ProcessorError
-
-try:
-    from plistlib import readPlist
-except ImportError:
-    from plistlib import load as readPlist
-
-try:
-    from plistlib import writePlist
-except ImportError:
-    from plistlib import dump as writePlist
+from plistlib import readPlist, writePlist
 
 __all__ = ["MunkiPkginfoReceiptsEditor"]
 
