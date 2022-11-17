@@ -33,7 +33,7 @@
 			<key>developer</key>
 			<string>Citrix Systems, Inc.</string>
 			<key>display_name</key>
-			<string>%DISPLAY_NAME%%</string>
+			<string>%DISPLAY_NAME%</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
