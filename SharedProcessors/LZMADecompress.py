@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/local/autopkg/python
 
 import subprocess
 from autopkglib import Processor, ProcessorError
