@@ -39,7 +39,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>source_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/MicrosoftAzureStorageExplorer/Microsoft Azure Storage Explorer.app</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Microsoft Azure Storage Explorer.app</string>
 				<key>destination_path</key>
 				<string>%pkgroot%/Applications/Microsoft Azure Storage Explorer.app</string>
 				<key>purge_destination</key>
