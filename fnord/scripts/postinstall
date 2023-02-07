@@ -1,0 +1,9 @@
+#!/bin/sh
+
+folders=$(mdfind -onlyin /Applications kind:folder -name "Photoshop")
+
+while read -r folder; do
+    /bin/cp /private/tmp/SuperPNG.plugin "$folder/Plug-ins"
+done <<< $folders
+
+/bin/rm -f /private/tmp/SuperPNG.plugin
