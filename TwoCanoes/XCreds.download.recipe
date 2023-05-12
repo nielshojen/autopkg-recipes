@@ -2,69 +2,30 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Description</key>
-	<string>Downloads the current release version of XCreds.</string>
-	<key>Identifier</key>
-	<string>com.github.nielshojen.download.XCreds</string>
-	<key>Input</key>
-	<dict>
-		<key>NAME</key>
-		<string>XCreds</string>
-		<key>DOWNLOAD_URL</key>
-		<string>https://twocanoes-software-updates.s3.amazonaws.com/xcreds/XCreds2.zip</string>
-	</dict>
-	<key>MinimumVersion</key>
-	<string>0.2.1</string>
-	<key>Process</key>
-	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>filename</key>
-				<string>%NAME%.zip</string>
-				<key>url</key>
-				<string>%DOWNLOAD_URL%</string>
-			</dict>
-			<key>Processor</key>
-			<string>URLDownloader</string>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>EndOfCheckPhase</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/unpack</string>
-				<key>purge_destination</key>
-				<true/>
-			</dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>FileFinder</string>
-			<key>Arguments</key>
-			<dict>
-				<key>pattern</key>
-				<string>%RECIPE_CACHE_DIR%/unpack/XCreds2/*.pkg</string>
-			</dict>
-		</dict>
-		<dict>
-    			<key>Processor</key>
-    			<string>com.github.nielshojen.SharedProcessors/VersionExtractor</string>
-    			<key>Arguments</key>
-    			<dict>
-				<key>input_file</key>
-				<string>%found_filename%</string>
-    				<key>split_on_in</key>
-    				<string>_Version-</string>
-    				<key>split_on_out</key>
-    				<string>.pkg</string>
-    			</dict>
-		</dict>
+    <key>Description</key>
+    <string>Downloads the current release version of XCreds.</string>
+    <key>Identifier</key>
+    <string>com.github.nielshojen.download.XCreds</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>XCreds</string>
+        <key>DOWNLOAD_URL</key>
+        <string>https://twocanoes-software-updates.s3.amazonaws.com/XCreds.pkg</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.1</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>%DOWNLOAD_URL%</string>
+            </dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+        </dict>
         <dict>
             <key>Arguments</key>
             <dict>
@@ -75,12 +36,76 @@
                     <string>Apple Root CA</string>
                 </array>
                 <key>input_path</key>
-                <string>%found_filename%</string>
+                <string>%pathname%</string>
             </dict>
             <key>Processor</key>
             <string>CodeSignatureVerifier</string>
         </dict>
-
-	</array>
+        <dict>
+            <key>Processor</key>
+            <string>FlatPkgUnpacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>flat_pkg_path</key>
+                <string>%pathname%</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/distpkg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>PkgPayloadUnpacker</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_payload_path</key>
+                <string>%RECIPE_CACHE_DIR%/distpkg/%NAME%.pkg/Payload</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/payload</string>
+            </dict>
+        </dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>info_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload/Applications/%NAME%.app/Contents/Info.plist</string>
+				<key>plist_keys</key>
+				<dict>
+					<key>CFBundleShortVersionString</key>
+					<string>version</string>
+					<key>LSMinimumSystemVersion</key>
+					<string>minimum_os_vers</string>
+				</dict>
+			</dict>
+			<key>Processor</key>
+			<string>PlistReader</string>
+		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>com.github.smithjw.processors/FriendlyPathDeleter</string>
+            <key>Arguments</key>
+            <dict>
+                <key>fail_deleter_silently</key>
+                <true/>
+                <key>path_list</key>
+                <array>
+                    <string>%RECIPE_CACHE_DIR%/payload</string>
+                    <string>%RECIPE_CACHE_DIR%/distpkg</string>
+                </array>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%pathname%</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
+                <key>overwrite</key>
+                <string>true</string>
+            </dict>
+        </dict>
+    </array>
 </dict>
 </plist>

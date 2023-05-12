@@ -12,8 +12,8 @@
         <string>System</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/XCreds</string>
-    	<key>NAME</key>
-    	<string>XCreds</string>
+        <key>NAME</key>
+        <string>XCreds</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
@@ -30,8 +30,8 @@
             <string>XCreds</string>
             <key>name</key>
             <string>%NAME%</string>
-			<key>installcheck_script</key>
-			<string>#!/usr/local/munki/munki-python
+            <key>installcheck_script</key>
+            <string>#!/usr/local/munki/munki-python
 
 from subprocess import check_output
 from distutils.version import StrictVersion
@@ -45,10 +45,10 @@ def get_mechs():
     return mechs_only
 
 def get_xcreds_vers():
-	plistFile = '/Library/Security/SecurityAgentPlugins/XCredsLoginPlugin.bundle/Contents/Info.plist'
-	with open(plistFile, 'rb') as f:
-		plist = plistlib.load(f)
-		return plist["CFBundleShortVersionString"]
+    plistFile = '/Library/Security/SecurityAgentPlugins/XCredsLoginPlugin.bundle/Contents/Info.plist'
+    with open(plistFile, 'rb') as f:
+        plist = plistlib.load(f)
+        return plist["CFBundleShortVersionString"]
 
 def main():
 
@@ -84,8 +84,8 @@ def main():
 
 if __name__ == "__main__":
     main()</string>
-			<key>preuninstall_script</key>
-			<string>#!/usr/local/munki/munki-python
+            <key>preuninstall_script</key>
+            <string>#!/usr/local/munki/munki-python
 
 import  os,     \
         sys,     \
@@ -170,6 +170,8 @@ if __name__ == '__main__':
                 <dict>
                     <key>version</key>
                     <string>%version%</string>
+					<key>minimum_os_version</key>
+					<string>%minimum_os_vers%</string>
                 </dict>
             </dict>
             <key>Processor</key>
@@ -179,7 +181,7 @@ if __name__ == '__main__':
             <key>Arguments</key>
             <dict>
                 <key>pkg_path</key>
-                <string>%found_filename%</string>
+                <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
                 <key>repo_subdirectory</key>
                 <string>%MUNKI_REPO_SUBDIR%</string>
             </dict>
@@ -187,15 +189,17 @@ if __name__ == '__main__':
             <string>MunkiImporter</string>
         </dict>
         <dict>
+            <key>Processor</key>
+            <string>com.github.smithjw.processors/FriendlyPathDeleter</string>
             <key>Arguments</key>
             <dict>
+                <key>fail_deleter_silently</key>
+                <true/>
                 <key>path_list</key>
                 <array>
-                    <string>%RECIPE_CACHE_DIR%/unpack</string>
+                    <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
                 </array>
             </dict>
-            <key>Processor</key>
-            <string>PathDeleter</string>
         </dict>
     </array>
 </dict>
