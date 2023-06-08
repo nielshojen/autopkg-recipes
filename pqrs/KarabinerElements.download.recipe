@@ -9,11 +9,11 @@
 	<key>Input</key>
 	<dict>
 		<key>PRODUCT_DOWNLOAD_URL</key>
-		<string>https://pqrs.org/osx/karabiner/</string>
+		<string>https://karabiner-elements.pqrs.org</string>
 		<key>NAME</key>
-		<string>Nvidia Web Driver</string>
+		<string>KarabinerElements</string>
 		<key>PRODUCT_RE_PATTERN</key>
-		<string>href="(files\/Karabiner\-Elements\-[\d\.]+\.dmg)"</string>
+		<string>(https:\/\/github.com\/pqrs-org\/Karabiner-Elements\/releases\/download\/v(?P&lt;version&gt;.*?)\/Karabiner\-Elements\-[\d\.]+\.dmg)</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.5.0</string>
@@ -36,23 +36,10 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>%PRODUCT_DOWNLOAD_URL%%FILE_DOWNLOAD_URL%</string>
+				<string>%FILE_DOWNLOAD_URL%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
-		</dict>
-		<dict>
-    			<key>Processor</key>
-    			<string>com.github.nielshojen.SharedProcessors/VersionExtractor</string>
-    			<key>Arguments</key>
-    			<dict>
-				<key>input_file</key>
-				<string>%pathname%</string>
-    				<key>split_on_in</key>
-    				<string>Elements-</string>
-    				<key>split_on_out</key>
-    				<string>.dmg</string>
-    			</dict>
 		</dict>
         <dict>   
             <key>Processor</key>   
