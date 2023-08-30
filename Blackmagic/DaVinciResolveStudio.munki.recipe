@@ -21,7 +21,7 @@
                 <string>testing</string>
             </array>
             <key>description</key>
-            <string>DaVinci Resolve Studio combines professional non-linear video editing with the world’s most advanced color corrector so now you can edit, color correct, finish and deliver all from one system! DaVinci Resolve is completely scalable and resolution independent so it can be used on set, in a small studio or integrated into the largest Hollywood production pipeline! From creative editing and multi camera television production to high end finishing and color correction, only DaVinci Resolve features the creative tools, compatibility, speed and legendary image quality you need to manage your entire workflow, which is why it is the number one solution used on Hollywood feature films.</string>
+            <string>DaVinci Resolve Studio combines professional non-linear video editing with the worlds most advanced color corrector so now you can edit, color correct, finish and deliver all from one system! DaVinci Resolve is completely scalable and resolution independent so it can be used on set, in a small studio or integrated into the largest Hollywood production pipeline! From creative editing and multi camera television production to high end finishing and color correction, only DaVinci Resolve features the creative tools, compatibility, speed and legendary image quality you need to manage your entire workflow, which is why it is the number one solution used on Hollywood feature films.</string>
             <key>display_name</key>
             <string>DaVinci Resolve Studio</string>
             <key>minimum_os_version</key>
