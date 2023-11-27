@@ -15,7 +15,6 @@
     <key>SEARCH_URL</key>
     <string>%BASE_URL%</string>
     <key>SEARCH_PATTERN</key>
-    <!-- (https://raw.githubusercontent.com/rudix-mac/packages/master/mtr-(?P<version>.*?)-macos(?P<OSX_VER>.*?).pkg) -->
     <string>(https://raw.githubusercontent.com/rudix-mac/packages/master/mtr-(?P&lt;version&gt;.*?)-macos(?P&lt;OSX_VER&gt;.*?).pkg)</string>
     <key>USER_AGENT</key>
     <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12</string>

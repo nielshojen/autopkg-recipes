@@ -10,8 +10,8 @@
 	<dict>
 		<key>NAME</key>
 		<string>AzureStorageExplorer</string>
-		<key>DOWNLOAD_URL</key>
-		<string>https://go.microsoft.com/fwlink/?linkid=708342</string>
+		<key>ARCH</key>
+		<string>x64</string>
 		<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
 		<false/>
 	</dict>
@@ -19,13 +19,24 @@
 	<string>0.2.0</string>
 	<key>Process</key>
 	<array>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>re_pattern</key>
+                <string>href=\"(?P&lt;match&gt;(.*?))\"(.*?)%ARCH%</string>
+                <key>url</key>
+                <string>https://azure.microsoft.com/en-us/products/storage/storage-explorer</string>
+            </dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+        </dict>
 		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>%DOWNLOAD_URL%</string>
+				<string>%match%</string>
 				<key>filename</key>
 				<string>%NAME%.zip</string>
 			</dict>
