@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the current release version of Capture One and imports it into Munki for use with perpetually-licensed Capture One.</string>
+	<key>Identifier</key>
+	<string>com.github.nielshojen.munki.CaptureOne</string>
+	<key>Input</key>
+	<dict>
+		<key>FORCE_MUNKIIMPORT</key>
+		<string>totally</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/phaseone</string>
+		<key>NAME</key>
+		<string>CaptureOne</string>
+		<key>STOP_ON_NO_NEW_DOWNLOAD</key>
+		<true/>
+		<key>pkginfo</key>
+		<dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing</string>
+            </array>
+			<key>category</key>
+			<string>Productivity</string>
+			<key>description</key>
+			<string>The professional choice in imaging software.</string>
+			<key>developer</key>
+			<string>Phase One</string>
+            <key>display_name</key>
+            <string>Capture One</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.foigus.download.CaptureOne</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>predicate</key>
+				<string>download_changed == FALSE AND STOP_ON_NO_NEW_DOWNLOAD == TRUE</string>
+			</dict>
+			<key>Processor</key>
+			<string>StopProcessingIf</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
+				<string>"latestCOVersions":.+?https:\/\/downloads\.captureone\.pro\/[\dabcdef]+\/CaptureOne\.Mac\.([\d]+\.[\d]+)\.[\d\.]+\.dmg</string>
+				<key>result_output_var_name</key>
+				<string>perpetual_version</string>
+				<key>url</key>
+				<string>https://www.captureone.com/en/account/download-trial</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>force_munkiimport</key>
+				<string>%FORCE_MUNKIIMPORT%</string>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
