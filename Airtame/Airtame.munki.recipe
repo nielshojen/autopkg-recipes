@@ -36,6 +36,14 @@
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
+			<key>postinstall_script</key>
+			<string>#!/bin/sh
+
+/bin/cp -R /Applications/Airtame.app/Contents/Resources/plugins/AirtameAudio.driver /Library/Audio/Plug-Ins/HAL</string>
+			<key>preuninstall_script</key>
+			<string>#!/bin/sh
+
+/bin/rm -rf /Library/Audio/Plug-Ins/HAL/AirtameAudio.driver</string>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
