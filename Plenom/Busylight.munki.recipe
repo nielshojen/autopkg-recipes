@@ -14,6 +14,8 @@
         <string>Plenom Busylight</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/PlenomBusylight</string>
+		<key>SOFTWARETITLE</key>
+		<string>PlenomBusylight</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
