@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>DOWNLOAD_PATTERN</key>
-        <string>(?P&lt;url&gt;https:\/\/downloads.xrite.com\/Downloads\/Software\/ccProfiler\/v(?P&lt;version&gt;.*?)\/mac\/ccProfiler.zip)</string>
+		<string>(?P&lt;url&gt;https://github.com/LUMESCA/calibrite-profiler-releases/releases/download/v(?P&lt;version&gt;.*?)/calibrite-PROFILER-.*.dmg)</string>
 		<key>DOWNLOAD_URL</key>
 		<string>https://calibrite.com/us/software-downloads/?noredirect=en-US</string>
         <key>NAME</key>
@@ -34,35 +34,20 @@
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%.zip</string>
+				<string>%NAME%.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
 		</dict>
-        <dict>
-            <key>Processor</key>
-            <string>Unarchiver</string>
-            <key>Arguments</key>
-            <dict>
-                <key>archive_path</key>
-                <string>%pathname%</string>
-                <key>purge_destination</key>
-                <true/>
-            </dict>
-        </dict>
 		<dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
 			<key>Arguments</key>
 			<dict>
-				<key>expected_authority_names</key>
-				<array>
-					<string>Developer ID Installer: X-Rite, Incorporated (2K7GT73B4R)</string>
-					<string>Developer ID Certification Authority</string>
-					<string>Apple Root CA</string>
-				</array>
 				<key>input_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.pkg</string>
+				<string>%pathname%/calibrite PROFILER.app</string>
+				<key>requirement</key>
+				<string>identifier "com.calibrite.profiler" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "5C392763F5"</string>
 			</dict>
 		</dict>
         <dict>
