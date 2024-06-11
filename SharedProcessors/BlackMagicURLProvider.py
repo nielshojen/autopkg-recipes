@@ -120,13 +120,18 @@ class BlackMagicURLProvider(Processor):
             match = re.match(self.env["product_name_pattern"], m_prod["name"])
             if match:
                 p = m_prod.copy()
-                major_version = p["urls"]["Mac OS X"][0]["major"]
-                minor_version = p["urls"]["Mac OS X"][0]["minor"]
-                release_version = p["urls"]["Mac OS X"][0]["releaseNum"]
+                if 'Mac OS X' in p["urls"]:
+                    major_version = p["urls"]["Mac OS X"][0]["major"]
+                    minor_version = p["urls"]["Mac OS X"][0]["minor"]
+                    release_version = p["urls"]["Mac OS X"][0]["releaseNum"]
+                else:
+                    continue
                 p["version"] = str(major_version) + "." + str(minor_version) + "." + str(release_version)
                 prods.append(p)
         # sort by version and grab the highest one
-        latest_prod = sorted(prods, key=itemgetter("version"))[-1]
+        latest_prod = sorted(
+            prods,
+            key=lambda v:LooseVersion(v['version']))[-1]
 
         # ensure our product contains info we need
         try:
@@ -149,10 +154,6 @@ class BlackMagicURLProvider(Processor):
                        not self.env["registration_info"][key]:
                         raise ProcessorError(errormsg)
 
-        # if this download requires Terms And Conditions, ensure we've set everything
-        if latest_prod["requiresTermsAndConditions"]:
-            self.env["registration_info"]["hasAgreedToTerms"] = 'true'
-
         # now build a request JSON to finally ask for the download URL
         req_data = {
             "country": "us",
@@ -161,13 +162,21 @@ class BlackMagicURLProvider(Processor):
                 "name": self.env["product_name"]
             }
         }
-        for k in self.env["registration_info"]:
-            req_data[k] = self.env["registration_info"][k]
+
+        # if this download requires Terms And Conditions, ensure we've set everything
+        if latest_prod["requiresTermsAndConditions"]:
+            self.env["registration_info"]["hasAgreedToTerms"] = 'true'
+            for k in self.env["registration_info"]:
+                req_data[k] = self.env["registration_info"][k]
+
         req_data = json.dumps(req_data)
         req_data = req_data.encode("utf-8")
 
         url = "https://www.blackmagicdesign.com/api/register/us/download/"
         url += str(download_id)
+
+        print(url)
+        print(req_data)
 
         request = urllib.request.Request(url, data=req_data)
         request.add_header("Content-Type", "application/json;charset=UTF-8")
