@@ -175,9 +175,6 @@ class BlackMagicURLProvider(Processor):
         url = "https://www.blackmagicdesign.com/api/register/us/download/"
         url += str(download_id)
 
-        print(url)
-        print(req_data)
-
         request = urllib.request.Request(url, data=req_data)
         request.add_header("Content-Type", "application/json;charset=UTF-8")
         request.add_header("User-Agent", "Mozilla/5.0")
