@@ -8,10 +8,12 @@
     <string>com.github.nielshojen.download.Kelvin</string>
     <key>Input</key>
     <dict>
+        <key>RELEASE_URL</key>
+		<string>released-files.042024</string>
         <key>DOWNLOAD_PATTERN</key>
 		<string>(Kelvin-+[0-9].+[0-9].+[0-9]-mac)</string>
 		<key>DOWNLOAD_URL</key>
-		<string>https://download.creativeforce.io/released-files.3x/prod/kelvin/mac/latest-mac.yml</string>
+		<string>https://download.creativeforce.io/%RELEASE_URL%/prod/kelvin/mac/latest-mac.yml</string>
         <key>NAME</key>
         <string>Kelvin</string>
     </dict>
@@ -47,7 +49,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>https://download.creativeforce.io/released-files.3x/prod/kelvin/mac/%match%.pkg</string>
+				<string>https://download.creativeforce.io/%RELEASE_URL%/prod/kelvin/mac/%match%.pkg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
