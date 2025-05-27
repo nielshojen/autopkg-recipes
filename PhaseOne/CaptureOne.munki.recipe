@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>FORCE_MUNKIIMPORT</key>
-		<string>totally</string>
+		<string>true</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/phaseone</string>
 		<key>NAME</key>
@@ -48,19 +48,6 @@
 			</dict>
 			<key>Processor</key>
 			<string>StopProcessingIf</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>re_pattern</key>
-				<string>"latestCOVersions":.+?https:\/\/downloads\.captureone\.pro\/[\dabcdef]+\/CaptureOne\.Mac\.([\d]+\.[\d]+)\.[\d\.]+\.dmg</string>
-				<key>result_output_var_name</key>
-				<string>perpetual_version</string>
-				<key>url</key>
-				<string>https://www.captureone.com/en/account/download-trial</string>
-			</dict>
-			<key>Processor</key>
-			<string>URLTextSearcher</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
