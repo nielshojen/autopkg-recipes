@@ -48,7 +48,7 @@
 				<key>additional_pkginfo</key>
 				<dict>
 					<key>minimum_os_version</key>
-					<string>10.15.0</string>
+					<string>13.0</string>
 				</dict>	
 			</dict>
 		</dict>
