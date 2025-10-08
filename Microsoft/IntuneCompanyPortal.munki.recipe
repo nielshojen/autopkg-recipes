@@ -40,18 +40,36 @@
     <string>com.github.nielshojen.pkg.IntuneCompanyPortal</string>
     <key>Process</key>
     <array>
+     	<dict>
+        <key>Processor</key>
+        <string>MunkiInstallsItemsCreator</string>
+        <key>Arguments</key>
+            <dict>
+                <key>faux_root</key>
+                <string>%RECIPE_CACHE_DIR%/downloads/payload</string>
+                <key>installs_item_paths</key>
+                <array>
+                    <string>/Applications/Company Portal.app</string>
+                </array>
+                <key>version_comparison_key</key>
+                <string>CFBundleVersion</string>
+            </dict>
+        </dict>
     	<dict>
     		<key>Processor</key>
     		<string>MunkiPkginfoMerger</string>
-    		<key>Arguments</key>
-    		<dict>
-				<key>additional_pkginfo</key>
-				<dict>
-					<key>minimum_os_version</key>
-					<string>13.0</string>
-				</dict>	
-			</dict>
 		</dict>
+        <dict>
+        <key>Processor</key>
+        <string>PathDeleter</string>
+        <key>Arguments</key>
+            <dict>
+                <key>path_list</key>
+                <array>
+                    <string>%RECIPE_CACHE_DIR%/downloads/payload</string>
+                </array>
+            </dict>
+        </dict>
         <dict>
             <key>Arguments</key>
             <dict>
