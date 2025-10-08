@@ -24,6 +24,8 @@
          <string>853070</string>
          <key>DOWNLOADURL</key>
          <string>https://go.microsoft.com/fwlink/?linkid=%PRODUCTID%</string>
+         <key>USER_AGENT</key>
+         <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 26_0) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15</string>
       </dict>
       <key>Process</key>
       <array>
@@ -36,6 +38,11 @@
                <string>%DOWNLOADURL%</string>
                <key>filename</key>
                <string>%VENDOR%_%SOFTWARETITLE1%_%SOFTWARETITLE2%_%SOFTWARETITLE3%.pkg</string>
+               <key>request_headers</key>
+               <dict>
+                  <key>user-agent</key>
+                  <string>%USER_AGENT%</string>
+               </dict>
             </dict>
          </dict>
          <dict>
