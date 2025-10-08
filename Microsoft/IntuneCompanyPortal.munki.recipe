@@ -40,41 +40,40 @@
     <string>com.github.nielshojen.pkg.IntuneCompanyPortal</string>
     <key>Process</key>
     <array>
-     	<dict>
-        <key>Processor</key>
-        <string>MunkiInstallsItemsCreator</string>
-        <key>Arguments</key>
-            <dict>
-                <key>faux_root</key>
-                <string>%RECIPE_CACHE_DIR%/downloads/payload</string>
-                <key>installs_item_paths</key>
-                <array>
-                    <string>/Applications/Company Portal.app</string>
-                </array>
-                <key>version_comparison_key</key>
-                <string>CFBundleVersion</string>
-            </dict>
-        </dict>
-    	<dict>
-    		<key>Processor</key>
-    		<string>MunkiPkginfoMerger</string>
-		</dict>
         <dict>
-        <key>Processor</key>
-        <string>PathDeleter</string>
-        <key>Arguments</key>
+            <key>Arguments</key>
             <dict>
-                <key>path_list</key>
-                <array>
-                    <string>%RECIPE_CACHE_DIR%/downloads/payload</string>
-                </array>
+                <key>additional_pkginfo</key>
+                <dict>
+                    <key>installs</key>
+                    <array>
+                        <dict>
+                            <key>CFBundleIdentifier</key>
+                            <string>com.microsoft.CompanyPortalMac</string>
+                            <key>CFBundleName</key>
+                            <string>Company Portal</string>
+                            <key>CFBundleVersion</key>
+                            <string>%version%</string>
+                            <key>path</key>
+                            <string>/Applications/Company Portal.app</string>
+                            <key>type</key>
+                            <string>application</string>
+                            <key>version_comparison_key</key>
+                            <string>CFBundleVersion</string>
+                        </dict>
+                    </array>
+                    <key>version</key>
+                    <string>%version%</string>
+                </dict>
             </dict>
+            <key>Processor</key>
+            <string>MunkiPkginfoMerger</string>
         </dict>
         <dict>
             <key>Arguments</key>
             <dict>
                 <key>pkg_path</key>
-                <string>%pathname%</string>
+                <string>%pkg_path%</string>
                 <key>repo_subdirectory</key>
                 <string>%MUNKI_REPO_SUBDIR%</string>
                 <key>version_comparison_key</key>
