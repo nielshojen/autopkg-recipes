@@ -5,7 +5,7 @@
       <key>Description</key>
       <string>Downloads the latest Microsoft Intune Company Portal installer package.</string>
       <key>Identifier</key>
-      <string>com.github.nielshojen.IntuneCompanyPortal</string>
+      <string>com.github.nielshojen.download.IntuneCompanyPortal</string>
       <key>MinimumVersion</key>
       <string>1.0.0</string>
       <key>Input</key>

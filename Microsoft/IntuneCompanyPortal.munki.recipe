@@ -37,7 +37,7 @@
         </dict>
     </dict>
     <key>ParentRecipe</key>
-    <string>com.github.rtrouton.pkg.MicrosoftIntuneCompanyPortal</string>
+    <string>com.github.nielshojen.pkg.IntuneCompanyPortal</string>
     <key>Process</key>
     <array>
     	<dict>
