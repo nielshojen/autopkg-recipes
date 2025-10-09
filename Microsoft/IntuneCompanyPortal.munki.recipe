@@ -51,6 +51,8 @@
                 <array>
                     <string>/Applications/Company Portal.app</string>
                 </array>
+    			<key>derive_minimum_os_version</key>
+    			<string>True</string>
                 <key>version_comparison_key</key>
                 <string>CFBundleVersion</string>
             </dict>
