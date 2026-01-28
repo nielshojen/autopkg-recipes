@@ -3,53 +3,58 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the most recent version of the MYKI app and imports into Munki.</string>
+    <string>Downloads the latest version of OBSBOT Center and imports into Munki.</string>
     <key>Identifier</key>
-    <string>com.github.nielshojen.munki.MYKI</string>
+    <string>com.github.nielshojen.munki.OBSBOTCenter</string>
     <key>Input</key>
     <dict>
+        <key>SUPPORTED_ARCH</key>
+        <string>arm64</string>
         <key>NAME</key>
-        <string>MYKI</string>
+        <string>OBSBOTCenter</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/%NAME%</string>
-		<key>MUNKI_CATEGORY</key>
-		<string>Utilities</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
             <array>
                 <string>testing</string>
             </array>
-			<key>category</key>
-			<string>%MUNKI_CATEGORY%</string>
             <key>description</key>
-            <string>MYKI helps you securely store and manage passwords locally across your devices.</string>
-            <key>developer</key>
-            <string>MYKI, Inc.</string>
+            <string>This installs OBSBOT Center which allow control of OBSBOT Cameras.</string>
             <key>display_name</key>
-            <string>MYKI</string>
+            <string>OBSBOT Center</string>
             <key>name</key>
             <string>%NAME%</string>
             <key>unattended_install</key>
             <true/>
+            <key>unattended_uninstall</key>
+            <true/>
             <key>uninstallable</key>
             <true/>
+			<key>supported_architectures</key>
+			<array>
+				<string>%SUPPORTED_ARCH%</string>
+			</array>
         </dict>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.9</string>
     <key>ParentRecipe</key>
-    <string>com.github.nielshojen.download.MYKI</string>
+    <string>com.github.nielshojen.download.OBSBOTCenter</string>
     <key>Process</key>
     <array>
         <dict>
             <key>Arguments</key>
             <dict>
-                <key>warning_message</key>
-                <string>MYKI was aquired by JumpCloud and is no longer in business</string>
+                <key>additional_pkginfo</key>
+                <dict>
+                    <key>version</key>
+                    <string>%version%</string>
+                </dict>
             </dict>
             <key>Processor</key>
-            <string>DeprecationWarning</string>
+            <string>MunkiPkginfoMerger</string>
         </dict>
         <dict>
             <key>Arguments</key>
