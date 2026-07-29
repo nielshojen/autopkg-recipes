@@ -197,7 +197,7 @@
 			<key>target</key>
 			<string>%RECIPE_CACHE_DIR%/payload/Applications/DaVinci Resolve/DaVinci Resolve Studio.app/</string>
 		</dict>
-        </dict>
+    </dict>
 	<dict>
 		<key>Arguments</key>
 		<dict>
