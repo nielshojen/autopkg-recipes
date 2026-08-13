@@ -43,8 +43,22 @@
         <dict>
             <key>Arguments</key>
             <dict>
+                <key>info_path</key>
+                <string>%pathname%/%NAME%.app/Contents/Info.plist</string>
+                <key>plist_keys</key>
+                <dict>
+                    <key>LSMinimumSystemVersion</key>
+                    <string>min_os_version</string>
+                </dict>
+            </dict>
+            <key>Processor</key>
+            <string>PlistReader</string>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
                 <key>app_file</key>
-                <string>%pathname%/%NAME%.app</string>
+                <string>%pathname%</string>
                 <key>name</key>
                 <string>%NAME%</string>
             </dict>
@@ -70,6 +84,8 @@
 				<string>%developer%</string>
 				<key>version</key>
 				<string>%version%</string>
+				<key>minimumSupportedOperatingSystem</key>
+				<string>%min_os_version%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.almenscorner.intune-upload.processors/IntuneAppUploader</string>
