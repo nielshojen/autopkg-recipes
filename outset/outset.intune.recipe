@@ -27,37 +27,6 @@
 	<string>com.github.dataJAR-recipes.download.Outset</string>
 	<key>Process</key>
 	<array>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack</string>
-                <key>flat_pkg_path</key>
-                <string>%pathname%</string>
-            </dict>
-            <key>Processor</key>
-            <string>FlatPkgUnpacker</string>
-        </dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>pattern</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/Outset-*.pkg</string>
-            </dict>
-            <key>Processor</key>
-            <string>FileFinder</string>
-        </dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/payload/usr/local/outset</string>
-                <key>pkg_payload_path</key>
-                <string>%found_filename%/Payload</string>
-            </dict>
-            <key>Processor</key>
-            <string>PkgPayloadUnpacker</string>
-        </dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -72,7 +41,7 @@
 				<key>displayname</key>
 				<string>%display_name%</string>
 				<key>icon</key>
-				<string>%RECIPE_CACHE_DIR%/payload/usr/local/outset/Outset.app</string>
+				<string></string>
 				<key>publisher</key>
 				<string>%developer%</string>
 				<key>version</key>
