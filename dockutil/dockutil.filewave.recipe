@@ -16,7 +16,7 @@
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.jessepeterson.download.dockutil</string>
+	<string>com.github.smithjw.pkg.dockutil</string>
 	<key>Process</key>
 	<array>
 		<dict>
