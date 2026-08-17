@@ -24,6 +24,10 @@
         <array>
             <string>Productivity</string>
         </array>
+        <key>preinstall_script</key>
+        <string></string>
+        <key>postinstall_script</key>
+        <string></string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.4.0</string>
@@ -51,6 +55,69 @@
             <key>Processor</key>
             <string>com.github.almenscorner.intune-upload.processors/IntuneAppIconGetter</string>
         </dict>
+        <dict>
+            <key>Processor</key>
+            <string>PkgRootCreator</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkgroot</key>
+                <string>%RECIPE_CACHE_DIR%/payload</string>
+                <key>pkgdirs</key>
+                <dict>
+                    <key>Applications</key>
+                    <string>0775</string>
+                </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%pathname%/Firefox.app</string>
+                <key>destination_path</key>
+                <string>%pkgroot%/Applications/Firefox.app</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>PkgCreator</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_request</key>
+                <dict>
+                    <key>pkgname</key>
+                    <string>%NAME%-%version%</string>
+                    <key>pkgdir</key>
+                    <string>%RECIPE_CACHE_DIR%</string>
+                    <key>id</key>
+                    <string>org.mozilla.firefox.pkg</string>
+                    <key>chown</key>
+                    <array>
+                        <dict>
+                            <key>path</key>
+                            <string>Applications</string>
+                            <key>user</key>
+                            <string>root</string>
+                            <key>group</key>
+                            <string>admin</string>
+                        </dict>
+                    </array>
+                </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>PathDeleter</string>
+            <key>Arguments</key>
+            <dict>
+                <key>path_list</key>
+                <array>
+                    <string>%RECIPE_CACHE_DIR%/payload</string>
+                </array>
+            </dict>
+        </dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -70,6 +137,10 @@
 				<string>%developer%</string>
 				<key>version</key>
 				<string>%version%</string>
+				<key>preinstall_script</key>
+				<string>%preinstall_script%</string>
+				<key>postinstall_script</key>
+				<string>%postinstall_script%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.almenscorner.intune-upload.processors/IntuneAppUploader</string>
