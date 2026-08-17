@@ -1,0 +1,105 @@
+@font-face {
+    font-family: "BrownPro-Light";
+    src: url(./BrownPro-Light.woff2);
+}
+
+@font-face {
+    font-family: "BrownPro-Bold";
+    src: url(./BrownPro-Bold.woff2);
+}
+
+@font-face {
+    font-family: "BrownPro-Regular";
+    src: url(./BrownPro-Regular.woff2);
+}
+
+body {
+    padding: 35px;
+    font-family: "BrownPro-Light",arial,sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: #2f3132;
+    line-height: 22px;
+}
+
+h1 {
+    font-family: "BrownPro-Bold",arial,sans-serif;
+    font-size: 72px;
+    letter-spacing: -1px;
+    line-height: 1.0;
+    margin: 15px 0;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+ul {
+    margin-block-start: 0 !important;
+    margin-block-end: 0 !important;
+    padding-left: 20px;
+}
+
+a {
+    color: inherit;
+    font-family: "BrownPro-Bold",arial,sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    color: #006991;
+}
+
+a:active, a:hover {
+    outline: 0;
+}
+
+summary {
+    color: #1061F8;
+    font-family: "BrownPro-Bold",arial,sans-serif;
+}
+
+summary::marker {
+    display: none;
+    content: "";
+}
+
+p strong {
+    font-family: "BrownPro-Bold",arial,sans-serif;
+}
+
+.h5, h5 {
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: none;
+    font-family: "BrownPro-Regular",arial,sans-serif;
+}
+
+.h4 {
+    font-family: "BrownPro-Regular",arial,sans-serif;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 1.08333;
+    margin: 20px auto 10px;
+}
+
+.component-text.text-block p {
+    font-family: "BrownPro-Light",arial,sans-serif;
+    margin: 0 0 11px;
+}
+
+.content-ctn h1 {
+    font-size: 48px;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
