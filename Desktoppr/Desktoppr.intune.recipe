@@ -8,6 +8,8 @@
 	<string>com.github.nielshojen.intune.Desktoppr</string>
 	<key>Input</key>
 	<dict>
+        <key>INSTALL_AS_MANAGED</key>
+        <string>False</string>
 		<key>NAME</key>
 		<string>Desktoppr</string>
 		<key>categories</key>
@@ -46,6 +48,8 @@
 				<string>%developer%</string>
 				<key>version</key>
 				<string>%version%</string>
+				<key>install_as_managed</key>
+				<string>%INSTALL_AS_MANAGED%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.almenscorner.intune-upload.processors/IntuneAppUploader</string>
