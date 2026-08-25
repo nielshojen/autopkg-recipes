@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
         <key>INSTALL_AS_MANAGED</key>
-        <string>False</string>
+        <false/>
 		<key>BYPASS_STOP_PROCESSING_IF_DOWNLOAD_UNCHANGED</key>
 		<string>False</string>
 		<key>DOWNLOAD_MISSING_FILE</key>

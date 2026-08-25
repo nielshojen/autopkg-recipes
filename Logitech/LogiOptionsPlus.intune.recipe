@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
         <key>INSTALL_AS_MANAGED</key>
-        <string>False</string>
+        <false/>
 		<key>NAME</key>
 		<string>Logi Options Plus</string>
 		<key>categories</key>

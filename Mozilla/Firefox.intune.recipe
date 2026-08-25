@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>INSTALL_AS_MANAGED</key>
-        <string>False</string>
+        <false/>
         <key>RELEASE</key>
         <string>latest</string>
         <key>LOCALE</key>
