@@ -38,7 +38,7 @@ class IntuneAppIconGetter(DmgMounter):
         "icon_file_path": {
             "description": "Path to the extracted icon file, if successful.",
         },
-        "icon_file_path_summary_result": {
+        "summary_text": {
             "description": "Path to the extracted icon file, if successful.",
         }
     }
@@ -52,7 +52,7 @@ class IntuneAppIconGetter(DmgMounter):
             name = name.lower().replace(" ", "_")
         recipe_cache_dir = self.env.get("RECIPE_CACHE_DIR")
         self.env["icon_file_path"] = None
-        self.env["icon_file_path_summary_result"] = None
+        self.env["summary_text"] = None
         mount_point = None
 
         # If app bundle not found, skip icon extraction
