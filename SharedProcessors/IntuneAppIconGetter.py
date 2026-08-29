@@ -38,7 +38,7 @@ class IntuneAppIconGetter(DmgMounter):
         "icon_file_path": {
             "description": "Path to the extracted icon file, if successful.",
         },
-        "summary_text": {
+        "intune_app_icon_getter_summary_result": {
             "description": "Path to the extracted icon file, if successful.",
         }
     }
@@ -52,7 +52,7 @@ class IntuneAppIconGetter(DmgMounter):
             name = name.lower().replace(" ", "_")
         recipe_cache_dir = self.env.get("RECIPE_CACHE_DIR")
         self.env["icon_file_path"] = None
-        self.env["summary_text"] = None
+        self.env["intune_app_icon_getter_summary_result"] = None
         mount_point = None
 
         # If app bundle not found, skip icon extraction
@@ -138,7 +138,10 @@ class IntuneAppIconGetter(DmgMounter):
         # Set output variable to path of extracted icon file
         if os.path.exists(icon_output_path):
             self.env["icon_file_path"] = icon_output_path
-            self.env["icon_file_path_summary_result"] = icon_output_path
+            self.env["intune_app_icon_getter_summary_result"] = {
+                "summary_text": "The following icons were copied:",
+                "data": {"icon_file_path": icon_output_path},
+            }
 
         # If app bundle was a .dmg file, unmount it
         if mount_point:
