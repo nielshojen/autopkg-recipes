@@ -23,11 +23,13 @@ import re
 import ssl
 import urllib.request, urllib.error, urllib.parse
 
-from distutils.version import LooseVersion, StrictVersion
+from distutils.version import StrictVersion
+
 from operator import itemgetter
 from pprint import pprint
 
 from autopkglib import Processor, ProcessorError
+from autopkglib import APLooseVersion as LooseVersion
 
 __all__ = ["BlackMagicURLProvider"]
 
